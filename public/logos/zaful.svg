@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="zaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+  </defs>
+  <path d="M50 20 C47 20 44 23 44 26 C44 29 48 30 50 32 L50 40 L20 65 H80 L50 40 Z" stroke="url(#zaGrad)" stroke-width="4" stroke-linejoin="round" fill="none" />
+  <path d="M30 65 L35 80 H65 L70 65" fill="url(#zaGrad)" opacity="0.2" />
+</svg>

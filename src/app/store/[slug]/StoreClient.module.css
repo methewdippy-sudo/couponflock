@@ -1,0 +1,510 @@
+.backLinkContainer {
+  margin: 32px 0 16px 0;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--primary-blue);
+  transform: translateX(-3px);
+}
+
+.backLink svg {
+  transition: transform var(--transition-fast);
+}
+
+/* Store Banner Header Card */
+.storeBanner {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: var(--font-outfit), sans-serif;
+  animation: fadeIn var(--transition-normal) ease;
+}
+
+.storeBannerHeader {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.storeLargeLogoWrapper {
+  width: 240px;
+  height: 140px;
+  min-height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--border-light);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.storeLargeLogo {
+  width: 100%;
+  height: 100%;
+  max-width: 220px;
+  max-height: 125px;
+  object-fit: contain;
+  transform: scale(1.48);
+  filter: contrast(1.15) saturate(1.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform 0.25s ease;
+}
+
+.storeLargeLogoFallback {
+  width: 200px;
+  height: 120px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary-blue-light), #bae6fd);
+  color: var(--primary-blue-hover);
+  font-weight: 800;
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-blue-light);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.storeMetaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.storeTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.storeTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.storeVerifiedBadge {
+  display: inline-block;
+  background-color: var(--accent-green-light);
+  color: var(--accent-green-hover);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.storeSubtitle {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  max-width: 680px;
+}
+
+.storeWebsiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-blue);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-top: 4px;
+  transition: color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.storeWebsiteLink:hover {
+  color: var(--primary-blue-hover);
+  text-decoration: underline;
+}
+
+/* Statistics Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 28px;
+}
+
+.statCard {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.statCard:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-md);
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Override home search layouts */
+.searchAndTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.storeCouponsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.searchBarOverride {
+  max-width: 320px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+@media (max-width: 768px) {
+  .storeBanner {
+    padding: 24px;
+    gap: 20px;
+  }
+  
+  .storeBannerHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .storeMetaInfo {
+    align-items: center;
+  }
+  
+  .storeTitleRow {
+    justify-content: center;
+  }
+  
+  .storeWebsiteLink {
+    align-self: center;
+  }
+  
+  /* Keep stats grid horizontal on tablets for premium space efficiency */
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 20px;
+  }
+
+  .statCard {
+    padding: 12px 8px;
+  }
+
+  .statValue {
+    font-size: 1.4rem;
+  }
+
+  .statLabel {
+    font-size: 0.7rem;
+  }
+  
+  .searchAndTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .searchBarOverride {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .storeBanner {
+    padding: 20px 16px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+
+  .storeLargeLogoWrapper {
+    width: 140px;
+    height: 88px;
+  }
+
+  .storeLargeLogoFallback {
+    width: 140px;
+    height: 88px;
+    font-size: 1.8rem;
+  }
+
+  .storeTitle {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .storeSubtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .storeWebsiteLink {
+    font-size: 0.82rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr); /* Stay horizontal and clean on mobile */
+    gap: 8px;
+    padding-top: 16px;
+  }
+
+  .statCard {
+    padding: 10px 6px;
+  }
+
+  .statValue {
+    font-size: 1.15rem;
+  }
+
+  .statLabel {
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Stack stats only on ultra-narrow viewports */
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .statCard {
+    padding: 12px;
+  }
+}
+
+/* SEO Redemption Guide Section */
+.seoGuideSection {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  margin-top: 48px;
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.seoGuideTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+.seoGuideContent {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.seoGuideSteps {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.seoGuideSteps li {
+  margin-bottom: 14px;
+}
+
+.seoGuideSteps strong {
+  color: var(--text-primary);
+}
+
+.seoGuideFooter {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 16px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .seoGuideSection {
+    padding: 24px;
+    margin-top: 36px;
+  }
+  
+  .seoGuideTitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Email Newsletter Subscription Section */
+.newsletterSection {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px dashed #cbd5e1;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 40px;
+  font-family: var(--font-outfit), sans-serif;
+  text-align: center;
+}
+
+.newsletterSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.newsletterSuccess h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 8px 0;
+}
+
+.newsletterSuccess p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.newsletterBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-align: left;
+}
+
+.newsletterContent h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.newsletterContent p {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  min-width: 380px;
+}
+
+.newsletterInput {
+  flex-grow: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.newsletterInput:focus {
+  border-color: var(--primary-blue);
+}
+
+.newsletterSubmit {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletterSubmit:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+@media (max-width: 900px) {
+  .newsletterBody {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 16px;
+  }
+  .newsletterForm {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+}
+
+/* Store Page Single-Column Coupon List (Full Width, Ultra-Clean) */
+.storeCouponsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}

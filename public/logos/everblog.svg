@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  <text x="50%" y="65%" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="900" text-anchor="middle" fill="#0F172A" letter-spacing="-1.5">
+    ever<tspan fill="url(#eGrad)">blog</tspan>
+  </text>
+  <!-- Colorful accent dots -->
+  <circle cx="95" cy="74" r="3.5" fill="#3B82F6" />
+  <circle cx="145" cy="74" r="3.5" fill="#EC4899" />
+  <circle cx="195" cy="74" r="3.5" fill="#8B5CF6" />
+  <circle cx="245" cy="74" r="3.5" fill="#10B981" />
+</svg>

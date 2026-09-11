@@ -1,0 +1,452 @@
+.container {
+  min-height: 100vh;
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background glows */
+.container::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background: #10b981;
+  border-color: #10b981;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Hero */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.badge {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.ctaGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.primaryCta {
+  background: #10b981;
+  color: #0b0f19;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+.secondaryCta {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryCta:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Mockup */
+.previewContainer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mockupImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.statVal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #34d399;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* Comparison */
+.comparisonSection {
+  max-width: 1000px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.sectionDesc {
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.tableContainer {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+
+.compTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.compTable th, .compTable td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.compTable th {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.featureCol {
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.usCol {
+  color: #34d399;
+  font-weight: 500;
+}
+
+.themCol {
+  color: #9ca3af;
+}
+
+/* Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.featureItem {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.featureIcon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.featureDesc {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Pricing Card */
+.pricingCard {
+  max-width: 550px;
+  margin: 6rem auto;
+  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.08) 0%, rgba(255, 255, 255, 0.02) 50%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.priceTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.priceBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.strikePrice {
+  text-decoration: line-through;
+  color: #6b7280;
+  font-size: 1.5rem;
+}
+
+.realPrice {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.priceDuration {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.priceFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  text-align: left;
+}
+
+.priceFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.checkIcon {
+  color: #34d399;
+  font-weight: bold;
+}
+
+.buyBtn {
+  width: 100%;
+  background: #10b981;
+  color: #0b0f19;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+}
+
+.buyBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.45);
+}
+
+.guaranteeText {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+/* FAQ */
+.faqSection {
+  max-width: 750px;
+  margin: 6rem auto 8rem;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faqQuestion:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.faqAnswer {
+  padding: 0 1.5rem 1.5rem;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}

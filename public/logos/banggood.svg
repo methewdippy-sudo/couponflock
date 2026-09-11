@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bangGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#ff7878" />
+    </linearGradient>
+  </defs>
+  <path d="M25 20 H55 C65 20 70 27 70 34 C70 41 64 47 55 47 H25 Z" fill="url(#bangGrad)" />
+  <path d="M25 47 H60 C70 47 75 54 75 62 C75 70 68 80 55 80 H25 Z" fill="url(#bangGrad)" />
+  <circle cx="40" cy="34" r="5" fill="#ffffff" />
+  <circle cx="40" cy="62" r="5" fill="#ffffff" />
+</svg>

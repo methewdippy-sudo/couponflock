@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="geekGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+  <path d="M25 35 L75 35 L80 85 L20 85 Z" fill="url(#geekGrad)" />
+  <path d="M40 35 C40 20 60 20 60 35" stroke="#475569" stroke-width="4" stroke-linecap="round" fill="none" />
+  <rect x="35" y="50" width="12" height="12" rx="2" fill="#ffffff" />
+  <rect x="53" y="50" width="12" height="12" rx="2" fill="#ffffff" />
+  <path d="M47 56h6" stroke="#ffffff" stroke-width="3" />
+</svg>

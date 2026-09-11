@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <!-- Navy Blue Background -->
+  <rect width="100%" height="100%" rx="12" fill="#0c2340" />
+  
+  <!-- Stylized Hairy Mammoth Icon (Representing Harry's Brand Emblem) -->
+  <g transform="translate(30, 20)" fill="#ff6f61">
+    <!-- Mammoth Body & Head -->
+    <path d="M5 25 Q10 10 25 10 Q35 10 38 18 Q40 22 38 25 Q35 28 32 25 Q28 22 25 25 Q20 28 15 28 Z" />
+    <!-- Tusks & Legs -->
+    <path d="M38 18 Q45 18 42 28 Q39 30 36 24 Z" fill="#ffffff" />
+    <rect x="10" y="27" width="4" height="10" rx="1" />
+    <rect x="22" y="27" width="4" height="10" rx="1" />
+    <rect x="30" y="25" width="4" height="10" rx="1" />
+  </g>
+
+  <!-- Typography -->
+  <text x="95" y="49" font-family="'Outfit', 'Inter', 'Montserrat', sans-serif" font-weight="800" font-size="30" fill="#ffffff" letter-spacing="1">
+    HARRY'S
+  </text>
+</svg>

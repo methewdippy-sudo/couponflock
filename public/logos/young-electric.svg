@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="yeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+  </defs>
+
+  <!-- Electric Bolt Icon -->
+  <g transform="translate(15, 12)">
+    <path d="M35 5 L15 38 L30 38 L20 62 L48 28 L32 28 Z" fill="url(#boltGrad)" stroke="#B45309" stroke-width="1.5" />
+    <circle cx="28" cy="34" r="32" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.4" />
+  </g>
+
+  <!-- YOUNG ELECTRIC BIKES Wordmark -->
+  <g transform="translate(85, 20)">
+    <!-- YOUNG -->
+    <text x="0" y="32" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#0F172A" letter-spacing="1">
+      YOUNG
+    </text>
+    
+    <!-- ELECTRIC -->
+    <text x="132" y="32" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#F59E0B" letter-spacing="1">
+      ELECTRIC
+    </text>
+
+    <!-- BIKES SUBTITLE -->
+    <rect x="0" y="44" width="285" height="2" fill="#E2E8F0" rx="1" />
+    <text x="142" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#64748B" letter-spacing="6" text-anchor="middle">
+      E - B I K E S
+    </text>
+  </g>
+</svg>

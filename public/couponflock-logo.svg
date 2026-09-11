@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <defs>
+    <linearGradient id="cf_grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cf_grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="cf_glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#10b981" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Flock Icon (Soaring discount wing / origami bird) -->
+  <g transform="translate(6, 6)">
+    <!-- Back Wing -->
+    <path d="M12 36 L28 8 L38 22 L22 42 Z" fill="url(#cf_grad2)" opacity="0.85"/>
+    <!-- Front Soaring Wing with Ticket Notch -->
+    <path d="M16 44 C20 44 26 40 32 32 L46 14 C48 11 46 8 42 8 L22 24 C18 27 16 32 16 36 Z" fill="url(#cf_grad1)" filter="url(#cf_glow)"/>
+    <!-- Coupon Tag Dot -->
+    <circle cx="24" cy="18" r="3.2" fill="#ffffff" opacity="0.95"/>
+    <!-- Upward Momentum Spark -->
+    <path d="M38 6 L41 12 L47 15 L41 18 L38 24 L35 18 L29 15 L35 12 Z" fill="#34d399"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="64" y="38" font-family="var(--font-outfit, 'Inter', -apple-system, sans-serif)" font-size="28" font-weight="700" fill="#0f172a" letter-spacing="-0.5px">
+    Coupon<tspan fill="#059669" font-weight="800">Flock</tspan>
+  </text>
+</svg>

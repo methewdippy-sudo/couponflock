@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <!-- Brand Name -->
+  <text x="25" y="52" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#000000" letter-spacing="-1.5">
+    swatch
+  </text>
+  <!-- Swiss Cross Red Square -->
+  <g transform="translate(195, 20)">
+    <rect x="0" y="0" width="40" height="40" rx="6" fill="#e30613" />
+    <!-- White Plus Sign -->
+    <rect x="16" y="8" width="8" height="24" rx="2" fill="#ffffff" />
+    <rect x="8" y="16" width="24" height="8" rx="2" fill="#ffffff" />
+  </g>
+</svg>

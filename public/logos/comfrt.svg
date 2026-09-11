@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <style>
+      .brand-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        font-size: 82px;
+        fill: #111827;
+        letter-spacing: -2px;
+      }
+      .brand-sub {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 17px;
+        fill: #6366f1;
+        letter-spacing: 5px;
+      }
+    </style>
+  </defs>
+  <!-- Background transparent -->
+  <rect width="100%" height="100%" fill="none"/>
+  
+  <!-- Subtle cloud icon for Comfrt -->
+  <g transform="translate(60, 48)">
+    <path d="M45 15 C45 6.7 38.3 0 30 0 C23.5 0 18 4.2 16 10 C14.5 9.4 12.8 9 11 9 C4.9 9 0 13.9 0 20 C0 26.1 4.9 31 11 31 L45 31 C51.1 31 56 26.1 56 20 C56 14.3 51.7 9.6 46.2 9.1 C45.5 12.6 45 15 45 15 Z" fill="#6366f1" opacity="0.9" transform="scale(1.9) translate(-5, 5)"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="210" y="112" class="brand-title">comfrt</text>
+  <text x="212" y="148" class="brand-sub">WEIGHTED APPAREL</text>
+</svg>
