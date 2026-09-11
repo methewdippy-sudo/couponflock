@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <head>
+        <meta name="google-site-verification" content="v4tNxY46v-W3u6LuCye9tAvrFVxeyn_tNNV7R5q24Iw" />
         <meta name="impact-site-verification" value="e8243051-e329-4f57-aedc-5f4539bfc2ac" />
         <meta name="impact-site-verification" content="e8243051-e329-4f57-aedc-5f4539bfc2ac" />
         {gaId && (
