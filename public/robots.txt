@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /images/
 Allow: /
 
-Sitemap: https://www.promoregistry.com/sitemap.xml
+Sitemap: https://www.couponflock.com/sitemap.xml
