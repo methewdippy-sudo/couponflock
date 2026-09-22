@@ -882,6 +882,246 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 17. THE DRM LAB (US / UK / Global Market)
+  {
+    id: 621,
+    name: "THE DRM LAB",
+    slug: "thedrmlab",
+    aliases: ["the-drm-lab", "drm-lab", "drmlab"],
+    logo: "/logos/thedrmlab.png",
+    website: "https://www.thedrmlab.com/methewdippy",
+    affiliate_url: "https://www.thedrmlab.com/methewdippy",
+    country: "US",
+    description: "Advanced at-home clinical micro-infusion treatments for acne scars, enlarged pores, and overall skin rejuvenation.",
+    coupons: [
+      {
+        id: "drm-deal-1",
+        code: "WELCOME10",
+        discount: "10% OFF",
+        title: "10% off your entire first order sitewide",
+        description: "Save 10% on PDRN Advanced Infusion Treatment and clinical skincare with verified code WELCOME10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-2",
+        code: "DRM15",
+        discount: "15% OFF",
+        title: "15% off PDRN micro-infusion serum kits",
+        description: "Get 15% off the 0.5 mm micro-infusion system and PDRN serum with code DRM15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-3",
+        code: "SPOOKY15",
+        discount: "15% OFF",
+        title: "15% off micro-infusion treatment kits sitewide",
+        description: "Take 15% off qualifying micro-infusion devices and replacement stamp orders with code SPOOKY15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-4",
+        code: "GLOW20",
+        discount: "20% OFF",
+        title: "20% off multi-month skincare bundles",
+        description: "Save 20% when you order multi-infusion refill packs and complete skin transformation bundles with code GLOW20.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-5",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "100% Free worldwide shipping & 90-day money-back guarantee",
+        description: "Enjoy completely free tracked courier delivery across the US, UK, CA, and worldwide on all orders.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 18. SEED NEEDS (US Gardening Market)
+  {
+    id: 622,
+    name: "Seed Needs",
+    slug: "seed-needs",
+    aliases: ["seedneeds", "seed-needs-co"],
+    logo: "/logos/seed-needs.png",
+    website: "https://www.seedneeds.com/dippy",
+    affiliate_url: "https://www.seedneeds.com/dippy",
+    country: "US",
+    description: "Non-GMO heirloom flower seeds, herb seeds, and vegetable seed packets for home gardeners across the United States.",
+    coupons: [
+      {
+        id: "seed-deal-1",
+        code: "GROW15",
+        discount: "15% OFF",
+        title: "15% off heirloom flower and garden seeds sitewide",
+        description: "Save 15% on flower seed packets, wild flower mixes, and organic vegetable seeds with code GROW15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "seed-deal-2",
+        code: "SEEDS10",
+        discount: "10% OFF",
+        title: "10% off all wildflower seed packets & herb assortments",
+        description: "Enjoy 10% off open-pollinated wildflower seeds and heirloom herb collections with code SEEDS10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "seed-deal-3",
+        code: "SPRING20",
+        discount: "20% OFF",
+        title: "20% off bulk seed assortments and pollinator mixes",
+        description: "Get 20% off bulk seed varieties and bee-friendly wildflower garden collections with code SPRING20.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "seed-deal-4",
+        code: "GARDEN10",
+        discount: "10% OFF",
+        title: "10% off perennial and annual flower seed packs",
+        description: "Save 10% on fresh, non-GMO flower seeds ready for spring planting with code GARDEN10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "seed-deal-5",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free standard shipping on orders over $35",
+        description: "Enjoy free tracked delivery across the USA on qualifying seed and gardening supply orders of $35 or more.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 19. UFLOWER (US Wedding Decor Market)
+  {
+    id: 623,
+    name: "Uflower",
+    slug: "uflower",
+    aliases: ["uflower-decor", "uflowerdecor", "uflower-com"],
+    logo: "/logos/uflower.png",
+    website: "https://uflower.com/dippy",
+    affiliate_url: "https://uflower.com/dippy",
+    country: "US",
+    description: "Original handcrafted artificial wedding floral decor, wedding flower arches, bridal bouquets, and ceremony backdrops.",
+    coupons: [
+      {
+        id: "uf-deal-1",
+        code: "UFLOWER",
+        discount: "5% OFF",
+        title: "5% off your entire first wedding floral order",
+        description: "Save 5% on your first order of custom silk floral arches, bouquets, and centerpieces with code UFLOWER.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uf-deal-2",
+        code: "WEDDING10",
+        discount: "10% OFF",
+        title: "10% off wedding flower arches & floral centerpieces",
+        description: "Save 10% on custom silk flower arches, table runners, and wedding centerpieces with code WEDDING10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uf-deal-3",
+        code: "UFLOWER15",
+        discount: "15% OFF",
+        title: "15% off bridal flower bouquets & backdrop arrangements",
+        description: "Get 15% off handcrafted artificial bridal bouquets and floral arch swag kits with code UFLOWER15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uf-deal-4",
+        code: "ARCH20",
+        discount: "$20 OFF",
+        title: "$20 off orders over $200 on wedding floral arches",
+        description: "Take $20 off qualifying large flower arch sets and wedding backdrops with code ARCH20.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uf-deal-5",
+        code: "",
+        discount: "FREE SAMPLE",
+        title: "Free flower & fabric sample with order + free US shipping",
+        description: "Receive free fabric and floral color samples with qualifying wedding decor sets plus free US delivery.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 20. BOUQUETS BY POST (UK Fresh Postal Flowers)
+  {
+    id: 624,
+    name: "Bouquets by Post",
+    slug: "bouquets-by-post",
+    aliases: ["bouquetsbypost", "bouquets-by-post-uk", "bouquetsbypost-com"],
+    logo: "/logos/bouquets-by-post.png",
+    website: "https://bouquetsbypost.com/muhammadhaziqueali",
+    affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
+    country: "UK",
+    description: "Fresh British postal flowers hand-arranged and delivered direct to doors across the UK with free delivery and a 7-day freshness guarantee.",
+    coupons: [
+      {
+        id: "bbp-deal-1",
+        code: "WELCOME10",
+        discount: "10% OFF",
+        title: "10% off your first postal flower bouquet order",
+        description: "Save 10% on fresh letterbox flowers, seasonal stems, and luxury rose bouquets with code WELCOME10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbp-deal-2",
+        code: "BOUQUET15",
+        discount: "15% OFF",
+        title: "15% off birthday, anniversary & celebration flowers",
+        description: "Enjoy 15% savings on all celebration postal bouquets and hand-tied floral gifts with code BOUQUET15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbp-deal-3",
+        code: "FRESH10",
+        discount: "10% OFF",
+        title: "10% off seasonal British stems and luxury roses",
+        description: "Get 10% off freshly picked carnations, freesia, and luxury postal bouquets with code FRESH10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbp-deal-4",
+        code: "CARDGIFT",
+        discount: "FREE GIFT",
+        title: "Free personalized gift card with every bouquet",
+        description: "Every postal flower bouquet includes a complimentary personalized gift message card with code CARDGIFT.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbp-deal-5",
+        code: "",
+        discount: "FREE UK DELIVERY",
+        title: "100% Free Royal Mail delivery across the UK",
+        description: "Enjoy guaranteed free delivery across England, Scotland, Wales, and Northern Ireland on all fresh bouquets.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 

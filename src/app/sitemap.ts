@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { FALLBACK_STORES, FALLBACK_POSTS } from "../lib/fallbackData";
+import { getAllRegisteredSlugs } from "../lib/storeRegistry";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.couponflock.com";
@@ -63,9 +64,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // All 493 store pages
-  const storePages = (FALLBACK_STORES || []).map((s) => ({
-    url: `${baseUrl}/store/${s.slug}`,
+  // Merge registered store slugs and fallback store slugs
+  const registeredSlugs = getAllRegisteredSlugs();
+  const fallbackSlugs = (FALLBACK_STORES || []).map((s) => s.slug);
+  const combinedSlugs = Array.from(new Set([...registeredSlugs, ...fallbackSlugs]));
+
+  // All store pages
+  const storePages = combinedSlugs.map((slug) => ({
+    url: `${baseUrl}/store/${slug}`,
     lastModified: staticDate,
     changeFrequency: "weekly" as const,
     priority: 0.9,
