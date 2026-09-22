@@ -64,6 +64,18 @@
   transform: scale(1.5);
 }
 
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .productImg {
+  transform: scale(1.05);
+}
+
 .logoFallback {
   width: 100%;
   height: 100%;

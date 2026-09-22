@@ -1,4 +1,4 @@
-import { Store, Coupon } from "../components/CouponCard";
+import { Store, Coupon, StoreProduct } from "../components/CouponCard";
 import { getLogoUrl } from "./fallbackData";
 
 export interface RegistryCoupon {
@@ -10,6 +10,7 @@ export interface RegistryCoupon {
   is_verified: boolean;
   expiry_date?: string;
   affiliate_url?: string;
+  image?: string;
 }
 
 export interface RegistryStore {
@@ -22,6 +23,7 @@ export interface RegistryStore {
   affiliate_url: string;
   country?: "US" | "UK" | "DE" | "CA" | "AU" | "GLOBAL";
   description?: string;
+  products?: StoreProduct[];
   coupons: RegistryCoupon[];
 }
 
@@ -46,6 +48,44 @@ export const STORE_REGISTRY: RegistryStore[] = [
     affiliate_url: "https://www.thedrmlab.com/methewdippy",
     country: "US",
     description: "Advanced at-home clinical micro-infusion treatments for acne scars, enlarged pores, and skin rejuvenation.",
+    products: [
+      {
+        id: "drm-prod-1",
+        name: "THE DRM LAB™ Micro-Infusion System",
+        badge: "Best Seller • 0.5mm Needles",
+        discount: "10% OFF with METHEW",
+        description: "Clinical at-home micro-infusion device designed to deliver active serums directly into the skin barrier for reduced pore size and smoother texture.",
+        image: "/images/thedrmlab/micro-infusion-system.webp",
+        url: "https://www.thedrmlab.com/methewdippy"
+      },
+      {
+        id: "drm-prod-2",
+        name: "THE DRM LAB™ PDRN Regenerative Serum",
+        badge: "Medical Formula • Salmon DNA",
+        discount: "CLINICAL GRADE",
+        description: "Pure medical-grade PDRN active regenerative serum formulated to boost cellular repair, stimulate collagen synthesis, and smooth deep acne scars.",
+        image: "/images/thedrmlab/pdrn-treatment.webp",
+        url: "https://www.thedrmlab.com/methewdippy"
+      },
+      {
+        id: "drm-prod-3",
+        name: "Clinical Trial Results: Acne Scars & Pore Minimization",
+        badge: "12-Week Study • 94% Success",
+        discount: "BEFORE & AFTER",
+        description: "Documented patient transformation demonstrating dramatic reduction in acne scars and visible pore tightening after 3 clinical micro-infusion sessions.",
+        image: "/images/thedrmlab/clinical-results-1.webp",
+        url: "https://www.thedrmlab.com/methewdippy"
+      },
+      {
+        id: "drm-prod-4",
+        name: "Clinical Trial Results: Fine Lines & Skin Elasticity",
+        badge: "Dermatologist Tested",
+        discount: "PROVEN RESULTS",
+        description: "Visible restoration of skin firmness, reduction of forehead and smile lines, and deep dermal hydration.",
+        image: "/images/thedrmlab/clinical-results-2.webp",
+        url: "https://www.thedrmlab.com/methewdippy"
+      }
+    ],
     coupons: [
       {
         id: "drm-deal-1",
@@ -53,6 +93,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "10% off your entire clinical skincare order sitewide",
         description: "Save 10% on PDRN Advanced Infusion Treatment and clinical skincare with verified coupon code METHEW.",
+        image: "/images/thedrmlab/micro-infusion-system.webp",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -62,6 +103,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "UP TO 20% OFF",
         title: "Up to 20% off multi-month skincare bundles & refill sets",
         description: "Save up to 20% on multi-infusion refill packs and complete skin transformation bundles automatically applied at checkout.",
+        image: "/images/thedrmlab/pdrn-treatment.webp",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -71,6 +113,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "100% Free worldwide tracked shipping & 90-day guarantee",
         description: "Enjoy completely free tracked courier delivery across the US, UK, CA, and worldwide on all orders.",
+        image: "/images/thedrmlab/clinical-results-1.webp",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -1066,7 +1109,9 @@ export function getRegisteredStore(requestedSlug: string): { store: Store; coupo
     name: regStore.name,
     slug: requestedSlug, // Preserves the exact URL slug accessed
     logo: logoUrl,
-    website: regStore.affiliate_url || regStore.website
+    website: regStore.affiliate_url || regStore.website,
+    products: regStore.products,
+    description: regStore.description
   };
 
   const populatedCoupons: Coupon[] = regStore.coupons.map(c => {
@@ -1083,7 +1128,8 @@ export function getRegisteredStore(requestedSlug: string): { store: Store; coupo
       storeSlug: requestedSlug,
       affiliate_url: affiliate,
       affiliate_link: affiliate,
-      affiliateLink: affiliate
+      affiliateLink: affiliate,
+      image: c.image
     };
   });
 

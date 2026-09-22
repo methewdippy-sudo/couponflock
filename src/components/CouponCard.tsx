@@ -4,12 +4,24 @@ import React, { useState } from "react";
 import styles from "./CouponCard.module.css";
 import { getLogoUrl } from "../lib/fallbackData";
 
+export interface StoreProduct {
+  id: string;
+  name: string;
+  badge?: string;
+  discount?: string;
+  description: string;
+  image: string;
+  url: string;
+}
+
 export interface Store {
   id?: string | number;
   name: string;
   logo?: string;
   slug?: string;
   website?: string;
+  products?: StoreProduct[];
+  description?: string;
 }
 
 export interface Coupon {
@@ -25,6 +37,8 @@ export interface Coupon {
   affiliate_url?: string;
   affiliate_link?: string;
   affiliateLink?: string;
+  image?: string;
+  [key: string]: any;
 }
 
 interface CouponCardProps {
@@ -119,9 +133,20 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
       tabIndex={0}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onGetCode(coupon); } }}
     >
-      {/* Left: Brand Logo */}
+      {/* Left: Product Image or Brand Logo */}
       <div className={styles.logoSection}>
-        {finalLogo ? (
+        {coupon.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img 
+            src={coupon.image} 
+            alt={displayTitle || storeName} 
+            className={styles.productImg} 
+            loading="lazy" 
+            decoding="async"
+            width={140}
+            height={100}
+          />
+        ) : finalLogo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img 
             src={finalLogo} 

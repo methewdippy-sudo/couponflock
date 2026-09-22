@@ -348,6 +348,76 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
         </div>
       </section>
 
+      {/* Featured Products & Clinical Treatments Showcase */}
+      {store.products && store.products.length > 0 && (
+        <section className={storeStyles.productsShowcaseSection}>
+          <div className={storeStyles.showcaseHeader}>
+            <div>
+              <h2 className={storeStyles.showcaseTitle}>Featured Products & Clinical Treatments</h2>
+              <p className={storeStyles.showcaseSubtitle}>
+                Explore best-selling medical-grade devices and active regenerative skincare from {store.name}
+              </p>
+            </div>
+            <a 
+              href={officialWebsiteUrl || baseStoreUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={storeStyles.showcaseShopAllLink}
+            >
+              Shop All Products &rarr;
+            </a>
+          </div>
+
+          <div className={storeStyles.productsGrid}>
+            {store.products.map((prod) => (
+              <a 
+                key={prod.id} 
+                href={prod.url || officialWebsiteUrl || baseStoreUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={storeStyles.productCard}
+                onClick={() => {
+                  if (typeof window !== "undefined" && (window as any).gtag) {
+                    (window as any).gtag("event", "select_item", {
+                      item_name: prod.name,
+                      item_category: store.name,
+                    });
+                  }
+                }}
+              >
+                <div className={storeStyles.productImageWrapper}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src={prod.image} 
+                    alt={prod.name} 
+                    className={storeStyles.productImage}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  {prod.badge && (
+                    <span className={storeStyles.productBadge}>{prod.badge}</span>
+                  )}
+                </div>
+                <div className={storeStyles.productCardContent}>
+                  {prod.discount && (
+                    <span className={storeStyles.productDiscount}>{prod.discount}</span>
+                  )}
+                  <h3 className={storeStyles.productName}>{prod.name}</h3>
+                  <p className={storeStyles.productDescription}>{prod.description}</p>
+                  <span className={storeStyles.productButton}>
+                    View on Official Store
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Search and Grid Filter Layout */}
       <div className={styles.contentLayout}>
         <div className={storeStyles.searchAndTitleRow}>

@@ -39,6 +39,7 @@ export default async function HomePage() {
       affiliate_url: c.affiliate_url || rs.affiliate_url || rs.website,
       affiliate_link: c.affiliate_url || rs.affiliate_url || rs.website,
       affiliateLink: c.affiliate_url || rs.affiliate_url || rs.website,
+      image: c.image,
     }));
   });
 
