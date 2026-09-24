@@ -337,6 +337,22 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
               <span>Visit Official Website</span>
             </a>
           </div>
+
+          {store.slug === "thedrmlab" && (
+            <div className={storeStyles.storeFeaturedHeroWrapper}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/thedrmlab/micro-infusion-system.webp" 
+                alt="THE DRM LAB Micro-Infusion System" 
+                className={storeStyles.storeFeaturedHeroImg}
+                width={200}
+                height={130}
+              />
+              <div className={storeStyles.storeFeaturedHeroBadge}>
+                <span>Featured • 24K Micro-Infusion</span>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Store Coupon Statistics Grid */}

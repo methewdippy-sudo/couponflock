@@ -205,7 +205,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
       onClick={handleClick}
     >
       {/* Left: Product Image or Brand Logo */}
-      <div className={styles.logoSection}>
+      <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""}`}>
         {coupon.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img 

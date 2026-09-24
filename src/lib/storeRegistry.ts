@@ -116,6 +116,26 @@ export const STORE_REGISTRY: RegistryStore[] = [
         image: "/images/thedrmlab/clinical-results-1.webp",
         is_verified: true,
         expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-4",
+        code: "METHEW",
+        discount: "15% OFF",
+        title: "15% off Micro-Infusion Clinical Starter Kit",
+        description: "Get 15% discount on the complete at-home clinical micro-infusion system and PDRN serum with code METHEW.",
+        image: "/images/thedrmlab/clinical-results-2.webp",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "drm-deal-5",
+        code: "METHEW",
+        discount: "EXTRA $20 OFF",
+        title: "Extra $20 off PDRN Serum 3-Month Transformation Bundle",
+        description: "Save an extra $20 on the 3-month PDRN cellular repair bundle plus free worldwide shipping with code METHEW.",
+        image: "/images/thedrmlab/clinical-results-3.webp",
+        is_verified: true,
+        expiry_date: "2026-12-31"
       }
     ]
   },
