@@ -192,19 +192,8 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
         document.body.removeChild(textArea);
       } catch {}
 
-      // 3. For code deals: keep CouponFlock & code reveal in front, open merchant tab in background
+      // 3. For code deals: keep user strictly on current page, show popup modal and reveal code without switching tabs
       e.preventDefault();
-      try {
-        const bgTab = window.open(targetUrl, "_blank", "noopener,noreferrer");
-        if (bgTab) {
-          try {
-            bgTab.blur();
-          } catch {}
-        }
-        window.focus();
-      } catch (err) {
-        console.warn("Failed to open background tab:", err);
-      }
     }
 
     // For direct deals (without code, e.g. Bouquets by Post), native anchor target="_blank" handles opening new tab directly
