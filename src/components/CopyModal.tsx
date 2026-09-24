@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import styles from "./CopyModal.module.css";
 import { Coupon, Store } from "./CouponCard";
 
@@ -93,15 +94,24 @@ const InfoIcon = () => (
 
 export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
   const { store, discount, code, description } = coupon;
-  const [copied, setCopied] = useState(true); // Set to true as it is copied automatically on click
+  const [copied, setCopied] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Detect iOS Safari to show appropriate instructions
-  const isIOS = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Detect iOS Safari
+  const isIOS =
+    typeof navigator !== "undefined" &&
+    /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-  const isDirectDeal = !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
+  const isDirectDeal =
+    !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
 
-  // Set timeout to reset the copied visual state after 2.5 seconds
+  // Mount check — needed for createPortal (SSR safety)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Reset copied state after 2.5 seconds
   useEffect(() => {
     const timer = setTimeout(() => setCopied(false), 2500);
     return () => clearTimeout(timer);
@@ -109,38 +119,43 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
 
   // Extract store properties safely
   const isStoreObject = typeof store === "object" && store !== null;
-  const storeName = isStoreObject ? (store as Store).name : (coupon.storeName || (typeof store === "string" ? store : "Store"));
+  const storeName = isStoreObject
+    ? (store as Store).name
+    : (coupon.storeName || (typeof store === "string" ? store : "Store"));
   const storeLogo = isStoreObject ? (store as Store).logo : undefined;
-  
-  // Create a fallback URL based on the store slug or affiliate link
-  const rawStoreUrl = coupon.affiliate_link || coupon.affiliate_url || (isStoreObject && (store as Store).website ? (store as Store).website : `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`);
+
+  // Build store URL
+  const rawStoreUrl =
+    coupon.affiliate_link ||
+    coupon.affiliate_url ||
+    (isStoreObject && (store as Store).website
+      ? (store as Store).website
+      : `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`);
   const [storeUrl, setStoreUrl] = useState<string>(rawStoreUrl);
 
   useEffect(() => {
     if (typeof window !== "undefined" && rawStoreUrl) {
-      const isAffiliate = rawStoreUrl.includes("admitad") || 
-                          rawStoreUrl.includes("convert") || 
-                          rawStoreUrl.includes("csl") || 
-                          rawStoreUrl.includes("bouquetsbypost") || 
-                          rawStoreUrl.includes("im8health") || 
-                          rawStoreUrl.includes("thedrmlab") || 
-                          rawStoreUrl.includes("litl.si") ||
-                          rawStoreUrl.includes("fatcoupon") ||
-                          rawStoreUrl.includes("/go/");
+      const isAffiliate =
+        rawStoreUrl.includes("admitad") ||
+        rawStoreUrl.includes("convert") ||
+        rawStoreUrl.includes("csl") ||
+        rawStoreUrl.includes("bouquetsbypost") ||
+        rawStoreUrl.includes("im8health") ||
+        rawStoreUrl.includes("thedrmlab") ||
+        rawStoreUrl.includes("litl.si") ||
+        rawStoreUrl.includes("fatcoupon") ||
+        rawStoreUrl.includes("/go/");
       if (isAffiliate) {
         try {
           const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
           const utmTerm = sessionStorage.getItem("utm_term") || "";
           const gclid = sessionStorage.getItem("gclid") || "";
-          
           const urlObj = rawStoreUrl.startsWith("http")
             ? new URL(rawStoreUrl)
             : new URL(rawStoreUrl, window.location.origin);
-          
           if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
           if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
           if (gclid) urlObj.searchParams.set("subid3", gclid);
-          
           setStoreUrl(urlObj.toString());
         } catch {
           setStoreUrl(rawStoreUrl);
@@ -151,21 +166,13 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
     }
   }, [rawStoreUrl]);
 
-  // Lock body scroll when modal is open (iOS Safari compatible approach)
+  // Simple scroll lock — just overflow hidden on html+body (safest across all browsers)
   useEffect(() => {
-    const scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
-      window.scrollTo(0, scrollY);
     };
   }, []);
 
@@ -186,15 +193,51 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
       await navigator.clipboard.writeText(code);
       setCopied(true);
       setTimeout(() => setCopied(false), 2200);
-    } catch (err) {
-      console.error("Failed to copy code: ", err);
+    } catch {
+      // Fallback
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = code;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2200);
+      } catch {}
     }
   };
 
-  return (
-    <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div className={styles.modal} ref={modalRef}>
-        
+  // The modal content JSX
+  const modalContent = (
+    <div
+      className={styles.overlay}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      // Inline critical styles as hard backup — cannot be overridden by any parent CSS
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 99999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        opacity: 1,
+        visibility: "visible",
+        backgroundColor: "rgba(15, 23, 42, 0.45)",
+      }}
+    >
+      <div
+        className={styles.modal}
+        ref={modalRef}
+        style={{ opacity: 1, transform: "none", visibility: "visible" }}
+      >
         {/* Close Button */}
         <button className={styles.btnClose} onClick={onClose} aria-label="Close modal">
           <CloseIcon />
@@ -202,8 +245,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
 
         {/* Modal Content */}
         <div className={styles.content}>
-          
-          {/* Header Store Banner & Discount */}
+          {/* Header */}
           <div className={styles.header}>
             {storeLogo ? (
               <div className={styles.storeLogoWrapper}>
@@ -218,9 +260,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
             <h2 id="modal-title" className={styles.title}>
               {isDirectDeal ? `${storeName} Deal Activated` : `Copy Code for ${storeName}`}
             </h2>
-            <div className={styles.discountBadge}>
-              {discount}
-            </div>
+            <div className={styles.discountBadge}>{discount}</div>
             <p className={styles.description}>{description}</p>
           </div>
 
@@ -228,7 +268,9 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
           <div className={styles.copyArea}>
             {isDirectDeal ? (
               <>
-                <p className={styles.copyLabel}>No coupon code required. The discount will be automatically applied at checkout!</p>
+                <p className={styles.copyLabel}>
+                  No coupon code required. The discount will be automatically applied at checkout!
+                </p>
                 <div className={styles.dealActivatedBox}>
                   <CheckIcon />
                   <span>Deal Activated!</span>
@@ -237,9 +279,8 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
             ) : (
               <>
                 <p className={styles.copyLabel}>Copy the promo code below and paste it at checkout:</p>
-                
-                <button 
-                  className={`${styles.codeContainer} ${copied ? styles.copied : ""}`} 
+                <button
+                  className={`${styles.codeContainer} ${copied ? styles.copied : ""}`}
                   onClick={handleCopy}
                   title="Click to copy code"
                   aria-live="polite"
@@ -263,7 +304,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
             )}
           </div>
 
-          {/* Redirect / Instructions Message */}
+          {/* Notice */}
           <div className={styles.redirectNotice}>
             <InfoIcon />
             <div className={styles.noticeText}>
@@ -288,23 +329,27 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
             </div>
           </div>
 
-          {/* Action Link to shop manually */}
+          {/* Shop Link */}
           <div className={styles.actionContainer}>
-            <a 
-              href={storeUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={storeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className={isDirectDeal ? styles.shopLinkPrimary : styles.shopLink}
             >
               <span>{isDirectDeal ? `Claim Deal at ${storeName}` : `Shop at ${storeName}`}</span>
               <ExternalLinkIcon />
             </a>
           </div>
-
         </div>
       </div>
     </div>
   );
+
+  // Use React Portal to render modal directly at document.body
+  // This bypasses ALL parent CSS — nothing can interfere with visibility
+  if (!mounted) return null;
+  return createPortal(modalContent, document.body);
 };
 
 export default CopyModal;
