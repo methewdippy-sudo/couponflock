@@ -216,10 +216,15 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 2. Open modal popup on current tab immediately
-    setActiveCoupon(coupon);
+    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
+    try {
+      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
+      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
+    } catch (err) {
+      console.warn("Failed to open our website in a new tab:", err);
+    }
 
-    // 3. GA4 Button Click Event Tracking
+    // GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -235,7 +240,8 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 4. Modal and clipboard are ready. The native anchor tag on CouponCard handles opening the merchant store in a new tab without being blocked by Safari popup blocker.
+    // 2. Redirect the current active tab to the merchant store's affiliate URL
+    window.location.href = storeUrl;
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);

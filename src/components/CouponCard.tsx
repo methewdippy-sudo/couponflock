@@ -126,84 +126,15 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
     }
   }, [expiry_date]);
 
-  const rawStoreUrl = coupon.affiliate_url || 
-                      (coupon as any).affiliate_link || 
-                      (coupon as any).affiliateLink || 
-                      (isStoreObject ? ((store as any).affiliateLink || (store as any).affiliate_link || (store as any).affiliate_url) : undefined) || 
-                      storeWebsite || 
-                      `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`;
 
-  const [targetUrl, setTargetUrl] = useState<string>(rawStoreUrl);
-
-  React.useEffect(() => {
-    if (typeof window !== "undefined" && rawStoreUrl) {
-      const isAffiliate = rawStoreUrl.includes("admitad") || 
-                          rawStoreUrl.includes("convert") || 
-                          rawStoreUrl.includes("csl") || 
-                          rawStoreUrl.includes("bouquetsbypost") || 
-                          rawStoreUrl.includes("im8health") || 
-                          rawStoreUrl.includes("thedrmlab") || 
-                          rawStoreUrl.includes("litl.si") ||
-                          rawStoreUrl.includes("fatcoupon") ||
-                          rawStoreUrl.includes("/go/");
-      if (isAffiliate) {
-        try {
-          const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
-          const utmTerm = sessionStorage.getItem("utm_term") || "";
-          const gclid = sessionStorage.getItem("gclid") || "";
-          
-          const urlObj = rawStoreUrl.startsWith("http")
-            ? new URL(rawStoreUrl)
-            : new URL(rawStoreUrl, window.location.origin);
-          
-          if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
-          if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
-          if (gclid) urlObj.searchParams.set("subid3", gclid);
-          
-          setTargetUrl(urlObj.toString());
-        } catch {
-          setTargetUrl(rawStoreUrl);
-        }
-      } else {
-        setTargetUrl(rawStoreUrl);
-      }
-    }
-  }, [rawStoreUrl]);
-
-  const handleClick = (e: React.MouseEvent) => {
-    // Prevent browser from navigating away or switching tabs - user stays strictly on current CouponFlock page
-    e.preventDefault();
-
-    // 1. Reveal code directly on the card button and open CopyModal popup in FRONT
-    setIsRevealed(true);
-    onGetCode(coupon);
-
-    // 2. Synchronously copy coupon code to user's clipboard if code exists
-    if (hasCode && code) {
-      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).catch(() => {});
-      }
-      try {
-        const textArea = document.createElement("textarea");
-        textArea.value = code;
-        textArea.setAttribute("readonly", "");
-        textArea.style.position = "absolute";
-        textArea.style.left = "-9999px";
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-      } catch {}
-    }
-  };
 
   return (
-    <a 
-      href={targetUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+    <div 
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}
-      onClick={handleClick}
+      onClick={() => onGetCode(coupon)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onGetCode(coupon); } }}
     >
       {/* Left: Product Image or Brand Logo */}
       <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""}`}>
@@ -293,7 +224,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
           </div>
         )}
       </div>
-    </a>
+    </div>
   );
 };
 

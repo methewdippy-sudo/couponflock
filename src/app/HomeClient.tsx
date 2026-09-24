@@ -340,10 +340,15 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 2. Open modal popup on current tab immediately
-    setActiveCoupon(coupon);
+    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
+    try {
+      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
+      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
+    } catch (err) {
+      console.warn("Failed to open our website in a new tab:", err);
+    }
 
-    // 3. GA4 Button Click Event Tracking
+    // GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -359,7 +364,8 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 4. Modal and clipboard are ready. The native anchor tag on CouponCard handles opening the merchant store in a new tab without being blocked by Safari popup blocker.
+    // 2. Redirect the current active tab to the merchant store's affiliate URL
+    window.location.href = storeUrl;
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication
@@ -405,34 +411,30 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
           </p>
 
           {/* Premium Search Bar */}
-          <form 
-            className={styles.searchBarWrapper}
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (matchedStores.length > 0) {
-                const topStore = matchedStores[0];
-                if (topStore && topStore.slug) {
-                  window.location.href = `/store/${topStore.slug}`;
-                }
-              } else {
-                const element = document.getElementById("stores") || document.getElementById("coupons");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }
-            }}
-          >
+          <div className={styles.searchBarWrapper}>
             <SearchIcon />
             <input
-              type="search"
+              type="text"
               placeholder="Search for brands, discount codes, or items..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  if (matchedStores.length > 0) {
+                    const topStore = matchedStores[0];
+                    if (topStore && topStore.slug) {
+                      window.location.href = `/store/${topStore.slug}`;
+                    }
+                  } else {
+                    const element = document.getElementById("stores") || document.getElementById("coupons");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }
+                }
+              }}
               className={styles.searchInput}
-              autoCapitalize="none"
-              autoCorrect="off"
-              spellCheck={false}
-              enterKeyHint="search"
             />
             {searchQuery && (
               <button 
@@ -469,7 +471,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                 ))}
               </div>
             )}
-          </form>
+          </div>
 
           {/* Premium Popular Searches Tagline */}
           <div className={styles.popularSearches}>
