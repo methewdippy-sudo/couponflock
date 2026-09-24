@@ -82,10 +82,9 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: contrast(1.12) saturate(1.08);
+  filter: contrast(1.08);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-  transform: scale(1.5);
 }
 
 .productImg {

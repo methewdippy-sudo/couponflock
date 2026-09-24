@@ -43,7 +43,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "THE DRM LAB",
     slug: "thedrmlab",
     aliases: ["the-drm-lab", "drm-lab", "drmlab"],
-    logo: "/logos/thedrmlab.png",
+    logo: "/logos/thedrmlab.svg",
     website: "https://www.thedrmlab.com/methewdippy",
     affiliate_url: "https://www.thedrmlab.com/methewdippy",
     country: "US",

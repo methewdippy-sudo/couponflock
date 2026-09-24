@@ -340,15 +340,21 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
+    // 1. Immediately open popup modal on current page in front of user
+    setActiveCoupon(coupon);
+
+    // 2. Open merchant store in a new tab without redirecting the current page
     try {
-      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
+      const bg = window.open(storeUrl, "_blank");
+      if (bg) {
+        try { bg.blur(); } catch {}
+      }
+      window.focus();
     } catch (err) {
-      console.warn("Failed to open our website in a new tab:", err);
+      console.warn("Failed to open store in new tab:", err);
     }
 
-    // GA4 Button Click Event Tracking
+    // 3. GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -363,9 +369,6 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
         // Ignore analytics errors
       }
     }
-
-    // 2. Redirect the current active tab to the merchant store's affiliate URL
-    window.location.href = storeUrl;
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication

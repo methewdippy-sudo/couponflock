@@ -3,10 +3,10 @@ import { Coupon, Store } from "../components/CouponCard";
 export const getLogoUrl = (slug: string | undefined | null) => {
   if (!slug || typeof slug !== "string") return undefined;
   const logoMap: Record<string, string> = {
-    "thedrmlab": "/logos/thedrmlab.png",
-    "the-drm-lab": "/logos/thedrmlab.png",
-    "drm-lab": "/logos/thedrmlab.png",
-    "drmlab": "/logos/thedrmlab.png",
+    "thedrmlab": "/logos/thedrmlab.svg",
+    "the-drm-lab": "/logos/thedrmlab.svg",
+    "drm-lab": "/logos/thedrmlab.svg",
+    "drmlab": "/logos/thedrmlab.svg",
     "bouquets-by-post": "/logos/bouquets-by-post.png",
     "bouquetsbypost": "/logos/bouquets-by-post.png",
     "seed-needs": "/logos/seed-needs.png",
