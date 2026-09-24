@@ -19,6 +19,14 @@
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
+  /* Reset button element default styles */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card:visited,

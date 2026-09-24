@@ -129,17 +129,17 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
 
 
   const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     setIsRevealed(true);
     onGetCode(coupon);
   };
 
   return (
-    <div 
+    // Using <button> (not div) so iOS Safari fires click events reliably on tap
+    <button
+      type="button"
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}
       onClick={handleClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handleClick(e as any); } }}
     >
       {/* Left: Product Image or Brand Logo */}
       <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""}`}>
@@ -229,7 +229,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
           </div>
         )}
       </div>
-    </div>
+    </button>
   );
 };
 

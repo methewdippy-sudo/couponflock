@@ -317,24 +317,31 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     
     const isDirect = !coupon.code || coupon.code === "DEAL" || coupon.code === "DIRECT";
 
-    // 1. Instantly copy code to user's clipboard (Synchronous execCommand fallback guarantees copy on iOS Safari)
+    // 1. Copy code to clipboard
+    // On iOS: use only async clipboard API (no focus/execCommand — those show the keyboard and break the event chain)
+    // On desktop: use execCommand synchronous fallback for broadest compatibility
     if (!isDirect && coupon.code) {
-      try {
-        const textArea = document.createElement("textarea");
-        textArea.value = coupon.code;
-        textArea.style.position = "fixed";
-        textArea.style.left = "-9999px";
-        textArea.style.top = "-9999px";
-        textArea.style.opacity = "0";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        textArea.setSelectionRange(0, 99999);
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-      } catch {
-        // Silently continue if execCommand fails
+      const ua2 = typeof navigator !== "undefined" ? navigator.userAgent : "";
+      const iosDevice = /iPhone|iPad|iPod/i.test(ua2);
+      if (!iosDevice) {
+        // Desktop / Android: synchronous execCommand copy
+        try {
+          const textArea = document.createElement("textarea");
+          textArea.value = coupon.code;
+          textArea.style.position = "fixed";
+          textArea.style.left = "-9999px";
+          textArea.style.top = "-9999px";
+          textArea.style.opacity = "0";
+          document.body.appendChild(textArea);
+          textArea.select();
+          textArea.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+        } catch {
+          // Silently continue
+        }
       }
+      // Also try async clipboard API (works on both, no-op if fails)
       if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(coupon.code).catch(() => {});
       }
