@@ -216,18 +216,10 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 2. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
-    try {
-      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
-    } catch (err) {
-      console.warn("Failed to open our website in a new tab:", err);
-    }
-
-    // 3. Immediately open popup modal on current page
+    // 2. Immediately open popup modal on current page
     setActiveCoupon(coupon);
 
-    // 4. GA4 Button Click Event Tracking
+    // 3. GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -243,8 +235,34 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 5. Redirect the current active tab to the merchant store's affiliate URL
-    window.location.href = storeUrl;
+    // 4. Device-specific Smart Routing
+    const isIOS = typeof navigator !== "undefined" && (/iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1));
+
+    if (isIOS) {
+      // iPhone / iPad: Keep user on CouponFlock with modal open, and open store in a new tab
+      try {
+        const link = document.createElement("a");
+        link.href = storeUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch {
+        try {
+          window.open(storeUrl, "_blank");
+        } catch {}
+      }
+    } else {
+      // Android / Desktop / Laptop: Exact PromoRegistry Tabunder Flow
+      try {
+        const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
+        window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
+      } catch (err) {
+        console.warn("Failed to open our website in a new tab:", err);
+      }
+      window.location.href = storeUrl;
+    }
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);
