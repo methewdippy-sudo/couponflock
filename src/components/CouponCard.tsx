@@ -171,7 +171,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   }, [rawStoreUrl]);
 
   const handleClick = (e: React.MouseEvent) => {
-    // 1. Reveal code directly on the card button and open CopyModal popup
+    // 1. Reveal code directly on the card button and open CopyModal popup in FRONT
     setIsRevealed(true);
     onGetCode(coupon);
 
@@ -191,9 +191,23 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
         document.execCommand("copy");
         document.body.removeChild(textArea);
       } catch {}
+
+      // 3. For code deals: keep CouponFlock & code reveal in front, open merchant tab in background
+      e.preventDefault();
+      try {
+        const bgTab = window.open(targetUrl, "_blank", "noopener,noreferrer");
+        if (bgTab) {
+          try {
+            bgTab.blur();
+          } catch {}
+        }
+        window.focus();
+      } catch (err) {
+        console.warn("Failed to open background tab:", err);
+      }
     }
 
-    // Native anchor tag target="_blank" handles opening new tab without popup blocker intervention
+    // For direct deals (without code, e.g. Bouquets by Post), native anchor target="_blank" handles opening new tab directly
   };
 
   return (
