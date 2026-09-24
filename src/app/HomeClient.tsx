@@ -367,19 +367,22 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     }
 
     // 4. Device-specific Smart Routing
-    // Strict iOS detection: only true iPhones/iPads (not macOS desktop)
     const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
     const isIOS = /iPhone|iPad|iPod/i.test(ua);
 
     if (isIOS) {
-      // iPhone / iPad (iOS Safari):
-      // We already called setActiveCoupon(coupon) above — the modal is now open.
-      // The CopyModal has a native <a href target="_blank"> button the user can tap to visit the store.
-      // We do NOT call window.open or window.location.href here because:
-      //   - Safari blocks programmatic window.open when user gesture chain is broken by setState/async
-      //   - We want to KEEP the user on CouponFlock so they can see and copy the code
-      // The modal's "Shop at Store" link opens the store in a new tab natively when tapped.
-      // No action needed here for iOS — modal handles everything.
+      // iPhone / iPad iOS Safari — GUARANTEED approach:
+      // Go to the store's dedicated page with ?coupon=ID&code=CODE params.
+      // StoreClient's checkParams useEffect reads these and auto-opens the modal.
+      const storeSlug =
+        (coupon as any).storeSlug ||
+        (isStoreObject ? (coupon.store as Store).slug : null) ||
+        storeName.toLowerCase().replace(/\s+/g, "-");
+      const storePageUrl =
+        `${window.location.origin}/store/${storeSlug}` +
+        `?coupon=${encodeURIComponent(String(coupon.id))}` +
+        `&code=${encodeURIComponent(coupon.code || "DEAL")}`;
+      window.location.href = storePageUrl;
     } else {
       // Android / Desktop / Laptop: Exact PromoRegistry Tabunder Flow
       try {
