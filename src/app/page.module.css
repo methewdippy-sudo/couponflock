@@ -474,8 +474,9 @@
   }
 
   .searchInput {
-    font-size: 0.95rem;
+    font-size: 16px;
     padding: 6px 0;
+    -webkit-appearance: none;
   }
 
   .btnClearSearch {
@@ -726,6 +727,8 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
   max-height: 320px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   z-index: 1000;
   padding: 8px 0;
   text-align: left;
@@ -735,12 +738,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 500;
   transition: all var(--transition-fast);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .searchSuggestionItem:hover {

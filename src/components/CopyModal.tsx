@@ -110,7 +110,43 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
   const storeLogo = isStoreObject ? (store as Store).logo : undefined;
   
   // Create a fallback URL based on the store slug or affiliate link
-  const storeUrl = coupon.affiliate_link || coupon.affiliate_url || (isStoreObject && (store as Store).website ? (store as Store).website : `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`);
+  const rawStoreUrl = coupon.affiliate_link || coupon.affiliate_url || (isStoreObject && (store as Store).website ? (store as Store).website : `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`);
+  const [storeUrl, setStoreUrl] = useState<string>(rawStoreUrl);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && rawStoreUrl) {
+      const isAffiliate = rawStoreUrl.includes("admitad") || 
+                          rawStoreUrl.includes("convert") || 
+                          rawStoreUrl.includes("csl") || 
+                          rawStoreUrl.includes("bouquetsbypost") || 
+                          rawStoreUrl.includes("im8health") || 
+                          rawStoreUrl.includes("thedrmlab") || 
+                          rawStoreUrl.includes("litl.si") ||
+                          rawStoreUrl.includes("fatcoupon") ||
+                          rawStoreUrl.includes("/go/");
+      if (isAffiliate) {
+        try {
+          const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
+          const utmTerm = sessionStorage.getItem("utm_term") || "";
+          const gclid = sessionStorage.getItem("gclid") || "";
+          
+          const urlObj = rawStoreUrl.startsWith("http")
+            ? new URL(rawStoreUrl)
+            : new URL(rawStoreUrl, window.location.origin);
+          
+          if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
+          if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
+          if (gclid) urlObj.searchParams.set("subid3", gclid);
+          
+          setStoreUrl(urlObj.toString());
+        } catch {
+          setStoreUrl(rawStoreUrl);
+        }
+      } else {
+        setStoreUrl(rawStoreUrl);
+      }
+    }
+  }, [rawStoreUrl]);
 
   // Lock body scroll when modal is open
   useEffect(() => {

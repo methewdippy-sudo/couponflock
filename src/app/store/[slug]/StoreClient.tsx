@@ -235,29 +235,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 4. Reliable Direct Redirect to Affiliate URL
-    // On Mobile (iPhone Safari & Android): direct location assignment prevents popup blockers from stopping the affiliate redirect
-    const isMobile = typeof navigator !== "undefined" && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      setTimeout(() => {
-        window.location.assign(storeUrl);
-      }, 120);
-    } else {
-      // On desktop: open merchant store in a new tab; fall back to redirect if blocked
-      try {
-        const newTab = window.open(storeUrl, "_blank", "noopener,noreferrer");
-        if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
-          setTimeout(() => {
-            window.location.assign(storeUrl);
-          }, 120);
-        }
-      } catch {
-        setTimeout(() => {
-          window.location.assign(storeUrl);
-        }, 120);
-      }
-    }
+    // 4. Modal and clipboard are ready. The native anchor tag on CouponCard handles opening the merchant store in a new tab without being blocked by Safari popup blocker.
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);
@@ -463,6 +441,10 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className={styles.searchInput}
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              enterKeyHint="search"
             />
             {searchQuery && (
               <button 

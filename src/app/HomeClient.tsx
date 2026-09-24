@@ -359,29 +359,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 4. Reliable Direct Redirect to Affiliate URL
-    // On Mobile (iPhone Safari & Android): direct location assignment prevents popup blockers from stopping the affiliate redirect
-    const isMobile = typeof navigator !== "undefined" && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      setTimeout(() => {
-        window.location.assign(storeUrl);
-      }, 120);
-    } else {
-      // On desktop: open merchant store in a new tab; fall back to redirect if blocked
-      try {
-        const newTab = window.open(storeUrl, "_blank", "noopener,noreferrer");
-        if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
-          setTimeout(() => {
-            window.location.assign(storeUrl);
-          }, 120);
-        }
-      } catch {
-        setTimeout(() => {
-          window.location.assign(storeUrl);
-        }, 120);
-      }
-    }
+    // 4. Modal and clipboard are ready. The native anchor tag on CouponCard handles opening the merchant store in a new tab without being blocked by Safari popup blocker.
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication
@@ -427,17 +405,38 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
           </p>
 
           {/* Premium Search Bar */}
-          <div className={styles.searchBarWrapper}>
+          <form 
+            className={styles.searchBarWrapper}
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (matchedStores.length > 0) {
+                const topStore = matchedStores.at(0);
+                if (topStore && topStore.slug) {
+                  window.location.href = `/store/${topStore.slug}`;
+                }
+              } else {
+                const element = document.getElementById("stores") || document.getElementById("coupons");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }
+            }}
+          >
             <SearchIcon />
             <input
-              type="text"
+              type="search"
               placeholder="Search for brands, discount codes, or items..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className={styles.searchInput}
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              enterKeyHint="search"
             />
             {searchQuery && (
               <button 
+                type="button"
                 onClick={() => setSearchQuery("")} 
                 className={styles.btnClearSearch}
                 aria-label="Clear search"
@@ -448,7 +447,10 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
             {/* Dynamic Autocomplete Suggestion Dropdown */}
             {searchQuery.trim() !== "" && matchedStores.length > 0 && (
-              <div className={styles.searchSuggestionsDropdown}>
+              <div 
+                className={styles.searchSuggestionsDropdown}
+                onMouseDown={(e) => e.preventDefault()}
+              >
                 {matchedStores.map((store) => (
                   <a 
                     key={store.id || store.slug} 
@@ -466,7 +468,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                 ))}
               </div>
             )}
-          </div>
+          </form>
 
           {/* Premium Popular Searches Tagline */}
           <div className={styles.popularSearches}>

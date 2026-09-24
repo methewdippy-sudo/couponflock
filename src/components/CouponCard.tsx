@@ -125,13 +125,85 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
     }
   }, [expiry_date]);
 
+  const rawStoreUrl = coupon.affiliate_url || 
+                      (coupon as any).affiliate_link || 
+                      (coupon as any).affiliateLink || 
+                      (isStoreObject ? ((store as any).affiliateLink || (store as any).affiliate_link || (store as any).affiliate_url) : undefined) || 
+                      storeWebsite || 
+                      `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`;
+
+  const [targetUrl, setTargetUrl] = useState<string>(rawStoreUrl);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined" && rawStoreUrl) {
+      const isAffiliate = rawStoreUrl.includes("admitad") || 
+                          rawStoreUrl.includes("convert") || 
+                          rawStoreUrl.includes("csl") || 
+                          rawStoreUrl.includes("bouquetsbypost") || 
+                          rawStoreUrl.includes("im8health") || 
+                          rawStoreUrl.includes("thedrmlab") || 
+                          rawStoreUrl.includes("litl.si") ||
+                          rawStoreUrl.includes("fatcoupon") ||
+                          rawStoreUrl.includes("/go/");
+      if (isAffiliate) {
+        try {
+          const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
+          const utmTerm = sessionStorage.getItem("utm_term") || "";
+          const gclid = sessionStorage.getItem("gclid") || "";
+          
+          const urlObj = rawStoreUrl.startsWith("http")
+            ? new URL(rawStoreUrl)
+            : new URL(rawStoreUrl, window.location.origin);
+          
+          if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
+          if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
+          if (gclid) urlObj.searchParams.set("subid3", gclid);
+          
+          setTargetUrl(urlObj.toString());
+        } catch {
+          setTargetUrl(rawStoreUrl);
+        }
+      } else {
+        setTargetUrl(rawStoreUrl);
+      }
+    }
+  }, [rawStoreUrl]);
+
+  const handleClick = (e: React.MouseEvent) => {
+    // 1. Synchronously copy coupon code to user's clipboard
+    if (hasCode) {
+      try {
+        const textArea = document.createElement("textarea");
+        textArea.value = code;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "-9999px";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        textArea.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      } catch {}
+      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).catch(() => {});
+      }
+    }
+
+    // 2. Open CopyModal popup on current tab and log analytics
+    onGetCode(coupon);
+
+    // Native anchor tag target="_blank" handles opening new tab without popup blocker intervention
+  };
+
   return (
-    <div 
+    <a 
+      href={targetUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}
-      onClick={() => onGetCode(coupon)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onGetCode(coupon); } }}
+      onClick={handleClick}
     >
       {/* Left: Product Image or Brand Logo */}
       <div className={styles.logoSection}>
@@ -212,16 +284,16 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
             <span className={styles.codeBtnPreview}>{code.slice(0, 3)}···</span>
           </div>
         ) : (
-          <button className={styles.dealBtn}>
+          <div className={styles.dealBtn}>
             Get Deal
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
             </svg>
-          </button>
+          </div>
         )}
       </div>
-    </div>
+    </a>
   );
 };
 
