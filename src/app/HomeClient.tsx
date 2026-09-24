@@ -124,10 +124,18 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
         return false;
       }
 
-      // Filter by search query (match store name, coupon code, or description)
+      // Filter by search query (match store name, store slug, coupon code, or description)
       if (searchQuery.trim() !== "") {
-        const query = searchQuery.toLowerCase();
-        const matchesStore = storeName ? storeName.toLowerCase().includes(query) : false;
+        const query = searchQuery.toLowerCase().trim();
+        const cleanQuery = query.replace(/[^a-z0-9]/g, "");
+        const cleanStoreName = storeName.toLowerCase().replace(/[^a-z0-9]/g, "");
+        const cleanStoreSlug = storeSlug.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+        const matchesStore = storeName ? (
+          storeName.toLowerCase().includes(query) || 
+          cleanStoreName.includes(cleanQuery) || 
+          cleanStoreSlug.includes(cleanQuery)
+        ) : false;
         const matchesCode = coupon.code ? coupon.code.toLowerCase().includes(query) : false;
         const matchesDesc = coupon.description ? coupon.description.toLowerCase().includes(query) : false;
         const matchesDiscount = coupon.discount ? coupon.discount.toLowerCase().includes(query) : false;
@@ -139,17 +147,38 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     });
   }, [initialCoupons, searchQuery, selectedStoreSlug]);
 
+  // Dynamically filter stores by search query (supports store name, slug, and no-space variations)
+  const filteredStores = useMemo(() => {
+    if (searchQuery.trim() === "") return initialStores;
+    const query = searchQuery.toLowerCase().trim();
+    const cleanQuery = query.replace(/[^a-z0-9]/g, "");
+
+    return initialStores.filter((store) => {
+      if (!store || !store.name) return false;
+      const name = store.name.toLowerCase();
+      const slug = (store.slug || "").toLowerCase();
+      const cleanName = name.replace(/[^a-z0-9]/g, "");
+      const cleanSlug = slug.replace(/[^a-z0-9]/g, "");
+
+      return (
+        name.includes(query) ||
+        slug.includes(query) ||
+        (cleanQuery.length > 1 && (cleanName.includes(cleanQuery) || cleanSlug.includes(cleanQuery)))
+      );
+    });
+  }, [initialStores, searchQuery]);
+
   const paginatedStores = useMemo(() => {
     const startIndex = (storePage - 1) * STORES_PER_PAGE;
-    return initialStores.slice(startIndex, startIndex + STORES_PER_PAGE);
-  }, [initialStores, storePage]);
+    return filteredStores.slice(startIndex, startIndex + STORES_PER_PAGE);
+  }, [filteredStores, storePage]);
 
   const paginatedCoupons = useMemo(() => {
     const startIndex = (couponPage - 1) * COUPONS_PER_PAGE;
     return filteredCoupons.slice(startIndex, startIndex + COUPONS_PER_PAGE);
   }, [filteredCoupons, couponPage]);
 
-  const totalStorePages = Math.ceil(initialStores.length / STORES_PER_PAGE);
+  const totalStorePages = Math.ceil(filteredStores.length / STORES_PER_PAGE);
   const totalCouponPages = Math.ceil(filteredCoupons.length / COUPONS_PER_PAGE);
 
   const renderPagination = (currentPage: number, totalPages: number, onPageChange: (page: number) => void, sectionId?: string) => {
@@ -288,34 +317,93 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     
     const isDirect = !coupon.code || coupon.code === "DEAL" || coupon.code === "DIRECT";
 
-    // Automatically copy code to user's clipboard instantly on click if it's not a direct deal
-    if (!isDirect) {
+    // 1. Instantly copy code to user's clipboard (Synchronous execCommand fallback guarantees copy on iOS Safari)
+    if (!isDirect && coupon.code) {
       try {
-        if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(coupon.code);
-        }
-      } catch (err) {
-        console.warn("Failed to automatically copy code to clipboard:", err);
+        const textArea = document.createElement("textarea");
+        textArea.value = coupon.code;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "-9999px";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        textArea.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      } catch {
+        // Silently continue if execCommand fails
+      }
+      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(coupon.code).catch(() => {});
       }
     }
 
-    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
-    try {
-      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
-    } catch (err) {
-      console.warn("Failed to open our website in a new tab:", err);
+    // 2. Open modal popup on current tab immediately
+    setActiveCoupon(coupon);
+
+    // 3. GA4 Button Click Event Tracking
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      try {
+        (window as any).gtag("event", "generate_lead", {
+          event_category: "Affiliate Button Click",
+          event_label: `${storeName} - ${coupon.discount}`,
+          value: 1.0,
+          currency: "USD",
+          coupon_id: String(coupon.id),
+          is_direct_deal: isDirect
+        });
+      } catch {
+        // Ignore analytics errors
+      }
     }
 
-    // 2. Redirect the current active tab to the merchant store's affiliate URL
-    window.location.href = storeUrl;
+    // 4. Reliable Direct Redirect to Affiliate URL
+    // On Mobile (iPhone Safari & Android): direct location assignment prevents popup blockers from stopping the affiliate redirect
+    const isMobile = typeof navigator !== "undefined" && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      setTimeout(() => {
+        window.location.assign(storeUrl);
+      }, 120);
+    } else {
+      // On desktop: open merchant store in a new tab; fall back to redirect if blocked
+      try {
+        const newTab = window.open(storeUrl, "_blank", "noopener,noreferrer");
+        if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+          setTimeout(() => {
+            window.location.assign(storeUrl);
+          }, 120);
+        }
+      } catch {
+        setTimeout(() => {
+          window.location.assign(storeUrl);
+        }, 120);
+      }
+    }
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication
   const matchedStores = useMemo(() => {
     if (searchQuery.trim() === "") return [];
-    const query = searchQuery.toLowerCase();
-    const matches = initialStores.filter(store => store && store.name && store.name.toLowerCase().includes(query));
+    const query = searchQuery.toLowerCase().trim();
+    const cleanQuery = query.replace(/[^a-z0-9]/g, "");
+
+    const matches = initialStores.filter(store => {
+      if (!store || !store.name) return false;
+      const name = store.name.toLowerCase();
+      const slug = (store.slug || "").toLowerCase();
+      const cleanName = name.replace(/[^a-z0-9]/g, "");
+      const cleanSlug = slug.replace(/[^a-z0-9]/g, "");
+
+      return (
+        name.includes(query) ||
+        slug.includes(query) ||
+        (cleanQuery.length > 1 && (cleanName.includes(cleanQuery) || cleanSlug.includes(cleanQuery)))
+      );
+    });
+
     const seen = new Set<string>();
     return matches.filter(store => {
       const key = store.name.toLowerCase().replace(/[^a-z0-9]/g, "");

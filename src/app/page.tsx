@@ -94,7 +94,7 @@ export default async function HomePage() {
               website: c.store.website
             } : "Unknown"
           }));
-          coupons = [...registryCoupons, ...strapiCoupons];
+          coupons = [...registryCoupons, ...strapiCoupons, ...FALLBACK_COUPONS];
         }
 
         if (Array.isArray(storesData.data) && storesData.data.length > 0) {
@@ -107,7 +107,7 @@ export default async function HomePage() {
           }));
           const mergedSeen = new Set<string>();
           const mergedStores: Store[] = [];
-          for (const st of [...registryStores, ...strapiStores]) {
+          for (const st of [...registryStores, ...strapiStores, ...FALLBACK_STORES]) {
             if (!mergedSeen.has(st.slug.toLowerCase())) {
               mergedSeen.add(st.slug.toLowerCase());
               mergedStores.push(st);

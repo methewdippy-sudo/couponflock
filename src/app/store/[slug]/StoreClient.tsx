@@ -193,39 +193,71 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
     
     const isDirect = !coupon.code || coupon.code === "DEAL" || coupon.code === "DIRECT";
 
-    // Automatically copy code to user's clipboard instantly on click if it's not a direct deal
-    if (!isDirect) {
+    // 1. Instantly copy code to user's clipboard (Synchronous execCommand fallback guarantees copy on iOS Safari)
+    if (!isDirect && coupon.code) {
       try {
-        if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(coupon.code);
-        }
-      } catch (err) {
-        console.warn("Failed to automatically copy code to clipboard:", err);
+        const textArea = document.createElement("textarea");
+        textArea.value = coupon.code;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "-9999px";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        textArea.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      } catch {
+        // Silently continue if execCommand fails
+      }
+      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(coupon.code).catch(() => {});
       }
     }
 
-    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
-    try {
-      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
-    } catch (err) {
-      console.warn("Failed to open our website in a new tab:", err);
-    }
+    // 2. Open modal popup on current tab immediately
+    setActiveCoupon(coupon);
 
-    // GA4 Button Click Event Tracking
+    // 3. GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "generate_lead", {
-        event_category: "Affiliate Button Click",
-        event_label: `${storeName} - ${coupon.discount}`,
-        value: 1.0,
-        currency: "USD",
-        coupon_id: String(coupon.id),
-        is_direct_deal: isDirect
-      });
+      try {
+        (window as any).gtag("event", "generate_lead", {
+          event_category: "Affiliate Button Click",
+          event_label: `${storeName} - ${coupon.discount}`,
+          value: 1.0,
+          currency: "USD",
+          coupon_id: String(coupon.id),
+          is_direct_deal: isDirect
+        });
+      } catch {
+        // Ignore analytics errors
+      }
     }
 
-    // 2. Redirect the current active tab to the merchant store's affiliate URL
-    window.location.href = storeUrl;
+    // 4. Reliable Direct Redirect to Affiliate URL
+    // On Mobile (iPhone Safari & Android): direct location assignment prevents popup blockers from stopping the affiliate redirect
+    const isMobile = typeof navigator !== "undefined" && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      setTimeout(() => {
+        window.location.assign(storeUrl);
+      }, 120);
+    } else {
+      // On desktop: open merchant store in a new tab; fall back to redirect if blocked
+      try {
+        const newTab = window.open(storeUrl, "_blank", "noopener,noreferrer");
+        if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+          setTimeout(() => {
+            window.location.assign(storeUrl);
+          }, 120);
+        }
+      } catch {
+        setTimeout(() => {
+          window.location.assign(storeUrl);
+        }, 120);
+      }
+    }
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);
