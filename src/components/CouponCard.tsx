@@ -171,12 +171,15 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   }, [rawStoreUrl]);
 
   const handleClick = (e: React.MouseEvent) => {
+    // Prevent browser from navigating away or switching tabs - user stays strictly on current CouponFlock page
+    e.preventDefault();
+
     // 1. Reveal code directly on the card button and open CopyModal popup in FRONT
     setIsRevealed(true);
     onGetCode(coupon);
 
-    // 2. Synchronously copy coupon code to user's clipboard
-    if (hasCode) {
+    // 2. Synchronously copy coupon code to user's clipboard if code exists
+    if (hasCode && code) {
       if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(code).catch(() => {});
       }
@@ -191,12 +194,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
         document.execCommand("copy");
         document.body.removeChild(textArea);
       } catch {}
-
-      // 3. For code deals: keep user strictly on current page, show popup modal and reveal code without switching tabs
-      e.preventDefault();
     }
-
-    // For direct deals (without code, e.g. Bouquets by Post), native anchor target="_blank" handles opening new tab directly
   };
 
   return (

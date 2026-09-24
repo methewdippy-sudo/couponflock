@@ -410,7 +410,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
             onSubmit={(e) => {
               e.preventDefault();
               if (matchedStores.length > 0) {
-                const topStore = matchedStores.at(0);
+                const topStore = matchedStores[0];
                 if (topStore && topStore.slug) {
                   window.location.href = `/store/${topStore.slug}`;
                 }
@@ -447,15 +447,16 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
             {/* Dynamic Autocomplete Suggestion Dropdown */}
             {searchQuery.trim() !== "" && matchedStores.length > 0 && (
-              <div 
-                className={styles.searchSuggestionsDropdown}
-                onMouseDown={(e) => e.preventDefault()}
-              >
+              <div className={styles.searchSuggestionsDropdown}>
                 {matchedStores.map((store) => (
                   <a 
                     key={store.id || store.slug} 
                     href={`/store/${store.slug}`}
                     className={styles.searchSuggestionItem}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = `/store/${store.slug}`;
+                    }}
                   >
                     {store.logo ? (
                       <img src={store.logo} alt={store.name} className={styles.suggestionLogo} />
