@@ -220,8 +220,8 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
             <span className={styles.codeBtnPreview}>{isRevealed ? code : `${code.slice(0, 3)}···`}</span>
           </div>
         ) : (
-          <div className={styles.dealBtn}>
-            Get Deal
+          <div className={`${styles.dealBtn} ${isRevealed ? styles.dealBtnRevealed : ""}`}>
+            {isRevealed ? "DEAL ACTIVATED!" : "Get Deal"}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>

@@ -56,6 +56,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "10% off your entire clinical skincare order sitewide",
         description: "Save 10% on PDRN Advanced Infusion Treatment and clinical skincare with verified coupon code METHEW.",
         image: "/images/thedrmlab/micro-infusion-system.webp",
+        affiliate_url: "https://www.thedrmlab.com/methewdippy",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -66,6 +67,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "Up to 20% off multi-month skincare bundles & refill sets",
         description: "Save up to 20% on multi-infusion refill packs and complete skin transformation bundles automatically applied at checkout.",
         image: "/images/thedrmlab/pdrn-treatment.webp",
+        affiliate_url: "https://www.thedrmlab.com/methewdippy",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -76,6 +78,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "100% Free worldwide tracked shipping & 90-day guarantee",
         description: "Enjoy completely free tracked courier delivery across the US, UK, CA, and worldwide on all orders.",
         image: "/images/thedrmlab/clinical-results-1.webp",
+        affiliate_url: "https://www.thedrmlab.com/methewdippy",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -86,6 +89,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "15% off Micro-Infusion Clinical Starter Kit",
         description: "Get 15% discount on the complete at-home clinical micro-infusion system and PDRN serum with code METHEW.",
         image: "/images/thedrmlab/clinical-results-2.webp",
+        affiliate_url: "https://www.thedrmlab.com/methewdippy",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -96,6 +100,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "Extra $20 off PDRN Serum 3-Month Transformation Bundle",
         description: "Save an extra $20 on the 3-month PDRN cellular repair bundle plus free worldwide shipping with code METHEW.",
         image: "/images/thedrmlab/clinical-results-3.webp",
+        affiliate_url: "https://www.thedrmlab.com/methewdippy",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -120,6 +125,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE UK DELIVERY",
         title: "100% Free Royal Mail delivery across the UK on all bouquets",
         description: "Enjoy guaranteed free delivery across England, Scotland, Wales, and Northern Ireland on all fresh bouquets.",
+        affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -129,6 +135,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FROM £18",
         title: "Fresh postal bouquets from £18 with 7-day freshness guarantee",
         description: "Hand-arranged celebration flowers and seasonal postal stems direct through the letterbox.",
+        affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -138,6 +145,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE CARD",
         title: "Free personalized gift message card with every floral order",
         description: "Every postal flower bouquet includes a complimentary personalized gift message card.",
+        affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -147,6 +155,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FRESH BLOOMS",
         title: "Special hand-tied birthday & anniversary postal flower gifts",
         description: "Freshly picked carnations, freesia, and luxury postal roses delivered safely across the UK.",
+        affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -156,6 +165,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "LETTERBOX",
         title: "Guaranteed letterbox delivery - recipient does not need to be home",
         description: "Specially packaged postal boxes slip easily through standard UK letterboxes to stay fresh.",
+        affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -231,6 +241,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "20% OFF",
         title: "20% off your entire first order sitewide",
         description: "Save 20% on iM8 Daily Ultimate Essentials and longevity nutrition with verified code RICHARD05376.",
+        affiliate_url: "https://www.im8health.com/RICHARD05376",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -240,6 +251,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "30% OFF",
         title: "30% off Welcome Kit plus free shaker cup",
         description: "Get 30% discount on the iM8 Welcome Kit plus complimentary shaker cup using promo code RICHARD05376.",
+        affiliate_url: "https://www.im8health.com/RICHARD05376",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -249,6 +261,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "Free tracked US shipping on all subscription orders",
         description: "Enjoy 100% free delivery across the United States on all qualifying iM8 Health orders.",
+        affiliate_url: "https://www.im8health.com/RICHARD05376",
         is_verified: true,
         expiry_date: "2026-12-31"
       }

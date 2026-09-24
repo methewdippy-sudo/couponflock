@@ -307,6 +307,12 @@
   box-shadow: 0 2px 12px rgba(79, 70, 229, 0.18);
 }
 
+.dealBtnRevealed {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
 /* ============================================================
    MOBILE RESPONSIVE
    ============================================================ */
