@@ -231,7 +231,81 @@ export const STORE_REGISTRY: RegistryStore[] = [
     ]
   },
 
-  // 4. TRANSPARENT LABS (US Market)
+  // 4. iM8 HEALTH (US Longevity Nutrition & Daily Essentials)
+  {
+    id: 43,
+    name: "iM8 Health",
+    slug: "im8health",
+    aliases: ["im8-health", "im8", "im8health-us", "im8-health-us"],
+    logo: "/logos/im8health.png",
+    website: "https://www.im8health.com/RICHARD05376",
+    affiliate_url: "https://www.im8health.com/RICHARD05376",
+    country: "US",
+    description: "Daily ultimate longevity and essentials nutrition system co-founded by David Beckham, clinically formulated for cellular rejuvenation and optimal health.",
+    products: [
+      {
+        id: "im8-prod-1",
+        name: "iM8 Daily Ultimate Essentials",
+        badge: "Best Seller • All-in-One",
+        discount: "SAVE WITH CODE RICHARD05376",
+        description: "Comprehensive daily longevity powder combining vitamins, minerals, superfoods, and adaptogens for peak performance.",
+        image: "/images/im8health/product-1.png",
+        url: "https://www.im8health.com/RICHARD05376"
+      },
+      {
+        id: "im8-prod-2",
+        name: "iM8 Daily Ultimate Longevity",
+        badge: "Clinician's Choice",
+        discount: "CELLULAR REPAIR",
+        description: "Advanced cellular rejuvenation formula formulated to support healthy aging, energy production, and cognitive function.",
+        image: "/images/im8health/product-2.png",
+        url: "https://www.im8health.com/RICHARD05376"
+      },
+      {
+        id: "im8-prod-3",
+        name: "The Beckham Stack Welcome Kit",
+        badge: "Free Shaker Cup Included",
+        discount: "UP TO 30% OFF",
+        description: "The complete starter collection featuring Daily Essentials, Longevity formula, and official iM8 travel shaker cup.",
+        image: "/images/im8health/product-3.jpg",
+        url: "https://www.im8health.com/RICHARD05376"
+      }
+    ],
+    coupons: [
+      {
+        id: "im8-deal-1",
+        code: "RICHARD05376",
+        discount: "20% OFF",
+        title: "20% off your entire first order sitewide",
+        description: "Save 20% on iM8 Daily Ultimate Essentials and longevity nutrition with verified code RICHARD05376.",
+        image: "/images/im8health/product-1.png",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "im8-deal-2",
+        code: "RICHARD05376",
+        discount: "30% OFF",
+        title: "30% off Welcome Kit plus free shaker cup",
+        description: "Get 30% discount on the iM8 Welcome Kit plus complimentary shaker cup using promo code RICHARD05376.",
+        image: "/images/im8health/product-3.jpg",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "im8-deal-3",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free tracked US shipping on all subscription orders",
+        description: "Enjoy 100% free delivery across the United States on all qualifying iM8 Health orders.",
+        image: "/images/im8health/product-2.png",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 5. TRANSPARENT LABS (US Market)
   {
     id: 601,
     name: "Transparent Labs",
