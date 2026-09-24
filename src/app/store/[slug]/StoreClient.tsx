@@ -247,15 +247,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
     const isIOS = /iPhone|iPad|iPod/i.test(ua);
 
     if (isIOS) {
-      // iPhone / iPad iOS Safari — GUARANTEED approach:
-      // Reload this same store page with ?coupon=ID&code=CODE params.
-      // The checkParams useEffect (already in StoreClient) reads these params and
-      // calls setActiveCoupon() → modal auto-opens on page load. 100% reliable.
-      const reloadUrl =
-        `${window.location.origin}${window.location.pathname}` +
-        `?coupon=${encodeURIComponent(String(coupon.id))}` +
-        `&code=${encodeURIComponent(coupon.code || "DEAL")}`;
-      window.location.replace(reloadUrl);
+      // iPhone / iPad: Just open the store affiliate URL in a new tab.
+      // window.open from a direct button click (user gesture) always works on iOS Safari.
+      window.open(storeUrl, "_blank");
     } else {
       // Android / Desktop / Laptop: Exact PromoRegistry Tabunder Flow
       try {

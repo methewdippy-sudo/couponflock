@@ -371,18 +371,9 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     const isIOS = /iPhone|iPad|iPod/i.test(ua);
 
     if (isIOS) {
-      // iPhone / iPad iOS Safari — GUARANTEED approach:
-      // Go to the store's dedicated page with ?coupon=ID&code=CODE params.
-      // StoreClient's checkParams useEffect reads these and auto-opens the modal.
-      const storeSlug =
-        (coupon as any).storeSlug ||
-        (isStoreObject ? (coupon.store as Store).slug : null) ||
-        storeName.toLowerCase().replace(/\s+/g, "-");
-      const storePageUrl =
-        `${window.location.origin}/store/${storeSlug}` +
-        `?coupon=${encodeURIComponent(String(coupon.id))}` +
-        `&code=${encodeURIComponent(coupon.code || "DEAL")}`;
-      window.location.href = storePageUrl;
+      // iPhone / iPad: Just open the store affiliate URL in a new tab.
+      // window.open from a direct button click (user gesture) always works on iOS Safari.
+      window.open(storeUrl, "_blank");
     } else {
       // Android / Desktop / Laptop: Exact PromoRegistry Tabunder Flow
       try {
