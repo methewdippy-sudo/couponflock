@@ -85,6 +85,7 @@ function extractDomain(url?: string, storeName?: string): string | null {
 export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBestDeal = false }) => {
   const { store, discount, code, is_verified, title, description, expiry_date } = coupon;
   const [logoError, setLogoError] = useState(false);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   const isStoreObject = typeof store === "object" && store !== null;
   const storeName = isStoreObject ? (store as Store).name : (typeof store === "string" ? store : "Store");
@@ -170,29 +171,27 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   }, [rawStoreUrl]);
 
   const handleClick = (e: React.MouseEvent) => {
-    // 1. Synchronously copy coupon code to user's clipboard
+    // 1. Reveal code directly on the card button and open CopyModal popup
+    setIsRevealed(true);
+    onGetCode(coupon);
+
+    // 2. Synchronously copy coupon code to user's clipboard
     if (hasCode) {
-      try {
-        const textArea = document.createElement("textarea");
-        textArea.value = code;
-        textArea.style.position = "fixed";
-        textArea.style.left = "-9999px";
-        textArea.style.top = "-9999px";
-        textArea.style.opacity = "0";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        textArea.setSelectionRange(0, 99999);
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-      } catch {}
       if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(code).catch(() => {});
       }
+      try {
+        const textArea = document.createElement("textarea");
+        textArea.value = code;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "absolute";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      } catch {}
     }
-
-    // 2. Open CopyModal popup on current tab and log analytics
-    onGetCode(coupon);
 
     // Native anchor tag target="_blank" handles opening new tab without popup blocker intervention
   };
@@ -279,9 +278,9 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
       {/* Right: Action Button */}
       <div className={styles.actionSection}>
         {hasCode ? (
-          <div className={styles.codeBtn}>
-            <span className={styles.codeBtnLabel}>Get Code</span>
-            <span className={styles.codeBtnPreview}>{code.slice(0, 3)}···</span>
+          <div className={`${styles.codeBtn} ${isRevealed ? styles.codeBtnRevealed : ""}`}>
+            <span className={styles.codeBtnLabel}>{isRevealed ? "COPIED!" : "Get Code"}</span>
+            <span className={styles.codeBtnPreview}>{isRevealed ? code : `${code.slice(0, 3)}···`}</span>
           </div>
         ) : (
           <div className={styles.dealBtn}>

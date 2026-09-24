@@ -254,6 +254,22 @@
   align-items: center;
 }
 
+.codeBtnRevealed {
+  border-color: #10b981;
+}
+
+.codeBtnRevealed .codeBtnLabel {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.codeBtnRevealed .codeBtnPreview {
+  color: #047857;
+  border-left-color: #a7f3d0;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
 /* Deal Button */
 .dealBtn {
   width: 100%;
