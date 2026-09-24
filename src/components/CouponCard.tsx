@@ -128,16 +128,35 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
 
 
 
+  // Affiliate URL for native link fallback (iOS Safari guaranteed)
+  const affiliateHref = coupon.affiliate_url || coupon.affiliate_link || (coupon as any).affiliateLink || storeWebsite || "#";
+
+  // iOS detection (at component level so it works on first render)
+  const isIOSDevice = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
   const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
     setIsRevealed(true);
-    onGetCode(coupon);
+    if (isIOSDevice) {
+      // iOS Safari: Do NOT preventDefault — let the native <a target="_blank"> open
+      // the affiliate URL directly. This is 100% guaranteed on iOS Safari.
+      // Just copy code as a side effect (no focus/execCommand on iOS)
+      if (hasCode && code && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).catch(() => {});
+      }
+      // Natural link click opens store in new tab — no JS popup blocker issues
+    } else {
+      // Desktop / Android: Intercept and run full tabunder flow via onGetCode
+      e.preventDefault();
+      onGetCode(coupon);
+    }
   };
 
   return (
-    // Using <button> (not div) so iOS Safari fires click events reliably on tap
-    <button
-      type="button"
+    // Native <a> tag — iOS Safari guaranteed tap → opens affiliate URL in new tab
+    <a
+      href={affiliateHref}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}
       onClick={handleClick}
     >
@@ -229,7 +248,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
           </div>
         )}
       </div>
-    </button>
+    </a>
   );
 };
 
