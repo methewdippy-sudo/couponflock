@@ -96,6 +96,9 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
   const [copied, setCopied] = useState(true); // Set to true as it is copied automatically on click
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // Detect iOS Safari to show appropriate instructions
+  const isIOS = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
   const isDirectDeal = !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
 
   // Set timeout to reset the copied visual state after 2.5 seconds
@@ -255,14 +258,18 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
             <InfoIcon />
             <div className={styles.noticeText}>
               <p>
-                {isDirectDeal ? (
+                {isIOS ? (
+                  <>Tap the button below to visit <span className={styles.highlight}>{storeName}</span> and apply your code at checkout.</>
+                ) : isDirectDeal ? (
                   <>We have redirected you to <span className={styles.highlight}>{storeName}</span> in a new tab.</>
                 ) : (
                   <>We have opened <span className={styles.highlight}>{storeName}&apos;s</span> website in a new tab.</>
                 )}
               </p>
               <p className={styles.noticeSubText}>
-                {isDirectDeal ? (
+                {isIOS ? (
+                  <>The store will open in a new tab so you can keep this code visible.</>
+                ) : isDirectDeal ? (
                   <>If the website did not load, please click the button below to claim your discount manually:</>
                 ) : (
                   <>If it didn&apos;t open automatically, you can click the link below to visit the official store:</>
