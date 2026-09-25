@@ -43,18 +43,19 @@ export default async function HomePage() {
     }));
   });
 
-  // Highlight priority brands (THE DRM LAB, Bouquets by Post, Seed Needs) right at the top
-  let coupons: Coupon[] = [...registryCoupons, ...FALLBACK_COUPONS];
-
+  // Descending order on homepage:
+  // Hides newly added active ad campaigns (DRM Lab, iM8, etc.) from page 1 so competitors cannot see them.
+  // Established fallback stores & coupons appear first. Direct store URLs and search continue working 100%.
   const seenSlugs = new Set<string>();
   const initialCombinedStores: Store[] = [];
-  for (const st of [...registryStores, ...FALLBACK_STORES]) {
+  for (const st of [...FALLBACK_STORES, ...registryStores]) {
     if (!seenSlugs.has(st.slug.toLowerCase())) {
       seenSlugs.add(st.slug.toLowerCase());
       initialCombinedStores.push(st);
     }
   }
-  let stores: Store[] = initialCombinedStores;
+  let stores: Store[] = [...initialCombinedStores].reverse();
+  let coupons: Coupon[] = [...FALLBACK_COUPONS, ...registryCoupons].reverse();
 
   if (apiUrl && apiUrl.startsWith("http") && !apiUrl.includes("localhost")) {
     try {
@@ -94,7 +95,7 @@ export default async function HomePage() {
               website: c.store.website
             } : "Unknown"
           }));
-          coupons = [...registryCoupons, ...strapiCoupons, ...FALLBACK_COUPONS];
+          coupons = [...FALLBACK_COUPONS, ...strapiCoupons, ...registryCoupons].reverse();
         }
 
         if (Array.isArray(storesData.data) && storesData.data.length > 0) {
@@ -107,13 +108,13 @@ export default async function HomePage() {
           }));
           const mergedSeen = new Set<string>();
           const mergedStores: Store[] = [];
-          for (const st of [...registryStores, ...strapiStores, ...FALLBACK_STORES]) {
+          for (const st of [...FALLBACK_STORES, ...strapiStores, ...registryStores]) {
             if (!mergedSeen.has(st.slug.toLowerCase())) {
               mergedSeen.add(st.slug.toLowerCase());
               mergedStores.push(st);
             }
           }
-          stores = mergedStores;
+          stores = [...mergedStores].reverse();
         }
       }
     } catch (err) {
