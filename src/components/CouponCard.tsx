@@ -1,5 +1,9 @@
 "use client";
 
+// Build-time cache buster — changes chunk hash on every deploy
+// Prevents Safari's immutable cache from serving stale JS after updates
+const _BUILD = process.env.NEXT_PUBLIC_BUILD_TIME;
+
 import React, { useState } from "react";
 import styles from "./CouponCard.module.css";
 import { getLogoUrl } from "../lib/fallbackData";

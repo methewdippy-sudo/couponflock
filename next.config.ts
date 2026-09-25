@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Build timestamp changes every deploy → forces Turbopack to generate new chunk hashes
+  // → browsers cannot serve stale immutable-cached JS after a new deployment
+  env: {
+    NEXT_PUBLIC_BUILD_TIME: Date.now().toString(),
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
