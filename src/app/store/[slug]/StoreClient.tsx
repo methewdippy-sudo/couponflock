@@ -169,6 +169,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                           rawStoreUrl.includes("bouquetsbypost") || 
                           rawStoreUrl.includes("im8health") ||
                           rawStoreUrl.includes("thedrmlab") ||
+                          rawStoreUrl.includes("dchousepower") ||
                           rawStoreUrl.includes("litl.si") ||
                           rawStoreUrl.includes("fatcoupon") ||
                           rawStoreUrl.includes("/go/");

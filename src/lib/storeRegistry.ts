@@ -919,6 +919,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5% OFF",
         title: "5% off promo code sitewide (verified working)",
         description: "Save 5% on all 12V 100Ah LiFePO4 lithium batteries, solar panels, and inverters with code METHEWDIPPY.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -928,6 +929,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5% OFF",
         title: "5% off 12V 100Ah / 24V deep-cycle trolling motor & RV batteries",
         description: "Get 5% instant discount on deep-cycle lithium marine and RV batteries with verified code METHEWDIPPY.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -937,6 +939,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5% OFF",
         title: "5% off off-grid solar panels, inverters & charge controllers",
         description: "Apply 5% discount on complete off-grid solar power systems with code METHEWDIPPY.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -946,6 +949,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "EXTRA 5% OFF",
         title: "Extra 5% off large capacity battery bank orders",
         description: "Stack an extra 5% savings on all high-capacity lithium battery bank orders using code METHEWDIPPY.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -955,6 +959,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "UP TO 35%",
         title: "Up to 35% off weekly flash sales on LiFePO4 power systems",
         description: "Save up to 35% on lightweight waterproof trolling motor and RV marine lithium batteries.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -964,6 +969,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "Free tracked US doorstep delivery on all battery orders",
         description: "Enjoy 100% free tracked US doorstep delivery with 10-year warranty on all DC House power systems.",
+        affiliate_url: "https://www.dchousepower.com/?ref=ikafrwml",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
