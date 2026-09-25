@@ -167,6 +167,8 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                           rawStoreUrl.includes("convert") || 
                           rawStoreUrl.includes("csl") || 
                           rawStoreUrl.includes("bouquetsbypost") || 
+                          rawStoreUrl.includes("im8health") ||
+                          rawStoreUrl.includes("thedrmlab") ||
                           rawStoreUrl.includes("litl.si") ||
                           rawStoreUrl.includes("fatcoupon") ||
                           rawStoreUrl.includes("/go/");

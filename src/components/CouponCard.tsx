@@ -4,7 +4,7 @@
 // Prevents Safari's immutable cache from serving stale JS after updates
 const _BUILD = process.env.NEXT_PUBLIC_BUILD_TIME;
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./CouponCard.module.css";
 import { getLogoUrl } from "../lib/fallbackData";
 
@@ -133,7 +133,29 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
 
 
   // Affiliate URL for native link fallback (iOS Safari guaranteed)
-  const affiliateHref = coupon.affiliate_url || coupon.affiliate_link || (coupon as any).affiliateLink || storeWebsite || "#";
+  const rawAffiliateHref = coupon.affiliate_url || coupon.affiliate_link || (coupon as any).affiliateLink || storeWebsite || "#";
+  const [trackedHref, setTrackedHref] = useState(rawAffiliateHref);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && rawAffiliateHref && rawAffiliateHref !== "#") {
+      try {
+        const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
+        const utmTerm = sessionStorage.getItem("utm_term") || "";
+        const gclid = sessionStorage.getItem("gclid") || "";
+        if (utmCampaign || utmTerm || gclid) {
+          const urlObj = rawAffiliateHref.startsWith("http")
+            ? new URL(rawAffiliateHref)
+            : new URL(rawAffiliateHref, window.location.origin);
+          if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
+          if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
+          if (gclid) urlObj.searchParams.set("subid3", gclid);
+          setTrackedHref(urlObj.toString());
+        }
+      } catch {
+        // Fallback to base link
+      }
+    }
+  }, [rawAffiliateHref]);
 
   // iOS detection (at component level so it works on first render)
   const isIOSDevice = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -158,7 +180,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   return (
     // Native <a> tag — iOS Safari guaranteed tap → opens affiliate URL in new tab
     <a
-      href={affiliateHref}
+      href={trackedHref}
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}

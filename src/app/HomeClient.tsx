@@ -296,7 +296,15 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     // Append Google Ads campaign and keyword SubIDs if it's an affiliate redirect link
     let storeUrl = rawStoreUrl;
     if (typeof window !== "undefined" && rawStoreUrl) {
-      const isAffiliate = rawStoreUrl.includes("admitad") || rawStoreUrl.includes("convert") || rawStoreUrl.includes("csl");
+      const isAffiliate = rawStoreUrl.includes("admitad") || 
+                          rawStoreUrl.includes("convert") || 
+                          rawStoreUrl.includes("csl") ||
+                          rawStoreUrl.includes("bouquetsbypost") ||
+                          rawStoreUrl.includes("im8health") ||
+                          rawStoreUrl.includes("thedrmlab") ||
+                          rawStoreUrl.includes("litl.si") ||
+                          rawStoreUrl.includes("fatcoupon") ||
+                          rawStoreUrl.includes("/go/");
       if (isAffiliate) {
         try {
           const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
