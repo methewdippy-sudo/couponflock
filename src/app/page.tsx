@@ -48,13 +48,13 @@ export default async function HomePage() {
     }
   }
 
-  // Filter fallback coupons: strictly for allowed off-topic public brands
+  // Filter fallback coupons: strictly for allowed off-topic public brands (top 60 featured deals for instant page load)
   const coupons: Coupon[] = FALLBACK_COUPONS.filter((c) => {
     const isStoreObj = typeof c.store === "object" && c.store !== null;
     const storeSlug = (c as any).storeSlug || (isStoreObj ? (c.store as Store).slug : "") || (typeof c.store === "string" ? c.store.toLowerCase().replace(/\s+/g, "-") : "");
     const cleanSlug = String(storeSlug).toLowerCase();
     return !EXCLUDED_HOMEPAGE_SLUGS.has(cleanSlug);
-  });
+  }).slice(0, 60);
 
   return (
     <main>
