@@ -1034,6 +1034,71 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 13. CRZ YOGA (Butterluxe Leggings, Sports Bras & Athleisure Activewear)
+  {
+    id: 633,
+    name: "CRZ YOGA",
+    slug: "crz-yoga",
+    aliases: ["crzyoga", "crz-yoga-us", "crzyoga-us"],
+    logo: "/logos/crz-yoga.svg",
+    website: "https://us.crzyoga.com",
+    affiliate_url: "https://us.crzyoga.com",
+    country: "US",
+    description: "Premium buttery-soft activewear, high-waisted Butterluxe leggings, workout sports bras, and athletic apparel designed for everyday performance and yoga.",
+    coupons: [
+      {
+        id: "crz-deal-1",
+        code: "WELCOME15",
+        discount: "15% OFF",
+        title: "15% off your entire first activewear order sitewide",
+        description: "Save 15% on Butterluxe leggings, sports bras, and athletic tops with verified code WELCOME15.",
+        affiliate_url: "https://us.crzyoga.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-deal-2",
+        code: "BUTTER20",
+        discount: "20% OFF",
+        title: "20% off Butterluxe Collection multi-pair bundles",
+        description: "Get 20% discount on buttery-soft Butterluxe leggings and active sets applied at checkout with code BUTTER20.",
+        affiliate_url: "https://us.crzyoga.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-deal-3",
+        code: "",
+        discount: "UP TO 50% OFF",
+        title: "Up to 50% off official clearance & seasonal sale",
+        description: "Save up to 50% on select colors, yoga tops, running shorts, and leggings while supplies last.",
+        affiliate_url: "https://us.crzyoga.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-deal-4",
+        code: "MAIL15",
+        discount: "15% OFF",
+        title: "15% off newsletter subscriber coupon code",
+        description: "Claim 15% off your shopping cart with verified email subscriber promo code MAIL15.",
+        affiliate_url: "https://us.crzyoga.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-deal-5",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "100% Free standard tracked US shipping on orders $49+",
+        description: "Enjoy complimentary fast tracked delivery across the United States on all qualifying CRZ YOGA orders.",
+        affiliate_url: "https://us.crzyoga.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
