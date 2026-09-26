@@ -170,6 +170,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                           rawStoreUrl.includes("im8health") ||
                           rawStoreUrl.includes("thedrmlab") ||
                           rawStoreUrl.includes("dchousepower") ||
+                          rawStoreUrl.includes("crzyoga") ||
                           rawStoreUrl.includes("litl.si") ||
                           rawStoreUrl.includes("fatcoupon") ||
                           rawStoreUrl.includes("/go/");
@@ -277,6 +278,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                             baseStoreUrl.includes("convert") || 
                             baseStoreUrl.includes("csl") || 
                             baseStoreUrl.includes("bouquetsbypost") || 
+                            baseStoreUrl.includes("crzyoga") || 
                             baseStoreUrl.includes("litl.si") ||
                             baseStoreUrl.includes("fatcoupon") ||
                             baseStoreUrl.includes("/go/");

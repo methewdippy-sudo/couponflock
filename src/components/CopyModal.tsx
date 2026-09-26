@@ -143,6 +143,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
         rawStoreUrl.includes("im8health") ||
         rawStoreUrl.includes("thedrmlab") ||
         rawStoreUrl.includes("dchousepower") ||
+        rawStoreUrl.includes("crzyoga") ||
         rawStoreUrl.includes("litl.si") ||
         rawStoreUrl.includes("fatcoupon") ||
         rawStoreUrl.includes("/go/");

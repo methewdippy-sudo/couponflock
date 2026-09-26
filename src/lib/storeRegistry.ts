@@ -1043,8 +1043,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "crz-yoga",
     aliases: ["crzyoga", "crz-yoga-us", "crzyoga-us"],
     logo: "/logos/crz-yoga.svg",
-    website: "https://us.crzyoga.com",
-    affiliate_url: "https://us.crzyoga.com",
+    website: "https://us.crzyoga.com/?ref=sulydaqw",
+    affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
     country: "US",
     description: "Premium buttery-soft activewear, high-waisted Butterluxe leggings, workout sports bras, and athletic apparel designed for everyday performance and yoga.",
     coupons: [
@@ -1054,7 +1054,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% OFF",
         title: "15% off your entire first activewear order sitewide",
         description: "Save 15% on Butterluxe leggings, sports bras, and athletic tops with verified code WELCOME15.",
-        affiliate_url: "https://us.crzyoga.com",
+        affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1064,7 +1064,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "20% OFF",
         title: "20% off Butterluxe Collection multi-pair bundles",
         description: "Get 20% discount on buttery-soft Butterluxe leggings and active sets applied at checkout with code BUTTER20.",
-        affiliate_url: "https://us.crzyoga.com",
+        affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1074,7 +1074,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "UP TO 50% OFF",
         title: "Up to 50% off official clearance & seasonal sale",
         description: "Save up to 50% on select colors, yoga tops, running shorts, and leggings while supplies last.",
-        affiliate_url: "https://us.crzyoga.com",
+        affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1084,7 +1084,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% OFF",
         title: "15% off newsletter subscriber coupon code",
         description: "Claim 15% off your shopping cart with verified email subscriber promo code MAIL15.",
-        affiliate_url: "https://us.crzyoga.com",
+        affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1094,7 +1094,52 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "100% Free standard tracked US shipping on orders $49+",
         description: "Enjoy complimentary fast tracked delivery across the United States on all qualifying CRZ YOGA orders.",
-        affiliate_url: "https://us.crzyoga.com",
+        affiliate_url: "https://us.crzyoga.com/?ref=sulydaqw",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 14. CRZ YOGA CANADA (Canadian Market)
+  {
+    id: 634,
+    name: "CRZ YOGA (Canada)",
+    slug: "crz-yoga-ca",
+    aliases: ["crzyoga-ca", "crz-yoga-canada", "crzyoga-canada"],
+    logo: "/logos/crz-yoga.svg",
+    website: "https://ca.crzyoga.com/?ref=sulydaqw",
+    affiliate_url: "https://ca.crzyoga.com/?ref=sulydaqw",
+    country: "CA",
+    description: "Official CRZ YOGA Canadian store. Butterluxe leggings, workout activewear, and sports bras with fast shipping across Canada.",
+    coupons: [
+      {
+        id: "crz-ca-deal-1",
+        code: "WELCOME15",
+        discount: "15% OFF",
+        title: "15% off first order across Canada sitewide",
+        description: "Save 15% on your first Canadian order of Butterluxe leggings and yoga gear with code WELCOME15.",
+        affiliate_url: "https://ca.crzyoga.com/?ref=sulydaqw",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-ca-deal-2",
+        code: "BUTTER20",
+        discount: "20% OFF",
+        title: "20% off Butterluxe bundle activewear orders",
+        description: "Claim 20% off multi-item leggings and activewear bundles with code BUTTER20.",
+        affiliate_url: "https://ca.crzyoga.com/?ref=sulydaqw",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "crz-ca-deal-3",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free tracked Canadian shipping on orders CA$65+",
+        description: "Enjoy free standard shipping to all Canadian provinces on orders over CA$65.",
+        affiliate_url: "https://ca.crzyoga.com/?ref=sulydaqw",
         is_verified: true,
         expiry_date: "2026-12-31"
       }

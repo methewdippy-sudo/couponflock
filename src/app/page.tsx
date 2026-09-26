@@ -22,7 +22,7 @@ const EXCLUDED_HOMEPAGE_SLUGS = new Set([
   "comfrt", "comfrt-clothing",
   "dc-house", "dc-house-power", "dchouse",
   "filter-baby", "filterbaby",
-  "crz-yoga", "crzyoga", "crz-yoga-us", "crzyoga-us",
+  "crz-yoga", "crzyoga", "crz-yoga-us", "crzyoga-us", "crz-yoga-ca", "crzyoga-ca", "crz-yoga-canada", "crzyoga-canada",
   // Other worked / custom affiliate brands:
   "everblog",
   "maple-prime", "mapleprime",
