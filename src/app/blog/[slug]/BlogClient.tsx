@@ -168,13 +168,18 @@ export default function BlogClient({ post }: BlogClientProps) {
   }, []);
 
   const handleAction = async (product: Product) => {
-    // 1. Copy coupon code to clipboard
-    try {
-      await navigator.clipboard.writeText(product.couponCode);
-      setToastMessage(`⚡ Code "${product.couponCode}" copied! Opening deal...`);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
-      setToastMessage("Opening deal...");
+    // 1. Copy coupon code or show auto-applied status
+    const isAuto = !product.couponCode || product.couponCode === "AUTOMATICALLY APPLIED" || product.couponCode === "AUTO-APPLIED";
+    if (isAuto) {
+      setToastMessage("⚡ Discount automatically applied! Opening official store...");
+    } else {
+      try {
+        await navigator.clipboard.writeText(product.couponCode);
+        setToastMessage(`⚡ Code "${product.couponCode}" copied! Opening deal...`);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+        setToastMessage("Opening deal...");
+      }
     }
 
     // 2. Clear toast after 2.5s
@@ -235,7 +240,9 @@ export default function BlogClient({ post }: BlogClientProps) {
   // Generate a shareable Pinterest URL for a specific product
   const getPinterestShareUrl = (product: Product) => {
     const media = product.imageUrl;
-    const desc = encodeURIComponent(`Love this! Get the ${product.name} from ${product.brand} and use code ${product.couponCode} for discounts!`);
+    const isAuto = !product.couponCode || product.couponCode === "AUTOMATICALLY APPLIED" || product.couponCode === "AUTO-APPLIED";
+    const codePart = isAuto ? "" : ` and use code ${product.couponCode}`;
+    const desc = encodeURIComponent(`Love this! Get the ${product.name} from ${product.brand}${codePart} for verified discounts!`);
     return `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&media=${encodeURIComponent(media)}&description=${desc}`;
   };
 
@@ -463,7 +470,13 @@ export default function BlogClient({ post }: BlogClientProps) {
                         <span style={{ color: "#16a34a", fontWeight: 700 }}>{product.price}</span>
                       </td>
                       <td>
-                        <code style={{ background: "#f1f5f9", padding: "4px 8px", borderRadius: "6px" }}>{product.couponCode}</code>
+                        {(!product.couponCode || product.couponCode === "AUTOMATICALLY APPLIED" || product.couponCode === "AUTO-APPLIED") ? (
+                          <span style={{ background: "#ecfdf5", color: "#059669", padding: "4px 8px", borderRadius: "6px", fontWeight: 600, fontSize: "0.85rem" }}>
+                            Auto-Applied
+                          </span>
+                        ) : (
+                          <code style={{ background: "#f1f5f9", padding: "4px 8px", borderRadius: "6px" }}>{product.couponCode}</code>
+                        )}
                       </td>
                       <td>
                         <button 
@@ -571,14 +584,26 @@ export default function BlogClient({ post }: BlogClientProps) {
 
                     {/* Actions Footer */}
                     <div className={styles.actionFooter}>
-                      <div 
-                        className={styles.codeBlock}
-                        onClick={() => handleAction(product)}
-                        title="Click to copy promo code"
-                      >
-                        <span className={styles.codeLabel}>Promo Code:</span>
-                        <span className={styles.codeValue}>{product.couponCode}</span>
-                      </div>
+                      {(!product.couponCode || product.couponCode === "AUTOMATICALLY APPLIED" || product.couponCode === "AUTO-APPLIED") ? (
+                        <div 
+                          className={styles.codeBlock}
+                          onClick={() => handleAction(product)}
+                          style={{ borderColor: "#10b981", background: "#f0fdf4" }}
+                          title="Discount automatically applied at checkout"
+                        >
+                          <span className={styles.codeLabel} style={{ color: "#059669" }}>Deal:</span>
+                          <span className={styles.codeValue} style={{ color: "#047857", fontWeight: 700, letterSpacing: "0.5px" }}>AUTO-APPLIED</span>
+                        </div>
+                      ) : (
+                        <div 
+                          className={styles.codeBlock}
+                          onClick={() => handleAction(product)}
+                          title="Click to copy promo code"
+                        >
+                          <span className={styles.codeLabel}>Promo Code:</span>
+                          <span className={styles.codeValue}>{product.couponCode}</span>
+                        </div>
+                      )}
                       
                       <button
                         onClick={() => handleAction(product)}
