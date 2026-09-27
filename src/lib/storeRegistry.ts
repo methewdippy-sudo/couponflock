@@ -1287,6 +1287,17 @@ export const STORE_REGISTRY: RegistryStore[] = [
     description: "Tenways crafts high-performance, lightweight commuter electric bikes featuring smooth magnetic torque sensors, Gates carbon belt drives, and long-range portable batteries.",
     coupons: [
       {
+        id: "tenways-deal-0",
+        code: "TENAFF30",
+        is_auto_applied: true,
+        discount: "$30 / €30 OFF",
+        title: "$30 / €30 off sitewide discount promo code",
+        description: "Save $30 / €30 off any Tenways electric bike purchase with exclusive coupon code TENAFF30.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
         id: "tenways-deal-1",
         code: "TENWAYS100",
         discount: "$100 OFF",
@@ -1342,6 +1353,143 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "SPECIAL SAVINGS",
         title: "Exclusive ID.me & Student Beans discounts for military and students",
         description: "Save extra with verified status on ID.me or Student Beans at official Tenways checkout.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 15. TENWAYS NL (Netherlands - Official Dutch E-Bike Store)
+  {
+    id: 632,
+    name: "Tenways NL",
+    slug: "tenways-nl",
+    aliases: ["tenwaysnl", "tenways-nederland", "tenways-fiets"],
+    logo: "/logos/tenways.svg",
+    website: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+    affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+    country: "GLOBAL",
+    description: "Bespaar op Tenways elektrische fietsen in Nederland met geverifieerde kortingscodes, gratis verzending en exclusieve aanbiedingen.",
+    coupons: [
+      {
+        id: "tenways-nl-1",
+        code: "TENAFF30",
+        is_auto_applied: true,
+        discount: "30€ KORTING",
+        title: "30€ kortingscode",
+        description: "Ontvang een exclusieve en geverifieerde kortingscode voor 30€ korting op je Tenways e-bike bestelling.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-2",
+        code: "",
+        discount: "300€ KORTING",
+        title: "300€ korting - terug naar school aanbieding",
+        description: "Bespaar tot wel 300€ op geselecteerde Tenways e-bikes tijdens de speciale seizoensactie.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-3",
+        code: "TENAFF30",
+        is_auto_applied: true,
+        discount: "10% KORTING",
+        title: "10% kortingscode voor de hele website",
+        description: "Krijg 10% korting op het hele assortiment elektrische fietsen met deze geverifieerde kortingscode.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-4",
+        code: "",
+        discount: "€100 KORTING",
+        title: "€100 korting op de CGO600 Pro",
+        description: "Profiteer van 100€ directe korting op de populaire Tenways CGO600 Pro lichtgewicht stadsfiets.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-5",
+        code: "",
+        discount: "GRATIS VERZENDING",
+        title: "Gratis verzending",
+        description: "Geniet van 100% gratis bezorging en een gratis montageset bij aankoop van elke Tenways elektrische fiets.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-6",
+        code: "",
+        discount: "100€ KORTING",
+        title: "100€ korting op comfort ontmoet stijl",
+        description: "Bespaar 100€ op de Tenways CGO800S comfortabele elektrische stadsfiets met lage instap.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-7",
+        code: "",
+        discount: "40% KORTING",
+        title: "40% korting op stads-e-bikes",
+        description: "Bespaar tot wel 40% op geselecteerde stads-elektrische fietsen en outlet modellen.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-8",
+        code: "",
+        discount: "30% KORTING",
+        title: "30% korting op elektrische bakfiets",
+        description: "Krijg 30% voordeel op Tenways elektrische bakfietsen en handige cargo accessoires.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-9",
+        code: "",
+        discount: "20% KORTING",
+        title: "20% korting op flitsaanbiedingen",
+        description: "Tijdelijke flitsaanbiedingen met 20% korting op geselecteerde Tenways e-bike modellen.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-10",
+        code: "",
+        discount: "10% KORTING",
+        title: "10% korting op accessoires",
+        description: "Bespaar 10% op fietstassen, kettingsloten, spatborden, bagagedragers en helmen.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-11",
+        code: "",
+        discount: "100€ KORTING",
+        title: "100€ studentenkorting",
+        description: "Studenten ontvangen 100€ extra voordeel via Student Beans verificatie bij het afrekenen.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-nl-12",
+        code: "",
+        discount: "30€ KORTING",
+        title: "30€ korting op nieuwsbriefabonnement",
+        description: "Meld je aan voor de officiële Tenways nieuwsbrief en ontvang direct 30€ korting op je eerste bestelling.",
         affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
         is_verified: true,
         expiry_date: "2026-12-31"
