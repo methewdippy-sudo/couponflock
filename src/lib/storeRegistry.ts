@@ -1209,6 +1209,81 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 14. TENWAYS (Lightweight Commuter E-Bikes - US / UK / Global)
+  {
+    id: 631,
+    name: "Tenways",
+    slug: "tenways",
+    aliases: ["tenways-us", "tenways-uk", "tenwaysebike", "tenways-ebike"],
+    logo: "/logos/tenways.svg",
+    website: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+    affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+    country: "GLOBAL",
+    description: "Tenways crafts high-performance, lightweight commuter electric bikes featuring smooth magnetic torque sensors, Gates carbon belt drives, and long-range portable batteries.",
+    coupons: [
+      {
+        id: "tenways-deal-1",
+        code: "TENWAYS100",
+        discount: "$100 OFF",
+        title: "$100 off sitewide on lightweight commuter electric bikes",
+        description: "Save $100 / £100 off premium lightweight commuter e-bikes including CGO600 Pro and CGO800S with verified coupon code TENWAYS100.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-deal-2",
+        code: "",
+        discount: "UP TO $500 OFF",
+        title: "Up to $500 off dual e-bike bundles & multi-bike packages",
+        description: "Save up to $500 on 'Double the Love' bundle purchases when buying two Tenways electric bikes together.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-deal-3",
+        code: "CGO150",
+        discount: "$150 OFF",
+        title: "$150 off CGO600 Pro & AGO Series Trekking E-Bikes",
+        description: "Claim an instant $150 discount on CGO600 Pro lightweight urban e-bikes and high-torque AGO series models.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-deal-4",
+        code: "WELCOME50",
+        discount: "$50 OFF",
+        title: "$50 off first order & welcome referral discount",
+        description: "Get $50 off your first Tenways electric bike purchase when using this verified referral promo code at checkout.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-deal-5",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free doorstep delivery & complimentary toolkit on all e-bikes",
+        description: "Enjoy 100% free tracked courier shipping and a complimentary assembly tool kit across US, UK, and Europe on all e-bike orders.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tenways-deal-6",
+        code: "",
+        discount: "SPECIAL SAVINGS",
+        title: "Exclusive ID.me & Student Beans discounts for military and students",
+        description: "Save extra with verified status on ID.me or Student Beans at official Tenways checkout.",
+        affiliate_url: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
