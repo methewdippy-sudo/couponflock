@@ -106,6 +106,9 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
   const isDirectDeal =
     !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
 
+  const isAutoApplied =
+    Boolean((coupon as any).is_auto_applied || (coupon as any).isAutoApplied);
+
   // Mount check — needed for createPortal (SSR safety)
   useEffect(() => {
     setMounted(true);
@@ -260,7 +263,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
               </div>
             )}
             <h2 id="modal-title" className={styles.title}>
-              {isDirectDeal ? `${storeName} Deal Activated` : `Copy Code for ${storeName}`}
+              {isAutoApplied ? `${discount} Coupon Code` : isDirectDeal ? `${storeName} Deal Activated` : `Copy Code for ${storeName}`}
             </h2>
             <div className={styles.discountBadge}>{discount}</div>
             <p className={styles.description}>{description}</p>
@@ -268,7 +271,28 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
 
           {/* Code Copy Area */}
           <div className={styles.copyArea}>
-            {isDirectDeal ? (
+            {isAutoApplied ? (
+              <>
+                <p className={styles.copyLabel}>Get an exclusive and verified discount code:</p>
+                <div className={styles.autoAppliedRow}>
+                  <div className={styles.autoAppliedBadge}>
+                    <CheckIcon />
+                    <span>AUTOMATICALLY APPLIED</span>
+                  </div>
+                  <button
+                    type="button"
+                    className={`${styles.copyCodeMiniBtn} ${copied ? styles.copyCodeMiniBtnCopied : ""}`}
+                    onClick={handleCopy}
+                    title="Click to copy backup code"
+                  >
+                    {copied ? "COPIED!" : "COPY CODE"}
+                  </button>
+                </div>
+                <p className={styles.autoAppliedSubtext}>
+                  Exclusive discount is automatically activated via your referral link. No manual code needed at checkout!
+                </p>
+              </>
+            ) : isDirectDeal ? (
               <>
                 <p className={styles.copyLabel}>
                   No coupon code required. The discount will be automatically applied at checkout!
@@ -313,7 +337,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
               <p>
                 {isIOS ? (
                   <>Tap the button below to visit <span className={styles.highlight}>{storeName}</span> and apply your code at checkout.</>
-                ) : isDirectDeal ? (
+                ) : (isDirectDeal || isAutoApplied) ? (
                   <>We have redirected you to <span className={styles.highlight}>{storeName}</span> in a new tab.</>
                 ) : (
                   <>We have opened <span className={styles.highlight}>{storeName}&apos;s</span> website in a new tab.</>
@@ -322,7 +346,7 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
               <p className={styles.noticeSubText}>
                 {isIOS ? (
                   <>The store will open in a new tab so you can keep this code visible.</>
-                ) : isDirectDeal ? (
+                ) : (isDirectDeal || isAutoApplied) ? (
                   <>If the website did not load, please click the button below to claim your discount manually:</>
                 ) : (
                   <>If it didn&apos;t open automatically, you can click the link below to visit the official store:</>
@@ -337,9 +361,9 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
               href={storeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={isDirectDeal ? styles.shopLinkPrimary : styles.shopLink}
+              className={(isDirectDeal || isAutoApplied) ? styles.shopLinkPrimary : styles.shopLink}
             >
-              <span>{isDirectDeal ? `Claim Deal at ${storeName}` : `Shop at ${storeName}`}</span>
+              <span>{(isDirectDeal || isAutoApplied) ? `Claim Deal at ${storeName}` : `Shop at ${storeName}`}</span>
               <ExternalLinkIcon />
             </a>
           </div>

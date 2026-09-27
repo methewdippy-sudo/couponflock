@@ -8,6 +8,7 @@ export interface RegistryCoupon {
   title: string;
   description: string;
   is_verified: boolean;
+  is_auto_applied?: boolean;
   expiry_date?: string;
   affiliate_url?: string;
   image?: string;
@@ -1161,19 +1162,20 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "redu-deal-1",
         code: "METHEW46097",
+        is_auto_applied: true,
         discount: "15% OFF",
-        title: "Exclusive 15% off sitewide on body contouring massagers & gels",
-        description: "Save 15% on all Redu Sculpt body sculpting devices, toning massagers, and firming gels with verified promo code METHEW46097.",
+        title: "15% off coupon code",
+        description: "Get an exclusive and verified discount code automatically applied at checkout.",
         affiliate_url: "https://www.redusculpt.com/METHEW46097",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "redu-deal-2",
-        code: "METHEW46097",
-        discount: "45% OFF",
-        title: "Up to 45% off seasonal body sculpting sale & starter bundles",
-        description: "Save up to 45% off on body contouring massagers and essentials during the promotional sale.",
+        code: "",
+        discount: "40% OFF",
+        title: "40% off - Season Sale",
+        description: "Save up to 40% off on body contouring massagers during the seasonal clearance event.",
         affiliate_url: "https://www.redusculpt.com/METHEW46097",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1181,9 +1183,10 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "redu-deal-3",
         code: "METHEW46097",
-        discount: "33% OFF",
-        title: "33% off Redu Sculpt massager + gel value bundles",
-        description: "Get 33% off multi-item body shaping kits, replacement pads, and slimming body oils with code METHEW46097.",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off discount code sitewide",
+        description: "Save 10% on all orders with verified discount pre-activated on your session.",
         affiliate_url: "https://www.redusculpt.com/METHEW46097",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1191,19 +1194,79 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "redu-deal-4",
         code: "",
-        discount: "FREE SHIPPING",
-        title: "Free tracked worldwide shipping on all massager orders",
-        description: "Enjoy completely free standard shipping on all Redu Sculpt devices and skincare with no minimum spend.",
+        discount: "60% OFF",
+        title: "60% off on subscription",
+        description: "Save up to 60% with auto-delivery on replacement gel pads and sculpting refill sets.",
         affiliate_url: "https://www.redusculpt.com/METHEW46097",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "redu-deal-5",
-        code: "WELCOME10",
-        discount: "10% OFF",
-        title: "10% off your first order with email sign up",
-        description: "Get an instant 10% discount on your first body contouring device when joining the Redu Sculpt newsletter.",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free shipping",
+        description: "Enjoy free standard shipping on all body sculpting orders across the United States.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-6",
+        code: "",
+        discount: "60% OFF",
+        title: "60% off on gel & oil",
+        description: "Get 60% off on Redu Sculpt sculpting gel and firming massage oil.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-7",
+        code: "",
+        discount: "46% OFF",
+        title: "46% off - body sculpting essentials",
+        description: "Save 46% off on complete body contouring essentials starter bundle.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-8",
+        code: "",
+        discount: "33% OFF",
+        title: "33% off on bundles",
+        description: "Save 33% when buying body sculpting massager value packs and gift sets.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-9",
+        code: "",
+        discount: "20% OFF",
+        title: "20% off on supplements",
+        description: "Get 20% discount on Redu Sculpt dietary wellness supplements.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-10",
+        code: "",
+        discount: "$30 OFF",
+        title: "$30 off on green tea",
+        description: "Save $30 instantly on green tea dietary extracts at checkout.",
+        affiliate_url: "https://www.redusculpt.com/METHEW46097",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "redu-deal-11",
+        code: "",
+        discount: "15% OFF",
+        title: "15% off on newsletter signup",
+        description: "Sign up for the newsletter to unlock 15% off your first purchase.",
         affiliate_url: "https://www.redusculpt.com/METHEW46097",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1329,6 +1392,7 @@ export function getRegisteredStore(requestedSlug: string): { store: Store; coupo
       title: c.title,
       description: c.description,
       is_verified: c.is_verified,
+      is_auto_applied: c.is_auto_applied,
       expiry_date: c.expiry_date || "2026-12-31",
       store: populatedStore,
       storeSlug: requestedSlug,

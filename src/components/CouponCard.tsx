@@ -261,8 +261,8 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
       <div className={styles.actionSection}>
         {hasCode ? (
           <div className={`${styles.codeBtn} ${isRevealed ? styles.codeBtnRevealed : ""}`}>
-            <span className={styles.codeBtnLabel}>{isRevealed ? "COPIED!" : "Get Code"}</span>
-            <span className={styles.codeBtnPreview}>{isRevealed ? code : `${code.slice(0, 3)}···`}</span>
+            <span className={styles.codeBtnLabel}>{isRevealed ? (coupon.is_auto_applied ? "ACTIVATED!" : "COPIED!") : (coupon.is_auto_applied ? "Show Code" : "Get Code")}</span>
+            <span className={styles.codeBtnPreview}>{isRevealed ? (coupon.is_auto_applied ? "APPLIED" : code) : (coupon.is_auto_applied ? "AUTO···" : `${code.slice(0, 3)}···`)}</span>
           </div>
         ) : (
           <div className={`${styles.dealBtn} ${isRevealed ? styles.dealBtnRevealed : ""}`}>
