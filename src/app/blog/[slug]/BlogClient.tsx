@@ -46,7 +46,9 @@ const STORE_LINKS: Record<string, string> = {
   "fitueyes": "/store/fitueyes-uk",
   "hitway": "/store/hitway-uk",
   "wolfbox": "/store/wolfbox-uk",
-  "nobody's child": "/store/nobodys-child"
+  "nobody's child": "/store/nobodys-child",
+  "redusculpt": "/store/redusculpt",
+  "redu sculpt": "/store/redusculpt"
 };
 
 export default function BlogClient({ post }: BlogClientProps) {
