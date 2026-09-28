@@ -1657,7 +1657,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 635,
     name: "Desktronic",
     slug: "desktronic",
-    aliases: ["desktronic-uk", "desktronic-de", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
+    aliases: ["desktronic-uk", "desktronic-de", "desktronic-nl", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
     website: "https://desktronic.co.uk/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
