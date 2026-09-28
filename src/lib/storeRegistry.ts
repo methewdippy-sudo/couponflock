@@ -1657,7 +1657,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 635,
     name: "Desktronic",
     slug: "desktronic",
-    aliases: ["desktronic-uk", "desktronic-de", "desktronic-nl", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
+    aliases: ["desktronic-uk", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
     website: "https://desktronic.co.uk/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
@@ -1939,6 +1939,140 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "$120 off Sculpfun S30 Ultra 33W Laser Cutter",
         description: "Save $120 on the heavy-duty 33W optical power laser machine with automatic assist kit.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 640,
+    name: "Desktronic NL",
+    slug: "desktronic-nl",
+    aliases: ["desktronic-netherlands", "desktronicnl"],
+    website: "https://desktronic.nl/",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    description: "Desktronic produceert hoogwaardige elektrische zit-sta bureaus met fluisterstille dubbele motoren, massief houten tafelbladen en ergonomische bediening voor gezonde werkplekken in Nederland.",
+    coupons: [
+      {
+        id: "desk-nl-0",
+        code: "WEVALUEYOU20",
+        is_auto_applied: false,
+        discount: "20€ KORTING",
+        title: "20€ korting op Desktronic zit-sta bureaus met actiecode",
+        description: "Bespaar 20€ op alle Desktronic elektrische zit-sta bureaus en ergonomische accessoires met geverifieerde kortingscode WEVALUEYOU20.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-nl-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "100€ KORTING",
+        title: "100€ korting op Desktronic Pro One met dubbele motor",
+        description: "Profiteer van 100€ directe korting op het vlaggenschip Pro One zit-sta bureau met 3-traps poten en geheugentoetsen.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-nl-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "50€ KORTING",
+        title: "50€ korting op Desktronic Home One compact bureau",
+        description: "Upgrade je thuiswerkplek met 50€ voordeel op de ruimtebesparende Home One elektrische serie.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-nl-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "GRATIS VERZENDING",
+        title: "Gratis bezorging in heel Nederland en België",
+        description: "Geen bezorgkosten op alle zit-sta bureaus en grote pakketten met veilige drempellevering.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-nl-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "5 JAAR GARANTIE",
+        title: "5 Jaar volledige garantie en 30 dagen risicoloos proefdraaien",
+        description: "Elk Desktronic bureau wordt geleverd met 5 jaar fabrieksgarantie op frame en motoren plus 30 dagen retourrecht.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 641,
+    name: "Desktronic DE",
+    slug: "desktronic-de",
+    aliases: ["desktronic-germany", "desktronicde"],
+    website: "https://desktronic.de/",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    description: "Desktronic fertigt hochwertige höhenverstellbare Schreibtische mit leisen Doppelmotoren, massiven Echtholz-Tischplatten und intuitiven Speichersteuerungen für gesunde Ergonomie am Arbeitsplatz.",
+    coupons: [
+      {
+        id: "desk-de-0",
+        code: "WEVALUEYOU20",
+        is_auto_applied: false,
+        discount: "20€ RABATT",
+        title: "20€ Rabatt auf Desktronic Schreibtische mit Rabattcode",
+        description: "Sichern Sie sich 20€ Rabatt auf alle elektrisch höhenverstellbaren Desktronic Schreibtische mit Gutscheincode WEVALUEYOU20.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-de-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "100€ RABATT",
+        title: "100€ Rabatt auf Desktronic Pro One Doppelmotor Schreibtisch",
+        description: "100€ Sofortrabatt auf den Premium-Schreibtisch Pro One mit stabilen 3-Segment-Beinen und Antikollisionssensor.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-de-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "50€ RABATT",
+        title: "50€ Rabatt auf Desktronic Home One Modell",
+        description: "Perfekt fürs Homeoffice: 50€ Ersparnis auf die kompakte Home One Stehschreibtisch-Serie.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-de-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "GRATIS VERSAND",
+        title: "Kostenloser Speditionsversand in ganz Deutschland",
+        description: "Keine Lieferkosten auf alle Schreibtische und ergonomische Büromöbel mit Sendungsverfolgung.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-de-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "5 JAHRE GARANTIE",
+        title: "5 Jahre Rundum-Garantie und 30 Tage Rückgaberecht",
+        description: "Jeder Schreibtisch ist mit 5 Jahren Herstellergarantie auf Rahmen und Motoren geschützt.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
