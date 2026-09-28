@@ -1652,8 +1652,289 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 635,
+    name: "Desktronic",
+    slug: "desktronic",
+    aliases: ["desktronic-uk", "desktronic-de", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
+    website: "https://desktronic.co.uk/",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    description: "Desktronic crafts premium smart electric standing desks engineered with whisper-quiet dual motors, solid wood desktops, and smart anti-collision memory controls for healthy ergonomic workspaces.",
+    coupons: [
+      {
+        id: "desk-deal-1",
+        code: "DESK10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off sitewide official coupon code",
+        description: "Save 10% on all Desktronic height-adjustable standing desks, ergonomic chairs, and accessories.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "£100 OFF",
+        title: "£100 off Desktronic Pro One Dual-Motor Standing Desk",
+        description: "Get £100 off the flagship Desktronic Pro One with ultra-stable 3-stage legs and smart presets.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "£50 OFF",
+        title: "£50 off Desktronic Home One Compact Desk",
+        description: "Upgrade your home office with £50 savings on the space-saving Home One electric desk series.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free express shipping across the UK & Germany",
+        description: "Enjoy zero delivery fees on all standing desks and large packages with tracked curb delivery.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "desk-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "5-YR WAR",
+        title: "5-Year full warranty & 30-day money-back trial",
+        description: "Every Desktronic desk includes a comprehensive 5-year frame and motor warranty plus risk-free returns.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 636,
+    name: "Naturnest",
+    slug: "naturnest",
+    aliases: ["naturnest-us", "naturnest-rooftop-tents", "naturnest-tents", "naturnest-uk"],
+    website: "https://www.naturnest.com/",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+    logo: "https://www.naturnest.com/cdn/shop/files/logo_300x.png",
+    description: "Naturnest designs rugged all-weather aluminum hard shell rooftop tents, vehicle awnings, and overlanding camping solutions engineered for effortless 60-second setup and extreme outdoor comfort.",
+    coupons: [
+      {
+        id: "nest-deal-1",
+        code: "NEST5",
+        is_auto_applied: false,
+        discount: "5% OFF",
+        title: "5% off sitewide official discount promo code",
+        description: "Apply coupon NEST5 at checkout to receive 5% off all hard shell rooftop tents and overlanding awnings.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nest-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "$300 OFF",
+        title: "$300 off Naturnest Polaris Aluminum Hard Shell Tent",
+        description: "Save $300 on the aerodynamic low-profile Polaris hard shell camper with high-density foam mattress.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nest-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "$200 OFF",
+        title: "$200 off 270-Degree Freestanding Overland Awnings",
+        description: "Get $200 instant discount on heavy-duty 280G ripstop waterproof awnings with built-in LED lighting.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nest-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free freight shipping across the US contiguous states",
+        description: "Enjoy complimentary curbside freight delivery on all rooftop tents with heavy-duty crate protection.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nest-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "2-YR WAR",
+        title: "2-Year manufacturer warranty & weatherproof guarantee",
+        description: "Complete 2-year warranty covering frame, gas struts, hydraulic hinges, and waterproof fabric integrity.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 637,
+    name: "TuxMat",
+    slug: "tuxmat",
+    aliases: ["tuxmat-us", "tuxmat-ca", "tux-mat", "tuxmat-car-mats"],
+    website: "https://www.tuxmat.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+    logo: "https://www.tuxmat.com/cdn/shop/files/tuxmat-logo_300x.png",
+    description: "TuxMat manufactures ultimate luxury all-weather custom car floor mats designed with maximum high-wall spill coverage, elegant luxury aesthetics, and 3D laser-scanned precision fit.",
+    coupons: [
+      {
+        id: "tux-deal-1",
+        code: "TUXMAT10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off custom fit all-weather floor mats promo",
+        description: "Save 10% on maximum coverage car floor mats and cargo trunk liners with verified promo code.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tux-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "Up to 15% off complete 1st, 2nd & 3rd row bundle sets",
+        description: "Equip your whole vehicle with premium high-wall laser protection and save up to 15% automatically.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tux-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "$30 OFF",
+        title: "$30 off Trunk Cargo Liners with Floor Mat Purchase",
+        description: "Add a matching custom cargo trunk tray to your floor mat order and save $30 at checkout.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tux-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free shipping to USA and Canada on orders over $100",
+        description: "Get fast tracked ground delivery with zero freight fees across the US and Canadian provinces.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "tux-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "LIFETIME",
+        title: "Lifetime limited warranty & perfect laser fit guarantee",
+        description: "Backed by TuxMat's signature lifetime warranty protecting against cracking, warping, and peeling.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 638,
+    name: "SunGoldPower",
+    slug: "sungoldpower",
+    aliases: ["sungold-power", "sungoldpower-us", "sun-gold-power"],
+    website: "https://sungoldpower.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+    logo: "https://sungoldpower.com/cdn/shop/files/logo_300x.png",
+    description: "SunGoldPower provides high-efficiency off-grid pure sine wave solar inverters, server rack lithium batteries, and complete solar power kits for whole home backup and off-grid living.",
+    coupons: [
+      {
+        id: "sgp-deal-1",
+        code: "SUN6",
+        is_auto_applied: false,
+        discount: "6% OFF",
+        title: "6% off sitewide official solar coupon code",
+        description: "Enjoy an extra 6% off solar inverters, lithium batteries, and solar kits with promo code SUN6.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sgp-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "$500 OFF",
+        title: "$500 off 6500W 48V Off-Grid Inverter Bundles",
+        description: "Save $500 on all-in-one pure sine wave inverter chargers with dual MPPT solar controllers.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sgp-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free shipping across the continental US",
+        description: "Zero shipping cost on heavy inverter equipment and palletized battery kits.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 639,
+    name: "Sculpfun",
+    slug: "sculpfun",
+    aliases: ["sculpfun-laser", "sculpfun-us", "sculp-fun"],
+    website: "https://www.sculpfun.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+    logo: "https://www.sculpfun.com/cdn/shop/files/logo_300x.png",
+    description: "Sculpfun pioneers high-speed desktop diode laser engravers and cutters designed for precision craft, wood carving, metal marking, and custom fabrication businesses.",
+    coupons: [
+      {
+        id: "sculp-deal-1",
+        code: "SCULP10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off sitewide official discount promo code",
+        description: "Get 10% off all Sculpfun S30 laser engravers, expansion kits, and accessories with code SCULP10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sculp-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "$120 OFF",
+        title: "$120 off Sculpfun S30 Ultra 33W Laser Cutter",
+        description: "Save $120 on the heavy-duty 33W optical power laser machine with automatic assist kit.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
+
 
 /**
  * Fast lookup map for all aliases and canonical slugs
