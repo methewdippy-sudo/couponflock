@@ -1495,6 +1495,153 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 16. ALGOLASER (Smart Diode Laser Engravers & Cutters)
+  {
+    id: 633,
+    name: "AlgoLaser",
+    slug: "algolaser",
+    aliases: ["algo-laser", "algolaser-us", "algolaser-global", "algolasercom"],
+    logo: "/logos/algolaser.png",
+    website: "https://algolaser.com/?ref=METHEWDIPPY",
+    affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+    country: "US",
+    description: "AlgoLaser pioneers cutting-edge smart diode laser engravers and cutters including Alpha MK2, Delta, and DIY series, delivering professional precision for wood, metal, acrylic, and craft businesses.",
+    coupons: [
+      {
+        id: "algo-deal-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $300 OFF",
+        title: "Up to $300 off - seasonal flash sale on laser engravers",
+        description: "Save up to $300 on AlgoLaser Alpha MK2, Delta smart cutters, and DIY diode packages during the seasonal promotion.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off sitewide instant discount",
+        description: "Enjoy an extra 10% discount automatically applied to all laser engravers, enclosures, and rotary rollers.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "$200 OFF",
+        title: "$200 off AlgoLaser Alpha MK2 (22W / 40W)",
+        description: "Get $200 instant price reduction on the flagship AlgoLaser Alpha MK2 heavy-duty diode laser cutter.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "$150 OFF",
+        title: "$150 off AlgoLaser Delta Smart Touchscreen",
+        description: "Save $150 on the AlgoLaser Delta smart laser cutter featuring built-in touch control and high-speed offline engraving.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free tracked priority shipping",
+        description: "Get 100% free door-to-door tracked delivery on laser cutters and engraving machine orders across US, EU & UK.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "30% OFF",
+        title: "Up to 30% off creator bundles & value packs",
+        description: "Save 30% when ordering complete maker kits including honeycomb panels, air assist pump, and protective enclosures.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "6% OFF",
+        title: "6% off first order newsletter signup",
+        description: "Subscribe to the official AlgoLaser newsletter to claim an instant 6% welcome bonus on your first machine.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "$80 OFF",
+        title: "$80 off AlgoLaser DIY Kit 10W/20W",
+        description: "Save $80 on the beginner-friendly AlgoLaser DIY Kit compact diode laser engraver.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off materials & plywood consumables",
+        description: "Enjoy 25% off high-grade basswood sheets, acrylic plates, and metal marking spray refills.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "$50 OFF",
+        title: "$50 off rotary roller axis attachments",
+        description: "Take $50 off cylindrical rotary roller accessories for engraving tumblers, mugs, and glass bottles.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-11",
+        code: "",
+        is_auto_applied: true,
+        discount: "WARRANTY",
+        title: "Free 1-year warranty & 90-day price match",
+        description: "Every machine includes a full 1-year manufacturer warranty, 30-day return window, and official technical support.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algo-deal-12",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off education & business purchases",
+        description: "Exclusive 15% discount for educational institutions, maker labs, and small craft business bulk orders.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
