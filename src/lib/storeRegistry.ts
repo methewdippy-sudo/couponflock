@@ -1664,6 +1664,17 @@ export const STORE_REGISTRY: RegistryStore[] = [
     description: "Desktronic crafts premium smart electric standing desks engineered with whisper-quiet dual motors, solid wood desktops, and smart anti-collision memory controls for healthy ergonomic workspaces.",
     coupons: [
       {
+        id: "desk-deal-0",
+        code: "WEVALUEYOU20",
+        is_auto_applied: false,
+        discount: "£20 OFF",
+        title: "£20 off Desktronic standing desks with verified promo code",
+        description: "Save £20 on all Desktronic electric height-adjustable standing desks, ergonomic chairs, and accessories with verified coupon code WEVALUEYOU20.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
         id: "desk-deal-1",
         code: "",
         is_auto_applied: true,
