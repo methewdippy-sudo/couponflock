@@ -1510,6 +1510,16 @@ export const STORE_REGISTRY: RegistryStore[] = [
     description: "AlgoLaser pioneers cutting-edge smart diode laser engravers and cutters including Alpha MK2, Delta, and DIY series, delivering professional precision for wood, metal, acrylic, and craft businesses.",
     coupons: [
       {
+        id: "algo-deal-0",
+        code: "ALMDS10",
+        discount: "8% OFF",
+        title: "8% off sitewide official discount promo code",
+        description: "Save 8% on all AlgoLaser smart laser engravers, cutters, and accessories with verified coupon code ALMDS10.",
+        affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
         id: "algo-deal-1",
         code: "",
         is_auto_applied: true,
