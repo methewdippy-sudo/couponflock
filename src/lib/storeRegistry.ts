@@ -1665,11 +1665,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "desk-deal-1",
-        code: "DESK10",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "10% OFF",
-        title: "10% off sitewide official coupon code",
-        description: "Save 10% on all Desktronic height-adjustable standing desks, ergonomic chairs, and accessories.",
+        title: "Up to £100 off standing desks and ergonomic sale",
+        description: "Get automatic discounts on Desktronic standing desks and ergonomic chairs, ergonomic chairs, and accessories.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1732,11 +1732,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "nest-deal-1",
-        code: "NEST5",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "5% OFF",
-        title: "5% off sitewide official discount promo code",
-        description: "Apply coupon NEST5 at checkout to receive 5% off all hard shell rooftop tents and overlanding awnings.",
+        title: "Up to $300 off hard shell rooftop tents sale",
+        description: "Claim instant seasonal savings on hard shell rooftop tents and awnings all hard shell rooftop tents and overlanding awnings.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1799,11 +1799,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "tux-deal-1",
-        code: "TUXMAT10",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "10% OFF",
-        title: "10% off custom fit all-weather floor mats promo",
-        description: "Save 10% on maximum coverage car floor mats and cargo trunk liners with verified promo code.",
+        title: "Up to 15% off custom fit all-weather floor mats",
+        description: "Save 10% on maximum coverage car floor mats and cargo trunk liners with auto-applied bundle savings.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1866,11 +1866,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "sgp-deal-1",
-        code: "SUN6",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "6% OFF",
-        title: "6% off sitewide official solar coupon code",
-        description: "Enjoy an extra 6% off solar inverters, lithium batteries, and solar kits with promo code SUN6.",
+        title: "Up to $500 off off-grid solar inverters and kits",
+        description: "Enjoy an extra 6% off solar inverters, lithium batteries, and solar kits with direct manufacturer promotional pricing.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -1911,11 +1911,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "sculp-deal-1",
-        code: "SCULP10",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "10% OFF",
-        title: "10% off sitewide official discount promo code",
-        description: "Get 10% off all Sculpfun S30 laser engravers, expansion kits, and accessories with code SCULP10.",
+        title: "Up to $120 off S30 laser engravers and cutters",
+        description: "Get 10% off all Sculpfun S30 laser engravers, expansion kits, and accessories with direct factory promotional discounts.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
         is_verified: true,
         expiry_date: "2026-12-31"
