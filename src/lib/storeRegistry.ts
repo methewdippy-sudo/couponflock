@@ -2077,6 +2077,140 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 642,
+    name: "Mirlux NL",
+    slug: "mirlux-nl",
+    aliases: ["mirlux", "mirluxnl", "mirlux-spiegels"],
+    website: "https://mirlux.nl/",
+    affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/101763.png",
+    description: "Mirlux ontwerpt en produceert luxe LED badkamerspiegels op maat, slimme spiegels met spiegelverwarming, touch-bediening en dimbare verlichting in Nederland.",
+    coupons: [
+      {
+        id: "mirlux-nl-0",
+        code: "10OFF",
+        is_auto_applied: false,
+        discount: "10% KORTING",
+        title: "10% Korting op alle Mirlux spiegels met kortingscode",
+        description: "Profiteer van 10% extra korting op je gehele bestelling bij Mirlux met de exclusieve kortingscode 10OFF.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-nl-1",
+        code: "WLKS",
+        is_auto_applied: false,
+        discount: "15% KORTING",
+        title: "15% Kortingscode op Mirlux design badkamerspiegels",
+        description: "Bespaar 15% op luxe LED spiegels en badkamermeubels met geverifieerde actiecode WLKS.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-nl-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "TOT 50% KORTING",
+        title: "Tot 50% Korting op geselecteerde badkamerspiegels in de Sale",
+        description: "Grote kortingen op populaire modellen LED spiegels met geïntegreerde verlichting en verwarming. Geen code vereist.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-nl-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "GRATIS VERZENDING",
+        title: "Gratis verzending op alle bestellingen in Nederland",
+        description: "Veilige en verzekerde verzending direct bij u thuisbezorgd zonder extra bezorgkosten.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-nl-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "2 JAAR GARANTIE",
+        title: "2 Jaar volledige garantie op LED verlichting en elektronica",
+        description: "Hoogwaardige kwaliteit gegarandeerd met 2 jaar officiële fabrieksgarantie en 30 dagen bedenktermijn.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 643,
+    name: "Mirlux DE",
+    slug: "mirlux-de",
+    aliases: ["mirlux-germany", "mirluxde"],
+    website: "https://mirlux.de/",
+    affiliate_url: "https://promoregistry.com/go/mirlux-de",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/123796.png",
+    description: "Mirlux steht für luxuriöse LED-Badspiegel nach Maß mit integrierter Spiegelheizung, dimmbarer Beleuchtung, Touch-Schaltern und edlen Rahmen in Deutschland.",
+    coupons: [
+      {
+        id: "mirlux-de-0",
+        code: "WLKS",
+        is_auto_applied: false,
+        discount: "15% RABATT",
+        title: "15% Rabattcode auf alle Mirlux Badspiegel",
+        description: "Sparen Sie 15% auf das gesamte Sortiment an maßgefertigten LED-Spiegeln mit dem Gutscheincode WLKS.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-de-1",
+        code: "10OFF",
+        is_auto_applied: false,
+        discount: "10% RABATT",
+        title: "10% Gutscheincode für Neukunden und Newsletter",
+        description: "Erhalten Sie 10% Rabatt auf Ihre erste Spiegelbestellung mit dem Rabattcode 10OFF.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-de-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BIS ZU 40% RABATT",
+        title: "Bis zu 40% Rabatt im Mirlux Sale auf Design-Spiegel",
+        description: "Attraktive Rabatte auf sofort lieferbare LED-Badspiegel und Hollywood-Spiegel. Automatisch an der Kasse abgezogen.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-de-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "KOSTENLOSER VERSAND",
+        title: "Kostenloser versicherter Versand innerhalb Deutschlands",
+        description: "Spezial-Spiegelversand mit bruchsicherer Verpackung ohne zusätzliche Versandkosten.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-de-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "2 JAHRE GARANTIE",
+        title: "2 Jahre Herstellergarantie auf alle LED-Komponenten",
+        description: "Höchste deutsche Sicherheits- und Qualitätsstandards mit CE-Zertifizierung und 2 Jahren Garantie.",
+        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
