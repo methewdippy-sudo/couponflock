@@ -2211,6 +2211,140 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 644,
+    name: "WJD Exclusives",
+    slug: "wjd-exclusives-us",
+    aliases: ["wjd-exclusives", "wjd", "wjd-exclusive", "wjdexclusives"],
+    website: "https://wjdexclusives.com/",
+    affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/82685.png",
+    description: "WJD Exclusives is a premier New York jeweler specializing in authentic 10K and 14K solid gold chains, Miami Cuban link bracelets, certified diamond pendants, rings, and luxury jewelry.",
+    coupons: [
+      {
+        id: "wjd-0",
+        code: "THANKYOU2023",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off WJD Exclusives Coupon Code Sitewide",
+        description: "Save 15% on real gold chains, Cuban links, diamond jewelry, and custom pendants with verified coupon code THANKYOU2023.",
+        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "wjd-1",
+        code: "THANKYOU2023",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Sitewide on Fine Gold & Diamond Jewelry",
+        description: "Enjoy an extra 10% discount on entire jewelry collection with code THANKYOU2023.",
+        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "wjd-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 60% OFF",
+        title: "Up to 60% Off Flash Deals & Weekly Gold Specials",
+        description: "Massive markdowns on trending chains, rope chains, rings, and bracelets. Discount automatically applied at checkout.",
+        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "wjd-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Insured US Shipping On All Orders",
+        description: "Complimentary fully insured domestic doorstep delivery with signature on all authentic jewelry orders.",
+        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "wjd-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "CERTIFIED GOLD",
+        title: "100% Guaranteed Genuine Gold & 30-Day Hassle-Free Returns",
+        description: "Every item stamped and certified authentic with 30-day money-back guarantee and lifetime diamond upgrade options.",
+        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 645,
+    name: "Silver Cross US",
+    slug: "silver-cross-us",
+    aliases: ["silver-cross", "silvercross", "silvercrossus"],
+    website: "https://silvercrossus.com/",
+    affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+    logo: "https://ui.awin.com/images/upload/merchant/profile/47379.png",
+    description: "Silver Cross is the iconic British luxury nursery brand crafting premier strollers, wave prams, reef travel systems, high chairs, and car seats trusted by parents worldwide since 1877.",
+    coupons: [
+      {
+        id: "sc-0",
+        code: "SAVE10",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Silver Cross Coupon Code on Strollers & Gear",
+        description: "Save 15% on luxury strollers, pram travel systems, and accessories with verified discount code SAVE10.",
+        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "$300 OFF",
+        title: "$300 Off Silver Cross Stroller Accessory Bundle Deals",
+        description: "Bundle and save up to $300 on Wave and Reef 2 stroller combinations including bassinet, tandem seat, and footmuff.",
+        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 50% OFF",
+        title: "Up to 50% Off Silver Cross Seasonal Sale & Clearance",
+        description: "Exclusive discounts on luxury baby strollers, high chairs, diaper bags, and travel cribs. No code needed.",
+        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Doorstep Shipping Across Contiguous United States",
+        description: "Get free standard shipping on all stroller systems, car seats, and accessories delivered directly to your door.",
+        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "3-YEAR WARRANTY",
+        title: "3-Year Manufacturer Warranty on All Luxury Strollers",
+        description: "Every Silver Cross stroller comes with a comprehensive 3-year warranty for complete peace of mind.",
+        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
