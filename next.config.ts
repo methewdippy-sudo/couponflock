@@ -106,6 +106,16 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/zendure",
+        destination: "https://www.awin1.com/cread.php?awinmid=68786&awinaffid=1909602&clickref=CF-DE&ued=https%3A%2F%2Fzendure.de%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/zendure-de",
+        destination: "https://www.awin1.com/cread.php?awinmid=68786&awinaffid=1909602&clickref=CF-DE&ued=https%3A%2F%2Fzendure.de%2F",
+        permanent: false,
+      },
+      {
         source: "/go/desktronic-4leg",
         destination: "https://desktronic.co.uk/products/4-leg-standing-desk?bg_ref=fek2GZmWHH&utm_source=fek2GZmWHH&utm_medium=partner&utm_campaign=Beginner%20Program",
         permanent: true,

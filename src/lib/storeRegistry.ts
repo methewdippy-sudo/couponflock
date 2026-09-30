@@ -2426,6 +2426,85 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 651,
+    name: "Zendure DE",
+    slug: "zendure",
+    aliases: ["zendure-de", "zendure-germany", "zendurede"],
+    website: "https://zendure.de/",
+    affiliate_url: "/go/zendure",
+    logo: "/logos/zendure.png",
+    country: "DE",
+    description: "Zendure ist ein führender Innovator für intelligente Energiespeicher und Balkonkraftwerk-Lösungen in Deutschland. Entdecken Sie SolarFlow Systeme, Hyper 2000, SuperBase mobile Powerstations und hocheffiziente Solarmodule.",
+    coupons: [
+      {
+        id: "zendure-de-1",
+        code: "ZD5",
+        is_auto_applied: false,
+        discount: "5% RABATT",
+        title: "5% Rabattcode auf das gesamte Zendure Sortiment",
+        description: "Sparen Sie mit dem exklusiven Rabattcode ZD5 5% auf Balkonkraftwerk Speicher, SolarFlow und Powerstations.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "zendure-de-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BIS ZU 40% RABATT",
+        title: "Bis zu 40% Rabatt auf Balkonkraftwerk Speicher & SolarFlow Sets",
+        description: "Direkter Rabatt auf ausgewählte Zendure SolarFlow Balkon-Speichersysteme im offiziellen Onlineshop.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "zendure-de-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "KOSTENLOSER VERSAND",
+        title: "Kostenloser versicherter Versand innerhalb Deutschlands",
+        description: "Alle qualifizierten Bestellungen von SolarFlow Speichern und Powerstations werden gratis und schnell geliefert.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "zendure-de-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "BIS ZU 800€ SPAREN",
+        title: "Bis zu 800€ Rabatt auf SuperBase V Powerstations & Solar-Sets",
+        description: "Mega-Preisvorteil auf mobile Heimspeicher, Notstromaggregate und erweiterbare Batteriesysteme.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "zendure-de-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "NEWSLETTER VORTEIL",
+        title: "Exklusive Rabatte und Gutscheine per Newsletter",
+        description: "Melden Sie sich für den kostenlosen Zendure Newsletter an und sichern Sie sich regelmäßige Aktionsangebote.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "zendure-de-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "10 JAHRE GARANTIE",
+        title: "Bis zu 10 Jahre Herstellergarantie auf Zendure Solarspeicher",
+        description: "Höchste LiFePO4 Akku-Qualität und Sicherheit mit langfristiger Herstellergarantie auf SolarFlow Speicher.",
+        affiliate_url: "/go/zendure",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
