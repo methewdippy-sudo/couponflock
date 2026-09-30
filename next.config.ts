@@ -96,6 +96,16 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/scheels",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/scheels-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F",
+        permanent: false,
+      },
+      {
         source: "/go/desktronic-4leg",
         destination: "https://desktronic.co.uk/products/4-leg-standing-desk?bg_ref=fek2GZmWHH&utm_source=fek2GZmWHH&utm_medium=partner&utm_campaign=Beginner%20Program",
         permanent: true,

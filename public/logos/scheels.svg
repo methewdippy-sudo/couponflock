@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150">
+  <rect width="500" height="150" fill="transparent"/>
+  <g transform="translate(25, 25)">
+    <!-- Red diamond crest motif -->
+    <path d="M 40 10 L 65 50 L 40 90 L 15 50 Z" fill="#C8102E"/>
+    <path d="M 40 25 L 53 50 L 40 75 L 27 50 Z" fill="#FFFFFF"/>
+    <!-- Bold SCHEELS Lettering -->
+    <text x="85" y="70" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="62" fill="#C8102E" letter-spacing="3">SCHEELS</text>
+  </g>
+</svg>

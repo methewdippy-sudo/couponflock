@@ -2345,6 +2345,85 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 26. SCHEELS (US Sporting Goods, Outdoor Gear, Footwear & Apparel)
+  {
+    id: 650,
+    name: "SCHEELS",
+    slug: "scheels",
+    aliases: ["scheels-us", "scheels-sports", "scheels-com"],
+    logo: "/logos/scheels.png",
+    website: "https://www.scheels.com",
+    affiliate_url: "/go/scheels",
+    country: "US",
+    description: "SCHEELS is America's premier sporting goods and outdoor gear destination. Explore athletic footwear, hunting, fishing, camping equipment, and sportswear from top brands like Nike, Hoka, Traeger, and Under Armour.",
+    coupons: [
+      {
+        id: "scheels-deal-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 50% OFF",
+        title: "Up to 50% off clearance sports gear & outdoor equipment",
+        description: "Save up to 50% on top hunting, fishing, camping, and athletic gear. Direct savings applied at checkout.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40% OFF",
+        title: "Up to 40% off athletic footwear: Nike, Hoka, On Cloud & Brooks",
+        description: "Huge discounts on top performance running shoes and athletic footwear for men, women, and kids.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-code-1",
+        code: "SCHEELS20",
+        discount: "$20 OFF",
+        title: "$20 off orders over $150 with verified promotional code",
+        description: "Save an extra $20 on eligible footwear, outdoor apparel, and sports equipment orders over $150 with code SCHEELS20.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free standard ground shipping on qualifying orders $50+",
+        description: "Get free fast tracked ground delivery across the United States on all qualifying orders over $50.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-code-2",
+        code: "SAVE10",
+        discount: "10% OFF",
+        title: "10% off select hunting gear, camping optics, and outdoor apparel",
+        description: "Enjoy 10% instant discount on camping and outdoor accessories with promo code SAVE10 at checkout.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "PRICE MATCH",
+        title: "SCHEELS Price Match Guarantee on all authorized retailers",
+        description: "Find a lower price on an identical in-stock item at any authorized competitor, and SCHEELS will match it.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
