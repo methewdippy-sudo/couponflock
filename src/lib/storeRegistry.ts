@@ -1737,7 +1737,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "naturnest",
     aliases: ["naturnest-us", "naturnest-rooftop-tents", "naturnest-tents", "naturnest-uk"],
     website: "https://www.naturnest.com/",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
     logo: "https://www.naturnest.com/cdn/shop/files/logo_300x.png",
     description: "Naturnest designs rugged all-weather aluminum hard shell rooftop tents, vehicle awnings, and overlanding camping solutions engineered for effortless 60-second setup and extreme outdoor comfort.",
     coupons: [
@@ -1748,7 +1748,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5% OFF",
         title: "Up to $300 off hard shell rooftop tents sale",
         description: "Claim instant seasonal savings on hard shell rooftop tents and awnings all hard shell rooftop tents and overlanding awnings.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1759,7 +1759,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$300 OFF",
         title: "$300 off Naturnest Polaris Aluminum Hard Shell Tent",
         description: "Save $300 on the aerodynamic low-profile Polaris hard shell camper with high-density foam mattress.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1770,7 +1770,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$200 OFF",
         title: "$200 off 270-Degree Freestanding Overland Awnings",
         description: "Get $200 instant discount on heavy-duty 280G ripstop waterproof awnings with built-in LED lighting.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1781,7 +1781,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIP",
         title: "Free freight shipping across the US contiguous states",
         description: "Enjoy complimentary curbside freight delivery on all rooftop tents with heavy-duty crate protection.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1792,7 +1792,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "2-YR WAR",
         title: "2-Year manufacturer warranty & weatherproof guarantee",
         description: "Complete 2-year warranty covering frame, gas struts, hydraulic hinges, and waterproof fabric integrity.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -1804,7 +1804,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "tuxmat",
     aliases: ["tuxmat-us", "tuxmat-ca", "tux-mat", "tuxmat-car-mats"],
     website: "https://www.tuxmat.com",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
     logo: "https://www.tuxmat.com/cdn/shop/files/tuxmat-logo_300x.png",
     description: "TuxMat manufactures ultimate luxury all-weather custom car floor mats designed with maximum high-wall spill coverage, elegant luxury aesthetics, and 3D laser-scanned precision fit.",
     coupons: [
@@ -1815,7 +1815,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "Up to 15% off custom fit all-weather floor mats",
         description: "Save 10% on maximum coverage car floor mats and cargo trunk liners with auto-applied bundle savings.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1826,7 +1826,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% OFF",
         title: "Up to 15% off complete 1st, 2nd & 3rd row bundle sets",
         description: "Equip your whole vehicle with premium high-wall laser protection and save up to 15% automatically.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1837,7 +1837,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$30 OFF",
         title: "$30 off Trunk Cargo Liners with Floor Mat Purchase",
         description: "Add a matching custom cargo trunk tray to your floor mat order and save $30 at checkout.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1848,7 +1848,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIP",
         title: "Free shipping to USA and Canada on orders over $100",
         description: "Get fast tracked ground delivery with zero freight fees across the US and Canadian provinces.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1859,7 +1859,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "LIFETIME",
         title: "Lifetime limited warranty & perfect laser fit guarantee",
         description: "Backed by TuxMat's signature lifetime warranty protecting against cracking, warping, and peeling.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.tuxmat.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -1871,7 +1871,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "sungoldpower",
     aliases: ["sungold-power", "sungoldpower-us", "sun-gold-power"],
     website: "https://sungoldpower.com",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
     logo: "https://sungoldpower.com/cdn/shop/files/logo_300x.png",
     description: "SunGoldPower provides high-efficiency off-grid pure sine wave solar inverters, server rack lithium batteries, and complete solar power kits for whole home backup and off-grid living.",
     coupons: [
@@ -1882,7 +1882,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "6% OFF",
         title: "Up to $500 off off-grid solar inverters and kits",
         description: "Enjoy an extra 6% off solar inverters, lithium batteries, and solar kits with direct manufacturer promotional pricing.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1893,7 +1893,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$500 OFF",
         title: "$500 off 6500W 48V Off-Grid Inverter Bundles",
         description: "Save $500 on all-in-one pure sine wave inverter chargers with dual MPPT solar controllers.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1904,7 +1904,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIP",
         title: "Free shipping across the continental US",
         description: "Zero shipping cost on heavy inverter equipment and palletized battery kits.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fsungoldpower.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -1916,7 +1916,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "sculpfun",
     aliases: ["sculpfun-laser", "sculpfun-us", "sculp-fun"],
     website: "https://www.sculpfun.com",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
     logo: "https://www.sculpfun.com/cdn/shop/files/logo_300x.png",
     description: "Sculpfun pioneers high-speed desktop diode laser engravers and cutters designed for precision craft, wood carving, metal marking, and custom fabrication businesses.",
     coupons: [
@@ -1927,7 +1927,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "Up to $120 off S30 laser engravers and cutters",
         description: "Get 10% off all Sculpfun S30 laser engravers, expansion kits, and accessories with direct factory promotional discounts.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1938,7 +1938,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$120 OFF",
         title: "$120 off Sculpfun S30 Ultra 33W Laser Cutter",
         description: "Save $120 on the heavy-duty 33W optical power laser machine with automatic assist kit.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fwww.sculpfun.com",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
         is_verified: true,
         expiry_date: "2026-12-31"
       }

@@ -57,7 +57,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/desktronic-uk",
-        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
         permanent: false,
       },
       {
@@ -67,12 +67,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/desktronic-nl",
-        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.nl%2F",
         permanent: false,
       },
       {
         source: "/go/desktronic-de",
-        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.de%2F",
         permanent: false,
       },
       {
