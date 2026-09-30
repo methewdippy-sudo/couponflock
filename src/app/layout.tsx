@@ -83,6 +83,23 @@ export default function RootLayout({
           src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=376c8fc11d613d19a45cd4c0fa5dddd7e411c6c9"
           strategy="lazyOnload"
         />
+        {/* mrge Official Publisher Tracking Script for CouponFlock */}
+        <Script id="mrge-tracking" strategy="afterInteractive">
+          {`
+            (function(){
+              var loc = window.location.href;
+              var dd = document.createElement('script');
+              dd.type = 'text/javascript';
+              dd.src = '//static.publisher.mrge.com/couponflock.js?loc=' + encodeURIComponent(loc);
+              var s = document.getElementsByTagName('script')[0];
+              if (s && s.parentNode) {
+                s.parentNode.insertBefore(dd, s);
+              } else {
+                document.head.appendChild(dd);
+              }
+            })();
+          `}
+        </Script>
         <meta name="fo-verify" content="21153cba-a2c3-435d-aff2-e91717e8564c" />
         <meta name="verify-admitad" content="dc1c933d28" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
