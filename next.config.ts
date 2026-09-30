@@ -57,18 +57,43 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/desktronic-uk",
-        destination: "https://desktronic.co.uk/muhammadhaziqueali",
-        permanent: true,
+        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        permanent: false,
       },
       {
         source: "/go/desktronic-us",
         destination: "https://www.xjcs5z7m.com/METHEWDIPPY/",
-        permanent: true,
+        permanent: false,
       },
       {
         source: "/go/desktronic-nl",
-        destination: "https://desktronic.nl/methewdippy",
-        permanent: true,
+        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.nl%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/desktronic-de",
+        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=https%3A%2F%2Fdesktronic.de%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/mirlux-nl",
+        destination: "https://www.awin1.com/cread.php?awinmid=101763&awinaffid=1909602&clickref=CF-NL&ued=https%3A%2F%2Fmirlux.nl%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/mirlux-de",
+        destination: "https://www.awin1.com/cread.php?awinmid=123796&awinaffid=1909602&clickref=CF-DE&ued=https%3A%2F%2Fmirlux.de%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/wjd-exclusives-us",
+        destination: "https://lkmstore.com/g/hIgUjRa",
+        permanent: false,
+      },
+      {
+        source: "/go/silver-cross-us",
+        destination: "https://app.linkscircle.com/short/0pSe401hQq",
+        permanent: false,
       },
       {
         source: "/go/desktronic-4leg",

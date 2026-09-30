@@ -1659,7 +1659,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "desktronic",
     aliases: ["desktronic-uk", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
     website: "https://desktronic.co.uk/",
-    affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+    affiliate_url: "/go/desktronic-uk",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
     description: "Desktronic crafts premium smart electric standing desks engineered with whisper-quiet dual motors, solid wood desktops, and smart anti-collision memory controls for healthy ergonomic workspaces.",
     coupons: [
@@ -1670,7 +1670,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£20 OFF",
         title: "£20 off Desktronic standing desks with verified promo code",
         description: "Save £20 on all Desktronic electric height-adjustable standing desks, ergonomic chairs, and accessories with verified coupon code WEVALUEYOU20.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1681,7 +1681,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "Up to £100 off standing desks and ergonomic sale",
         description: "Get automatic discounts on Desktronic standing desks and ergonomic chairs, ergonomic chairs, and accessories.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1692,7 +1692,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£100 OFF",
         title: "£100 off Desktronic Pro One Dual-Motor Standing Desk",
         description: "Get £100 off the flagship Desktronic Pro One with ultra-stable 3-stage legs and smart presets.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1703,7 +1703,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£50 OFF",
         title: "£50 off Desktronic Home One Compact Desk",
         description: "Upgrade your home office with £50 savings on the space-saving Home One electric desk series.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1714,7 +1714,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIP",
         title: "Free express shipping across the UK & Germany",
         description: "Enjoy zero delivery fees on all standing desks and large packages with tracked curb delivery.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1725,7 +1725,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5-YR WAR",
         title: "5-Year full warranty & 30-day money-back trial",
         description: "Every Desktronic desk includes a comprehensive 5-year frame and motor warranty plus risk-free returns.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-uk",
+        affiliate_url: "/go/desktronic-uk",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -1950,7 +1950,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "desktronic-nl",
     aliases: ["desktronic-netherlands", "desktronicnl"],
     website: "https://desktronic.nl/",
-    affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+    affiliate_url: "/go/desktronic-nl",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
     description: "Desktronic produceert hoogwaardige elektrische zit-sta bureaus met fluisterstille dubbele motoren, massief houten tafelbladen en ergonomische bediening voor gezonde werkplekken in Nederland.",
     coupons: [
@@ -1961,7 +1961,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "20€ KORTING",
         title: "20€ korting op Desktronic zit-sta bureaus met actiecode",
         description: "Bespaar 20€ op alle Desktronic elektrische zit-sta bureaus en ergonomische accessoires met geverifieerde kortingscode WEVALUEYOU20.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+        affiliate_url: "/go/desktronic-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1972,7 +1972,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "100€ KORTING",
         title: "100€ korting op Desktronic Pro One met dubbele motor",
         description: "Profiteer van 100€ directe korting op het vlaggenschip Pro One zit-sta bureau met 3-traps poten en geheugentoetsen.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+        affiliate_url: "/go/desktronic-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1983,7 +1983,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "50€ KORTING",
         title: "50€ korting op Desktronic Home One compact bureau",
         description: "Upgrade je thuiswerkplek met 50€ voordeel op de ruimtebesparende Home One elektrische serie.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+        affiliate_url: "/go/desktronic-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1994,7 +1994,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "GRATIS VERZENDING",
         title: "Gratis bezorging in heel Nederland en België",
         description: "Geen bezorgkosten op alle zit-sta bureaus en grote pakketten met veilige drempellevering.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+        affiliate_url: "/go/desktronic-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2005,7 +2005,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5 JAAR GARANTIE",
         title: "5 Jaar volledige garantie en 30 dagen risicoloos proefdraaien",
         description: "Elk Desktronic bureau wordt geleverd met 5 jaar fabrieksgarantie op frame en motoren plus 30 dagen retourrecht.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-nl",
+        affiliate_url: "/go/desktronic-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -2017,7 +2017,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "desktronic-de",
     aliases: ["desktronic-germany", "desktronicde"],
     website: "https://desktronic.de/",
-    affiliate_url: "https://promoregistry.com/go/desktronic-de",
+    affiliate_url: "/go/desktronic-de",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
     description: "Desktronic fertigt hochwertige höhenverstellbare Schreibtische mit leisen Doppelmotoren, massiven Echtholz-Tischplatten und intuitiven Speichersteuerungen für gesunde Ergonomie am Arbeitsplatz.",
     coupons: [
@@ -2028,7 +2028,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "20€ RABATT",
         title: "20€ Rabatt auf Desktronic Schreibtische mit Rabattcode",
         description: "Sichern Sie sich 20€ Rabatt auf alle elektrisch höhenverstellbaren Desktronic Schreibtische mit Gutscheincode WEVALUEYOU20.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-de",
+        affiliate_url: "/go/desktronic-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2039,7 +2039,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "100€ RABATT",
         title: "100€ Rabatt auf Desktronic Pro One Doppelmotor Schreibtisch",
         description: "100€ Sofortrabatt auf den Premium-Schreibtisch Pro One mit stabilen 3-Segment-Beinen und Antikollisionssensor.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-de",
+        affiliate_url: "/go/desktronic-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2050,7 +2050,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "50€ RABATT",
         title: "50€ Rabatt auf Desktronic Home One Modell",
         description: "Perfekt fürs Homeoffice: 50€ Ersparnis auf die kompakte Home One Stehschreibtisch-Serie.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-de",
+        affiliate_url: "/go/desktronic-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2061,7 +2061,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "GRATIS VERSAND",
         title: "Kostenloser Speditionsversand in ganz Deutschland",
         description: "Keine Lieferkosten auf alle Schreibtische und ergonomische Büromöbel mit Sendungsverfolgung.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-de",
+        affiliate_url: "/go/desktronic-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2072,7 +2072,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "5 JAHRE GARANTIE",
         title: "5 Jahre Rundum-Garantie und 30 Tage Rückgaberecht",
         description: "Jeder Schreibtisch ist mit 5 Jahren Herstellergarantie auf Rahmen und Motoren geschützt.",
-        affiliate_url: "https://promoregistry.com/go/desktronic-de",
+        affiliate_url: "/go/desktronic-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -2084,7 +2084,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "mirlux-nl",
     aliases: ["mirlux", "mirluxnl", "mirlux-spiegels"],
     website: "https://mirlux.nl/",
-    affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+    affiliate_url: "/go/mirlux-nl",
     logo: "https://ui.awin.com/images/upload/merchant/profile/101763.png",
     description: "Mirlux ontwerpt en produceert luxe LED badkamerspiegels op maat, slimme spiegels met spiegelverwarming, touch-bediening en dimbare verlichting in Nederland.",
     coupons: [
@@ -2095,7 +2095,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% KORTING",
         title: "10% Korting op alle Mirlux spiegels met kortingscode",
         description: "Profiteer van 10% extra korting op je gehele bestelling bij Mirlux met de exclusieve kortingscode 10OFF.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        affiliate_url: "/go/mirlux-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2106,7 +2106,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% KORTING",
         title: "15% Kortingscode op Mirlux design badkamerspiegels",
         description: "Bespaar 15% op luxe LED spiegels en badkamermeubels met geverifieerde actiecode WLKS.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        affiliate_url: "/go/mirlux-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2117,7 +2117,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "TOT 50% KORTING",
         title: "Tot 50% Korting op geselecteerde badkamerspiegels in de Sale",
         description: "Grote kortingen op populaire modellen LED spiegels met geïntegreerde verlichting en verwarming. Geen code vereist.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        affiliate_url: "/go/mirlux-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2128,7 +2128,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "GRATIS VERZENDING",
         title: "Gratis verzending op alle bestellingen in Nederland",
         description: "Veilige en verzekerde verzending direct bij u thuisbezorgd zonder extra bezorgkosten.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        affiliate_url: "/go/mirlux-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2139,7 +2139,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "2 JAAR GARANTIE",
         title: "2 Jaar volledige garantie op LED verlichting en elektronica",
         description: "Hoogwaardige kwaliteit gegarandeerd met 2 jaar officiële fabrieksgarantie en 30 dagen bedenktermijn.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-nl",
+        affiliate_url: "/go/mirlux-nl",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -2151,7 +2151,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "mirlux-de",
     aliases: ["mirlux-germany", "mirluxde"],
     website: "https://mirlux.de/",
-    affiliate_url: "https://promoregistry.com/go/mirlux-de",
+    affiliate_url: "/go/mirlux-de",
     logo: "https://ui.awin.com/images/upload/merchant/profile/123796.png",
     description: "Mirlux steht für luxuriöse LED-Badspiegel nach Maß mit integrierter Spiegelheizung, dimmbarer Beleuchtung, Touch-Schaltern und edlen Rahmen in Deutschland.",
     coupons: [
@@ -2162,7 +2162,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% RABATT",
         title: "15% Rabattcode auf alle Mirlux Badspiegel",
         description: "Sparen Sie 15% auf das gesamte Sortiment an maßgefertigten LED-Spiegeln mit dem Gutscheincode WLKS.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        affiliate_url: "/go/mirlux-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2173,7 +2173,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% RABATT",
         title: "10% Gutscheincode für Neukunden und Newsletter",
         description: "Erhalten Sie 10% Rabatt auf Ihre erste Spiegelbestellung mit dem Rabattcode 10OFF.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        affiliate_url: "/go/mirlux-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2184,7 +2184,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "BIS ZU 40% RABATT",
         title: "Bis zu 40% Rabatt im Mirlux Sale auf Design-Spiegel",
         description: "Attraktive Rabatte auf sofort lieferbare LED-Badspiegel und Hollywood-Spiegel. Automatisch an der Kasse abgezogen.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        affiliate_url: "/go/mirlux-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2195,7 +2195,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "KOSTENLOSER VERSAND",
         title: "Kostenloser versicherter Versand innerhalb Deutschlands",
         description: "Spezial-Spiegelversand mit bruchsicherer Verpackung ohne zusätzliche Versandkosten.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        affiliate_url: "/go/mirlux-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2206,7 +2206,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "2 JAHRE GARANTIE",
         title: "2 Jahre Herstellergarantie auf alle LED-Komponenten",
         description: "Höchste deutsche Sicherheits- und Qualitätsstandards mit CE-Zertifizierung und 2 Jahren Garantie.",
-        affiliate_url: "https://promoregistry.com/go/mirlux-de",
+        affiliate_url: "/go/mirlux-de",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -2218,7 +2218,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "wjd-exclusives-us",
     aliases: ["wjd-exclusives", "wjd", "wjd-exclusive", "wjdexclusives"],
     website: "https://wjdexclusives.com/",
-    affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+    affiliate_url: "/go/wjd-exclusives-us",
     logo: "https://ui.awin.com/images/upload/merchant/profile/82685.png",
     description: "WJD Exclusives is a premier New York jeweler specializing in authentic 10K and 14K solid gold chains, Miami Cuban link bracelets, certified diamond pendants, rings, and luxury jewelry.",
     coupons: [
@@ -2229,7 +2229,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% OFF",
         title: "15% Off WJD Exclusives Coupon Code Sitewide",
         description: "Save 15% on real gold chains, Cuban links, diamond jewelry, and custom pendants with verified coupon code THANKYOU2023.",
-        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        affiliate_url: "/go/wjd-exclusives-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2240,7 +2240,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "10% Off Sitewide on Fine Gold & Diamond Jewelry",
         description: "Enjoy an extra 10% discount on entire jewelry collection with code THANKYOU2023.",
-        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        affiliate_url: "/go/wjd-exclusives-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2251,7 +2251,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "UP TO 60% OFF",
         title: "Up to 60% Off Flash Deals & Weekly Gold Specials",
         description: "Massive markdowns on trending chains, rope chains, rings, and bracelets. Discount automatically applied at checkout.",
-        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        affiliate_url: "/go/wjd-exclusives-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2262,7 +2262,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "Free Insured US Shipping On All Orders",
         description: "Complimentary fully insured domestic doorstep delivery with signature on all authentic jewelry orders.",
-        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        affiliate_url: "/go/wjd-exclusives-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2273,7 +2273,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "CERTIFIED GOLD",
         title: "100% Guaranteed Genuine Gold & 30-Day Hassle-Free Returns",
         description: "Every item stamped and certified authentic with 30-day money-back guarantee and lifetime diamond upgrade options.",
-        affiliate_url: "https://promoregistry.com/go/wjd-exclusives-us",
+        affiliate_url: "/go/wjd-exclusives-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
@@ -2285,7 +2285,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "silver-cross-us",
     aliases: ["silver-cross", "silvercross", "silvercrossus"],
     website: "https://silvercrossus.com/",
-    affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+    affiliate_url: "/go/silver-cross-us",
     logo: "https://ui.awin.com/images/upload/merchant/profile/47379.png",
     description: "Silver Cross is the iconic British luxury nursery brand crafting premier strollers, wave prams, reef travel systems, high chairs, and car seats trusted by parents worldwide since 1877.",
     coupons: [
@@ -2296,7 +2296,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "15% OFF",
         title: "15% Off Silver Cross Coupon Code on Strollers & Gear",
         description: "Save 15% on luxury strollers, pram travel systems, and accessories with verified discount code SAVE10.",
-        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2307,7 +2307,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "$300 OFF",
         title: "$300 Off Silver Cross Stroller Accessory Bundle Deals",
         description: "Bundle and save up to $300 on Wave and Reef 2 stroller combinations including bassinet, tandem seat, and footmuff.",
-        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2318,7 +2318,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "UP TO 50% OFF",
         title: "Up to 50% Off Silver Cross Seasonal Sale & Clearance",
         description: "Exclusive discounts on luxury baby strollers, high chairs, diaper bags, and travel cribs. No code needed.",
-        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2329,7 +2329,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "Free Doorstep Shipping Across Contiguous United States",
         description: "Get free standard shipping on all stroller systems, car seats, and accessories delivered directly to your door.",
-        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -2340,7 +2340,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "3-YEAR WARRANTY",
         title: "3-Year Manufacturer Warranty on All Luxury Strollers",
         description: "Every Silver Cross stroller comes with a comprehensive 3-year warranty for complete peace of mind.",
-        affiliate_url: "https://promoregistry.com/go/silver-cross-us",
+        affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
