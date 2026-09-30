@@ -2382,16 +2382,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "scheels-code-1",
-        code: "SCHEELS20",
-        discount: "$20 OFF",
-        title: "$20 off orders over $150 with verified promotional code",
-        description: "Save an extra $20 on eligible footwear, outdoor apparel, and sports equipment orders over $150 with code SCHEELS20.",
-        affiliate_url: "/go/scheels",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
         id: "scheels-deal-3",
         code: "",
         is_auto_applied: true,
@@ -2403,17 +2393,29 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "scheels-code-2",
-        code: "SAVE10",
-        discount: "10% OFF",
-        title: "10% off select hunting gear, camping optics, and outdoor apparel",
-        description: "Enjoy 10% instant discount on camping and outdoor accessories with promo code SAVE10 at checkout.",
+        id: "scheels-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "40% OFF",
+        title: "Up to 40% off select outerwear, sports clothing & swimwear",
+        description: "Save up to 40% on top seasonal apparel, jackets, and sportswear for the whole family.",
         affiliate_url: "/go/scheels",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
-        id: "scheels-deal-4",
+        id: "scheels-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "Up to 25% off hunting gear, camping essentials & optics",
+        description: "Direct markdown deals on hunting blinds, hunting accessories, and camping supplies.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "scheels-deal-6",
         code: "",
         is_auto_applied: true,
         discount: "PRICE MATCH",
