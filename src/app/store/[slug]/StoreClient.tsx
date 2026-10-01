@@ -174,7 +174,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                           rawStoreUrl.includes("litl.si") ||
                           rawStoreUrl.includes("fatcoupon") ||
                           rawStoreUrl.includes("/go/");
-      if (isAffiliate) {
+      if (isAffiliate && !rawStoreUrl.includes("connectadtrack.com")) {
         try {
           const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
           const utmTerm = sessionStorage.getItem("utm_term") || "";

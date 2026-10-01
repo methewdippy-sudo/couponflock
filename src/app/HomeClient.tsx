@@ -306,12 +306,14 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                           rawStoreUrl.includes("litl.si") ||
                           rawStoreUrl.includes("fatcoupon") ||
                           rawStoreUrl.includes("/go/");
-      if (isAffiliate) {
+      if (isAffiliate && !rawStoreUrl.includes("connectadtrack.com")) {
         try {
           const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
           const utmTerm = sessionStorage.getItem("utm_term") || "";
           const gclid = sessionStorage.getItem("gclid") || "";
-          const urlObj = new URL(rawStoreUrl);
+          const urlObj = rawStoreUrl.startsWith("http")
+            ? new URL(rawStoreUrl)
+            : new URL(rawStoreUrl, window.location.origin);
           
           if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
           if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
