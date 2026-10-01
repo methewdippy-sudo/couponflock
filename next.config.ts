@@ -251,8 +251,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/tuxmat",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
+        permanent: true,
+      },
+      {
         source: "/go/tuxmat-us",
-        destination: "https://redirect.partner.fatcoupon.com/go?cid=575&mid=41895&url=https%3A%2F%2Fwww.tuxmat.com%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
+        permanent: true,
+      },
+      {
+        source: "/go/tuxmat-ca",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tuxmat.com",
         permanent: true,
       },
       {
