@@ -375,24 +375,9 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 4. Device-specific Smart Routing
-    const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
-    const isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-    if (isIOS) {
-      // iPhone / iPad: Just open the store affiliate URL in a new tab.
-      // window.open from a direct button click (user gesture) always works on iOS Safari.
-      window.open(storeUrl, "_blank");
-    } else {
-      // Android / Desktop / Laptop: Exact PromoRegistry Tabunder Flow
-      try {
-        const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-        window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
-      } catch (err) {
-        console.warn("Failed to open our website in a new tab:", err);
-      }
-      window.location.href = storeUrl;
-    }
+    // 4. Clean & Reliable Tracking Tab Flow:
+    // Keep current page on CouponFlock displaying modal, open merchant affiliate tracking in a new tab
+    window.open(storeUrl, "_blank");
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication

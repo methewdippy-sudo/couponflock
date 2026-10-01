@@ -102,12 +102,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/scheels",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F%3Futm_source%3Dmrge%26utm_medium%3Daffiliate%26utm_campaign%3Dcouponflock",
         permanent: false,
       },
       {
         source: "/go/scheels-us",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F%3Futm_source%3Dmrge%26utm_medium%3Daffiliate%26utm_campaign%3Dcouponflock",
+        permanent: false,
+      },
+      {
+        source: "/go/algolaser",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falgolaser.com%2F%3Futm_source%3Dmrge%26utm_medium%3Daffiliate%26utm_campaign%3Dcouponflock",
         permanent: false,
       },
       {

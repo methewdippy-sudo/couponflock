@@ -2505,6 +2505,75 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  // 28. AlgoLaser (Diode Laser Engravers & Cutters)
+  {
+    id: 652,
+    name: "AlgoLaser",
+    slug: "algolaser",
+    aliases: ["algo-laser", "algolaser-us", "algolaser-engraver", "algolaser-official"],
+    website: "https://algolaser.com",
+    affiliate_url: "/go/algolaser",
+    logo: "https://algolaser.com/cdn/shop/files/2_f7037a7f-b0ca-4b7c-9b36-d722768bd1ab.png",
+    country: "US",
+    description: "AlgoLaser is a world-renowned pioneer in smart diode laser engravers and cutting machines. Empower your DIY craft projects, small business, and laser engraving creativity with the flagship AlgoLaser Alpha MK2, Delta, DIY Kit, and Pixi series.",
+    coupons: [
+      {
+        id: "algolaser-deal-1",
+        code: "BACK15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off AlgoLaser diode laser engravers & accessories",
+        description: "Save 15% on high-precision laser engravers, enclosures, and air assist pumps with verified promo code BACK15.",
+        affiliate_url: "/go/algolaser",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algolaser-deal-2",
+        code: "ALZYX",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "Extra 10% off storewide on all AlgoLaser machines",
+        description: "Get 10% off AlgoLaser Alpha, Delta, and DIY Kit MK3 models with coupon code ALZYX.",
+        affiliate_url: "/go/algolaser",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algolaser-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $200 OFF",
+        title: "Up to $200 off AlgoLaser Alpha MK2 & Delta 22W/40W flagship sets",
+        description: "Automatic instant tiered discounts applied at checkout on high-power diode laser cutters.",
+        affiliate_url: "/go/algolaser",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algolaser-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free insured express delivery on qualifying AlgoLaser machines",
+        description: "Get free fast tracked shipping from local US warehouses on orders over $99.",
+        affiliate_url: "/go/algolaser",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "algolaser-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "90-DAY PROTECTION",
+        title: "90-Day lowest price match protection & 1-year official warranty",
+        description: "Shop with peace of mind with AlgoLaser's 90-day price match guarantee and full factory warranty.",
+        affiliate_url: "/go/algolaser",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
