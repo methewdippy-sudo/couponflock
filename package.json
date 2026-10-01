@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "verify:chain": "node ../scripts/qa_chain_verifier.js"
+    "verify:chain": "node ../scripts/qa_chain_verifier.js",
+    "prune:deployments": "node scripts/auto_prune_deployments.cjs"
   },
   "dependencies": {
     "next": "16.2.6",
