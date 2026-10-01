@@ -266,6 +266,41 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/duckhead",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/duck-head",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/dayalane",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/jack-rogers",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/jackrogers",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/city-beauty",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/citybeauty",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        permanent: true,
+      },
+      {
         source: "/go/hotel-tonight",
         destination: "https://redirect.partner.fatcoupon.com/go?cid=575&mid=19660&url=https%3A%2F%2Fwww.hoteltonight.com",
         permanent: true,

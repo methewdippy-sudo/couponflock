@@ -2585,6 +2585,230 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 653,
+    name: "Duck Head",
+    slug: "duckhead",
+    aliases: ["duck-head", "duckhead-us", "duck-head-apparel"],
+    website: "https://duckhead.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+    logo: "/logos/duckhead.svg",
+    description: "Duck Head is an iconic American heritage apparel brand established in 1865, renowned for rugged khakis, premium Oxford button-downs, polo shirts, and timeless southern casual wear.",
+    coupons: [
+      {
+        id: "duckhead-code-1",
+        code: "WELCOME15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Your First Order with Newsletter Signup",
+        description: "Apply promo code WELCOME15 at checkout to receive 15% off classic chinos, button-downs, and casual outerwear.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "duckhead-code-2",
+        code: "SAVE10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "Extra 10% Off Sitewide Heritage Apparel",
+        description: "Save an extra 10% on your Duck Head purchase including polos, jackets, and accessories with promo code SAVE10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "duckhead-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40%",
+        title: "Up to 40% Off Seasonal Sale & Heritage Clearance",
+        description: "Browse discounted heritage styles with discounts up to 40% automatically deducted at checkout.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "duckhead-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Standard Ground Delivery on Orders Over $100",
+        description: "Enjoy zero shipping charges on qualifying US apparel orders over $100 automatically.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fduckhead.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 654,
+    name: "Dayalane",
+    slug: "dayalane",
+    aliases: ["dayalane-jewelry", "dayalane-diamonds", "dayalane-us"],
+    website: "https://dayalane.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+    logo: "/logos/dayalane.svg",
+    description: "Dayalane crafts exquisite fine jewelry specializing in IGI-certified lab-grown diamond engagement rings, eternity bands, and everyday luxury pieces set in 14K solid gold.",
+    coupons: [
+      {
+        id: "dayalane-code-1",
+        code: "DAYA10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Your Entire Lab Diamond Fine Jewelry Order",
+        description: "Apply discount code DAYA10 at checkout to save 10% on sparkling lab diamond rings, necklaces, and earrings.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dayalane-code-2",
+        code: "SAVE50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "$50 Off Luxury Diamond Jewelry Orders Over $500",
+        description: "Receive $50 off high-end eternity bands and certified engagement rings with coupon code SAVE50.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dayalane-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fully-Insured Priority Shipping & 30-Day Returns",
+        description: "Every Dayalane jewelry order ships securely with tracked insured delivery and 30-day hassle-free returns.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dayalane-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "LIFETIME",
+        title: "Lifetime Warranty & Complimentary Luxury Gift Box",
+        description: "All lab diamond pieces include authentic grading certificates, signature presentation box, and lifetime warranty.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdayalane.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 655,
+    name: "Jack Rogers",
+    slug: "jack-rogers",
+    aliases: ["jackrogers", "jackrogersusa", "jack-rogers-shoes"],
+    website: "https://jackrogersusa.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+    logo: "/logos/jack-rogers.svg",
+    description: "Jack Rogers is a celebrated American footwear brand famous for its classic handcrafted whipstitched leather sandals, sophisticated flats, wedges, and timeless resort footwear.",
+    coupons: [
+      {
+        id: "jackrogers-code-1",
+        code: "HELLO15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Your First Footwear Order with Email Signup",
+        description: "Enjoy 15% off classic sandals, flats, and resort heels with promo code HELLO15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "jackrogers-code-2",
+        code: "EXTRA10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "Extra 10% Off Select Handcrafted Whipstitch Sandals",
+        description: "Save an extra 10% on iconic leather whipstitch sandals with coupon code EXTRA10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "jackrogers-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 50%",
+        title: "Up to 50% Off Seasonal Sandal & Shoe Clearance",
+        description: "Shop deeply discounted summer sandals, wedges, and accessories with savings up to 50% applied at checkout.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "jackrogers-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Standard Shipping on Orders Over $75",
+        description: "Receive free ground shipping across the contiguous United States on orders of $75 or more.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fjackrogersusa.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 656,
+    name: "City Beauty",
+    slug: "city-beauty",
+    aliases: ["citybeauty", "city-lips", "citybeauty-us"],
+    website: "https://citybeauty.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+    logo: "/logos/city-beauty.svg",
+    description: "City Beauty is a science-backed skincare and functional beauty brand renowned for City Lips plumping lip treatment, anti-aging moisturizers, and clinically formulated skin rejuvenation.",
+    coupons: [
+      {
+        id: "citybeauty-code-1",
+        code: "CITY15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Sitewide Skincare & City Lips Treatments",
+        description: "Use coupon code CITY15 during checkout to save 15% on anti-aging serums and plumping lip glosses.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "citybeauty-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BOGO",
+        title: "Buy 2 Get 1 Free on Award-Winning City Lips Gloss",
+        description: "Bundle and save on City Lips plumping treatment with automatic multi-pack savings applied in your cart.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "citybeauty-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fast US Shipping on Orders Over $50",
+        description: "Enjoy complimentary tracked US shipping when you spend $50 or more on beauty and skincare essentials.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "citybeauty-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "60-DAY GUARANTEE",
+        title: "60-Day 100% Money-Back Satisfaction Guarantee",
+        description: "Try City Beauty completely risk-free with a full 60-day refund policy even if the bottle is completely empty.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcitybeauty.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
