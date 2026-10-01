@@ -2809,6 +2809,342 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 657,
+    name: "USA Berkey Filters",
+    slug: "usaberkeyfilters",
+    aliases: ["usa-berkey-filters", "berkey-filters", "berkey"],
+    website: "https://www.usaberkeyfilters.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+    logo: "/logos/usaberkeyfilters.svg",
+    description: "USA Berkey Filters is the leading premier distributor of authentic Berkey gravity-fed stainless steel water filtration systems, replacement Black Berkey elements, and fluoridation filters.",
+    coupons: [
+      {
+        id: "berkey-code-1",
+        code: "BERKEY10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Authentic Berkey Water Filtration Systems",
+        description: "Save 10% on complete stainless steel gravity water purification systems with coupon code BERKEY10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "berkey-code-2",
+        code: "SAVE5",
+        is_auto_applied: false,
+        discount: "5% OFF",
+        title: "5% Off Genuine Black Berkey Replacement Elements",
+        description: "Apply discount code SAVE5 at checkout to save on genuine factory replacement filters and fluoride elements.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "berkey-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fast Ground Delivery on Orders Over $99",
+        description: "All qualifying water system orders over $99 receive free insured shipping across the United States.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "berkey-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "LIFETIME",
+        title: "Lifetime Customer Support & Official Factory Warranty",
+        description: "Backed by authentic Berkey manufacturer warranties and dedicated water quality filtration experts.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 658,
+    name: "Candy In Bulk",
+    slug: "candyinbulk",
+    aliases: ["candy-in-bulk", "bulk-candy", "candyinbulk-us"],
+    website: "https://candyinbulk.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+    logo: "/logos/candyinbulk.svg",
+    description: "Candy In Bulk offers wholesale bulk candy, chocolates, gummies, wrapped treats, and novelty confections for weddings, corporate events, and parties at direct wholesale savings.",
+    coupons: [
+      {
+        id: "candy-code-1",
+        code: "SWEET10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Wholesale Bulk Candy & Confectionery Orders",
+        description: "Apply coupon code SWEET10 at checkout to save 10% on bulk chocolates, gummies, and party candies.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "candy-code-2",
+        code: "BULK15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Party & Event Candy Orders Over $150",
+        description: "Save 15% on large orders of wrapped confections and novelty sweets with promo code BULK15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "candy-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Shipping on Wholesale Orders Over $100",
+        description: "Enjoy zero delivery fees on qualifying confectionery shipments nationwide automatically.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "candy-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FRESH PACK",
+        title: "100% Freshness Guarantee & Temperature-Safe Delivery",
+        description: "Every shipment is packed with climate protection ensuring your candies arrive perfectly fresh and intact.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 659,
+    name: "Silver Cross",
+    slug: "silvercross",
+    aliases: ["silver-cross", "silver-cross-us", "silver-cross-baby"],
+    website: "https://silvercrossus.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
+    logo: "/logos/silvercross.svg",
+    description: "Silver Cross is the iconic royal British nursery brand established in 1877, celebrated worldwide for luxury prams, premium strollers, car seats, and nursery furniture designed with peerless craftsmanship.",
+    coupons: [
+      {
+        id: "silvercross-code-1",
+        code: "ROYAL10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Luxury Strollers, Car Seats & Prams",
+        description: "Use coupon code ROYAL10 at checkout to save 10% on iconic British strollers and travel systems.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "silvercross-code-2",
+        code: "BUNDLE15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Travel System Bundles & Pram Packages",
+        description: "Save 15% when purchasing full travel system packages with stroller, bassinet, and infant car seat using code BUNDLE15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "silvercross-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free White-Glove Tracked Delivery on Strollers",
+        description: "All premium pram and stroller orders receive fast, complimentary tracked home delivery.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "silvercross-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "WARRANTY",
+        title: "3-Year Extended Royal Manufacturer Warranty",
+        description: "Register your Silver Cross travel gear to receive an exclusive 3-year warranty against any manufacturing defects.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 660,
+    name: "Mirlux",
+    slug: "mirlux",
+    aliases: ["mirlux-led", "mirlux-mirrors", "mirlux-us"],
+    website: "https://mirlux.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmirlux.com%2F",
+    logo: "/logos/mirlux.svg",
+    description: "Mirlux designs high-end smart LED bathroom mirrors, anti-fog backlit vanity mirrors, and luxury Hollywood dressing mirrors with touch sensors and dimmable lighting.",
+    coupons: [
+      {
+        id: "mirlux-code-1",
+        code: "MIRLUX10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Smart LED Bathroom & Vanity Mirrors",
+        description: "Apply discount code MIRLUX10 at checkout to save 10% on dimmable backlit LED vanity mirrors.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmirlux.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-code-2",
+        code: "VANITY15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Select Anti-Fog Backlit Mirrors",
+        description: "Save 15% on luxury Hollywood vanity and frameless anti-fog bathroom mirrors with promo code VANITY15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmirlux.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fully-Insured Fragile Freight Delivery",
+        description: "Every mirror is shipped in reinforced impact-proof wooden crating with zero breakage guarantee.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmirlux.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "mirlux-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "5-YR WARRANTY",
+        title: "5-Year Commercial Grade LED Lighting Warranty",
+        description: "Mirlux mirrors are built with commercial-grade components and guaranteed with a comprehensive 5-year warranty.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmirlux.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 661,
+    name: "RollerSkateNation",
+    slug: "rollerskatenation",
+    aliases: ["roller-skate-nation", "skatenation", "rollerskate-nation"],
+    website: "https://rollerskatenation.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frollerskatenation.com%2F",
+    logo: "/logos/rollerskatenation.svg",
+    description: "RollerSkateNation is the premier destination for roller skaters, featuring top-tier quad skates, inline skates, derby gear, wheels, bearings, and outdoor skating apparel for all skill levels.",
+    coupons: [
+      {
+        id: "skatenation-code-1",
+        code: "SKATE10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Quad Skates, Inline Skates & Wheels",
+        description: "Save 10% on top brand roller skates, outdoor wheels, and protective gear with promo code SKATE10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frollerskatenation.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "skatenation-code-2",
+        code: "ROLL15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Outdoor Wheels & Roller Derby Packages",
+        description: "Upgrade your skating setup with 15% off high-performance wheels and packages using coupon code ROLL15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frollerskatenation.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "skatenation-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40%",
+        title: "Up to 40% Off Seasonal Skate Clearance & Deals",
+        description: "Save up to 40% on discontinued colors, retro quad roller skates, and youth skates with auto-applied deals.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frollerskatenation.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "skatenation-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fast Ground Shipping on Orders Over $99",
+        description: "All skate packages and accessories over $99 receive fast tracked ground delivery across the US.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frollerskatenation.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 662,
+    name: "Petite Plume",
+    slug: "petite-plume",
+    aliases: ["petiteplume", "petite-plume-sleepwear", "petite-plume-us"],
+    website: "https://petite-plume.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpetite-plume.com%2F",
+    logo: "/logos/petite-plume.svg",
+    description: "Petite Plume creates nostalgic luxury sleepwear and children's loungewear made from the finest brushed cotton, silk, and breathable twill, featured in Vogue and royal nurseries.",
+    coupons: [
+      {
+        id: "plume-code-1",
+        code: "PLUME15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Luxury Sleepwear & Family Pajamas",
+        description: "Apply discount code PLUME15 at checkout to receive 15% off classic brushed cotton pajamas and robes.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpetite-plume.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plume-code-2",
+        code: "FAMILY10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Matching Family Holiday Loungewear",
+        description: "Save 10% when outfitting the whole family with matching festive loungewear using promo code FAMILY10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpetite-plume.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plume-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE MONOGRAM",
+        title: "Complimentary Custom Monogramming On Select Sets",
+        description: "Add personalized custom monogram embroidery to luxury pajamas and robes automatically.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpetite-plume.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plume-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Standard Ground Delivery on Orders Over $100",
+        description: "Enjoy zero delivery fees on luxury sleepwear orders across the contiguous United States.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpetite-plume.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
