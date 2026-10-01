@@ -2353,7 +2353,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "SCHEELS",
     slug: "scheels",
     aliases: ["scheels-us", "scheels-sports", "scheels-com"],
-    logo: "/logos/scheels.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Scheels_logo.svg",
     website: "https://www.scheels.com",
     affiliate_url: "/go/scheels",
     country: "US",
@@ -2440,11 +2440,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "zendure-de-1",
-        code: "ZD5",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "5% RABATT",
-        title: "5% Rabattcode auf das gesamte Zendure Sortiment",
-        description: "Sparen Sie mit dem exklusiven Rabattcode ZD5 5% auf Balkonkraftwerk Speicher, SolarFlow und Powerstations.",
+        title: "5% Rabatt auf das gesamte Zendure Sortiment",
+        description: "Sparen Sie 5% auf Balkonkraftwerk Speicher, SolarFlow und Powerstations. Automatisch an der Kasse aktiviert.",
         affiliate_url: "/go/zendure",
         is_verified: true,
         expiry_date: "2026-12-31"
