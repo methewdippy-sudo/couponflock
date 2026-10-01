@@ -356,10 +356,18 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 2. Immediately open popup modal on current page
+    // 2. Open CouponFlock in a NEW TAB with the coupon modal query param (browser focuses on this tab!)
+    try {
+      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
+      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
+    } catch (e) {
+      console.warn("Failed to open CouponFlock in a new tab:", e);
+    }
+
+    // 3. Immediately open popup modal on current page as well
     setActiveCoupon(coupon);
 
-    // 3. GA4 Button Click Event Tracking
+    // 4. GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -375,17 +383,8 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 4. Background Tab Flow:
-    // Keep user on CouponFlock viewing modal/code, open merchant affiliate tracking in background
-    try {
-      const affiliateTab = window.open(storeUrl, "_blank");
-      if (affiliateTab) {
-        affiliateTab.blur();
-      }
-      window.focus();
-    } catch (err) {
-      console.warn("Failed to open affiliate tab in background:", err);
-    }
+    // 5. Navigate the background window to the merchant affiliate link
+    window.location.href = storeUrl;
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication
