@@ -246,9 +246,17 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 4. Clean & Reliable Tracking Tab Flow:
-    // Open merchant affiliate tracking link in a new tab cleanly
-    window.open(storeUrl, "_blank");
+    // 4. Background Tab Flow:
+    // Keep user on CouponFlock viewing modal/code, open merchant affiliate tracking in background
+    try {
+      const affiliateTab = window.open(storeUrl, "_blank");
+      if (affiliateTab) {
+        affiliateTab.blur();
+      }
+      window.focus();
+    } catch (err) {
+      console.warn("Failed to open affiliate tab in background:", err);
+    }
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);

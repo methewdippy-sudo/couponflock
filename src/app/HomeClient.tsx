@@ -375,9 +375,17 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       }
     }
 
-    // 4. Clean & Reliable Tracking Tab Flow:
-    // Keep current page on CouponFlock displaying modal, open merchant affiliate tracking in a new tab
-    window.open(storeUrl, "_blank");
+    // 4. Background Tab Flow:
+    // Keep user on CouponFlock viewing modal/code, open merchant affiliate tracking in background
+    try {
+      const affiliateTab = window.open(storeUrl, "_blank");
+      if (affiliateTab) {
+        affiliateTab.blur();
+      }
+      window.focus();
+    } catch (err) {
+      console.warn("Failed to open affiliate tab in background:", err);
+    }
   };
 
   // Dynamically find matching stores based on the search query with automatic deduplication

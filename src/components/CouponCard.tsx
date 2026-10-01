@@ -161,20 +161,9 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   const isIOSDevice = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     setIsRevealed(true);
-    if (isIOSDevice) {
-      // iOS Safari: Do NOT preventDefault — let the native <a target="_blank"> open
-      // the affiliate URL directly. This is 100% guaranteed on iOS Safari.
-      // Just copy code as a side effect (no focus/execCommand on iOS)
-      if (hasCode && code && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).catch(() => {});
-      }
-      // Natural link click opens store in new tab — no JS popup blocker issues
-    } else {
-      // Desktop / Android: Intercept and run full tabunder flow via onGetCode
-      e.preventDefault();
-      onGetCode(coupon);
-    }
+    onGetCode(coupon);
   };
 
   return (
