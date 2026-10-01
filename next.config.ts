@@ -57,12 +57,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/desktronic",
-        destination: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
         permanent: false,
       },
       {
         source: "/go/desktronic-uk",
-        destination: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
         permanent: false,
       },
       {
