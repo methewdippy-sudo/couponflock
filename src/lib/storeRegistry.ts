@@ -1659,7 +1659,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "desktronic",
     aliases: ["desktronic-uk", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
     website: "https://desktronic.co.uk/",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+    affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
     logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
     description: "Desktronic crafts premium smart electric standing desks engineered with whisper-quiet dual motors, solid wood desktops, and smart anti-collision memory controls for healthy ergonomic workspaces.",
     coupons: [
@@ -1670,7 +1670,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£20 OFF",
         title: "£20 off Desktronic standing desks with verified promo code",
         description: "Save £20 on all Desktronic electric height-adjustable standing desks, ergonomic chairs, and accessories with verified coupon code WEVALUEYOU20.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1681,7 +1681,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "10% OFF",
         title: "10% off standing desks and ergonomic accessories",
         description: "Save 10% on your entire ergonomic desk setup with verified promo code WorkComfort.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1692,7 +1692,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£100 OFF",
         title: "£100 off Desktronic Pro One Dual-Motor Standing Desk",
         description: "Get £100 off the flagship Desktronic Pro One with ultra-stable 3-stage legs and smart presets with code PROONE100.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1703,7 +1703,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "£50 OFF",
         title: "£50 off Desktronic Home One Compact Desk",
         description: "Upgrade your home office with £50 savings on the space-saving Home One electric desk series with code HOME50.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1714,7 +1714,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "EXTRA £15 OFF",
         title: "Extra £15 discount on sit-stand desk configurations",
         description: "Claim an extra £15 checkout discount on all electric motorized standing desks with voucher NEW6BTXLNC3.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -1725,7 +1725,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIP",
         title: "Free express shipping across the UK & Germany",
         description: "Enjoy zero delivery fees on all standing desks and large packages with tracked courier delivery.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
+        affiliate_url: "https://www.awin1.com/cread.php?awinmid=107055&awinaffid=1909602&clickref=CF-UK&ued=https%3A%2F%2Fdesktronic.co.uk%2F",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
