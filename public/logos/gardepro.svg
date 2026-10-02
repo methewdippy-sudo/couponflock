@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <rect width="400" height="120" rx="16" fill="#1C2826"/>
+  <circle cx="200" cy="36" r="12" fill="#E28438"/>
+  <circle cx="200" cy="36" r="6" fill="#1C2826"/>
+  <text x="200" y="75" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">GARDE<tspan fill="#E28438">PRO</tspan></text>
+  <text x="200" y="96" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#A2B29F" text-anchor="middle" letter-spacing="3">TRAIL CAMERAS &amp; WILDLIFE TECH</text>
+</svg>

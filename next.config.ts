@@ -409,6 +409,46 @@ const nextConfig: NextConfig = {
         source: "/go/bestbullysticks",
         destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.bestbullysticks.com%2F",
         permanent: true,
+      },
+      {
+        source: "/go/deerrun",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdeerruntreadmill.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/big-wall-decor",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/bigwalldecor",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/carputech",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.carputech.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/gardepro",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgardepro.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/flower-knows",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+        permanent: true,
+      },
+      {
+        source: "/go/flowerknows",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+        permanent: true,
+      },
+      {
+        source: "/go/curtarra",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.curtarra.com%2F",
+        permanent: true,
       }
     ];
   },

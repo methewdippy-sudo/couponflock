@@ -3426,6 +3426,276 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 669,
+    name: "DeerRun",
+    slug: "deerrun",
+    aliases: ["deerruntreadmill", "deer-run", "deerrun-walking-pad"],
+    website: "https://deerruntreadmill.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdeerruntreadmill.com%2F",
+    logo: "/logos/deerrun.svg",
+    description: "DeerRun engineers smart, ultra-quiet under-desk treadmills, folding 2-in-1 walking pads, and compact running machines equipped with PitPat interactive fitness app tracking.",
+    coupons: [
+      {
+        id: "dr-code-1",
+        code: "DEER40",
+        is_auto_applied: false,
+        discount: "$40 OFF",
+        title: "$40 Off Smart Under-Desk Treadmills & Walking Pads",
+        description: "Apply promo code DEER40 at checkout to take $40 off Q1 and A1 smart under-desk walking treadmills.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdeerruntreadmill.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dr-code-2",
+        code: "RUN10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Folding Running Machines & Accessories",
+        description: "Save 10% on folding cardio running pads and non-slip shock-absorbing floor mats with coupon RUN10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdeerruntreadmill.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dr-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Fast Tracked Ground Delivery in the US",
+        description: "Enjoy 100% free doorstep freight shipping on all home gym walking pads and motorized treadmill units.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdeerruntreadmill.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 670,
+    name: "Big Wall Decor",
+    slug: "big-wall-decor",
+    aliases: ["bigwalldecor", "big-wall-art", "bigwalldecor-us"],
+    website: "https://bigwalldecor.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+    logo: "/logos/big-wall-decor.svg",
+    description: "Big Wall Decor produces oversized, high-definition art prints on tear-resistant fabric frames created by trending independent artists from around the world.",
+    coupons: [
+      {
+        id: "bwd-code-1",
+        code: "WALL20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% Off Giant Framed Wall Art & Canvas Prints",
+        description: "Use coupon code WALL20 at checkout to save 20% on all extra-large designer wall prints and snap frames.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bwd-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40% OFF",
+        title: "Up to 40% Off Trending Artist Collections",
+        description: "Save up to 40% automatically on curated abstract, nature, and pop-culture oversized wall art sets.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bwd-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Carbon-Neutral Shipping on US Orders Over $150",
+        description: "Enjoy zero shipping charges on oversized framed canvas orders delivered across the United States.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbigwalldecor.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 671,
+    name: "Carputech",
+    slug: "carputech",
+    aliases: ["carputech-carplay", "carputech-wireless", "carputech-adapter"],
+    website: "https://www.carputech.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.carputech.com%2F",
+    logo: "/logos/carputech.svg",
+    description: "Carputech specializes in premium OEM-integrated wireless Apple CarPlay and Android Auto modules, smart Linux touchscreen head units, and plug-and-play automotive tech upgrades.",
+    coupons: [
+      {
+        id: "cpu-code-1",
+        code: "CARPLAY50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "$50 Off Wireless CarPlay & Android Auto Modules",
+        description: "Apply discount code CARPLAY50 to receive $50 off retrofit smart screen modules for BMW, Audi, Mercedes, and Lexus.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.carputech.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cpu-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE WARRANTY",
+        title: "Free 2-Year Comprehensive Hardware Warranty",
+        description: "All CarPlay decoder boxes and replacement touchscreens include a 2-year warranty with free technical support.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.carputech.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cpu-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Worldwide Express Delivery on All Modules",
+        description: "Enjoy free worldwide express air shipping with real-time tracking on every automotive smart adapter order.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.carputech.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 672,
+    name: "GardePro",
+    slug: "gardepro",
+    aliases: ["gardepro-camera", "gardepro-trail-cams", "gardepro-hunting"],
+    website: "https://gardepro.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgardepro.com%2F",
+    logo: "/logos/gardepro.svg",
+    description: "GardePro designs cutting-edge 48MP cellular trail cameras, no-glow infrared night vision hunting cams, and WiFi wildlife surveillance gear with ultra-fast 0.1s trigger speeds.",
+    coupons: [
+      {
+        id: "gp-code-1",
+        code: "TRAIL15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off 4G Cellular & WiFi Trail Cameras",
+        description: "Use coupon code TRAIL15 to save 15% on high-definition night vision wildlife monitoring cameras.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgardepro.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "gp-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BUNDLE & SAVE",
+        title: "Save Up to $60 on Multi-Camera Hunting Packs",
+        description: "Get instant bundle discounts when buying 2-pack or 4-pack trail camera kits with solar charging panels.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgardepro.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "gp-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Tracked US Priority Shipping Over $49",
+        description: "Receive free ground shipping with live tracking updates on all trail cameras and solar battery kits.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgardepro.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 673,
+    name: "Flower Knows",
+    slug: "flower-knows",
+    aliases: ["flowerknows", "flower-knows-makeup", "flowerknows-cosmetics"],
+    website: "https://flowerknows.co",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+    logo: "/logos/flower-knows.svg",
+    description: "Flower Knows is the viral vintage romantic cosmetic house creating fairytale embossed eyeshadow palettes, cloud lip creams, and engraved hand mirrors inspired by Baroque and Rococo aesthetics.",
+    coupons: [
+      {
+        id: "fk-code-1",
+        code: "FAIRY10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Swan Ballet & Moonlight Mermaid Makeup",
+        description: "Save 10% on viral engraved lipstick sets, embossing blushes, and perfume oils with promo code FAIRY10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "fk-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE GIFT",
+        title: "Free Limited Edition Hand Mirror on Orders $100+",
+        description: "Receive an iconic engraved Baroque handheld makeup mirror automatically with qualifying cosmetic orders.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "fk-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Worldwide Tracked Delivery Over $60",
+        description: "Enjoy zero shipping fees on international orders above $60 with secure padded collectible packaging.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fflowerknows.co",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 674,
+    name: "Curtarra",
+    slug: "curtarra",
+    aliases: ["curtarra-curtains", "curtarra-drapes", "curtarra-custom"],
+    website: "https://www.curtarra.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.curtarra.com%2F",
+    logo: "/logos/curtarra.svg",
+    description: "Curtarra crafts bespoke made-to-measure blackout curtains, pinch pleat linen drapes, and motor-compatible drapery panels custom tailored to within 1/8 inch precision.",
+    coupons: [
+      {
+        id: "cur-code-1",
+        code: "DRAPE20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% Off Custom Made-to-Measure Curtains",
+        description: "Apply discount code DRAPE20 at checkout to take 20% off custom tailored linen and velvet blackout drapes.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.curtarra.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cur-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SWATCHES",
+        title: "Free Custom Fabric Swatch Sample Box",
+        description: "Order up to 10 complimentary luxury drapery fabric samples delivered to your home before buying.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.curtarra.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cur-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Expedited Air Courier Delivery in the US",
+        description: "Receive 100% free expedited shipping on all made-to-order curtain panels across the continental US.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.curtarra.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
