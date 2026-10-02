@@ -3966,6 +3966,456 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 681,
+    name: "Luhxe",
+    slug: "luhxe",
+    aliases: ["luhxe-jewelry", "luhxe-moissanite", "luhxediamonds"],
+    website: "https://luhxe.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fluhxe.com%2F",
+    logo: "/logos/luhxe.svg",
+    description: "Luhxe crafts exquisite fine jewelry, brilliant VVS moissanite tennis bracelets, custom iced pendants, and luxury engagement rings designed with exceptional ethical craftsmanship.",
+    coupons: [
+      {
+        id: "luhxe-code-1",
+        code: "LUHXE15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Sitewide Fine Jewelry & Moissanite",
+        description: "Apply coupon code LUHXE15 at checkout to receive 15% off all moissanite necklaces, bracelets, and rings.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fluhxe.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "luhxe-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40% OFF",
+        title: "Up to 40% Off Luxury Tennis Bracelets & Chains",
+        description: "Save up to 40% automatically on select sterling silver and solid gold moissanite tennis jewelry collections.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fluhxe.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "luhxe-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Fully Insured Express US Delivery",
+        description: "Receive free signature-required insured shipping across the United States on orders over $75.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fluhxe.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 682,
+    name: "Renogy",
+    slug: "renogy",
+    aliases: ["renogy-solar", "renogypower", "renogy-energy"],
+    website: "https://renogy.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frenogy.com",
+    logo: "/logos/renogy.svg",
+    description: "Renogy is an industry leader in renewable solar power solutions, providing premium monocrystalline solar panels, lithium iron phosphate batteries, pure sine wave inverters, and complete off-grid solar kits.",
+    coupons: [
+      {
+        id: "renogy-code-1",
+        code: "RENOGY10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Sitewide Solar Panels, Inverters & Kits",
+        description: "Save an extra 10% on off-grid solar systems, MPPT charge controllers, and LiFePO4 batteries using promo code RENOGY10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frenogy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "renogy-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $400 OFF",
+        title: "Up to $400 Off Complete Off-Grid & RV Solar Bundles",
+        description: "Instant manufacturer discounts on full solar cabin kits, van conversions, and marine battery systems.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frenogy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "renogy-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free FedEx Freight & Ground Shipping Nationwide",
+        description: "Enjoy zero shipping costs on all orders delivered anywhere within the continental United States.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Frenogy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 683,
+    name: "LumyHealth",
+    slug: "lumyhealth",
+    aliases: ["lumy-health", "lumyhealth-redlight", "lumy"],
+    website: "https://lumyhealth.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Flumyhealth.com%2F",
+    logo: "/logos/lumyhealth.svg",
+    description: "LumyHealth designs medical-grade target and full-body red light therapy panels engineered to stimulate collagen production, accelerate muscle recovery, reduce inflammation, and optimize cellular energy.",
+    coupons: [
+      {
+        id: "lumy-code-1",
+        code: "LUMY20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% Off Clinical Red Light Therapy Panels",
+        description: "Redeem coupon code LUMY20 at checkout to unlock 20% off all targeted and full-body red light devices.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Flumyhealth.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "lumy-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "$150 OFF",
+        title: "Save $150 on Pro Multi-Wave Panel Bundles",
+        description: "Automatic $150 bundle savings on dual-wavelength 660nm red and 850nm near-infrared therapy setups.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Flumyhealth.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "lumy-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "60-DAY TRIAL",
+        title: "60-Day Risk-Free Home Trial & Free Shipping",
+        description: "Test your light therapy panel at home with a 100% money-back guarantee and complimentary courier delivery.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Flumyhealth.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 684,
+    name: "Meepo",
+    slug: "meepo",
+    aliases: ["meepoboard", "meepo-electric-skateboard", "meepo-boards"],
+    website: "https://www.meepoboard.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.meepoboard.com",
+    logo: "/logos/meepo.svg",
+    description: "Meepo is a world-renowned pioneer in high-speed electric skateboards and all-terrain e-boards, featuring long-range battery packs, high-torque dual motors, and flexible bamboo-composite decks.",
+    coupons: [
+      {
+        id: "meepo-code-1",
+        code: "MEEPO100",
+        is_auto_applied: false,
+        discount: "$100 OFF",
+        title: "$100 Off Voyager & Hurricane All-Terrain Boards",
+        description: "Use discount code MEEPO100 at checkout for an instant $100 off high-power long-range electric skateboards.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.meepoboard.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "meepo-code-2",
+        code: "MEEPO50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "$50 Off Mini & Commuter E-Skateboards",
+        description: "Save $50 on portable shortboards and commuter electric skateboards with coupon code MEEPO50.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.meepoboard.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "meepo-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Expedited Delivery & 6-Month Factory Warranty",
+        description: "Zero shipping fees across US mainland plus complimentary 6-month manufacturer parts warranty.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.meepoboard.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 685,
+    name: "Purecozy",
+    slug: "purecozy",
+    aliases: ["purecozyhome", "pure-cozy", "purecozy-bedding"],
+    website: "https://purecozyhome.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpurecozyhome.com%2F",
+    logo: "/logos/purecozy.svg",
+    description: "Purecozy specializes in ultra-soft organic bamboo bed sheets, cooling duvet covers, and breathable silk-blend pillowcases designed for hot sleepers seeking luxurious, temperature-regulating rest.",
+    coupons: [
+      {
+        id: "pure-code-1",
+        code: "COZY25",
+        is_auto_applied: false,
+        discount: "25% OFF",
+        title: "25% Off Sitewide Organic Bamboo Sheet Sets",
+        description: "Apply voucher code COZY25 during checkout for 25% off all silky soft cooling bamboo bedding sets.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpurecozyhome.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "pure-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BOGO 30% OFF",
+        title: "Buy 1 Get 1 30% Off Bamboo Comforter Bundles",
+        description: "Add two or more bedding essentials to your cart to instantly receive 30% off your second item.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpurecozyhome.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "pure-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "100-NIGHT TRIAL",
+        title: "100-Night Risk-Free Sleep Trial with Free Returns",
+        description: "Sleep cool and comfortably with a full 100-night money-back guarantee and free ground shipping.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpurecozyhome.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 686,
+    name: "TopOak",
+    slug: "topoak",
+    aliases: ["topoakoverland", "top-oak", "topoak-tent"],
+    website: "https://topoakoverland.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ftopoakoverland.com%2F",
+    logo: "/logos/topoak.svg",
+    description: "TopOak engineers rugged hard-shell and soft-shell rooftop tents, 270-degree vehicle awnings, and overland camping storage built for rugged off-road exploration and all-weather durability.",
+    coupons: [
+      {
+        id: "topoak-code-1",
+        code: "OAK150",
+        is_auto_applied: false,
+        discount: "$150 OFF",
+        title: "$150 Off Hard-Shell Rooftop Tents",
+        description: "Save $150 on premium aerodynamic aluminum hard shell rooftop tents with coupon code OAK150.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ftopoakoverland.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "topoak-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $350 OFF",
+        title: "Up to $350 Off Overland Awning & Tent Packages",
+        description: "Automatic multi-item discount applied when bundling rooftop tents with 270-degree freestanding awnings.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ftopoakoverland.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "topoak-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE FREIGHT",
+        title: "Free Commercial & Residential Freight Delivery",
+        description: "Receive free palletized liftgate freight delivery on heavy rooftop tents across the continental USA.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ftopoakoverland.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 687,
+    name: "Bloomist",
+    slug: "bloomist",
+    aliases: ["bloomist-decor", "bloomist-home", "bloomist-inc"],
+    website: "https://bloomist.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbloomist.com",
+    logo: "/logos/bloomist.svg",
+    description: "Bloomist curates artisan eco-luxury home decor, faux botanicals, hand-thrown pottery, dried floral arrangements, and sustainable architectural design accents crafted in harmony with nature.",
+    coupons: [
+      {
+        id: "bloom-code-1",
+        code: "BLOOM15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off First Order of Artisan Home Decor",
+        description: "Use voucher code BLOOM15 to receive 15% off your first purchase of sustainable botanicals and handcrafted vases.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbloomist.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bloom-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 30% OFF",
+        title: "Up to 30% Off Seasonal Dried Botanicals & Pottery",
+        description: "Save up to 30% on selected terracotta vessels, dried blooms, and handcrafted wood decor.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbloomist.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bloom-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Standard Shipping on Orders Over $150",
+        description: "Enjoy complimentary domestic ground shipping on all orders totaling $150 or more.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fbloomist.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 688,
+    name: "Commomy Decor",
+    slug: "commomy",
+    aliases: ["commomydecor", "commomy-tiles", "commomy-decor"],
+    website: "https://commomy.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcommomy.com",
+    logo: "/logos/commomy.svg",
+    description: "Commomy Decor makes premium 3D peel and stick wall tiles, backsplash tiles, and self-adhesive stone veneers for effortless, budget-friendly kitchen and bathroom home transformations.",
+    coupons: [
+      {
+        id: "commomy-code-1",
+        code: "COMMOMY18",
+        is_auto_applied: false,
+        discount: "18% OFF",
+        title: "18% Off Sitewide 3D Peel & Stick Wall Tiles",
+        description: "Enter coupon code COMMOMY18 at checkout to get an extra 18% off all tile designs and backsplash bundles.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcommomy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "commomy-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 35% OFF",
+        title: "Up to 35% Off Multi-Pack Kitchen Backsplash Packs",
+        description: "Bulk pack discounts automatically applied to large room and renovation DIY tile packs.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcommomy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "commomy-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Doorstep Shipping on Orders Exceeding $49",
+        description: "Fast free shipping on all orders of $49 or more within the contiguous United States.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcommomy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 689,
+    name: "Acasis",
+    slug: "acasis",
+    aliases: ["acasis-official", "acasis-hub", "acasis-tech"],
+    website: "https://www.acasis.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.acasis.com",
+    logo: "/logos/acasis.svg",
+    description: "Acasis manufactures high-speed 40Gbps NVMe SSD enclosures, Thunderbolt 4 docking stations, 4K HDMI video capture cards, and versatile USB-C multi-port hubs for creators and professionals.",
+    coupons: [
+      {
+        id: "acasis-code-1",
+        code: "ACASIS15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Thunderbolt 4 Enclosures & Docks",
+        description: "Apply discount code ACASIS15 at checkout to receive 15% off high-speed NVMe storage enclosures and hubs.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.acasis.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "acasis-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $60 OFF",
+        title: "Up to $60 Off 4K Video Capture Cards & Drive Docks",
+        description: "Save up to $60 instantly on dual-bay SSD cloners and streaming capture cards.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.acasis.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "acasis-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE US SHIPPING",
+        title: "Free Tracked Priority Courier Shipping on $50+",
+        description: "Enjoy zero delivery fees on orders above $50 with real-time tracking.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.acasis.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 690,
+    name: "GepRC",
+    slug: "geprc",
+    aliases: ["geprc-fpv", "geprc-drones", "gep-rc"],
+    website: "https://geprc.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgeprc.com",
+    logo: "/logos/geprc.svg",
+    description: "GEPRC designs premier high-performance FPV racing quadcopters, CineWhoop drones, carbon fiber frames, brushless motors, and flight controllers for freestyle pilots and cinematic creators.",
+    coupons: [
+      {
+        id: "geprc-code-1",
+        code: "GEPRC10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off FPV Drones, CineWhoops & Flight Gear",
+        description: "Enter promo code GEPRC10 at checkout for an instant 10% discount on quadcopters and drone accessories.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgeprc.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "geprc-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $80 OFF",
+        title: "Up to $80 Off Ready-to-Fly (RTF) Drone Packages",
+        description: "Save big on complete BNF and RTF drone kits equipped with digital HD video transmitters.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgeprc.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "geprc-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "WORLDWIDE DELIVERY",
+        title: "Secure Tracked Worldwide Shipping on All Flight Gear",
+        description: "Safe and insured international transit with factory technician guarantee.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgeprc.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
