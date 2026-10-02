@@ -3696,6 +3696,276 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 675,
+    name: "Elite Havens",
+    slug: "elite-havens",
+    aliases: ["elitehavens", "elite-havens-villas", "elitehavens-luxury"],
+    website: "http://www.elitehavens.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fwww.elitehavens.com",
+    logo: "/logos/elite-havens.svg",
+    description: "Elite Havens curates Asia's finest handpicked luxury private villas, beachfront chalets, and estate sanctuaries across Bali, Phuket, Koh Samui, Sri Lanka, and Japan with private chefs and concierge staff.",
+    coupons: [
+      {
+        id: "eh-code-1",
+        code: "HAVEN10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Luxury Private Villa Bookings",
+        description: "Save 10% on private luxury villas and estates in Bali, Thailand, and Japan with promo code HAVEN10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fwww.elitehavens.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eh-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE CHEF",
+        title: "Complimentary Private Chef & Dedicated Butler Service",
+        description: "Every luxury estate booking includes a dedicated villa manager, private culinary chef, and housekeeping staff.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fwww.elitehavens.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eh-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "EARLY BIRD",
+        title: "Up to 15% Off Early Bird Vacation Reservations",
+        description: "Reserve your luxury tropical escape 90+ days in advance to unlock automatic early booking rate discounts.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fwww.elitehavens.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 676,
+    name: "Ariel Bath",
+    slug: "ariel-bath",
+    aliases: ["arielbath", "ariel-vanities", "arielbath-us"],
+    website: "https://www.arielbath.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.arielbath.com%2F",
+    logo: "/logos/ariel-bath.svg",
+    description: "Ariel Bath crafts luxury solid wood bathroom vanities, freestanding soaking acrylic bathtubs, LED anti-fog mirrors, and shower enclosures designed for high-end home remodels.",
+    coupons: [
+      {
+        id: "ab-code-1",
+        code: "BATH150",
+        is_auto_applied: false,
+        discount: "$150 OFF",
+        title: "$150 Off Luxury Solid Wood Bathroom Vanities",
+        description: "Apply discount code BATH150 at checkout to save $150 on double and single sink bathroom vanity sets.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.arielbath.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "ab-code-2",
+        code: "SOAK10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Freestanding Acrylic Soaking Tubs",
+        description: "Save 10% on modern deep soaking bathtubs and thermostatic whirlpool spa units with coupon SOAK10.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.arielbath.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "ab-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE CURBSIDE",
+        title: "Free Freight Curbside Delivery Across the US",
+        description: "Enjoy zero delivery charges on all heavy freight bathroom vanities and freestanding bathtubs.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.arielbath.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 677,
+    name: "AusomStore",
+    slug: "ausomstore",
+    aliases: ["ausom", "ausom-scooter", "ausomstore-us"],
+    website: "https://ausomstore.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fausomstore.com",
+    logo: "/logos/ausomstore.svg",
+    description: "AusomStore builds rugged high-speed dual-motor electric off-road scooters featuring hydraulic disc brakes, SUV-grade suspension, and long-range commuter battery packs.",
+    coupons: [
+      {
+        id: "aus-code-1",
+        code: "AUSOM50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "$50 Off Leopard & Gallop Electric Off-Road Scooters",
+        description: "Use coupon code AUSOM50 at checkout to take $50 off high-power dual motor electric commuter scooters.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fausomstore.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "aus-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE GIFT",
+        title: "Free Off-Road Riding Helmet & Front Storage Bag",
+        description: "Receive a free rugged tactical storage pouch and protective gear kit automatically with scooter orders.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fausomstore.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "aus-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Fast Tracked US Delivery from Local Warehouse",
+        description: "Enjoy fast 2-5 day doorstep shipping across the United States from local California and New Jersey depots.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fausomstore.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 678,
+    name: "Hardaddy",
+    slug: "hardaddy",
+    aliases: ["hardaddy-shirts", "hardaddy-menswear", "hardaddy-us"],
+    website: "http://hardaddy.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fhardaddy.com",
+    logo: "/logos/hardaddy.svg",
+    description: "Hardaddy creates vintage Hawaiian shirts, retro floral button-downs, casual Cuban collar camp shirts, and breathable outdoor resort menswear with unique nostalgic prints.",
+    coupons: [
+      {
+        id: "hd-code-1",
+        code: "VINTAGE20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% Off Retro Hawaiian & Camp Collar Shirts",
+        description: "Save 20% on all vintage printed short-sleeve resort shirts with promo code VINTAGE20.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fhardaddy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "hd-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BUY 3 GET 4TH FREE",
+        title: "Buy 3 Shirts, Get 4th Shirt Completely Free",
+        description: "Mix and match any 4 retro shirts or beach shorts in your cart to receive the 4th item free automatically.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fhardaddy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "hd-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Tracked Global Shipping on Orders Over $79",
+        description: "Enjoy zero international delivery fees on qualifying casual menswear orders delivered worldwide.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=http%3A%2F%2Fhardaddy.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 679,
+    name: "Auto-Vox",
+    slug: "auto-vox",
+    aliases: ["autovox", "auto-vox-camera", "autovox-wireless"],
+    website: "https://auto-vox.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fauto-vox.com",
+    logo: "/logos/auto-vox.svg",
+    description: "Auto-Vox pioneers solar-powered wireless backup cameras, OEM-fit rearview mirror dashcams, and digital wireless reversing camera systems for cars, RVs, trucks, and trailers.",
+    coupons: [
+      {
+        id: "av-code-1",
+        code: "BACKUP15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Solar Wireless Backup Camera Kits",
+        description: "Apply coupon code BACKUP15 to save 15% on 5-minute DIY installation solar wireless rear cameras.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fauto-vox.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "av-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $60 OFF",
+        title: "Up to $60 Off Dual Dash Cam Mirror Systems",
+        description: "Save up to $60 automatically on full-touch streaming media mirror dash cameras with night vision.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fauto-vox.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "av-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Tracked Priority Shipping on US Orders Over $50",
+        description: "Receive free ground shipping with real-time tracking on all automotive security cameras and accessories.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fauto-vox.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 680,
+    name: "Airseekers",
+    slug: "airseekers",
+    aliases: ["airseekers-robotics", "airseekers-mower", "tron-mower"],
+    website: "https://airseekers-robotics.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fairseekers-robotics.com%2F",
+    logo: "/logos/airseekers.svg",
+    description: "Airseekers invents perimeter-wire-free AI robotic lawn mowers equipped with true 3D omnidirectional vision, multi-zone lawn mapping, and real-time obstacle avoidance technology.",
+    coupons: [
+      {
+        id: "air-code-1",
+        code: "MOWER200",
+        is_auto_applied: false,
+        discount: "$200 OFF",
+        title: "$200 Off Tron Wire-Free Robotic Lawn Mowers",
+        description: "Use coupon code MOWER200 at checkout to receive $200 off the revolutionary Tron wire-free AI robotic mower.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fairseekers-robotics.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "air-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "3-YR WARRANTY",
+        title: "Complimentary 3-Year Comprehensive Machine Warranty",
+        description: "Every robotic lawn mower purchase comes with a full 3-year factory warranty and replacement parts support.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fairseekers-robotics.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "air-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Fully Insured Expedited US Delivery",
+        description: "Enjoy zero shipping and freight handling fees on high-end robotic mowers delivered right to your door.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fairseekers-robotics.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
