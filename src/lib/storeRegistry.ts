@@ -3145,9 +3145,289 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  {
+    id: 663,
+    name: "Evelyn & Bobbie",
+    slug: "evelyn-bobbie",
+    aliases: ["evelynbobbie", "evelyn-and-bobbie", "evelynbobbie-us"],
+    website: "https://evelynbobbie.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fevelynbobbie.com%2F",
+    logo: "/logos/evelyn-bobbie.svg",
+    description: "Evelyn & Bobbie designs patented wirefree luxury bras and seamless underwear offering revolutionary all-day lift, pain-free posture support, and invisible shaping for cup sizes A to H.",
+    coupons: [
+      {
+        id: "eb-code-1",
+        code: "COMFORT15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Defy & Beyond Wirefree Bras",
+        description: "Save 15% on award-winning seamless wireless lift bras and bralettes with promo code COMFORT15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fevelynbobbie.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eb-code-2",
+        code: "FIRST10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off First Intimates & Undies Order",
+        description: "Enjoy 10% off your initial purchase of seamless briefs, thongs, and everyday lounge bras.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fevelynbobbie.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eb-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "BUNDLE & SAVE",
+        title: "Buy More, Save More on Everyday Panty Packs",
+        description: "Unlock automatic bundle savings when purchasing 3+ pairs of seamless hipster or high-waist underwear.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fevelynbobbie.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eb-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free US Shipping & Hassle-Free Returns Over $75",
+        description: "Enjoy free standard delivery and 30-day fit guarantee exchanges on all qualifying domestic orders.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fevelynbobbie.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 664,
+    name: "Frank Darling",
+    slug: "frank-darling",
+    aliases: ["frankdarling", "frank-darling-diamonds", "frank-darling-jewelry"],
+    website: "https://frankdarling.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffrankdarling.com%2F",
+    logo: "/logos/frank-darling.svg",
+    description: "Frank Darling handcrafts bespoke engagement rings, lab-grown and natural diamond jewelry, and wedding bands with transparent pricing and customizable 3D sketch designs.",
+    coupons: [
+      {
+        id: "fd-code-1",
+        code: "SPARKLE100",
+        is_auto_applied: false,
+        discount: "$100 OFF",
+        title: "$100 Off Custom Diamond Engagement Rings",
+        description: "Apply coupon code SPARKLE100 at checkout to receive $100 off custom diamond engagement ring settings.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffrankdarling.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "fd-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE TRY-ON",
+        title: "Free Try-At-Home 3D Replica Ring Kit",
+        description: "Select up to 3 custom engagement ring styles and receive high-precision sterling silver replicas to test at home for free.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffrankdarling.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "fd-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Insured Overnight US Delivery & Resizing",
+        description: "Every fine jewelry order includes complimentary fully-insured FedEx overnight shipping and a free 60-day ring resize.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffrankdarling.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 665,
+    name: "ALOHAS",
+    slug: "alohas",
+    aliases: ["alohas-shoes", "alohas-fashion", "alohas-us"],
+    website: "https://alohas.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falohas.com%2F",
+    logo: "/logos/alohas.svg",
+    description: "ALOHAS is a Barcelona-designed sustainable footwear and chic apparel brand famous for zero-waste on-demand leather boots, platform sandals, mules, and runway-ready clothing.",
+    coupons: [
+      {
+        id: "alohas-code-1",
+        code: "ALOHAS15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Handcrafted Leather Boots & Shoes",
+        description: "Save 15% on artisan Spanish boots, loafers, and party sandals with promo code ALOHAS15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falohas.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "alohas-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 30% OFF",
+        title: "Up to 30% Off Sustainable Pre-Order Collection",
+        description: "Support circular, zero-waste manufacturing and save up to 30% automatically on upcoming shoe arrivals.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falohas.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "alohas-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Global Express Delivery Over $190",
+        description: "Enjoy complimentary tracked express shipping directly from Europe on all footwear orders above $190.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falohas.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 666,
+    name: "Byrokko",
+    slug: "byrokko",
+    aliases: ["byrokko-tanning", "shine-brown", "byrokko-us"],
+    website: "https://www.byrokko.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.byrokko.com%2F",
+    logo: "/logos/byrokko.svg",
+    description: "Byrokko is the viral creator of Shine Brown tanning accelerators, self-tanning mousses, and nourishing suncare formulas designed for a deep bronze glow with natural ingredients.",
+    coupons: [
+      {
+        id: "byr-code-1",
+        code: "BRONZE15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Shine Brown Tanning Creams & Oils",
+        description: "Apply discount code BRONZE15 to take 15% off original Shine Brown tanning creams and watermelon body oils.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.byrokko.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "byr-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "BUY 2 GET 1",
+        title: "Buy 2 Get 1 Free on Viral Shine Brown Bundles",
+        description: "Add 3 tanning creams or oils to cart and receive the 3rd item free automatically at checkout.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.byrokko.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "byr-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Tracked Priority Shipping on Orders Over $50",
+        description: "Enjoy zero shipping fees on premium self-tanners, bronzing mists, and skincare across the US.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.byrokko.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 667,
+    name: "FlexJobs",
+    slug: "flexjobs",
+    aliases: ["flex-jobs", "flexjobs-remote", "flexjobs-com"],
+    website: "https://www.flexjobs.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.flexjobs.com",
+    logo: "/logos/flexjobs.svg",
+    description: "FlexJobs is the #1 trusted job search platform for legitimate, 100% scam-free remote, hybrid, and flexible freelance jobs with expert career coaching and skill certifications.",
+    coupons: [
+      {
+        id: "flex-code-1",
+        code: "SAVE30",
+        is_auto_applied: false,
+        discount: "30% OFF",
+        title: "30% Off All Remote Job Search Memberships",
+        description: "Use coupon code SAVE30 to save 30% on 1-month, 3-month, or annual access to pre-screened remote jobs.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.flexjobs.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "flex-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE WEBINARS",
+        title: "Free Career Webinars & Resume Review Events",
+        description: "Members receive full complimentary access to live workshops with career coaches and hiring managers.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.flexjobs.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "flex-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "SATISFACTION",
+        title: "14-Day 100% Satisfaction Money-Back Guarantee",
+        description: "Try FlexJobs with zero risk — if you are not fully satisfied with your remote job hunt, request a full refund within 14 days.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.flexjobs.com",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 668,
+    name: "Best Bully Sticks",
+    slug: "best-bully-sticks",
+    aliases: ["bestbullysticks", "best-bullysticks", "bullysticks"],
+    website: "https://www.bestbullysticks.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.bestbullysticks.com%2F",
+    logo: "/logos/best-bully-sticks.svg",
+    description: "Best Bully Sticks offers 100% all-natural, single-ingredient beef bully sticks, antlers, and dental chews for dogs of all sizes, promoting oral health without rawhide or additives.",
+    coupons: [
+      {
+        id: "bbs-code-1",
+        code: "BULLY15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off All-Natural Dog Chews & Treats",
+        description: "Use coupon code BULLY15 at checkout to receive 15% off odor-free beef bully sticks and dental bones.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.bestbullysticks.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbs-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "SAVE 15%",
+        title: "Extra 15% Off Recurring Auto-Ship Subscriptions",
+        description: "Save 15% automatically on recurring chew deliveries with flexible scheduling and free cancellation.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.bestbullysticks.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "bbs-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Domestic US Shipping on Orders Over $79",
+        description: "Enjoy complimentary doorstep shipping on premium natural dog chews and treat packs over $79.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.bestbullysticks.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
-
 
 /**
  * Fast lookup map for all aliases and canonical slugs

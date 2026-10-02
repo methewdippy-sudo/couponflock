@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <rect width="400" height="120" rx="16" fill="#F0F7FF"/>
+  <text x="200" y="65" font-family="'Inter', Helvetica, sans-serif" font-size="34" font-weight="900" fill="#0D47A1" text-anchor="middle" letter-spacing="1">flex<tspan fill="#00A86B">jobs</tspan></text>
+  <text x="200" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#4B6B94" text-anchor="middle" letter-spacing="3">VERIFIED REMOTE &amp; HYBRID WORK</text>
+</svg>
