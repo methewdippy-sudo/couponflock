@@ -40,7 +40,7 @@ export interface RegistryStore {
 export const STORE_REGISTRY: RegistryStore[] = [
   // 1. THE DRM LAB (US / UK / Global Market)
   {
-    id: 621,
+    id: 601,
     name: "THE DRM LAB",
     slug: "thedrmlab",
     aliases: ["the-drm-lab", "drm-lab", "drmlab"],
@@ -110,7 +110,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 2. BOUQUETS BY POST (UK Fresh Postal Flowers - DIRECT DEALS ONLY)
   {
-    id: 624,
+    id: 602,
     name: "Bouquets by Post",
     slug: "bouquets-by-post",
     aliases: ["bouquetsbypost", "bouquets-by-post-uk", "bouquetsbypost-com"],
@@ -175,7 +175,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 3. SEED NEEDS (US Gardening Market - DIRECT DEALS ONLY)
   {
-    id: 622,
+    id: 603,
     name: "Seed Needs",
     slug: "seed-needs",
     aliases: ["seedneeds", "seed-needs-co"],
@@ -271,7 +271,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 5. TRANSPARENT LABS (US Market)
   {
-    id: 601,
+    id: 604,
     name: "Transparent Labs",
     slug: "transparent-labs",
     aliases: ["transparent-labs-us"],
@@ -340,7 +340,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 2. GARTEN UND FREIZEIT (Germany / EU Market)
   {
-    id: 602,
+    id: 605,
     name: "Garten und Freizeit",
     slug: "garten-und-freizeit",
     aliases: ["garten-und-freizeit-de"],
@@ -400,7 +400,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 3. DREAMCLOUD (United Kingdom Market)
   {
-    id: 603,
+    id: 606,
     name: "DreamCloud",
     slug: "dreamcloud",
     aliases: ["dreamcloud-uk", "dreamcloud-us"],
@@ -784,7 +784,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 9. MELLOW SLEEP (100% Auto-Applied Affiliate Deals)
   {
-    id: 630,
+    id: 625,
     name: "Mellow Sleep",
     slug: "mellow-sleep",
     aliases: ["mellow"],
@@ -844,7 +844,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 10. COMFRT CLOTHING (Weighted Anxiety Relief Hoodies)
   {
-    id: 631,
+    id: 626,
     name: "Comfrt",
     slug: "comfrt",
     aliases: ["comfrt-clothing"],
@@ -904,7 +904,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 11. DC HOUSE (LiFePO4 Lithium Batteries & Solar Power)
   {
-    id: 632,
+    id: 627,
     name: "DC House",
     slug: "dc-house",
     aliases: ["dchouse", "dc-house-power"],
@@ -979,7 +979,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 13. FILTER BABY (US Market - Dermatologist-Approved Skincare Water Filter)
   {
-    id: 613,
+    id: 628,
     name: "Filter Baby",
     slug: "filter-baby",
     aliases: ["filter-baby-coupons", "filterbaby", "filter-baby-us"],
@@ -1039,7 +1039,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 13. CRZ YOGA (Butterluxe Leggings, Sports Bras & Athleisure Activewear)
   {
-    id: 633,
+    id: 629,
     name: "CRZ YOGA",
     slug: "crz-yoga",
     aliases: ["crzyoga", "crz-yoga-us", "crzyoga-us"],
@@ -1104,7 +1104,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 14. CRZ YOGA CANADA (Canadian Market)
   {
-    id: 634,
+    id: 630,
     name: "CRZ YOGA (Canada)",
     slug: "crz-yoga-ca",
     aliases: ["crzyoga-ca", "crz-yoga-canada", "crzyoga-canada"],
@@ -1149,7 +1149,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 13. REDU SCULPT (US / Global Body Sculpting Massagers)
   {
-    id: 630,
+    id: 631,
     name: "Redu Sculpt",
     slug: "redusculpt",
     aliases: ["redu-sculpt", "redusculpt-us", "redu-sculpt-us"],
@@ -1276,7 +1276,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 14. TENWAYS (Lightweight Commuter E-Bikes - US / UK / Global)
   {
-    id: 631,
+    id: 632,
     name: "Tenways",
     slug: "tenways",
     aliases: ["tenways-us", "tenways-uk", "tenwaysebike", "tenways-ebike"],
@@ -1362,7 +1362,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 15. TENWAYS NL (Netherlands - Official Dutch E-Bike Store)
   {
-    id: 632,
+    id: 633,
     name: "Tenways NL",
     slug: "tenways-nl",
     aliases: ["tenwaysnl", "tenways-nederland", "tenways-fiets"],
@@ -1499,7 +1499,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
 
   // 16. ALGOLASER (Smart Diode Laser Engravers & Cutters)
   {
-    id: 633,
+    id: 634,
     name: "AlgoLaser",
     slug: "algolaser",
     aliases: ["algo-laser", "algolaser-us", "algolaser-global", "algolasercom"],
@@ -1660,7 +1660,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["desktronic-uk", "desktronic-se", "desktronic-standing-desk", "desktronic-eu"],
     website: "https://desktronic.co.uk/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    logo: "/logos/desktronic.svg",
     description: "Desktronic crafts premium smart electric standing desks engineered with whisper-quiet dual motors, solid wood desktops, and smart anti-collision memory controls for healthy ergonomic workspaces.",
     coupons: [
       {
@@ -1738,7 +1738,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["naturnest-us", "naturnest-rooftop-tents", "naturnest-tents", "naturnest-uk"],
     website: "https://www.naturnest.com/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
-    logo: "https://www.naturnest.com/cdn/shop/files/logo_300x.png",
+    logo: "/logos/naturnest.svg",
     description: "Naturnest designs rugged all-weather aluminum hard shell rooftop tents, vehicle awnings, and overlanding camping solutions engineered for effortless 60-second setup and extreme outdoor comfort.",
     coupons: [
       {
@@ -1872,7 +1872,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["sungold-power", "sungoldpower-us", "sun-gold-power"],
     website: "https://sungoldpower.com",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
-    logo: "https://sungoldpower.com/cdn/shop/files/logo_300x.png",
+    logo: "/logos/sungoldpower.svg",
     description: "SunGoldPower provides high-efficiency off-grid pure sine wave solar inverters, server rack lithium batteries, and complete solar power kits for whole home backup and off-grid living.",
     coupons: [
       {
@@ -1917,7 +1917,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["sculpfun-laser", "sculpfun-us", "sculp-fun"],
     website: "https://www.sculpfun.com",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
-    logo: "https://www.sculpfun.com/cdn/shop/files/logo_300x.png",
+    logo: "/logos/sculpfun.svg",
     description: "Sculpfun pioneers high-speed desktop diode laser engravers and cutters designed for precision craft, wood carving, metal marking, and custom fabrication businesses.",
     coupons: [
       {
@@ -1951,7 +1951,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["desktronic-netherlands", "desktronicnl"],
     website: "https://desktronic.nl/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.nl%2F",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    logo: "/logos/desktronic.svg",
     description: "Desktronic produceert hoogwaardige elektrische zit-sta bureaus met fluisterstille dubbele motoren, massief houten tafelbladen en ergonomische bediening voor gezonde werkplekken in Nederland.",
     coupons: [
       {
@@ -2018,7 +2018,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["desktronic-germany", "desktronicde"],
     website: "https://desktronic.de/",
     affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.de%2F",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/107055.png",
+    logo: "/logos/desktronic.svg",
     description: "Desktronic fertigt hochwertige höhenverstellbare Schreibtische mit leisen Doppelmotoren, massiven Echtholz-Tischplatten und intuitiven Speichersteuerungen für gesunde Ergonomie am Arbeitsplatz.",
     coupons: [
       {
@@ -2085,7 +2085,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["mirlux", "mirluxnl", "mirlux-spiegels"],
     website: "https://mirlux.nl/",
     affiliate_url: "/go/mirlux-nl",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/101763.png",
+    logo: "/logos/mirlux.svg",
     description: "Mirlux ontwerpt en produceert luxe LED badkamerspiegels op maat, slimme spiegels met spiegelverwarming, touch-bediening en dimbare verlichting in Nederland.",
     coupons: [
       {
@@ -2152,7 +2152,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["mirlux-germany", "mirluxde"],
     website: "https://mirlux.de/",
     affiliate_url: "/go/mirlux-de",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/123796.png",
+    logo: "/logos/mirlux.svg",
     description: "Mirlux steht für luxuriöse LED-Badspiegel nach Maß mit integrierter Spiegelheizung, dimmbarer Beleuchtung, Touch-Schaltern und edlen Rahmen in Deutschland.",
     coupons: [
       {
@@ -2219,7 +2219,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["wjd-exclusives", "wjd", "wjd-exclusive", "wjdexclusives"],
     website: "https://wjdexclusives.com/",
     affiliate_url: "/go/wjd-exclusives-us",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/82685.png",
+    logo: "/logos/wjdexclusives.svg",
     description: "WJD Exclusives is a premier New York jeweler specializing in authentic 10K and 14K solid gold chains, Miami Cuban link bracelets, certified diamond pendants, rings, and luxury jewelry.",
     coupons: [
       {
@@ -2286,7 +2286,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["silver-cross", "silvercross", "silvercrossus"],
     website: "https://silvercrossus.com/",
     affiliate_url: "/go/silver-cross-us",
-    logo: "https://ui.awin.com/images/upload/merchant/profile/47379.png",
+    logo: "/logos/silvercross.svg",
     description: "Silver Cross is the iconic British luxury nursery brand crafting premier strollers, wave prams, reef travel systems, high chairs, and car seats trusted by parents worldwide since 1877.",
     coupons: [
       {
@@ -2353,7 +2353,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "SCHEELS",
     slug: "scheels",
     aliases: ["scheels-us", "scheels-sports", "scheels-com"],
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Scheels_logo.svg",
+    logo: "/logos/scheels.svg",
     website: "https://www.scheels.com",
     affiliate_url: "/go/scheels",
     country: "US",
@@ -2512,75 +2512,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         title: "Bis zu 10 Jahre Herstellergarantie auf Zendure Solarspeicher",
         description: "Höchste LiFePO4 Akku-Qualität und Sicherheit mit langfristiger Herstellergarantie mit Code 10JAHRE.",
         affiliate_url: "/go/zendure",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      }
-    ]
-  },
-  // 28. AlgoLaser (Diode Laser Engravers & Cutters)
-  {
-    id: 652,
-    name: "AlgoLaser",
-    slug: "algolaser",
-    aliases: ["algo-laser", "algolaser-us", "algolaser-engraver", "algolaser-official"],
-    website: "https://algolaser.com",
-    affiliate_url: "/go/algolaser",
-    logo: "https://algolaser.com/cdn/shop/files/2_f7037a7f-b0ca-4b7c-9b36-d722768bd1ab.png",
-    country: "US",
-    description: "AlgoLaser is a world-renowned pioneer in smart diode laser engravers and cutting machines. Empower your DIY craft projects, small business, and laser engraving creativity with the flagship AlgoLaser Alpha MK2, Delta, DIY Kit, and Pixi series.",
-    coupons: [
-      {
-        id: "algolaser-deal-1",
-        code: "BACK15",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% off AlgoLaser diode laser engravers & accessories",
-        description: "Save 15% on high-precision laser engravers, enclosures, and air assist pumps with verified promo code BACK15.",
-        affiliate_url: "/go/algolaser",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "algolaser-deal-2",
-        code: "ALZYX",
-        is_auto_applied: false,
-        discount: "10% OFF",
-        title: "Extra 10% off storewide on all AlgoLaser machines",
-        description: "Get 10% off AlgoLaser Alpha, Delta, and DIY Kit MK3 models with coupon code ALZYX.",
-        affiliate_url: "/go/algolaser",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "algolaser-deal-3",
-        code: "",
-        is_auto_applied: true,
-        discount: "UP TO $200 OFF",
-        title: "Up to $200 off AlgoLaser Alpha MK2 & Delta 22W/40W flagship sets",
-        description: "Automatic instant tiered discounts applied at checkout on high-power diode laser cutters.",
-        affiliate_url: "/go/algolaser",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "algolaser-deal-4",
-        code: "",
-        is_auto_applied: true,
-        discount: "FREE SHIPPING",
-        title: "Free insured express delivery on qualifying AlgoLaser machines",
-        description: "Get free fast tracked shipping from local US warehouses on orders over $99.",
-        affiliate_url: "/go/algolaser",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "algolaser-deal-5",
-        code: "",
-        is_auto_applied: true,
-        discount: "90-DAY PROTECTION",
-        title: "90-Day lowest price match protection & 1-year official warranty",
-        description: "Shop with peace of mind with AlgoLaser's 90-day price match guarantee and full factory warranty.",
-        affiliate_url: "/go/algolaser",
         is_verified: true,
         expiry_date: "2026-12-31"
       }

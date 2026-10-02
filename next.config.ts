@@ -599,6 +599,136 @@ const nextConfig: NextConfig = {
         source: "/go/geprc-fpv",
         destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fgeprc.com",
         permanent: true,
+      },
+      {
+        source: "/go/thedrmlab",
+        destination: "https://www.thedrmlab.com/methewdippy",
+        permanent: true,
+      },
+      {
+        source: "/go/the-drm-lab",
+        destination: "https://www.thedrmlab.com/methewdippy",
+        permanent: true,
+      },
+      {
+        source: "/go/bouquets-by-post",
+        destination: "https://bouquetsbypost.com/muhammadhaziqueali",
+        permanent: true,
+      },
+      {
+        source: "/go/seed-needs",
+        destination: "https://www.seedneeds.com/dippy",
+        permanent: true,
+      },
+      {
+        source: "/go/im8health",
+        destination: "https://www.im8health.com/RICHARD05376",
+        permanent: true,
+      },
+      {
+        source: "/go/im8-health",
+        destination: "https://www.im8health.com/RICHARD05376",
+        permanent: true,
+      },
+      {
+        source: "/go/transparent-labs",
+        destination: "https://vert.si/g693JE",
+        permanent: true,
+      },
+      {
+        source: "/go/garten-und-freizeit",
+        destination: "https://litl.si/5p50u",
+        permanent: true,
+      },
+      {
+        source: "/go/dreamcloud",
+        destination: "https://vert.si/dJUkDu",
+        permanent: true,
+      },
+      {
+        source: "/go/qidi-us",
+        destination: "https://us.qidi3d.com/?sca_ref=10216933.GBxI9fhaM2YhHIe",
+        permanent: true,
+      },
+      {
+        source: "/go/qidi-de",
+        destination: "https://qidi3d-de.myshopify.com?sca_ref=12082423.h3UYEVqJ6Tg",
+        permanent: true,
+      },
+      {
+        source: "/go/qidi-uk",
+        destination: "https://qidi3d-uk.myshopify.com?sca_ref=12082424.7VZOgmHzi7mV",
+        permanent: true,
+      },
+      {
+        source: "/go/qidi-ca",
+        destination: "https://qidi3d-ca.myshopify.com?sca_ref=12082426.lb4pfrcPLtarI",
+        permanent: true,
+      },
+      {
+        source: "/go/qidi-au",
+        destination: "https://qiditech3d-au.myshopify.com?sca_ref=12082425.u0nAUHxvoBprsex",
+        permanent: true,
+      },
+      {
+        source: "/go/mellow-sleep",
+        destination: "https://mellowsleep.com/RICHARD1",
+        permanent: true,
+      },
+      {
+        source: "/go/comfrt",
+        destination: "https://comfrt.com",
+        permanent: true,
+      },
+      {
+        source: "/go/dc-house",
+        destination: "https://www.dchousepower.com/?ref=ikafrwml",
+        permanent: true,
+      },
+      {
+        source: "/go/filter-baby",
+        destination: "https://filterbaby.com/discount/FILTER15?ref=promoregistry",
+        permanent: true,
+      },
+      {
+        source: "/go/crz-yoga",
+        destination: "https://us.crzyoga.com/?ref=sulydaqw",
+        permanent: true,
+      },
+      {
+        source: "/go/crz-yoga-ca",
+        destination: "https://ca.crzyoga.com/?ref=sulydaqw",
+        permanent: true,
+      },
+      {
+        source: "/go/redusculpt",
+        destination: "https://www.redusculpt.com/METHEW46097",
+        permanent: true,
+      },
+      {
+        source: "/go/tenways",
+        destination: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        permanent: true,
+      },
+      {
+        source: "/go/tenways-nl",
+        destination: "https://www.tenways.com/?ref=nta1mzr&utm_source=tapfiliate&utm_medium=affiliate&utm_campaign=nta1mzr",
+        permanent: true,
+      },
+      {
+        source: "/go/naturnest",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturnest.com%2F",
+        permanent: true,
+      },
+      {
+        source: "/go/sungoldpower",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsungoldpower.com",
+        permanent: true,
+      },
+      {
+        source: "/go/sculpfun",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
+        permanent: true,
       }
     ];
   },
