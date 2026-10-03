@@ -43,6 +43,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/coupons/:slug",
+        destination: "/deals/:slug",
+      },
+    ];
+  },
   async redirects() {
     return [
       {
