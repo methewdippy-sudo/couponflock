@@ -1685,50 +1685,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         is_verified: true,
         expiry_date: "2026-12-31"
       },
-      {
-        id: "desk-deal-2",
-        code: "PROONE100",
-        is_auto_applied: false,
-        discount: "£100 OFF",
-        title: "£100 off Desktronic Pro One Dual-Motor Standing Desk",
-        description: "Get £100 off the flagship Desktronic Pro One with ultra-stable 3-stage legs and smart presets with code PROONE100.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "desk-deal-3",
-        code: "HOME50",
-        is_auto_applied: false,
-        discount: "£50 OFF",
-        title: "£50 off Desktronic Home One Compact Desk",
-        description: "Upgrade your home office with £50 savings on the space-saving Home One electric desk series with code HOME50.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "desk-deal-4",
-        code: "NEW6BTXLNC3",
-        is_auto_applied: false,
-        discount: "EXTRA £15 OFF",
-        title: "Extra £15 discount on sit-stand desk configurations",
-        description: "Claim an extra £15 checkout discount on all electric motorized standing desks with voucher NEW6BTXLNC3.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "desk-deal-5",
-        code: "FREESHIP",
-        is_auto_applied: false,
-        discount: "FREE SHIP",
-        title: "Free express shipping across the UK & Germany",
-        description: "Enjoy zero delivery fees on all standing desks and large packages with tracked courier delivery.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fdesktronic.co.uk%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      }
     ]
   },
   {
