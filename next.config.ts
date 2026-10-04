@@ -629,6 +629,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/im8",
+        destination: "https://www.im8health.com/RICHARD05376",
+        permanent: true,
+      },
+      {
         source: "/go/im8health",
         destination: "https://www.im8health.com/RICHARD05376",
         permanent: true,
@@ -690,6 +695,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/dc-house",
+        destination: "https://www.dchousepower.com/?ref=ikafrwml",
+        permanent: true,
+      },
+      {
+        source: "/go/dchouse",
         destination: "https://www.dchousepower.com/?ref=ikafrwml",
         permanent: true,
       },
