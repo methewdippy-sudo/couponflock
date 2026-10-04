@@ -4370,6 +4370,1624 @@ export const STORE_REGISTRY: RegistryStore[] = [
       }
     ]
   }
+,
+  // 701. PISCIFUN (US)
+  {
+    id: 701,
+    name: "Piscifun",
+    slug: "piscifun",
+    aliases: ["piscifun-us","piscifun-fishing"],
+    logo: "/logos/piscifun.svg",
+    website: "https://www.piscifun.com",
+    affiliate_url: "/go/piscifun",
+    country: "US",
+    description: "Piscifun manufactures high-performance fishing reels, rods, tackle bags, lines, and tournament angling gear at accessible price points.",
+    coupons: [
+          {
+                "id": "pisc-1",
+                "code": "WELCOME15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Fishing Tackle Order",
+                "description": "Save 15% on baitcaster reels, spinning reels, and braided line with verified code.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-2",
+                "code": "REEL20",
+                "discount": "20% OFF",
+                "title": "20% Off Torrent & Phantom Baitcasting Reels",
+                "description": "Get 20% off tournament-tested carbon fiber baitcasters and precision drag reels.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 35% OFF",
+                "title": "Up to 35% Off Angler Clearance & Seasonal Tackle",
+                "description": "Direct instant discount across top-selling rods, tackle boxes, and fishing bags.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-4",
+                "code": "FREESHIP",
+                "discount": "FREE SHIPPING",
+                "title": "Free Express Shipping on Orders Over $49",
+                "description": "Enjoy complimentary fast tracked delivery across the United States.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-5",
+                "code": "TACKLE10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Fishing Gear & Line Bundles",
+                "description": "Take 10% off Onyx braided line, waterproof tackle bags, and carbon rods.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 2 GET 10%",
+                "title": "Buy 2 Reels or Rods & Get Extra 10% Off",
+                "description": "Automatic bundle discount applied at checkout on any two rod or reel combos.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-7",
+                "code": "FLY25",
+                "discount": "25% OFF",
+                "title": "25% Off Fly Fishing Reels & Line Spools",
+                "description": "Exclusive angler discount on CNC-machined aluminum alloy fly fishing reels.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          },
+          {
+                "id": "pisc-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "WARRANTY INCLUDED",
+                "title": "Free 1-Year Manufacturer Warranty on All Reels",
+                "description": "Full factory warranty and direct customer support included with every order.",
+                "is_verified": true,
+                "affiliate_url": "/go/piscifun"
+          }
+    ]
+  },
+  // 702. SCARLET DARKNESS (US)
+  {
+    id: 702,
+    name: "Scarlet Darkness",
+    slug: "scarlet-darkness",
+    aliases: ["scarletdarkness","scarlet-darkness-us"],
+    logo: "/logos/scarlet-darkness.svg",
+    website: "https://scarletdarkness.com",
+    affiliate_url: "/go/scarlet-darkness",
+    country: "US",
+    description: "Scarlet Darkness crafts vintage-inspired retro clothing, Victorian corset gowns, steampunk attire, and Renaissance faire fashion for women.",
+    coupons: [
+          {
+                "id": "scad-1",
+                "code": "DARK15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Retro & Victorian Fashion Order",
+                "description": "Save 15% on elegant corset dresses, skirts, and vintage blouses with code DARK15.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-2",
+                "code": "GOTH20",
+                "discount": "20% OFF",
+                "title": "20% Off Renaissance Faire & Steampunk Gowns",
+                "description": "Take 20% off bestselling vintage Victorian dresses and pirate renaissance corsets.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 40% OFF",
+                "title": "Up to 40% Off Seasonal Gothic & Vintage Clearance",
+                "description": "Instant markdown applied directly across past-season vintage jackets and petticoats.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-4",
+                "code": "FREESHIP",
+                "discount": "FREE SHIPPING",
+                "title": "Free Tracked US Shipping on Orders Over $59",
+                "description": "Enjoy complimentary standard delivery on all domestic fashion orders.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-5",
+                "code": "CORSET10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Vintage Blouses & Corset Tops",
+                "description": "Save 10% on smocked peasant blouses, lace shirts, and Renaissance vests.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "$15 OFF $100",
+                "title": "$15 Off Multi-Item Orders Over $100",
+                "description": "Automatic tiered discount activated in shopping bag on qualifying totals.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-7",
+                "code": "VINTAGE25",
+                "discount": "25% OFF",
+                "title": "25% Off Select Gothic Trench Coats & Cloaks",
+                "description": "Special seasonal promotion on velvet capes, hooded cloaks, and steampunk coats.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          },
+          {
+                "id": "scad-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "EASY RETURNS",
+                "title": "30-Day Hassle-Free Returns & Size Exchanges",
+                "description": "Shop with peace of mind with simple returns and exchanges on all clothing.",
+                "is_verified": true,
+                "affiliate_url": "/go/scarlet-darkness"
+          }
+    ]
+  },
+  // 703. KREWE (US)
+  {
+    id: 703,
+    name: "KREWE",
+    slug: "krewe",
+    aliases: ["krewe-eyewear","krewe-us"],
+    logo: "/logos/krewe.svg",
+    website: "https://www.krewe.com",
+    affiliate_url: "/go/krewe",
+    country: "US",
+    description: "KREWE is an independent New Orleans-based eyewear brand creating handcrafted artisanal sunglasses and luxury prescription optical frames.",
+    coupons: [
+          {
+                "id": "krewe-1",
+                "code": "KREWE10",
+                "discount": "10% OFF",
+                "title": "10% Off First Luxury Eyewear Order with Sign Up",
+                "description": "Save 10% on handcrafted Italian acetate sunglasses and titanium frames.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-2",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "SECOND CHANCE",
+                "title": "Free Lifetime Second Chance Frame Replacement",
+                "description": "If you damage or break your frames, KREWE replaces them once for free.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-3",
+                "code": "SUN20",
+                "discount": "20% OFF",
+                "title": "20% Off Polarized Sunglasses & Core Classics",
+                "description": "Exclusive savings on iconic St. Louis, Franklin, and nylon mirror shades.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE 2-DAY",
+                "title": "Free 2-Day Express Shipping & Free Returns",
+                "description": "Fast premium tracked delivery with complimentary prepaid return labels.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-5",
+                "code": "OPTICAL15",
+                "discount": "15% OFF",
+                "title": "15% Off Prescription Optical Eyeglasses",
+                "description": "Take 15% off custom prescription lenses and handcrafted designer frames.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 30% OFF",
+                "title": "Up to 30% Off Archive & Seasonal Vault Sale",
+                "description": "Direct discount on limited-edition colorways and handcrafted acetate silhouettes.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-7",
+                "code": "GIFT50",
+                "discount": "$50 OFF",
+                "title": "$50 Off Orders Over $350 on Eyewear Sets",
+                "description": "Save $50 instantly when styling sunglasses with hard cases and chains.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          },
+          {
+                "id": "krewe-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "CLEANING KIT",
+                "title": "Complimentary Custom Hard Case & Microfiber Cloth",
+                "description": "Premium designer storage case and microfiber cleaning cloth with every pair.",
+                "is_verified": true,
+                "affiliate_url": "/go/krewe"
+          }
+    ]
+  },
+  // 704. PERGOLUX (DE)
+  {
+    id: 704,
+    name: "Pergolux",
+    slug: "pergolux",
+    aliases: ["pergolux-de","pergolux-pergola"],
+    logo: "/logos/pergolux.svg",
+    website: "https://pergolux.de",
+    affiliate_url: "/go/pergolux",
+    country: "DE",
+    description: "Pergolux designs and manufactures premium bioclimatic louvered pergolas, glass wall systems, and motorized outdoor living solutions.",
+    coupons: [
+          {
+                "id": "perg-1",
+                "code": "PERGO500",
+                "discount": "€500 OFF",
+                "title": "€500 Off Motorized Louvered Pergola Systems",
+                "description": "Save €500 on all-weather aluminum pergolas with motorized roof slats.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-2",
+                "code": "GARTEN10",
+                "discount": "10% OFF",
+                "title": "10% Off Zip Screens, LED Lighting & Heaters",
+                "description": "Take 10% off windproof side screens, integrated LED strips, and patio heating.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE CONSULT",
+                "title": "Free 3D Patio Visualization & Expert Consultation",
+                "description": "Book a complimentary virtual 3D design session for your terrace or garden.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE FREIGHT",
+                "title": "Free Curbside Delivery Across Germany & Austria",
+                "description": "Insured freight shipping directly to your home with zero shipping surcharge.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-5",
+                "code": "SUMMER15",
+                "discount": "15% OFF",
+                "title": "15% Off Glass Sliding Wall Add-On Systems",
+                "description": "Enclose your pergola into an all-season winter garden with 15% off glass panels.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "5-YEAR WARRANTY",
+                "title": "5-Year Full Manufacturer Weatherproof Warranty",
+                "description": "100% rustproof powder-coated aluminum guaranteed against severe weather.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-7",
+                "code": "PERGO300",
+                "discount": "€300 OFF",
+                "title": "€300 Off Skydance & Pergola S2 Models",
+                "description": "Direct discount coupon code for freestanding and wall-mounted pergolas.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          },
+          {
+                "id": "perg-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "DIY GUIDE",
+                "title": "Free Step-by-Step Video Assembly Instructions & Tools",
+                "description": "Detailed video manual and all necessary hardware for easy DIY setup.",
+                "is_verified": true,
+                "affiliate_url": "/go/pergolux"
+          }
+    ]
+  },
+  // 705. RYOBI (GLOBAL)
+  {
+    id: 705,
+    name: "Ryobi",
+    slug: "ryobi",
+    aliases: ["ryobi-tools","ryobi-fr","ryobi-eu"],
+    logo: "/logos/ryobi.svg",
+    website: "https://fr.ryobitools.eu",
+    affiliate_url: "/go/ryobi",
+    country: "GLOBAL",
+    description: "Ryobi delivers innovative 18V ONE+ and 36V MAX POWER cordless power tools, garden machinery, mowers, and DIY home improvement equipment.",
+    coupons: [
+          {
+                "id": "ryo-1",
+                "code": "ONEPLUS20",
+                "discount": "20% OFF",
+                "title": "20% Off 18V ONE+ Cordless Power Tool Starter Kits",
+                "description": "Save 20% on drill drivers, impact drivers, and Lithium+ battery starter kits.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-2",
+                "code": "JARDIN15",
+                "discount": "15% OFF",
+                "title": "15% Off Cordless Garden Trimmers & Lawn Mowers",
+                "description": "Take 15% off 36V MAX POWER hedge trimmers, leaf blowers, and mowers.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE BATTERY",
+                "title": "Free Extra 18V 4.0Ah Battery with Bare Tool Combos",
+                "description": "Promotional bundle offer: receive a high-capacity battery with qualifying tools.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE DELIVERY",
+                "title": "Free Standard Delivery on Tool Orders Over €50",
+                "description": "Complimentary express courier shipping across France and Europe.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-5",
+                "code": "OUTIL10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Circular Saws, Sanders & Routers",
+                "description": "Save 10% on precision woodworking and home renovation power tools.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "3-YEAR WARRANTY",
+                "title": "3-Year Extended Manufacturer Tool Warranty",
+                "description": "Register your Ryobi tool online within 30 days for an extra year of coverage.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-7",
+                "code": "CLEAN25",
+                "discount": "25% OFF",
+                "title": "25% Off High Pressure Washers & Wet/Dry Vacuums",
+                "description": "Discount on patio washers, compact wet/dry vacs, and cleaning attachments.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          },
+          {
+                "id": "ryo-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 30% OFF",
+                "title": "Up to 30% Off Seasonal DIY & Garden Clearance",
+                "description": "Instant discounts on selected bare tools and workshop accessories.",
+                "is_verified": true,
+                "affiliate_url": "/go/ryobi"
+          }
+    ]
+  },
+  // 706. MAGICSHINE (US)
+  {
+    id: 706,
+    name: "Magicshine",
+    slug: "magicshine",
+    aliases: ["magicshine-us","magicshine-lights"],
+    logo: "/logos/magicshine.svg",
+    website: "https://magicshine.com",
+    affiliate_url: "/go/magicshine",
+    country: "US",
+    description: "Magicshine engineers ultra-bright bicycle headlights, smart radar taillights, and MTB night riding lighting systems trusted by cyclists worldwide.",
+    coupons: [
+          {
+                "id": "mag-1",
+                "code": "SHINE15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Cycling Light Order",
+                "description": "Save 15% on high-lumen bike headlights, taillights, and helmet mounts.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-2",
+                "code": "MONTEER20",
+                "discount": "20% OFF",
+                "title": "20% Off Monteer & Ray Series MTB Trail Lights",
+                "description": "Take 20% off heavy-duty 3000 to 8000 lumen night riding bike headlights.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE RADAR",
+                "title": "Free Garmin Mount with SEEMEE Smart Taillights",
+                "description": "Automatic bundle bonus: free quarter-turn mount with brake-sensing taillights.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE SHIPPING",
+                "title": "Free Worldwide Tracked Shipping on Orders Over $99",
+                "description": "Fast doorstep delivery with real-time tracking on all lighting kits.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-5",
+                "code": "COMMUTE10",
+                "discount": "10% OFF",
+                "title": "10% Off AllVTY City Commuter Bike Lights",
+                "description": "Save 10% on anti-glare USB-C rechargeable urban commuting headlamps.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "2-YEAR WARRANTY",
+                "title": "2-Year Manufacturer Warranty on All Cycling Lights",
+                "description": "Waterproof IPX6/IPX7 certified lights protected by factory warranty.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-7",
+                "code": "COMBO25",
+                "discount": "25% OFF",
+                "title": "25% Off Headlight & Smart Tail Light Combos",
+                "description": "Save 25% when purchasing bundled front and rear illumination sets.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          },
+          {
+                "id": "mag-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 30% OFF",
+                "title": "Up to 30% Off Seasonal Cyclist Flash Sale",
+                "description": "Direct discount on battery packs, remote switches, and out-front mounts.",
+                "is_verified": true,
+                "affiliate_url": "/go/magicshine"
+          }
+    ]
+  },
+  // 707. TESMART (US)
+  {
+    id: 707,
+    name: "TESmart",
+    slug: "tesmart",
+    aliases: ["tesmart-us","tesmart-kvm"],
+    logo: "/logos/tesmart.svg",
+    website: "https://www.tesmart.com",
+    affiliate_url: "/go/tesmart",
+    country: "US",
+    description: "TESmart manufactures enterprise and home office KVM switches, HDMI matrices, and multi-monitor docking solutions for dual/triple workstation setups.",
+    coupons: [
+          {
+                "id": "tes-1",
+                "code": "TES10",
+                "discount": "10% OFF",
+                "title": "10% Off Dual Monitor KVM Switches Sitewide",
+                "description": "Save 10% on 4K@60Hz and 8K HDMI/DisplayPort dual-monitor KVM switchers.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-2",
+                "code": "MATRIX15",
+                "discount": "15% OFF",
+                "title": "15% Off Professional HDMI Matrix Switchers",
+                "description": "Take 15% off 4x4 and 8x8 HDMI matrix switches with RS232 and IP control.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE CABLES",
+                "title": "Free High-Speed HDMI & USB KVM Cables Included",
+                "description": "Every switch comes packaged with complete certified connection cables.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE US SHIPPING",
+                "title": "Free Standard Ground Shipping Across the US",
+                "description": "Enjoy fast domestic delivery directly from US warehouse facilities.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-5",
+                "code": "TRIPLE20",
+                "discount": "20% OFF",
+                "title": "20% Off Triple Monitor Multi-PC KVM Workstations",
+                "description": "Save 20% when upgrading high-performance trading and engineering desks.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "2-YEAR WARRANTY",
+                "title": "2-Year Full Hardware Warranty & Lifetime Tech Support",
+                "description": "Dedicated enterprise technical support and warranty coverage on all units.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-7",
+                "code": "SAVE50",
+                "discount": "$50 OFF",
+                "title": "$50 Off Orders Over $400 on KVM Docking Bundles",
+                "description": "Tiered cart discount automatically verified for enterprise bulk orders.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          },
+          {
+                "id": "tes-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "30-DAY RETURN",
+                "title": "30-Day Money-Back Guarantee on All Switchers",
+                "description": "Test your workstation setup risk-free with full 30-day return policy.",
+                "is_verified": true,
+                "affiliate_url": "/go/tesmart"
+          }
+    ]
+  },
+  // 708. C.PARAVANO (US)
+  {
+    id: 708,
+    name: "C.Paravano",
+    slug: "cparavano",
+    aliases: ["c-paravano","cparavano-us"],
+    logo: "/logos/cparavano.svg",
+    website: "https://www.cparavano.com",
+    affiliate_url: "/go/cparavano",
+    country: "US",
+    description: "C.Paravano creates Italian-inspired designer women's footwear, chic comfortable pointed-toe flats, classic pumps, mules, and genuine leather bags.",
+    coupons: [
+          {
+                "id": "cpar-1",
+                "code": "PARAVANO15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Designer Footwear Purchase",
+                "description": "Save 15% on pointed-toe lambskin flats, heels, and leather pumps with code.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-2",
+                "code": "LOAFER20",
+                "discount": "20% OFF",
+                "title": "20% Off Luxury Soft Leather Loafers & Mules",
+                "description": "Take 20% off bestselling cushioned slip-on loafers and vintage buckle flats.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 40% OFF",
+                "title": "Up to 40% Off Seasonal Runway & Outlet Sale",
+                "description": "Direct price markdown on designer slingbacks, sandals, and handbag collections.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE SHIPPING",
+                "title": "Free Express Shipping on Orders Over $100",
+                "description": "Complimentary doorstep courier delivery across the United States.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-5",
+                "code": "PUMP10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Comfortable Office Block Heels",
+                "description": "Save 10% on ergonomic memory-foam cushioned dress shoes for work.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 2 GET $25",
+                "title": "Buy 2 Pairs & Get $25 Off Instantly",
+                "description": "Automatic bundle savings in cart when choosing any two shoe styles.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-7",
+                "code": "BAG25",
+                "discount": "25% OFF",
+                "title": "25% Off Genuine Cowhide Crossbody Bags & Totes",
+                "description": "Discount on Italian-crafted minimal leather handbags and clutches.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          },
+          {
+                "id": "cpar-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "30-DAY RETURN",
+                "title": "30-Day Hassle-Free Returns & Perfect Fit Guarantee",
+                "description": "Easy returns and size swaps to ensure your perfect comfort fit.",
+                "is_verified": true,
+                "affiliate_url": "/go/cparavano"
+          }
+    ]
+  },
+  // 709. SENSER (US)
+  {
+    id: 709,
+    name: "Senser",
+    slug: "senser",
+    aliases: ["senser-us","senser-fashion"],
+    logo: "/logos/senser.svg",
+    website: "https://www.senser.net",
+    affiliate_url: "/go/senser",
+    country: "US",
+    description: "Senser is a global digital luxury platform connecting shoppers to 500+ European boutiques with guaranteed authentic designer clothing, bags, and shoes.",
+    coupons: [
+          {
+                "id": "sens-1",
+                "code": "SENSER50",
+                "discount": "$50 OFF",
+                "title": "$50 Off Your First Luxury Designer Order Over $400",
+                "description": "Save $50 on authentic Saint Laurent, Balenciaga, Gucci, and Prada.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-2",
+                "code": "LUXURY10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide European Boutique Fashion",
+                "description": "Take 10% off current-season runway apparel, sneakers, and designer bags.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 60% OFF",
+                "title": "Up to 60% Off Designer Seasonal Boutique Clearance",
+                "description": "Huge instant markdowns sourced directly from authorized European retailers.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "AUTHENTIC 100%",
+                "title": "100% Certified Authenticity & Boutique Inspection Guarantee",
+                "description": "Every luxury piece undergoes strict quality and authenticity verification.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-5",
+                "code": "SNEAKER15",
+                "discount": "15% OFF",
+                "title": "15% Off Designer Sneakers & Luxury Streetwear",
+                "description": "Save 15% on Golden Goose, Alexander McQueen, and Maison Margiela kicks.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE GLOBAL",
+                "title": "Free DHL Express Insured Worldwide Shipping",
+                "description": "Fast international shipping with tracking and zero hidden import duty.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-7",
+                "code": "BAG100",
+                "discount": "$100 OFF",
+                "title": "$100 Off Designer Leather Handbags Over $800",
+                "description": "Exclusive savings on luxury totes, shoulder bags, and card holders.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          },
+          {
+                "id": "sens-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "EASY RETURNS",
+                "title": "14-Day Global Return Protection on All Luxury Orders",
+                "description": "Complimentary prepaid return pickup for total luxury shopping security.",
+                "is_verified": true,
+                "affiliate_url": "/go/senser"
+          }
+    ]
+  },
+  // 710. CANDYROO (UK)
+  {
+    id: 710,
+    name: "Candyroo",
+    slug: "candyroo",
+    aliases: ["candy-roo","candyroo-uk"],
+    logo: "/logos/candyroo.svg",
+    website: "https://candyroo.co.uk",
+    affiliate_url: "/go/candyroo",
+    country: "UK",
+    description: "Candyroo is the UK's premier pick & mix sweet shop, offering giant pouch sweets, retro British tuckshop favorites, American candy, and gift hampers.",
+    coupons: [
+          {
+                "id": "cand-1",
+                "code": "ROO15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Pick & Mix Sweet Order",
+                "description": "Save 15% on custom sweet pouches, gummy mixes, and retro tuckshop boxes.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-2",
+                "code": "POUCH20",
+                "discount": "20% OFF",
+                "title": "20% Off 1kg & 2kg Giant Sweet Pouches",
+                "description": "Take 20% off bestselling fizzy sweets, vegan jellies, and chocolate pouches.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE UK POST",
+                "title": "Free Royal Mail Tracked Delivery Over £35",
+                "description": "Free fast shipping to any UK address on orders over £35.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-4",
+                "code": "HAMPER10",
+                "discount": "10% OFF",
+                "title": "10% Off American Candy & Soda Gift Hampers",
+                "description": "Save 10% on imported USA snacks, rare candies, and birthday sweet boxes.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-5",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 3 GET 4TH",
+                "title": "Buy 3 Snack Pouches & Get 4th Half Price",
+                "description": "Automatic mix & match tuckshop promotion applied at checkout.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-6",
+                "code": "VEGAN15",
+                "discount": "15% OFF",
+                "title": "15% Off 100% Certified Vegan & Gluten-Free Sweets",
+                "description": "Delicious plant-based jelly treats, sour sweets, and dairy-free fudge.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-7",
+                "code": "SWEET5",
+                "discount": "£5 OFF",
+                "title": "£5 Off Party Pack Orders Over £40",
+                "description": "Voucher code valid on wedding favors, sweet buffets, and party bags.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          },
+          {
+                "id": "cand-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FRESH PACK",
+                "title": "100% Resealable Freshness-Sealed Pouches Guaranteed",
+                "description": "Packed fresh daily in eco-friendly resealable food-grade pouches.",
+                "is_verified": true,
+                "affiliate_url": "/go/candyroo"
+          }
+    ]
+  },
+  // 711. GRAYS HOCKEY (UK)
+  {
+    id: 711,
+    name: "Grays Hockey",
+    slug: "grays-hockey",
+    aliases: ["grayshockey","grays-hockey-uk"],
+    logo: "/logos/grays-hockey.svg",
+    website: "https://www.grays-hockey.com",
+    affiliate_url: "/go/grays-hockey",
+    country: "UK",
+    description: "Grays Hockey is the world's most historic field hockey brand, crafting elite composite sticks, AC/KN series, protective gloves, bags, and shoes.",
+    coupons: [
+          {
+                "id": "gray-1",
+                "code": "GRAYS15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Field Hockey Equipment Order",
+                "description": "Save 15% on composite hockey sticks, gloves, bags, and turf shoes with code.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-2",
+                "code": "STICK20",
+                "discount": "20% OFF",
+                "title": "20% Off Kinetic (KN) & AC Composite Hockey Sticks",
+                "description": "Take 20% off world-class carbon fiber sticks with Geocentric Core technology.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 40% OFF",
+                "title": "Up to 40% Off End-of-Season Stick Clearance",
+                "description": "Direct price reductions on past-season professional field hockey gear.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE UK POST",
+                "title": "Free UK Standard Delivery on Orders Over £50",
+                "description": "Fast tracked courier delivery across England, Scotland, Wales, and NI.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-5",
+                "code": "GUARD10",
+                "discount": "10% OFF",
+                "title": "10% Off Shin Guards, Masks & Protective Gear",
+                "description": "Protect yourself on turf with 10% off high-impact shin guards and gloves.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE BALL",
+                "title": "Free Match Hockey Ball with Any Stick Purchase",
+                "description": "Free international match ball automatically added with any adult stick.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-7",
+                "code": "BAG15",
+                "discount": "15% OFF",
+                "title": "15% Off Multi-Stick Backpacks & Holdalls",
+                "description": "Save 15% on water-resistant kit bags with stick compartments.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          },
+          {
+                "id": "gray-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "PRO CHOICE",
+                "title": "Official Equipment of Olympic & International Players",
+                "description": "Engineered to strict FIH regulations for championship tournament play.",
+                "is_verified": true,
+                "affiliate_url": "/go/grays-hockey"
+          }
+    ]
+  },
+  // 712. MERACH (UK)
+  {
+    id: 712,
+    name: "Merach",
+    slug: "merach",
+    aliases: ["merach-uk","merach-fitness"],
+    logo: "/logos/merach.svg",
+    website: "https://uk.merachfit.com",
+    affiliate_url: "/go/merach",
+    country: "UK",
+    description: "Merach develops smart connected home fitness equipment, electromagnetic resistance rowing machines, quiet exercise bikes, and smart treadmills.",
+    coupons: [
+          {
+                "id": "mer-1",
+                "code": "MERACH50",
+                "discount": "£50 OFF",
+                "title": "£50 Off Smart Water & Magnetic Rowing Machines",
+                "description": "Save £50 on quiet electromagnetic rowers with Bluetooth app connectivity.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-2",
+                "code": "BIKE15",
+                "discount": "15% OFF",
+                "title": "15% Off MERACH Indoor Stationary Exercise Bikes",
+                "description": "Take 15% off silent magnetic resistance spinning bikes for home cardio.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE APP",
+                "title": "Free 1-Year MERACH App All-Access Subscription",
+                "description": "Access hundreds of on-demand trainer workouts and scenic rowing videos.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE UK DELIVERY",
+                "title": "Free Tracked Heavy-Goods Delivery Across the UK",
+                "description": "Free home doorstep delivery on all rowers, treadmills, and exercise bikes.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-5",
+                "code": "TREAD10",
+                "discount": "10% OFF",
+                "title": "10% Off Compact Under-Desk Walking Pads",
+                "description": "Save 10% on foldable walking treadmills with LED display and remote control.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "2-YEAR WARRANTY",
+                "title": "2-Year Frame & Motor Warranty with Free Support",
+                "description": "Peace of mind with comprehensive UK customer support and parts replacement.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-7",
+                "code": "MERACH80",
+                "discount": "£80 OFF",
+                "title": "£80 Off Total Gym Bundles Over £600",
+                "description": "Tiered voucher code when pairing rower with vibration plate or bike.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          },
+          {
+                "id": "mer-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "30-DAY TRIAL",
+                "title": "30-Day Risk-Free Home Workout Trial",
+                "description": "Experience workout results at home with hassle-free 30-day returns.",
+                "is_verified": true,
+                "affiliate_url": "/go/merach"
+          }
+    ]
+  },
+  // 713. EDEN'S HERBALS (US)
+  {
+    id: 713,
+    name: "Eden's Herbals",
+    slug: "edens-herbals",
+    aliases: ["edensherbals","xtra-herbals","edens-herbals-us"],
+    logo: "/logos/edens-herbals.svg",
+    website: "https://edensherbals.com",
+    affiliate_url: "/go/edens-herbals",
+    country: "US",
+    description: "Eden's Herbals provides pure third-party lab-tested CBD gummies, organic full spectrum CBD oils, soothing relief creams, and pet wellness tinctures.",
+    coupons: [
+          {
+                "id": "eden-1",
+                "code": "EDEN20",
+                "discount": "20% OFF",
+                "title": "20% Off Your Entire CBD & Wellness Order Sitewide",
+                "description": "Save 20% on CBD gummies, full spectrum tinctures, and topicals with code.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-2",
+                "code": "GUMMY25",
+                "discount": "25% OFF",
+                "title": "25% Off 500mg & 1000mg Fruity CBD Gummies",
+                "description": "Take 25% off bestselling THC-free organic isolate gummy bears.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 2 GET 1",
+                "title": "Buy 2 CBD Products & Get 1 Free Instantly",
+                "description": "Automatic checkout deal: mix and match your favorite tinctures and salves.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE US SHIPPING",
+                "title": "Free Discreet US Shipping on All Orders",
+                "description": "Zero shipping fee and plain packaging delivered across the USA.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-5",
+                "code": "RELIEF15",
+                "discount": "15% OFF",
+                "title": "15% Off Cooling CBD Muscle & Joint Salve",
+                "description": "Save 15% on deep-penetrating CBD pain relief balms and roll-ons.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "LAB CERTIFIED",
+                "title": "100% Third-Party Lab Certified Potency & Purity",
+                "description": "Every batch verified by independent US laboratories with viewable COAs.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-7",
+                "code": "PET20",
+                "discount": "20% OFF",
+                "title": "20% Off Natural Pet CBD Drops for Dogs & Cats",
+                "description": "Promote calm and joint comfort in pets with non-GMO bacon-flavored CBD drops.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          },
+          {
+                "id": "eden-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "MONEY-BACK",
+                "title": "30-Day 100% Satisfaction Money-Back Guarantee",
+                "description": "Feel the calming difference risk-free or get a complete refund.",
+                "is_verified": true,
+                "affiliate_url": "/go/edens-herbals"
+          }
+    ]
+  },
+  // 714. PUPPER CRUST (US)
+  {
+    id: 714,
+    name: "Pupper Crust",
+    slug: "pupper-crust",
+    aliases: ["puppercrust","pupper-crust-us"],
+    logo: "/logos/pupper-crust.svg",
+    website: "https://puppercrust.com",
+    affiliate_url: "/go/pupper-crust",
+    country: "US",
+    description: "Pupper Crust crafts wholesome artisan oven-baked dog pizza crusts, gourmet canine treats, and all-natural nutrition made with human-grade ingredients.",
+    coupons: [
+          {
+                "id": "pupp-1",
+                "code": "PUPPY20",
+                "discount": "20% OFF",
+                "title": "20% Off Your First Dog Pizza & Treat Box",
+                "description": "Save 20% on all-natural oven-baked dog pizzas and crunchy artisan biscuits.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-2",
+                "code": "SUB15",
+                "discount": "15% OFF",
+                "title": "15% Off Monthly Treat Subscription Deliveries",
+                "description": "Enjoy 15% recurring savings and automated fresh treat boxes every month.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE SHIPPING",
+                "title": "Free Tracked US Shipping on Orders Over $40",
+                "description": "Complimentary doorstep delivery directly from the bakery oven to your dog.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-4",
+                "code": "BARK10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Artisan Canine Snacks & Toppers",
+                "description": "Take 10% off organic dog treats, training bites, and savory meal toppers.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-5",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 3 GET 1 FREE",
+                "title": "Buy 3 Dog Pizzas & Get 1 Free Bonus Pizza",
+                "description": "Automatic multi-pack celebration offer applied at checkout.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "HUMAN-GRADE",
+                "title": "100% Real Human-Grade Ingredients & Zero Preservatives",
+                "description": "Crafted without artificial colors, fillers, wheat gluten, or mystery meats.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-7",
+                "code": "BIRTHDAY25",
+                "discount": "25% OFF",
+                "title": "25% Off Pup Birthday Party Bundles & Kits",
+                "description": "Celebrate your pup's special day with party pizzas, hats, and treat pouches.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          },
+          {
+                "id": "pupp-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "TASTE GUARANTEE",
+                "title": "100% Tail-Wagging Taste Guarantee or Full Refund",
+                "description": "If your furry friend does not love it, get a prompt, courteous refund.",
+                "is_verified": true,
+                "affiliate_url": "/go/pupper-crust"
+          }
+    ]
+  },
+  // 715. ZOUPW (US)
+  {
+    id: 715,
+    name: "ZOUPW",
+    slug: "zoupw",
+    aliases: ["zoupw-power","zoupw-us"],
+    logo: "/logos/zoupw.svg",
+    website: "https://zoupw.com",
+    affiliate_url: "/go/zoupw",
+    country: "US",
+    description: "ZOUPW develops rugged portable power stations, monocrystalline solar panels, LiFePO4 battery generators, and outdoor off-grid energy gear.",
+    coupons: [
+          {
+                "id": "zoup-1",
+                "code": "POWER100",
+                "discount": "$100 OFF",
+                "title": "$100 Off Portable LiFePO4 Power Stations",
+                "description": "Save $100 on 600W to 2000W portable solar generators for camping & emergencies.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-2",
+                "code": "SOLAR15",
+                "discount": "15% OFF",
+                "title": "15% Off Foldable Monocrystalline Solar Panels",
+                "description": "Take 15% off 100W and 200W high-efficiency waterproof solar charging kits.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 30% OFF",
+                "title": "Up to 30% Off Solar Generator Power Bundles",
+                "description": "Instant package markdown when purchasing power station plus solar panels.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE EXPEDITED",
+                "title": "Free Expedited US Shipping on All Power Units",
+                "description": "Fast delivery directly from domestic warehouses with insured tracking.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-5",
+                "code": "CAMP10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Power Inverters & GaN Fast Chargers",
+                "description": "Save 10% on car jump starters, fast charging blocks, and DC accessories.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "3500+ CYCLES",
+                "title": "Long-Life LiFePO4 Batteries Rated for 10+ Years",
+                "description": "Premium battery chemistry ensuring over 3500 full charge cycles to 80%.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-7",
+                "code": "SAVE50",
+                "discount": "$50 OFF",
+                "title": "$50 Off Emergency Blackout Home Backup Sets",
+                "description": "Code valid on heavy-duty expandable battery systems over $500.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          },
+          {
+                "id": "zoup-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "2-YEAR WARRANTY",
+                "title": "2-Year Manufacturer Warranty & Hassle-Free Returns",
+                "description": "Full factory warranty coverage and dedicated 24/7 technical customer support.",
+                "is_verified": true,
+                "affiliate_url": "/go/zoupw"
+          }
+    ]
+  },
+  // 716. BIRDFY (US)
+  {
+    id: 716,
+    name: "Birdfy",
+    slug: "birdfy",
+    aliases: ["birdfy-us","birdfy-feeder"],
+    logo: "/logos/birdfy.svg",
+    website: "https://www.birdfy.com",
+    affiliate_url: "/go/birdfy",
+    country: "US",
+    description: "Birdfy creates AI-powered smart bird feeder cameras that automatically identify 6,000+ bird species, capture full HD video, and alert you on your phone.",
+    coupons: [
+          {
+                "id": "bird-1",
+                "code": "BIRDFY15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Smart AI Bird Feeder Camera",
+                "description": "Save 15% on 1080p/2K wireless smart bird feeder cams with AI bird recognition.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-2",
+                "code": "DUAL40",
+                "discount": "$40 OFF",
+                "title": "$40 Off Birdfy Feeder Dual-Camera Solar Bundles",
+                "description": "Take $40 off dual-lens smart feeders with continuous solar power panels.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE AI ACCESS",
+                "title": "Free Lifetime AI Bird Species Identification Included",
+                "description": "Automatically recognize over 6,000 global bird species with zero recurring fee.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE SHIPPING",
+                "title": "Free Standard US Shipping on Orders Over $99",
+                "description": "Tracked express shipping directly to your doorstep with safe delivery.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-5",
+                "code": "HUMMING20",
+                "discount": "20% OFF",
+                "title": "20% Off Smart Hummingbird Feeders & Nectar Sets",
+                "description": "Save 20% on precision camera feeders tailored for hummingbirds.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 35% OFF",
+                "title": "Up to 35% Off Seasonal Holiday Nature Bundles",
+                "description": "Direct discount on feeder extension perches, suet balls, and camera accessories.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-7",
+                "code": "FEEDER10",
+                "discount": "10% OFF",
+                "title": "10% Off Sitewide Solar Panels & Mounting Poles",
+                "description": "Get 10% off universal tree mounts, wall brackets, and high-gain solar panels.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          },
+          {
+                "id": "bird-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "2-YEAR WARRANTY",
+                "title": "2-Year Full Hardware Warranty & IP65 Weatherproofing",
+                "description": "Completely waterproof design built to withstand snow, rain, and heat.",
+                "is_verified": true,
+                "affiliate_url": "/go/birdfy"
+          }
+    ]
+  },
+  // 717. PAPABLIC (US)
+  {
+    id: 717,
+    name: "Papablic",
+    slug: "papablic",
+    aliases: ["papablic-baby","papablic-us"],
+    logo: "/logos/papablic.svg",
+    website: "https://papablic.com",
+    affiliate_url: "/go/papablic",
+    country: "US",
+    description: "Papablic designs parenting-friendly baby essentials, steam bottle sterilizers and dryers, infant sonic toothbrushes, and breast pump storage systems.",
+    coupons: [
+          {
+                "id": "papa-1",
+                "code": "BABY15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Baby Essentials Order",
+                "description": "Save 15% on steam sterilizers, bottle warmers, and sonic infant toothbrushes.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-2",
+                "code": "STEAM20",
+                "discount": "20% OFF",
+                "title": "20% Off Steam Baby Bottle Sterilizer & Dryer Pro",
+                "description": "Take 20% off bestselling large-capacity 3-in-1 bottle sterilizer and dryers.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE US SHIPPING",
+                "title": "Free Standard Shipping on Orders Over $45",
+                "description": "Enjoy fast, reliable tracked delivery across the United States.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-4",
+                "code": "BRUSH10",
+                "discount": "10% OFF",
+                "title": "10% Off Sonic Baby Toothbrush & Replacement Heads",
+                "description": "Save 10% on gentle LED lighted vibrating toothbrushes for toddlers.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-5",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BUY 2 GET 15%",
+                "title": "Buy 2 Feeding Accessories & Save Extra 15%",
+                "description": "Automatic bundle discount on silicone brushes, pacifier wipes, and bags.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "BPA-FREE 100%",
+                "title": "100% Food-Grade BPA-Free & Medical Grade Safety",
+                "description": "Certified safe materials meeting strict pediatric infant safety standards.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-7",
+                "code": "PUMP25",
+                "discount": "25% OFF",
+                "title": "25% Off Breast Pump Storage Bags & Organizers",
+                "description": "Discount on space-saving breastmilk freezer bags and drying racks.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          },
+          {
+                "id": "papa-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "LIFETIME SUPPORT",
+                "title": "Lifetime Customer Support & 1-Year Replacement Warranty",
+                "description": "Hassle-free replacement policy with dedicated support for new parents.",
+                "is_verified": true,
+                "affiliate_url": "/go/papablic"
+          }
+    ]
+  },
+  // 718. NATUREHIKE (AU)
+  {
+    id: 718,
+    name: "Naturehike",
+    slug: "naturehike",
+    aliases: ["naturehike-au","naturehike-outdoor"],
+    logo: "/logos/naturehike.svg",
+    website: "https://www.naturehike.au",
+    affiliate_url: "/go/naturehike",
+    country: "AU",
+    description: "Naturehike creates ultralight camping tents, lightweight goose down sleeping bags, compact hiking furniture, and premium outdoor gear for backpackers.",
+    coupons: [
+          {
+                "id": "natu-1",
+                "code": "HIKE15",
+                "discount": "15% OFF",
+                "title": "15% Off Your First Ultralight Camping Order",
+                "description": "Save 15% on Cloud-Up backpacking tents, sleeping pads, and hiking poles.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-2",
+                "code": "TENT20",
+                "discount": "20% OFF",
+                "title": "20% Off Cloud-Up & Star River Ultralight Tents",
+                "description": "Take 20% off 20D silicone-coated waterproof 1-person and 2-person tents.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-3",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "UP TO 35% OFF",
+                "title": "Up to 35% Off Outdoor Camping Gear Clearance",
+                "description": "Instant discounts on titanium cookware, headlamps, and compact backpacks.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-4",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "FREE AU POST",
+                "title": "Free Standard Delivery Across Australia Over $99",
+                "description": "Fast tracked courier dispatch from Melbourne/Sydney warehouses.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-5",
+                "code": "SLEEP10",
+                "discount": "10% OFF",
+                "title": "10% Off Goose Down Sleeping Bags & Inflatable Mats",
+                "description": "Save 10% on compact packable down bags rated for extreme cold nights.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-6",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "LIFETIME SUPPORT",
+                "title": "1-Year Warranty & Dedicated Outdoor Gear Support",
+                "description": "Reliable materials and waterproof craftsmanship built for rugged terrain.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-7",
+                "code": "CHAIR25",
+                "discount": "25% OFF",
+                "title": "25% Off Ultralight Folding Camping Chairs & Tables",
+                "description": "Discount on aircraft-grade aluminum portable chairs weighing under 1kg.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          },
+          {
+                "id": "natu-8",
+                "code": "",
+                "is_auto_applied": true,
+                "discount": "30-DAY RETURN",
+                "title": "30-Day Hassle-Free Returns & Money-Back Guarantee",
+                "description": "Gear up for your next bushwalking or trail adventure completely risk-free.",
+                "is_verified": true,
+                "affiliate_url": "/go/naturehike"
+          }
+    ]
+  }
 ];
 
 /**

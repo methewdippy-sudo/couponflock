@@ -737,7 +737,187 @@ const nextConfig: NextConfig = {
         source: "/go/sculpfun",
         destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.sculpfun.com",
         permanent: true,
-      }
+      },
+      {
+        source: "/go/piscifun",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.piscifun.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/piscifun-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.piscifun.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/scarlet-darkness",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fscarletdarkness.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/scarlet-darkness-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fscarletdarkness.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/krewe",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.krewe.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/krewe-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.krewe.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/pergolux",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpergolux.de%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/pergolux-de",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpergolux.de%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/ryobi",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffr.ryobitools.eu%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/ryobi-fr",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Ffr.ryobitools.eu%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/magicshine",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmagicshine.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/magicshine-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fmagicshine.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/tesmart",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tesmart.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/tesmart-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.tesmart.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/cparavano",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.cparavano.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/cparavano-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.cparavano.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/senser",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.senser.net%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/senser-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.senser.net%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/candyroo",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyroo.co.uk%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/candyroo-uk",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyroo.co.uk%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/grays-hockey",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.grays-hockey.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/grays-hockey-uk",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.grays-hockey.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/merach",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fuk.merachfit.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/merach-uk",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fuk.merachfit.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/edens-herbals",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fedensherbals.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/edens-herbals-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fedensherbals.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/pupper-crust",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpuppercrust.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/pupper-crust-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpuppercrust.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/zoupw",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fzoupw.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/zoupw-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fzoupw.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/birdfy",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.birdfy.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/birdfy-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.birdfy.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/papablic",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpapablic.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/papablic-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fpapablic.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/naturehike",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturehike.au%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/naturehike-au",
+        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturehike.au%2F",
+        permanent: false,
+      },
     ];
   },
 };
