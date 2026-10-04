@@ -928,6 +928,16 @@ const nextConfig: NextConfig = {
         destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.naturehike.au%2F",
         permanent: false,
       },
+      {
+        source: "/go/aquasana",
+        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=http%3A%2F%2Fwww.aquasana.com%2F",
+        permanent: false,
+      },
+      {
+        source: "/go/aquasana-us",
+        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=http%3A%2F%2Fwww.aquasana.com%2F",
+        permanent: false,
+      },
     ];
   },
 };

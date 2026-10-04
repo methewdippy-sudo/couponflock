@@ -5988,6 +5988,94 @@ export const STORE_REGISTRY: RegistryStore[] = [
           }
     ]
   }
+,
+  {
+    "id": 719,
+    "name": "Aquasana",
+    "slug": "aquasana",
+    "aliases": ["aquasana-filters", "aquasana-water", "aquasana-us", "aquasana-water-filters"],
+    "website": "https://www.aquasana.com",
+    "affiliate_url": "/go/aquasana",
+    "logo": "/logos/aquasana.png",
+    "description": "Aquasana designs industry-leading home water filtration systems, including whole house water filters, under-sink reverse osmosis systems, and shower filters engineered to remove up to 99% of contaminants while preserving healthy minerals.",
+    "coupons": [
+      {
+        "id": "aqua-1",
+        "code": "AQUA50",
+        "discount": "50% OFF",
+        "title": "50% Off Select Whole House Water Filtration Systems",
+        "description": "Redeem code AQUA50 to save 50% on Rhino Whole House Water Filters with professional installation kits.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-2",
+        "code": "CLEAN15",
+        "discount": "15% OFF",
+        "title": "15% Off Under-Sink Reverse Osmosis & Countertop Filters",
+        "description": "Apply coupon CLEAN15 at checkout for 15% discount on all NSF-certified drinking water filtration systems.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-3",
+        "code": "",
+        "is_auto_applied": true,
+        "discount": "FREE SHIPPING",
+        "title": "Free Fast US Shipping on All Water Filter Orders Over $45",
+        "description": "Enjoy free standard delivery across the continental United States automatically applied at cart.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-4",
+        "code": "SHOWER20",
+        "discount": "20% OFF",
+        "title": "20% Off Premium Chlorine Shower Filter Units & Wands",
+        "description": "Protect your hair and skin with 20% off Aquasana shower filters using coupon SHOWER20.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-5",
+        "code": "SAVE10",
+        "discount": "10% OFF",
+        "title": "10% Off Sitewide Official Aquasana Promo Code",
+        "description": "Valid on all replacement filter cartridges, water pitchers, and whole house filtration accessories.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-6",
+        "code": "",
+        "is_auto_applied": true,
+        "discount": "15% OFF SUBSCRIPTION",
+        "title": "Water for Life: 15% Off Auto-Ship Replacement Filters + Free Shipping",
+        "description": "Join the Water for Life program to lock in 15% off replacement cartridges delivered automatically.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-7",
+        "code": "",
+        "is_auto_applied": true,
+        "discount": "90-DAY GUARANTEE",
+        "title": "90-Day Pure Satisfaction Money-Back Guarantee",
+        "description": "Test any Aquasana filtration unit in your home risk-free with a full 90-day return policy.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      },
+      {
+        "id": "aqua-8",
+        "code": "BUNDLE25",
+        "discount": "25% OFF",
+        "title": "25% Off Annual Replacement Filter Multi-Packs",
+        "description": "Stock up on genuine Claryum replacement filters with 25% bundle savings using coupon code BUNDLE25.",
+        "is_verified": true,
+        "affiliate_url": "/go/aquasana"
+      }
+    ]
+  }
 ];
 
 /**
