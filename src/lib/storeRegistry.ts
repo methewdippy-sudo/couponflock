@@ -2317,25 +2317,135 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "scheels-deal-1",
-        code: "SAVE50",
-        is_auto_applied: false,
-        discount: "UP TO 50% OFF",
-        title: "Up to 50% off clearance sports gear and outdoor equipment",
-        description: "Save up to 50% on top hunting, fishing, camping, and athletic gear with verified code SAVE50.",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off coupon code & sitewide deals",
+        description: "Get exclusive discounts and promotional coupon savings pre-applied at checkout on Scheels.com.",
         affiliate_url: "/go/scheels",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-10-31"
       },
       {
         id: "scheels-deal-2",
-        code: "FREESHIP",
-        is_auto_applied: false,
-        discount: "FREE SHIPPING",
-        title: "Free standard ground shipping on qualifying orders $50+",
-        description: "Get free fast tracked ground delivery across the United States with code FREESHIP.",
+        code: "",
+        is_auto_applied: true,
+        discount: "50% OFF",
+        title: "50% off on top brands & clearance gear",
+        description: "Save up to 50% on Nike, Hoka, Under Armour, Traeger, and outdoor clearance apparel.",
         affiliate_url: "/go/scheels",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free shipping on qualifying orders $50+",
+        description: "Receive free standard ground delivery across the United States on eligible orders over $50.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "50% OFF",
+        title: "50% off on girl & women shoes",
+        description: "Save up to 50% on athletic sneakers, running shoes, hiking footwear, and casual boots.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "40% OFF",
+        title: "40% off - boy's & men's clothing",
+        description: "Take up to 40% discount on athletic hoodies, shirts, training shorts, and activewear.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "40% OFF",
+        title: "40% off on outer & swimwear",
+        description: "Up to 40% off seasonal cold-weather jackets, waterproof shells, fleece, and swimwear.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "30% OFF",
+        title: "30% off - backpacks & duffel bags",
+        description: "Save 30% on travel bags, tactical packs, school backpacks, and sports gym duffels.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off - hunting items & gear",
+        description: "Save 25% on hunting clothing, archery gear, optics, camouflage, and field equipment.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off on drinkware & coolers",
+        description: "Take 20% off Yeti, Stanley, Hydro Flask insulated tumblers, bottles, and outdoor coolers.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off on home & yard products",
+        description: "Save 20% on patio accessories, outdoor heating, yard games, and home sports decor.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-11",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off on best selling sporting items",
+        description: "15% promotional discount on top-rated fitness, golf, baseball, and athletic gear.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "scheels-deal-12",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on newsletter sign-up",
+        description: "Sign up for Scheels VIP email newsletter and receive 10% off your next online order.",
+        affiliate_url: "/go/scheels",
+        is_verified: true,
+        expiry_date: "2026-10-31"
       }
     ]
   },
