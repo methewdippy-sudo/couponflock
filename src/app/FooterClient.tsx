@@ -76,7 +76,10 @@ export default function FooterClient() {
           <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.6", maxWidth: "320px" }}>
             Where smart shoppers flock for 100% verified discount codes, exclusive promotional deals, and money-saving vouchers online.
           </p>
-          <p style={{ color: "var(--text-tertiary)", fontSize: "0.75rem", lineHeight: "1.5", maxWidth: "320px", marginTop: "12px" }}>
+          <p style={{ color: "var(--text-tertiary)", fontSize: "0.78rem", lineHeight: "1.5", maxWidth: "340px", marginTop: "10px" }}>
+            <strong>CouponFlock</strong> (couponflock.com) is founded, owned, and operated by <strong>Muhammad Tahammi Ali</strong> as a verified digital performance publisher and sole proprietorship.
+          </p>
+          <p style={{ color: "var(--text-tertiary)", fontSize: "0.75rem", lineHeight: "1.5", maxWidth: "340px", marginTop: "8px" }}>
             CouponFlock uses verified affiliate merchant integrations and Google search insights strictly for coupon validity testing, campaign performance auditing, and consumer savings accuracy.
           </p>
         </div>
@@ -108,7 +111,7 @@ export default function FooterClient() {
           style={{ fontSize: "0.85rem", color: "var(--text-tertiary)", cursor: "default", userSelect: "none" }}
           onClick={handleCopyrightClick}
         >
-          © {new Date().getFullYear()} CouponFlock.com. All Rights Reserved.
+          © {new Date().getFullYear()} CouponFlock.com — Founder &amp; Sole Proprietor: Muhammad Tahammi Ali. All Rights Reserved.
         </p>
 
         {/* Secret AI Portal Link - Only appears after 5 rapid clicks on copyright */}

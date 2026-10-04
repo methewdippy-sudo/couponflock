@@ -17,7 +17,7 @@ export default function TermsPage() {
 
       <section style={{ marginBottom: "28px" }}>
         <p style={{ color: "var(--text-secondary)", marginBottom: "16px" }}>
-          Welcome to <strong>CouponFlock.com</strong>. By accessing and using our website, you agree to comply with and be bound by the following terms of service. If you do not agree to these terms, please refrain from using our platform.
+          Welcome to <strong>CouponFlock.com</strong>, founded, owned, and operated by <strong>Muhammad Tahammi Ali</strong> as a registered performance marketing publisher and sole proprietorship. By accessing and using our website, you agree to comply with and be bound by the following terms of service. If you do not agree to these terms, please refrain from using our platform.
         </p>
       </section>
 

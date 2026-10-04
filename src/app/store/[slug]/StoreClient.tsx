@@ -735,6 +735,22 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             </div>
           </section>
         )}
+
+        {/* Official Publisher & Affiliate Disclosure for Google Trust & Safety */}
+        <section style={{
+          marginTop: "36px",
+          padding: "18px 22px",
+          backgroundColor: "#f8fafc",
+          border: "1px solid #e2e8f0",
+          borderRadius: "12px",
+          fontSize: "0.82rem",
+          lineHeight: "1.6",
+          color: "#64748b"
+        }}>
+          <p style={{ margin: 0 }}>
+            <strong style={{ color: "#0f172a" }}>Publisher Disclosure:</strong> CouponFlock (couponflock.com) is an authorized digital coupon and promotional deal discovery portal owned and operated by <strong>Muhammad Tahammi Ali</strong> (Sole Proprietor). We participate in verified commercial affiliate and brand ambassador programs for <strong>{store.name}</strong> and partner merchants. When consumers activate verified promo codes or shop via tracked links, we may earn a performance commission at zero additional cost to the buyer. All trademarks, brand names, and logos are property of their respective owners.
+          </p>
+        </section>
       </div>
 
       {/* Copy modal popup */}

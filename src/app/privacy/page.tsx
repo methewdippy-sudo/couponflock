@@ -17,7 +17,7 @@ export default function PrivacyPage() {
 
       <section style={{ marginBottom: "28px" }}>
         <p style={{ color: "var(--text-secondary)", marginBottom: "16px" }}>
-          Welcome to <strong>CouponFlock.com</strong>. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, protect, and use information when you use our website to find discount codes and promo offers.
+          Welcome to <strong>CouponFlock.com</strong>, founded, owned, and operated by <strong>Muhammad Tahammi Ali</strong> as a registered performance marketing publisher and sole proprietorship. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, protect, and use information when you use our website to find discount codes and promo offers.
         </p>
       </section>
 

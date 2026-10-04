@@ -106,13 +106,13 @@ export default function ContactPage() {
 
           <div style={{ borderTop: "1px solid var(--border-light)", paddingTop: "20px" }}>
             <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "8px" }}>
-              Corporate Office
+              Operating Entity &amp; Ownership
             </h3>
             <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-              CouponFlock Ltd.<br />
-              100 Pine Street, Suite 1250<br />
-              San Francisco, CA 94111<br />
-              United States
+              <strong>CouponFlock</strong> (Sole Proprietorship)<br />
+              <strong>Founder &amp; Operator:</strong> Muhammad Tahammi Ali<br />
+              <strong>Website:</strong> https://couponflock.com<br />
+              <strong>Email:</strong> support@couponflock.com / methewdippy@gmail.com
             </p>
           </div>
         </div>

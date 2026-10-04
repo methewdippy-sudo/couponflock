@@ -71,6 +71,32 @@ export default function AboutPage() {
         </p>
       </section>
 
+      <section style={{ marginBottom: "32px" }}>
+        <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "14px", letterSpacing: "-0.01em" }}>
+          4. Corporate Ownership &amp; Operating Entity
+        </h2>
+        <p style={{ color: "var(--text-secondary)", marginBottom: "14px" }}>
+          <strong>CouponFlock</strong> (https://couponflock.com) is founded, owned, and operated by <strong>Muhammad Tahammi Ali</strong> as a registered performance marketing publisher and sole proprietorship.
+        </p>
+        <div style={{ 
+          backgroundColor: "var(--bg-secondary)", 
+          border: "1px solid var(--border-light)", 
+          borderRadius: "var(--radius-md)", 
+          padding: "20px", 
+          fontSize: "0.92rem", 
+          color: "var(--text-secondary)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px"
+        }}>
+          <p><strong>Founder &amp; Legal Operator:</strong> Muhammad Tahammi Ali (Sole Proprietor)</p>
+          <p><strong>Operating Business:</strong> CouponFlock (couponflock.com)</p>
+          <p><strong>Business Operations:</strong> Verified Promotional Voucher Discovery, Affiliate Marketing &amp; E-Commerce Deal Aggregation</p>
+          <p><strong>Business Email:</strong> support@couponflock.com / methewdippy@gmail.com</p>
+          <p><strong>Advertising Compliance:</strong> Fully compliant with Google Ads Advertiser Policies and FTC Affiliate Disclosure Standards</p>
+        </div>
+      </section>
+
       <section style={{ 
         backgroundColor: "var(--bg-secondary)", 
         border: "1px solid var(--border-light)", 
