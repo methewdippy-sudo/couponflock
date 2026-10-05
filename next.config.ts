@@ -630,17 +630,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/im8",
-        destination: "https://www.im8health.com/METHEW29111",
+        destination: "https://www.im8health.com/RICHARD05376",
         permanent: true,
       },
       {
         source: "/go/im8health",
-        destination: "https://www.im8health.com/METHEW29111",
+        destination: "https://www.im8health.com/RICHARD05376",
         permanent: true,
       },
       {
         source: "/go/im8-health",
-        destination: "https://www.im8health.com/METHEW29111",
+        destination: "https://www.im8health.com/RICHARD05376",
         permanent: true,
       },
       {
