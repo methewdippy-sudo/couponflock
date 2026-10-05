@@ -271,7 +271,17 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
 
           {/* Code Copy Area */}
           <div className={styles.copyArea}>
-            {isAutoApplied ? (
+            {isDirectDeal ? (
+              <>
+                <p className={styles.copyLabel}>
+                  No coupon code required. The discount will be automatically applied at checkout!
+                </p>
+                <div className={styles.dealActivatedBox}>
+                  <CheckIcon />
+                  <span>Deal Activated!</span>
+                </div>
+              </>
+            ) : isAutoApplied ? (
               <>
                 <p className={styles.copyLabel}>Get an exclusive and verified discount code:</p>
                 <div className={styles.autoAppliedRow}>
@@ -291,16 +301,6 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
                 <p className={styles.autoAppliedSubtext}>
                   Exclusive discount is automatically activated via your referral link. No manual code needed at checkout!
                 </p>
-              </>
-            ) : isDirectDeal ? (
-              <>
-                <p className={styles.copyLabel}>
-                  No coupon code required. The discount will be automatically applied at checkout!
-                </p>
-                <div className={styles.dealActivatedBox}>
-                  <CheckIcon />
-                  <span>Deal Activated!</span>
-                </div>
               </>
             ) : (
               <>
