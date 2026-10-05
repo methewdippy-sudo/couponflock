@@ -120,7 +120,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/algolaser",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Falgolaser.com%2F",
+        destination: "https://algolaser.com/?ref=METHEWDIPPY",
         permanent: false,
       },
       {
