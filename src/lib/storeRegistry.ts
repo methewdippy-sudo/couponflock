@@ -6001,19 +6001,21 @@ export const STORE_REGISTRY: RegistryStore[] = [
     "coupons": [
       {
         "id": "aqua-1",
-        "code": "AQUA50",
-        "discount": "50% OFF",
-        "title": "50% Off Select Whole House Water Filtration Systems",
-        "description": "Redeem code AQUA50 to save 50% on Rhino Whole House Water Filters with professional installation kits.",
+        "code": "",
+        "is_auto_applied": true,
+        "discount": "UP TO 50% OFF",
+        "title": "Up to 50% Off Select Whole House & Under-Sink Water Filtration Systems",
+        "description": "No coupon code required. Instant discount applied automatically at checkout across select whole house Rhino filters and drinking water systems.",
         "is_verified": true,
         "affiliate_url": "/go/aquasana"
       },
       {
         "id": "aqua-2",
-        "code": "CLEAN15",
-        "discount": "15% OFF",
-        "title": "15% Off Under-Sink Reverse Osmosis & Countertop Filters",
-        "description": "Apply coupon CLEAN15 at checkout for 15% discount on all NSF-certified drinking water filtration systems.",
+        "code": "",
+        "is_auto_applied": true,
+        "discount": "15% OFF SUBSCRIPTION",
+        "title": "Water for Life: 15% Off Auto-Ship Replacement Filters + Free Delivery",
+        "description": "Join the Water for Life program to receive 15% discount on authentic replacement cartridges with automatic free scheduled shipping.",
         "is_verified": true,
         "affiliate_url": "/go/aquasana"
       },
@@ -6022,55 +6024,18 @@ export const STORE_REGISTRY: RegistryStore[] = [
         "code": "",
         "is_auto_applied": true,
         "discount": "FREE SHIPPING",
-        "title": "Free Fast US Shipping on All Water Filter Orders Over $45",
-        "description": "Enjoy free standard delivery across the continental United States automatically applied at cart.",
+        "title": "Free Fast Standard Delivery on All US Water Filter Orders Over $45",
+        "description": "Enjoy free nationwide shipping automatically calculated at checkout on qualifying filtration systems and replacement accessories.",
         "is_verified": true,
         "affiliate_url": "/go/aquasana"
       },
       {
         "id": "aqua-4",
-        "code": "SHOWER20",
-        "discount": "20% OFF",
-        "title": "20% Off Premium Chlorine Shower Filter Units & Wands",
-        "description": "Protect your hair and skin with 20% off Aquasana shower filters using coupon SHOWER20.",
-        "is_verified": true,
-        "affiliate_url": "/go/aquasana"
-      },
-      {
-        "id": "aqua-5",
-        "code": "SAVE10",
-        "discount": "10% OFF",
-        "title": "10% Off Sitewide Official Aquasana Promo Code",
-        "description": "Valid on all replacement filter cartridges, water pitchers, and whole house filtration accessories.",
-        "is_verified": true,
-        "affiliate_url": "/go/aquasana"
-      },
-      {
-        "id": "aqua-6",
-        "code": "",
-        "is_auto_applied": true,
-        "discount": "15% OFF SUBSCRIPTION",
-        "title": "Water for Life: 15% Off Auto-Ship Replacement Filters + Free Shipping",
-        "description": "Join the Water for Life program to lock in 15% off replacement cartridges delivered automatically.",
-        "is_verified": true,
-        "affiliate_url": "/go/aquasana"
-      },
-      {
-        "id": "aqua-7",
         "code": "",
         "is_auto_applied": true,
         "discount": "90-DAY GUARANTEE",
-        "title": "90-Day Pure Satisfaction Money-Back Guarantee",
-        "description": "Test any Aquasana filtration unit in your home risk-free with a full 90-day return policy.",
-        "is_verified": true,
-        "affiliate_url": "/go/aquasana"
-      },
-      {
-        "id": "aqua-8",
-        "code": "BUNDLE25",
-        "discount": "25% OFF",
-        "title": "25% Off Annual Replacement Filter Multi-Packs",
-        "description": "Stock up on genuine Claryum replacement filters with 25% bundle savings using coupon code BUNDLE25.",
+        "title": "90-Day Pure Satisfaction Risk-Free In-Home Money-Back Guarantee",
+        "description": "Try any Aquasana filtration unit in your home with complete peace of mind backed by a full 90-day official return guarantee.",
         "is_verified": true,
         "affiliate_url": "/go/aquasana"
       }
