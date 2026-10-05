@@ -1511,10 +1511,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "algo-deal-0",
-        code: "ALMDS10",
-        discount: "8% OFF",
-        title: "8% off sitewide official discount promo code",
-        description: "Save 8% on all AlgoLaser smart laser engravers, cutters, and accessories with verified coupon code ALMDS10.",
+        code: "",
+        is_auto_applied: true,
+        discount: "EXTRA 10% OFF",
+        title: "Extra 10% off for subscribers and official promotions",
+        description: "No coupon code required. Extra 10% savings and official seasonal discounts applied automatically at checkout.",
         affiliate_url: "https://algolaser.com/?ref=METHEWDIPPY",
         is_verified: true,
         expiry_date: "2026-12-31"
