@@ -231,28 +231,28 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "im8health",
     aliases: ["im8-health", "im8", "im8health-us", "im8-health-us"],
     logo: "/logos/im8health.png",
-    website: "https://www.im8health.com/RICHARD05376",
-    affiliate_url: "https://www.im8health.com/RICHARD05376",
+    website: "https://www.im8health.com/METHEW29111",
+    affiliate_url: "https://www.im8health.com/METHEW29111",
     country: "US",
     description: "Daily ultimate longevity and essentials nutrition system co-founded by David Beckham, clinically formulated for cellular rejuvenation and optimal health.",
     coupons: [
       {
         id: "im8-deal-1",
-        code: "RICHARD05376",
+        code: "METHEW29111",
         discount: "20% OFF",
         title: "20% off your entire first order sitewide",
-        description: "Save 20% on iM8 Daily Ultimate Essentials and longevity nutrition with verified code RICHARD05376.",
-        affiliate_url: "https://www.im8health.com/RICHARD05376",
+        description: "Save 20% on iM8 Daily Ultimate Essentials and longevity nutrition with verified code METHEW29111.",
+        affiliate_url: "https://www.im8health.com/METHEW29111",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "im8-deal-2",
-        code: "RICHARD05376",
+        code: "METHEW29111",
         discount: "30% OFF",
         title: "30% off Welcome Kit plus free shaker cup",
-        description: "Get 30% discount on the iM8 Welcome Kit plus complimentary shaker cup using promo code RICHARD05376.",
-        affiliate_url: "https://www.im8health.com/RICHARD05376",
+        description: "Get 30% discount on the iM8 Welcome Kit plus complimentary shaker cup using promo code METHEW29111.",
+        affiliate_url: "https://www.im8health.com/METHEW29111",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
@@ -262,7 +262,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         discount: "FREE SHIPPING",
         title: "Free tracked US shipping on all subscription orders",
         description: "Enjoy 100% free delivery across the United States on all qualifying iM8 Health orders.",
-        affiliate_url: "https://www.im8health.com/RICHARD05376",
+        affiliate_url: "https://www.im8health.com/METHEW29111",
         is_verified: true,
         expiry_date: "2026-12-31"
       }
