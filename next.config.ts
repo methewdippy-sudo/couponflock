@@ -339,8 +339,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/candy-in-bulk",
+        destination: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        permanent: true,
+      },
+      {
         source: "/go/candyinbulk",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fcandyinbulk.com%2F",
+        destination: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         permanent: true,
       },
       {
