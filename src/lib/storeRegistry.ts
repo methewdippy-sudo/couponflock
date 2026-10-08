@@ -2771,7 +2771,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["usa-berkey-filters", "berkey-filters", "berkey"],
     website: "https://www.usaberkeyfilters.com/aff/282/",
     affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
-    logo: "/logos/usaberkeyfilters.webp",
+    logo: "/logos/usaberkeyfilters.png",
     country: "US",
     description: "USA Berkey Filters is America's premier distributor of authentic Berkey gravity-fed stainless steel water filtration systems, Black Berkey replacement elements, and water purification accessories.",
     coupons: [
@@ -2820,12 +2820,12 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "berkey-deal-6",
-        code: "",
-        is_auto_applied: true,
+        id: "berkey-code-6",
+        code: "USA20",
+        is_auto_applied: false,
         discount: "25% OFF",
         title: "25% Off on Light Water Filter",
-        description: "Save 25% on Berkey Light lightweight shatter-resistant gravity water purifiers.",
+        description: "Apply coupon code USA20 at checkout to save on Berkey Light gravity water purifiers.",
         affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -2853,12 +2853,12 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "berkey-deal-9",
-        code: "",
-        is_auto_applied: true,
+        id: "berkey-code-9",
+        code: "USA20",
+        is_auto_applied: false,
         discount: "20% OFF",
         title: "20% Off on Replacement Filters",
-        description: "Get 20% off authentic Black Berkey replacement filter elements and fluoride reduction filters.",
+        description: "Use coupon code USA20 at checkout for 20% off authentic Black Berkey replacement filter elements.",
         affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
         is_verified: true,
         expiry_date: "2026-12-31"
