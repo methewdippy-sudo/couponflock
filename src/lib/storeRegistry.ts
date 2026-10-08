@@ -2798,17 +2798,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "berkey-code-3",
-        code: "BERKEY15",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% Off Discount Code Sitewide",
-        description: "Take 15% off your entire order across the store on all water filters and replacement elements.",
-        affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
         id: "berkey-deal-4",
         code: "",
         is_auto_applied: true,
