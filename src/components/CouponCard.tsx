@@ -170,13 +170,13 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   };
 
   return (
-    // Native <a> tag — iOS Safari guaranteed tap → opens affiliate URL in new tab
-    <a
-      href={trackedHref}
-      target="_blank"
-      rel="noopener noreferrer"
+    // Interactive card container
+    <div
       className={`${styles.card} ${isBestDeal ? styles.bestDealCard : ""}`}
       onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handleClick(e as any); } }}
     >
       {/* Left: Product Image or Brand Logo */}
       <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""}`}>
@@ -266,7 +266,7 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
           </div>
         )}
       </div>
-    </a>
+    </div>
   );
 };
 
