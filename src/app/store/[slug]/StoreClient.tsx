@@ -227,7 +227,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 2. Immediately open popup modal on current page
+    // 2. Immediately open popup modal on current page (user stays on CouponFlock and sees code)
     setActiveCoupon(coupon);
 
     // 3. GA4 Button Click Event Tracking
@@ -246,14 +246,11 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 4. Open the MERCHANT affiliate URL in a NEW TAB directly (lands user on merchant with cookie!)
+    // 4. Open merchant affiliate link in a single NEW TAB
     try {
-      const opened = window.open(storeUrl, "_blank", "noopener,noreferrer");
-      if (!opened || opened.closed || typeof opened.closed === "undefined") {
-        window.location.href = storeUrl;
-      }
+      window.open(storeUrl, "_blank");
     } catch (e) {
-      window.location.href = storeUrl;
+      console.warn("Popup blocked:", e);
     }
   };
 
