@@ -2900,6 +2900,17 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "candy-code-1",
+        code: "CANDY20",
+        is_auto_applied: false,
+        discount: "$20 OFF",
+        title: "$20 Off Bulk Candy & Sweet Orders",
+        description: "Apply verified promo code CANDY20 at checkout for an instant $20 discount on qualifying bulk candy assortments.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "candy-code-2",
         code: "WELCOME10",
         is_auto_applied: false,
         discount: "10% OFF",
@@ -2910,23 +2921,12 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "candy-code-2",
-        code: "CANDY10",
+        id: "candy-code-3",
+        code: "WELCOME",
         is_auto_applied: false,
         discount: "10% OFF",
-        title: "10% Off Bulk Chocolates & Sweets",
-        description: "Use promo code CANDY10 at checkout for 10% off assorted bulk gummies, wrapped chocolates, and party novelties.",
-        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "candy-code-3",
-        code: "BULK15",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% Off Large Bulk Orders Over $150",
-        description: "Take 15% off qualifying wholesale orders over $150 with verified discount code BULK15.",
+        title: "10% Off Sitewide Bulk Treats",
+        description: "Use verified promo code WELCOME at checkout for an instant 10% discount on bulk gummy bears, chocolates, and party sweets.",
         affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
         expiry_date: "2026-12-31"
