@@ -137,7 +137,10 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
   const [trackedHref, setTrackedHref] = useState(rawAffiliateHref);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && rawAffiliateHref && rawAffiliateHref !== "#" && !rawAffiliateHref.includes("connectadtrack.com")) {
+    const isDirectUntouched = rawAffiliateHref.includes("candyinbulk") || 
+                              rawAffiliateHref.includes("usaberkeyfilters") || 
+                              rawAffiliateHref.includes("connectadtrack.com");
+    if (typeof window !== "undefined" && rawAffiliateHref && rawAffiliateHref !== "#" && !isDirectUntouched) {
       try {
         const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
         const utmTerm = sessionStorage.getItem("utm_term") || "";

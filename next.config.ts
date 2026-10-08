@@ -330,12 +330,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/usaberkeyfilters",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        destination: "https://www.usaberkeyfilters.com/aff/282/",
+        permanent: true,
+      },
+      {
+        source: "/go/usa-berkey-filters",
+        destination: "https://www.usaberkeyfilters.com/aff/282/",
         permanent: true,
       },
       {
         source: "/go/berkey",
-        destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.usaberkeyfilters.com%2F",
+        destination: "https://www.usaberkeyfilters.com/aff/282/",
         permanent: true,
       },
       {
