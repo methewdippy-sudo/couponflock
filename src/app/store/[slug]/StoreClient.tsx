@@ -227,18 +227,10 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 2. Open CouponFlock in a NEW TAB with the coupon modal query param (browser focuses on this tab!)
-    try {
-      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
-      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
-    } catch (e) {
-      console.warn("Failed to open CouponFlock in a new tab:", e);
-    }
-
-    // 3. Immediately open popup modal on current page as well
+    // 2. Immediately open popup modal on current page
     setActiveCoupon(coupon);
 
-    // 4. GA4 Button Click Event Tracking
+    // 3. GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -254,8 +246,15 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 5. Navigate the background window to the merchant affiliate link
-    window.location.href = storeUrl;
+    // 4. Open the MERCHANT affiliate URL in a NEW TAB directly (lands user on merchant with cookie!)
+    try {
+      const opened = window.open(storeUrl, "_blank", "noopener,noreferrer");
+      if (!opened || opened.closed || typeof opened.closed === "undefined") {
+        window.location.href = storeUrl;
+      }
+    } catch (e) {
+      window.location.href = storeUrl;
+    }
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);
