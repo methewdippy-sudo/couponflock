@@ -246,11 +246,16 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
 
-    // 4. Open merchant affiliate link in a single NEW TAB
+    // 4. Background Tab Flow:
+    // Keep user on CouponFlock viewing modal/code, open merchant affiliate tracking in background
     try {
-      window.open(storeUrl, "_blank");
-    } catch (e) {
-      console.warn("Popup blocked:", e);
+      const affiliateTab = window.open(storeUrl, "_blank");
+      if (affiliateTab) {
+        affiliateTab.blur();
+      }
+      window.focus();
+    } catch (err) {
+      console.warn("Failed to open affiliate tab in background:", err);
     }
   };
 
