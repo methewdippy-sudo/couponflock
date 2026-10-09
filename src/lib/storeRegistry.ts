@@ -2247,23 +2247,12 @@ export const STORE_REGISTRY: RegistryStore[] = [
     description: "Silver Cross is the iconic British luxury nursery brand crafting premier strollers, wave prams, reef travel systems, high chairs, and car seats trusted by parents worldwide since 1877.",
     coupons: [
       {
-        id: "sc-0",
+        id: "sc-1",
         code: "SAVE10",
         is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% Off Silver Cross Coupon Code on Strollers & Gear",
-        description: "Save 15% on luxury strollers, pram travel systems, and accessories with verified discount code SAVE10.",
-        affiliate_url: "/go/silver-cross-us",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "sc-1",
-        code: "",
-        is_auto_applied: true,
-        discount: "$300 OFF",
-        title: "$300 Off Silver Cross Stroller Accessory Bundle Deals",
-        description: "Bundle and save up to $300 on Wave and Reef 2 stroller combinations including bassinet, tandem seat, and footmuff.",
+        discount: "10% OFF",
+        title: "10% off coupon code",
+        description: "Save 10% on luxury strollers, pram travel systems, and accessories with verified discount code SAVE10.",
         affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -2272,9 +2261,9 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "sc-2",
         code: "",
         is_auto_applied: true,
-        discount: "UP TO 50% OFF",
-        title: "Up to 50% Off Silver Cross Seasonal Sale & Clearance",
-        description: "Exclusive discounts on luxury baby strollers, high chairs, diaper bags, and travel cribs. No code needed.",
+        discount: "40% OFF",
+        title: "40% off on sale items",
+        description: "Get up to 40% off on select premium baby gear, strollers, and nursery items in the seasonal sale.",
         affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -2283,9 +2272,9 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "sc-3",
         code: "",
         is_auto_applied: true,
-        discount: "FREE SHIPPING",
-        title: "Free Doorstep Shipping Across Contiguous United States",
-        description: "Get free standard shipping on all stroller systems, car seats, and accessories delivered directly to your door.",
+        discount: "70% OFF",
+        title: "70% off on bassinets",
+        description: "Huge clearance discount of up to 70% off luxury baby bassinets and sleep accessories.",
         affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -2294,9 +2283,75 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "sc-4",
         code: "",
         is_auto_applied: true,
-        discount: "3-YEAR WARRANTY",
-        title: "3-Year Manufacturer Warranty on All Luxury Strollers",
-        description: "Every Silver Cross stroller comes with a comprehensive 3-year warranty for complete peace of mind.",
+        discount: "FREE SHIPPING",
+        title: "free shipping over $99",
+        description: "Enjoy complimentary tracked ground shipping across the US on all orders over $99.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "40% OFF",
+        title: "40% off on mealtime set",
+        description: "Save 40% on high chairs, booster seats, and ergonomic baby mealtime feeding essentials.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "30% OFF",
+        title: "30% off on accessory bundle",
+        description: "Bundle and save 30% when purchasing coordinating stroller footmuffs, rain covers, and adapters.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "$300 OFF",
+        title: "$300 off on strollers",
+        description: "Save $300 instantly on premium Wave 3 and Reef 2 single-to-double luxury travel systems.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "$130 OFF",
+        title: "$130 off on travel crib",
+        description: "Get $130 off portable, lightweight travel cribs and playards designed for effortless family adventures.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off on accessories",
+        description: "Save 15% on stylish diaper bags, cup holders, changing mats, and pram seat liners.",
+        affiliate_url: "/go/silver-cross-us",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "sc-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on newsletter sign-up",
+        description: "Subscribe to the official Silver Cross email club to unlock an immediate 10% discount on your next purchase.",
         affiliate_url: "/go/silver-cross-us",
         is_verified: true,
         expiry_date: "2026-12-31"
@@ -3010,62 +3065,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       }
     ]
   },
-  {
-    id: 659,
-    name: "Silver Cross",
-    slug: "silvercross",
-    aliases: ["silver-cross", "silver-cross-us", "silver-cross-baby"],
-    website: "https://silvercrossus.com",
-    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
-    logo: "/logos/silvercross.svg",
-    description: "Silver Cross is the iconic royal British nursery brand established in 1877, celebrated worldwide for luxury prams, premium strollers, car seats, and nursery furniture designed with peerless craftsmanship.",
-    coupons: [
-      {
-        id: "silvercross-code-1",
-        code: "ROYAL10",
-        is_auto_applied: false,
-        discount: "10% OFF",
-        title: "10% Off Luxury Strollers, Car Seats & Prams",
-        description: "Use coupon code ROYAL10 at checkout to save 10% on iconic British strollers and travel systems.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "silvercross-code-2",
-        code: "BUNDLE15",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% Off Travel System Bundles & Pram Packages",
-        description: "Save 15% when purchasing full travel system packages with stroller, bassinet, and infant car seat using code BUNDLE15.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "silvercross-deal-3",
-        code: "",
-        is_auto_applied: true,
-        discount: "FREE SHIP",
-        title: "Free White-Glove Tracked Delivery on Strollers",
-        description: "All premium pram and stroller orders receive fast, complimentary tracked home delivery.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "silvercross-deal-4",
-        code: "",
-        is_auto_applied: true,
-        discount: "WARRANTY",
-        title: "3-Year Extended Royal Manufacturer Warranty",
-        description: "Register your Silver Cross travel gear to receive an exclusive 3-year warranty against any manufacturing defects.",
-        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fsilvercrossus.com%2F",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      }
-    ]
-  },
+
   {
     id: 660,
     name: "Mirlux",
@@ -6399,6 +6399,128 @@ export const STORE_REGISTRY: RegistryStore[] = [
         affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
         is_verified: true,
         expiry_date: "2026-10-31"
+      }
+    ]
+  },
+  {
+    id: 722,
+    name: "Nuvio Recovery",
+    slug: "nuvio-recovery",
+    aliases: ["nuviorecovery", "nuvio-recovery-us", "nuvio"],
+    website: "https://nuviorecovery.com",
+    affiliate_url: "/go/nuviorecovery",
+    logo: "/logos/nuvio-recovery.png",
+    description: "Nuvio Recovery engineers advanced wellness and recovery equipment including red light therapy mats, cold plunge ice bath chillers, therapy masks, and targeted healing caps.",
+    coupons: [
+      {
+        id: "nuvio-1",
+        code: "METHEW50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "15% off coupon code",
+        description: "Get $50 off your order with exclusive promo code METHEW50 at checkout.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "65% OFF",
+        title: "65% off - Prime Day Sale",
+        description: "Save up to 65% on top-rated recovery equipment during the limited-time sale event.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-3",
+        code: "METHEW50",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off discount code sitewide",
+        description: "Unlock sitewide savings with verified coupon code METHEW50 on all wellness systems.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "60% OFF",
+        title: "60% off recovery chiller pro",
+        description: "Enjoy up to 60% off high-performance Recovery Chiller Pro systems for cold water therapy.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free shipping",
+        description: "Get complimentary free shipping on your qualifying Nuvio Recovery device orders across the US.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "50% OFF",
+        title: "50% red light therapy mat",
+        description: "Save 50% on full-body red light therapy mats for deep muscle recovery and cellular repair.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "40% OFF",
+        title: "40% off red light therapy mask",
+        description: "Receive 40% discount on medical-grade LED red light therapy facial masks for skin rejuvenation.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "30% OFF",
+        title: "30% off long recovery pod",
+        description: "Take 30% off spacious long recovery pods for optimal home cold plunge and contrast therapy.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off red light therapy cap",
+        description: "Get 20% off targeted red light therapy caps designed for scalp health and hair rejuvenation.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "nuvio-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on newsletter sign-up",
+        description: "Sign up for the Nuvio Recovery newsletter to get 10% off your next recovery purchase.",
+        affiliate_url: "/go/nuviorecovery",
+        is_verified: true,
+        expiry_date: "2026-12-31"
       }
     ]
   }

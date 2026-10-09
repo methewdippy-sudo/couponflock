@@ -129,6 +129,16 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/nuviorecovery",
+        destination: "https://nuviorecovery.com/methewdippy50",
+        permanent: false,
+      },
+      {
+        source: "/go/nuvio-recovery",
+        destination: "https://nuviorecovery.com/methewdippy50",
+        permanent: false,
+      },
+      {
         source: "/go/scheels",
         destination: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fwww.scheels.com%2F",
         permanent: false,
