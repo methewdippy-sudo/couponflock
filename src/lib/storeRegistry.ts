@@ -6190,17 +6190,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "uplift-code-1",
-        code: "FALL",
-        is_auto_applied: false,
-        discount: "UP TO $300 OFF",
-        title: "Up to $300 Off + 5 Free Accessories (Fall Focus Sale)",
-        description: "Apply promo code FALL at checkout to save $100 off $999+, $150 off $1,499+, $200 off $1,999+, or $300 off $2,999+ plus choose 5 free ergonomic accessories (up to $275 value).",
-        affiliate_url: "/go/upliftdesk",
-        is_verified: true,
-        expiry_date: "2026-11-02"
-      },
-      {
-        id: "uplift-code-2",
         code: "WELCOME",
         is_auto_applied: false,
         discount: "$20 OFF",
@@ -6209,6 +6198,17 @@ export const STORE_REGISTRY: RegistryStore[] = [
         affiliate_url: "/go/upliftdesk",
         is_verified: true,
         expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-code-2",
+        code: "FALL",
+        is_auto_applied: false,
+        discount: "UP TO $300 OFF",
+        title: "Up to $300 Off + 5 Free Accessories (Fall Focus Sale)",
+        description: "Apply promo code FALL at checkout to save $100 off $999+, $150 off $1,499+, $200 off $1,999+, or $300 off $2,999+ plus choose 5 free ergonomic accessories (up to $275 value).",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-11-02"
       },
       {
         id: "uplift-code-3",
