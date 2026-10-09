@@ -310,12 +310,12 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       <section className={storeStyles.storeBanner}>
         <div className={storeStyles.storeBannerHeader}>
           {bannerLogo ? (
-            <div className={storeStyles.storeLargeLogoWrapper}>
+            <div className={`${storeStyles.storeLargeLogoWrapper} ${store.slug === 'chompshop' || store.slug === 'chomp-shop' ? storeStyles.storeLargeLogoWrapperChomp : ''}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src={bannerLogo} 
                 alt={store.name} 
-                className={storeStyles.storeLargeLogo} 
+                className={`${storeStyles.storeLargeLogo} ${store.slug === 'chompshop' || store.slug === 'chomp-shop' ? storeStyles.storeLargeLogoChomp : ''}`} 
                 width={260}
                 height={130}
                 decoding="async"

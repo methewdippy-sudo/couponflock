@@ -71,6 +71,23 @@
   transition: transform 0.25s ease;
 }
 
+.storeLargeLogoWrapperChomp {
+  background-color: #1f73b6 !important;
+  border: 1.5px solid #1a6cb0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(31, 115, 182, 0.25) !important;
+}
+
+.storeLargeLogoChomp {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+}
+
 .storeHeroVisualWrapper {
   width: 220px;
   height: 140px;

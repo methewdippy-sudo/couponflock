@@ -3,6 +3,11 @@ import { Coupon, Store } from "../components/CouponCard";
 export const getLogoUrl = (slug: string | undefined | null) => {
   if (!slug || typeof slug !== "string") return undefined;
   const logoMap: Record<string, string> = {
+    "chompshop": "/logos/chompshop.png",
+    "chomp-shop": "/logos/chompshop.png",
+    "chompsaw": "/logos/chompshop.png",
+    "chomp-saw": "/logos/chompshop.png",
+    "chompshop-us": "/logos/chompshop.png",
     "piscifun": "/logos/piscifun.png",
     "scarlet-darkness": "/logos/scarlet-darkness.png",
     "krewe": "/logos/krewe.png",

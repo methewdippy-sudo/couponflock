@@ -252,16 +252,19 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
         <div className={styles.content}>
           {/* Header */}
           <div className={styles.header}>
-            {storeLogo ? (
-              <div className={styles.storeLogoWrapper}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={storeLogo} alt={storeName} className={styles.storeLogo} />
-              </div>
-            ) : (
-              <div className={styles.storeLogoFallback}>
-                {storeName.charAt(0).toUpperCase()}
-              </div>
-            )}
+            {(() => {
+              const isChomp = storeSlug === "chompshop" || storeSlug === "chomp-shop" || (typeof storeName === "string" && storeName.toLowerCase().includes("chomp"));
+              return storeLogo ? (
+                <div className={`${styles.storeLogoWrapper} ${isChomp ? styles.storeLogoWrapperChomp : ""}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={storeLogo} alt={storeName} className={`${styles.storeLogo} ${isChomp ? styles.storeLogoChomp : ""}`} />
+                </div>
+              ) : (
+                <div className={styles.storeLogoFallback}>
+                  {storeName.charAt(0).toUpperCase()}
+                </div>
+              );
+            })()}
             <h2 id="modal-title" className={styles.title}>
               {isAutoApplied ? `${discount} Coupon Code` : isDirectDeal ? `${storeName} Deal Activated` : `Copy Code for ${storeName}`}
             </h2>

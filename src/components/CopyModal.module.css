@@ -115,6 +115,20 @@
   padding: 4px;
 }
 
+.storeLogoWrapperChomp {
+  background-color: #1f73b6 !important;
+  border: 1px solid #1a6cb0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.storeLogoChomp {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  padding: 0 !important;
+}
+
 .storeLogoFallback {
   width: 64px;
   height: 64px;

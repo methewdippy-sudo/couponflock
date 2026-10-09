@@ -179,36 +179,41 @@ export const CouponCard: React.FC<CouponCardProps> = ({ coupon, onGetCode, isBes
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handleClick(e as any); } }}
     >
       {/* Left: Product Image or Brand Logo */}
-      <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""}`}>
-        {coupon.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img 
-            src={coupon.image} 
-            alt={displayTitle || storeName} 
-            className={styles.productImg} 
-            loading="lazy" 
-            decoding="async"
-            width={140}
-            height={100}
-          />
-        ) : finalLogo ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img 
-            src={finalLogo} 
-            alt={storeName} 
-            className={styles.logoImg} 
-            loading="lazy" 
-            decoding="async"
-            width={140}
-            height={80}
-            onError={() => setLogoError(true)}
-          />
-        ) : (
-          <div className={styles.logoFallback}>
-            {storeName.charAt(0).toUpperCase()}
+      {(() => {
+        const isChomp = rawSlug === "chompshop" || rawSlug === "chomp-shop" || cleanBaseSlug === "chompshop" || (typeof storeName === "string" && storeName.toLowerCase().includes("chomp"));
+        return (
+          <div className={`${styles.logoSection} ${coupon.image ? styles.logoSectionProduct : ""} ${isChomp ? styles.logoSectionChomp : ""}`}>
+            {coupon.image ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img 
+                src={coupon.image} 
+                alt={displayTitle || storeName} 
+                className={styles.productImg} 
+                loading="lazy" 
+                decoding="async"
+                width={140}
+                height={100}
+              />
+            ) : finalLogo ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img 
+                src={finalLogo} 
+                alt={storeName} 
+                className={`${styles.logoImg} ${isChomp ? styles.logoImgChomp : ""}`} 
+                loading="lazy" 
+                decoding="async"
+                width={140}
+                height={80}
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div className={styles.logoFallback}>
+                {storeName.charAt(0).toUpperCase()}
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        );
+      })()}
 
       {/* Center: Content */}
       <div className={styles.contentSection}>

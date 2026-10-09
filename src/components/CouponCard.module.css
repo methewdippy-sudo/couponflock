@@ -95,6 +95,22 @@
   image-rendering: crisp-edges;
 }
 
+.logoSectionChomp {
+  background-color: #1f73b6 !important;
+  border-color: #1a6cb0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.logoImgChomp {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 11px !important;
+}
+
 .productImg {
   width: 100%;
   height: 100%;
