@@ -6277,6 +6277,130 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+  // 721. CHOMP SHOP (US)
+  {
+    id: 721,
+    name: "Chomp Shop",
+    slug: "chompshop",
+    aliases: ["chomp-shop", "chompshop-com", "chompsaw", "chomp-saw"],
+    website: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+    affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+    logo: "/logos/chompshop.png",
+    country: "US",
+    description: "Chomp Shop creates the award-winning ChompSaw, a kid-safe power tool designed for cutting cardboard with ease. Empowering young makers to explore hands-on creativity and 3D STEAM projects safely.",
+    coupons: [
+      {
+        id: "chomp-code-1",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% off coupon code",
+        description: "Apply exclusive coupon code METHEWDIPPY at checkout to save up to 20% on your ChompSaw order and cardboard craft supplies.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-code-2",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off discount code sitewide",
+        description: "Use verified discount code METHEWDIPPY at checkout for an instant 10% discount on all ChompSaw maker tools and accessories.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off on bundles",
+        description: "Save 15% automatically on ChompSaw tool and materials bundles. No coupon code required.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE PRINTS",
+        title: "free 3d prints on your order",
+        description: "Get complimentary 3D print project templates automatically added to your qualifying maker order.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free shipping",
+        description: "Enjoy zero nationwide delivery fees automatically calculated on eligible domestic US orders.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off - replacement parts",
+        description: "Take 25% off replacement cutting blades, safety guards, and maker accessories.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off on cardboard projects",
+        description: "Special 20% discount on cardboard design project packs and STEAM creator kits.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "$72 OFF",
+        title: "$72 off annual - club subscribe",
+        description: "Save $72 each year when you subscribe to the annual Chomp Maker Club membership.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off on accessories",
+        description: "Discount applied automatically on guide rails, safety mats, and craft attachments.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "chomp-deal-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on newsletter signup",
+        description: "Sign up for the official Chompshop newsletter to unlock an instant 10% welcome discount.",
+        affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      }
+    ]
   }
 ];
 
