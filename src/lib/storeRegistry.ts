@@ -6175,6 +6175,108 @@ export const STORE_REGISTRY: RegistryStore[] = [
         "affiliate_url": "/go/aquasana"
       }
     ]
+  },
+  // 720. UPLIFT DESK (US)
+  {
+    id: 720,
+    name: "UPLIFT Desk",
+    slug: "upliftdesk",
+    aliases: ["uplift-desk", "upliftdesk-com", "uplift", "uplift-standing-desk"],
+    website: "https://www.upliftdesk.com",
+    affiliate_url: "/go/upliftdesk",
+    logo: "/logos/upliftdesk.png",
+    country: "US",
+    description: "UPLIFT Desk is the #1 rated ergonomic standing desk and office furniture manufacturer in Austin, Texas. Engineered with commercial-grade dual motors, industry-leading 15-year warranty, customizable solid wood desktops, and free nationwide delivery.",
+    coupons: [
+      {
+        id: "uplift-code-1",
+        code: "FALL",
+        is_auto_applied: false,
+        discount: "UP TO $300 OFF",
+        title: "Up to $300 Off + 5 Free Accessories (Fall Focus Sale)",
+        description: "Apply promo code FALL at checkout to save $100 off $999+, $150 off $1,499+, $200 off $1,999+, or $300 off $2,999+ plus choose 5 free ergonomic accessories (up to $275 value).",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-11-02"
+      },
+      {
+        id: "uplift-code-2",
+        code: "WELCOME",
+        is_auto_applied: false,
+        discount: "$20 OFF",
+        title: "$20 Off Welcome Discount for New Customers",
+        description: "Apply promo code WELCOME at checkout for an instant $20 discount on qualifying first-time standing desk and ergonomic workspace orders.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-code-3",
+        code: "ROF5",
+        is_auto_applied: false,
+        discount: "5% OFF",
+        title: "5% Off Sitewide Ergonomic Desks & Office Gear",
+        description: "Enter verified coupon code ROF5 at checkout to receive 5% off standing desks, ergonomic chairs, and monitor arms.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "5 FREE GIFTS",
+        title: "5 Free Ergonomic Accessories with Standing Desk Purchase",
+        description: "Choose up to 5 free accessories (valued up to $275) automatically included during custom desk configuration at official checkout.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Standard US Nationwide Delivery on All Standing Desks",
+        description: "Enjoy zero delivery fees calculated automatically at checkout across the lower 48 US states on all standing desks and accessories.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "15-YR WARRANTY",
+        title: "Industry-Leading 15-Year Commercial Warranty Included Free",
+        description: "Every UPLIFT V2 standing desk includes an all-inclusive 15-year warranty covering frame, motors, controller, and desktop.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "30-DAY TRIAL",
+        title: "30-Day Risk-Free In-Office Trial & Free Returns",
+        description: "Test your UPLIFT standing desk in your home or office for 30 days risk-free with prepaid return shipping.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "uplift-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40% OFF",
+        title: "Up to 40% Off Certified Open Box & Clearance Desks",
+        description: "Save big on certified like-new standing desks, ergonomic seating, and monitor mounts with full 15-year warranty protection.",
+        affiliate_url: "/go/upliftdesk",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
