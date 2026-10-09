@@ -126,6 +126,9 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
     ? (store as Store).name
     : (coupon.storeName || (typeof store === "string" ? store : "Store"));
   const storeLogo = isStoreObject ? (store as Store).logo : undefined;
+  const storeSlug = isStoreObject
+    ? (store as Store).slug
+    : ((coupon as any).storeSlug || (typeof store === "string" ? store.toLowerCase().replace(/[\s_]+/g, "-") : ""));
 
   // Build store URL
   const rawStoreUrl =
@@ -253,15 +256,17 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
           {/* Header */}
           <div className={styles.header}>
             {(() => {
-              const isChomp = storeSlug === "chompshop" || storeSlug === "chomp-shop" || (typeof storeName === "string" && storeName.toLowerCase().includes("chomp"));
+              const safeSlug = storeSlug || "";
+              const safeName = storeName || "Store";
+              const isChomp = safeSlug === "chompshop" || safeSlug === "chomp-shop" || (typeof safeName === "string" && safeName.toLowerCase().includes("chomp"));
               return storeLogo ? (
                 <div className={`${styles.storeLogoWrapper} ${isChomp ? styles.storeLogoWrapperChomp : ""}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={storeLogo} alt={storeName} className={`${styles.storeLogo} ${isChomp ? styles.storeLogoChomp : ""}`} />
+                  <img src={storeLogo} alt={safeName} className={`${styles.storeLogo} ${isChomp ? styles.storeLogoChomp : ""}`} />
                 </div>
               ) : (
                 <div className={styles.storeLogoFallback}>
-                  {storeName.charAt(0).toUpperCase()}
+                  {safeName.charAt(0).toUpperCase()}
                 </div>
               );
             })()}

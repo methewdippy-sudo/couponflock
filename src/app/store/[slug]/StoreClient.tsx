@@ -11,6 +11,25 @@ interface StoreClientProps {
   coupons: Coupon[];
 }
 
+class ModalErrorBoundary extends React.Component<{ children: React.ReactNode; fallback?: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: any) {
+    console.error("ModalErrorBoundary caught error:", error);
+  }
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || null;
+    }
+    return this.props.children;
+  }
+}
+
 export default function StoreClient({ store, coupons }: StoreClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCoupon, setActiveCoupon] = useState<Coupon | null>(null);
@@ -755,7 +774,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
 
       {/* Copy modal popup */}
       {activeCoupon && (
-        <CopyModal coupon={activeCoupon} onClose={() => setActiveCoupon(null)} />
+        <ModalErrorBoundary>
+          <CopyModal coupon={activeCoupon} onClose={() => setActiveCoupon(null)} />
+        </ModalErrorBoundary>
       )}
     </div>
   );
