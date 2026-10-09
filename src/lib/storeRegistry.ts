@@ -2243,7 +2243,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     aliases: ["silver-cross", "silvercross", "silvercrossus"],
     website: "https://silvercrossus.com/",
     affiliate_url: "/go/silver-cross-us",
-    logo: "/logos/silvercross.svg",
+    logo: "/logos/silvercross.png",
     description: "Silver Cross is the iconic British luxury nursery brand crafting premier strollers, wave prams, reef travel systems, high chairs, and car seats trusted by parents worldwide since 1877.",
     coupons: [
       {
