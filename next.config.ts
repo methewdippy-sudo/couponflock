@@ -130,12 +130,42 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/nuviorecovery",
-        destination: "https://nuviorecovery.com/methewdippy50",
+        destination: "https://nuviorecovery.com/collections/all-products?sca_ref=12515963.4GAOkTKNceGUU",
         permanent: false,
       },
       {
         source: "/go/nuvio-recovery",
-        destination: "https://nuviorecovery.com/methewdippy50",
+        destination: "https://nuviorecovery.com/collections/all-products?sca_ref=12515963.4GAOkTKNceGUU",
+        permanent: false,
+      },
+      {
+        source: "/go/seeq-supply",
+        destination: "https://www.seeqsupply.com/METHEW87649",
+        permanent: false,
+      },
+      {
+        source: "/go/seeqsupply",
+        destination: "https://www.seeqsupply.com/METHEW87649",
+        permanent: false,
+      },
+      {
+        source: "/go/seeq",
+        destination: "https://www.seeqsupply.com/METHEW87649",
+        permanent: false,
+      },
+      {
+        source: "/go/nushape",
+        destination: "https://www.nushape.com/METHEW88461",
+        permanent: false,
+      },
+      {
+        source: "/go/skinnyfit",
+        destination: "https://www.skinnyfit.com/METHEW18019",
+        permanent: false,
+      },
+      {
+        source: "/go/skinny-fit",
+        destination: "https://www.skinnyfit.com/METHEW18019",
         permanent: false,
       },
       {
