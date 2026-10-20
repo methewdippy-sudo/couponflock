@@ -1000,12 +1000,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/aquasana",
-        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=http%3A%2F%2Fwww.aquasana.com%2F",
+        destination: "http://www.aquasana.com/",
         permanent: false,
       },
       {
         source: "/go/aquasana-us",
-        destination: "https://connectadtrack.com/?s=cpa&u=4scw8ip03bvjtb1113tujbn362i4gnjwwbtf6e27fhe0piecupu&url=http%3A%2F%2Fwww.aquasana.com%2F",
+        destination: "http://www.aquasana.com/",
         permanent: false,
       },
     ];

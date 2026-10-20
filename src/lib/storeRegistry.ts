@@ -6852,7 +6852,210 @@ STORE_REGISTRY.forEach(store => {
  */
 export function getRegisteredStore(requestedSlug: string): { store: Store; coupons: Coupon[] } | null {
   const norm = requestedSlug.toLowerCase().trim();
-  const regStore = ALIAS_LOOKUP[norm];
+  const regStore = ALIAS_LOOKUP[norm,
+  {
+    id: 806,
+    name: "Woodland Direct",
+    slug: "woodland-direct",
+    aliases: ["woodland-direct-us", "woodlanddirect", "woodlanddirect-us"],
+    website: "https://www.woodlanddirect.com",
+    affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+    logo: "/logos/woodland-direct.png",
+    country: "US",
+    description: "America's premier online store for gas & wood fireplaces, chimney caps, gas logs, fire pits, patio heaters, BBQ grills, and premium outdoor living.",
+    coupons: [
+      {
+        id: "woodland-deal-1",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off verified discount on fireplaces, patio & outdoor living",
+        description: "Save 10% automatically applied through this exclusive partner link on fireplaces, fire pits, patio furniture, and accessories.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "Up to 20% off on selected items and seasonal clearance",
+        description: "Save up to 20% on selected gas logs, fire bowls, and outdoor accessories. Discount applied automatically at checkout.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on DCS grills & premium outdoor kitchens",
+        description: "Instant 10% discount automatically unlocked on DCS gas grills and outdoor kitchen components.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free shipping on qualifying orders over $99",
+        description: "Enjoy free standard shipping to the contiguous US on thousands of products when you spend $99 or more.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on vented & ventless gas log sets",
+        description: "Save 10% automatically on top-rated gas log sets. Includes natural gas and liquid propane configurations.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "FROM $349",
+        title: "Gas fire pits and outdoor fire tables starting from $349",
+        description: "Explore a massive selection of propane and natural gas fire pits starting at just $349 with fast home delivery.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "FROM $476",
+        title: "Luxury patio furniture and dining collections from $476",
+        description: "Shop all-weather wicker, aluminum, and teak outdoor patio furniture sets starting from $476.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "FROM $1,069",
+        title: "Wood fireplaces and high-efficiency wood inserts from $1,069",
+        description: "Discover EPA-certified wood burning fireplaces, zero-clearance models, and stove inserts starting at $1,069.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off on newsletter email sign-up",
+        description: "Sign up for Woodland Direct emails to receive an instant 10% discount on your upcoming purchase.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "woodland-deal-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "5% OFF",
+        title: "5% off on BBQ grills & smokers",
+        description: "Automatic 5% savings applied on built-in and freestanding BBQ grills and smokers.",
+        affiliate_url: "https://chirpy.st/u26844_U5XHl0",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+  {
+    id: 810,
+    name: "Plated Skin Science",
+    slug: "plated-skin",
+    aliases: ["plated-skin-science", "plated", "buypated", "platedskinscience"],
+    website: "https://platedskinscience.com",
+    affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+    logo: "/logos/plated-skin.png",
+    country: "US",
+    description: "Breakthrough exosome skincare formulated with Renewosome™ technology. Clinically proven to accelerate cellular renewal, reduce redness, and smooth deep wrinkles.",
+    coupons: [
+      {
+        id: "plated-deal-1",
+        code: "WELCOME15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off verified exclusive coupon code sitewide",
+        description: "Apply promo code WELCOME15 at checkout to receive 15% off your order of clinically proven exosome serums.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plated-deal-2",
+        code: "INTENSE20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% off INTENSE Serum for rapid collagen & wrinkle renewal",
+        description: "Get 20% off highest-concentration exosome INTENSE Serum with working discount code INTENSE20.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plated-deal-3",
+        code: "DAILY15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off DAILY Serum for radiant skin barrier repair",
+        description: "Save 15% on DAILY exosome serum designed to defend against environmental aging with code DAILY15.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plated-deal-4",
+        code: "HAIR20",
+        is_auto_applied: false,
+        discount: "20% OFF",
+        title: "20% off CALM Serum and Hair Density Recovery Serum",
+        description: "Use active voucher code HAIR20 to save 20% on scalp revitalization and post-procedure calm serums.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plated-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $65 OFF",
+        title: "Up to $65 off on Duo & Trio Skincare Bundles",
+        description: "Save up to $65 automatically when purchasing the complete Intense + Daily serum regimen bundle.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "plated-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free tracked US shipping on all skincare orders",
+        description: "Enjoy 100% complimentary tracked delivery across the United States automatically applied at checkout.",
+        affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  }
+];
   if (!regStore) return null;
 
   const logoUrl = regStore.logo || getLogoUrl(regStore.slug) || getLogoUrl(norm);
