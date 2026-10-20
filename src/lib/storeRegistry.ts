@@ -7055,6 +7055,86 @@ export function getRegisteredStore(requestedSlug: string): { store: Store; coupo
       }
     ]
   }
+,
+  {
+    id: 809,
+    name: "Larine",
+    slug: "larine",
+    aliases: ["larine-us", "buylarine", "buylarine-com", "larine-co"],
+    website: "https://www.buylarine.com",
+    affiliate_url: "https://www.buylarine.com/METHEW23131",
+    logo: "/logos/larine.png",
+    country: "US",
+    description: "Doctor-formulated remineralizing oral care: sugar-free enamel repair chewing gum, breath mints, remineralizing pouches, and oral probiotic starter kits.",
+    coupons: [
+      {
+        id: "larine-deal-1",
+        code: "METHEW23131",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off verified exclusive discount code sitewide",
+        description: "Apply working coupon code METHEW23131 at checkout to save 15% on remineralizing gum, mints, and oral health bundles.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "larine-deal-2",
+        code: "METHEW23131",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off verified promo code on all enamel care kits",
+        description: "Use active discount code METHEW23131 to unlock savings on Enamel Starter Kits and variety packs.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "larine-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 60% OFF",
+        title: "Up to 60% off on Enamel Starter Kits & bundles",
+        description: "Save up to 60% on complete remineralizing starter sets with gum, mints, and pouches automatically at checkout.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "larine-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $80 OFF",
+        title: "Up to $80 off on bulk remineralizing gum boxes",
+        description: "Get up to $80 in instant volume savings when purchasing multi-box bundles of nano-hydroxyapatite gum.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "larine-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off on long-lasting fresh breath mints",
+        description: "Enjoy 25% off clean ingredient breath mints designed to balance your oral microbiome.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "larine-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free US standard shipping on qualifying orders",
+        description: "Automatic free delivery applied at checkout on all eligible domestic US subscriptions and bundles.",
+        affiliate_url: "https://www.buylarine.com/METHEW23131",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  }
 ];
   if (!regStore) return null;
 
