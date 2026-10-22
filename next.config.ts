@@ -1024,6 +1024,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/pongbot-us",
+        destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
+        permanent: true,
+      },
+      {
         source: "/go/pongbot",
         destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         permanent: false,
