@@ -1,4 +1,6 @@
 :root {
+  --font-outfit: var(--font-poppins);
+
   /* CouponFlock Emerald Mint & Slate Theme (Verified Savings & High Authority) */
   --bg-primary: #f8fafc; /* Crisp, clean modern light backdrop */
   --bg-secondary: #ffffff; /* Pure white surface */

@@ -5,10 +5,10 @@ import "./globals.css";
 import HeaderClient from "./HeaderClient";
 import FooterClient from "./FooterClient";
 
-const outfit = Outfit({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-outfit",
+  variable: "--font-poppins",
   display: "swap",
   preload: true,
 });
@@ -135,7 +135,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body style={{ fontFamily: "var(--font-outfit), sans-serif" }}>
+      <body style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
         {/* Navigation Header */}
         <HeaderClient />
 
