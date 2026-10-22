@@ -8535,22 +8535,22 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "pongbot-deal-1",
-        code: "SPROM",
+        code: "SAVE2026",
         is_auto_applied: false,
         discount: "15% OFF",
         title: "15% off Pace S Pro & smart AI training machines",
-        description: "Take your game to the next level with 15% savings on intelligent ball launchers when you apply verified code SPROM at checkout.",
+        description: "Take your game to the next level with 15% savings on intelligent ball launchers when you apply verified code SAVE2026 at checkout.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
         expiry_date: "2026-11-19"
       },
       {
         id: "pongbot-deal-2",
-        code: "TIGLIO10",
+        code: "PRIME26",
         is_auto_applied: false,
         discount: "10% OFF",
         title: "10% off verified discount code sitewide",
-        description: "Save an instant 10% on your entire PongBot equipment order including solo training units and accessories with code TIGLIO10.",
+        description: "Save an instant 10% on your entire PongBot equipment order including solo training units and accessories with code PRIME26.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
         expiry_date: "2026-11-21"
