@@ -8868,8 +8868,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 808,
     name: "SWA Sabers",
     slug: "swa-sabers",
-    aliases: ["swasabers", "swa-saber", "swasaber"],
-    website: "https://swasabers.com",
+    aliases: ["swa-sabers-us", "swasabers", "swasabers-us", "swa-saber", "swasaber", "swa-sabers-deals"],
+    website: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
     affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
     logo: "/logos/swa-sabers.png",
     country: "US",
@@ -8879,56 +8879,111 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "swa-deal-1",
         code: "",
         is_auto_applied: true,
-        discount: "UP TO 25% OFF",
-        title: "Up to 25% off automatic sitewide discount on custom lightsabers",
-        description: "Instant discount automatically activated through this official partner link on all Xenopixel, Proffie, and Baselit dueling sabers.",
+        discount: "10% OFF",
+        title: "10% off storewide exclusive savings",
+        description: "Activate an instant 10% discount on battle-ready combat lightsabers and precision soundboard hilts via your partner link.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-22"
       },
       {
         id: "swa-deal-2",
         code: "",
         is_auto_applied: true,
-        discount: "UP TO $100 OFF",
-        title: "Save up to $100 on Neopixel & Proffie flagship replica hilts",
-        description: "Automatic price drops on iconic collector replica sabers including Ahsoka, Anakin, Luke, Vader, and Kenobi configurations.",
+        discount: "BUY 1 GET 2 FREE",
+        title: "Mega Saber Bundle: Buy 1 Get 2 Free",
+        description: "Special collector bundle promotion: grab your primary hilt and get two training sabers included at no extra charge while promotional inventory lasts.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-22"
       },
       {
         id: "swa-deal-3",
         code: "",
         is_auto_applied: true,
-        discount: "FROM $79",
-        title: "Baselit combat dueling lightsabers starting from just $79",
-        description: "Heavy-grade aircraft aluminum hilt dueling sabers with 12 sound fonts and smooth swing technology starting at $79.",
+        discount: "35% OFF",
+        title: "35% off on the Sovereign Saber Collection",
+        description: "Claim 35% savings on the ultra-detailed Sovereign series featuring aircraft-grade aluminum hilts and heavy-duty dueling blades.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-23"
       },
       {
         id: "swa-deal-4",
         code: "",
         is_auto_applied: true,
         discount: "FREE SHIPPING",
-        title: "Free tracked galaxy courier shipping on orders over $100",
-        description: "Receive free insured delivery with live tracking numbers on all lightsaber orders totaling $100 or more.",
+        title: "Free tracked US doorstep shipping",
+        description: "No surprise fees at checkout: get 100% free insured shipping with live carrier tracking on all domestic lightsaber orders.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-18"
       },
       {
         id: "swa-deal-5",
         code: "",
         is_auto_applied: true,
-        discount: "SPECIAL DEAL",
-        title: "Mystery Saber Box offers with guaranteed pixel & hilt upgrades",
-        description: "Unlock limited edition mystery saber box tiers with guaranteed high-tier blade upgrades and accessory cases.",
+        discount: "30% OFF",
+        title: "30% off limited-edition custom hilts",
+        description: "Score a direct 30% markdown on custom-machined Neopixel and Xenopixel V3 replica sabers during this seasonal drop.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-21"
+      },
+      {
+        id: "swa-deal-6",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off select combat dueling sabers",
+        description: "Save 25% on heavy-combat certified sabers engineered with shatterproof polycarbonate blades for full-contact dueling.",
+        affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        is_verified: true,
+        expiry_date: "2026-11-17"
+      },
+      {
+        id: "swa-deal-7",
+        code: "",
+        is_auto_applied: true,
+        discount: "25% OFF",
+        title: "25% off on Celestial Collection lightsabers",
+        description: "Enjoy 25% off the Celestial flagship line boasting smooth-swing motion sensors and multi-color LED blade effects.",
+        affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        is_verified: true,
+        expiry_date: "2026-11-19"
+      },
+      {
+        id: "swa-deal-8",
+        code: "",
+        is_auto_applied: true,
+        discount: "20% OFF",
+        title: "20% off the stealth Shadow Collection",
+        description: "Upgrade to the matte black anodized Shadow series with 20% discount applied automatically at checkout.",
+        affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        is_verified: true,
+        expiry_date: "2026-11-19"
+      },
+      {
+        id: "swa-deal-9",
+        code: "",
+        is_auto_applied: true,
+        discount: "15% OFF",
+        title: "15% off convention & cosplay ready replicas",
+        description: "Save 15% on screen-accurate hilts and cosplay accessories with quick-draw belt clips and display stands.",
+        affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        is_verified: true,
+        expiry_date: "2026-11-17"
+      },
+      {
+        id: "swa-deal-10",
+        code: "",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off welcome discount on your first saber",
+        description: "First time joining the guild? Unlock 10% off your initial lightsaber purchase with instant checkout activation.",
+        affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        is_verified: true,
+        expiry_date: "2026-11-17"
       }
     ]
   },

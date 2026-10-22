@@ -1024,6 +1024,26 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/swa-sabers",
+        destination: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        permanent: true,
+      },
+      {
+        source: "/go/swasabers",
+        destination: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        permanent: true,
+      },
+      {
+        source: "/go/swa-sabers-us",
+        destination: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        permanent: true,
+      },
+      {
+        source: "/go/swasabers-us",
+        destination: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
+        permanent: true,
+      },
+      {
         source: "/go/pongbot-us",
         destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         permanent: true,
