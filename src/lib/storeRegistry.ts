@@ -749,7 +749,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 633,
     name: "IM8 Health",
     slug: "im8health",
-    aliases: ["im8-health", "im8", "im8health-us", "im8-health-us"],
+    aliases: ["im8-health", "im8", "im8health-us", "im8-health-us", "im8-longevity", "im8-health-deals", "im8-official"],
     logo: "/logos/im8health.png",
     website: "https://www.im8health.com/METHEW29111",
     affiliate_url: "https://www.im8health.com/METHEW29111",
