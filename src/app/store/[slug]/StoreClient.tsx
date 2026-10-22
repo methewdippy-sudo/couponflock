@@ -216,48 +216,26 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
     
     const isDirect = !coupon.code || coupon.code === "DEAL" || coupon.code === "DIRECT";
 
-    // 1. Copy code to clipboard
-    // On iOS: use only async clipboard API (no focus/execCommand — those show the keyboard and break the event chain)
-    // On desktop: use execCommand synchronous fallback for broadest compatibility
+    // Automatically copy code to user's clipboard instantly on click if it's not a direct deal
     if (!isDirect && coupon.code) {
-      const ua2 = typeof navigator !== "undefined" ? navigator.userAgent : "";
-      const iosDevice = /iPhone|iPad|iPod/i.test(ua2);
-      if (!iosDevice) {
-        // Desktop / Android: synchronous execCommand copy
-        try {
-          const textArea = document.createElement("textarea");
-          textArea.value = coupon.code;
-          textArea.style.position = "fixed";
-          textArea.style.left = "-9999px";
-          textArea.style.top = "-9999px";
-          textArea.style.opacity = "0";
-          document.body.appendChild(textArea);
-          textArea.select();
-          textArea.setSelectionRange(0, 99999);
-          document.execCommand("copy");
-          document.body.removeChild(textArea);
-        } catch {
-          // Silently continue
+      try {
+        if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(coupon.code);
         }
-      }
-      // Also try async clipboard API (works on both, no-op if fails)
-      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(coupon.code).catch(() => {});
+      } catch (err) {
+        console.warn("Failed to automatically copy code to clipboard:", err);
       }
     }
 
-    // 2. Open the Merchant Affiliate URL directly in a new tab
+    // 1. Open our own website in a new tab, passing the coupon query params to auto-trigger the modal
     try {
-      window.open(storeUrl, "_blank", "noopener,noreferrer");
+      const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
+      window.open(ourSiteUrl, "_blank", "noopener,noreferrer");
     } catch (err) {
-      console.warn("Failed to open merchant URL in new tab:", err);
-      window.location.href = storeUrl;
+      console.warn("Failed to open our website in a new tab:", err);
     }
 
-    // 3. Immediately show popup modal on current page with copied code
-    setActiveCoupon(coupon);
-
-    // 4. GA4 Button Click Event Tracking
+    // GA4 Button Click Event Tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       try {
         (window as any).gtag("event", "generate_lead", {
@@ -272,6 +250,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
         // Ignore analytics errors
       }
     }
+
+    // 2. Redirect the current active tab to the merchant store's affiliate URL (Tabunder System!)
+    window.location.href = storeUrl;
   };
 
   const [officialWebsiteUrl, setOfficialWebsiteUrl] = useState<string | null>(null);
