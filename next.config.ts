@@ -389,6 +389,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/usaberkey",
+        destination: "https://www.usaberkeyfilters.com/aff/282/",
+        permanent: true,
+      },
+      {
         source: "/go/usaberkeyfilters",
         destination: "https://www.usaberkeyfilters.com/aff/282/",
         permanent: true,
