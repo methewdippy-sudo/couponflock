@@ -5,7 +5,7 @@ import { Coupon, Store } from "../../../components/CouponCard";
 import { getLogoUrl, FALLBACK_STORES, FALLBACK_COUPONS } from "../../../lib/fallbackData";
 import { getRegisteredStore, getAllRegisteredSlugs } from "../../../lib/storeRegistry";
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const revalidate = 86400; // Edge cached for 24h
 
 // Pre-render stores at build time
 export async function generateStaticParams() {
