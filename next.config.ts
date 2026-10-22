@@ -1004,6 +1004,21 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/go/pongbot",
+        destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
+        permanent: false,
+      },
+      {
+        source: "/go/pongbot-sports",
+        destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
+        permanent: false,
+      },
+      {
+        source: "/go/pongbotsports",
+        destination: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
+        permanent: false,
+      },
+      {
         source: "/go/aquasana-us",
         destination: "http://www.aquasana.com/",
         permanent: false,
