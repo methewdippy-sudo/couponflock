@@ -337,6 +337,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             <div className={storeStyles.storeTitleRow}>
               <h1 className={storeStyles.storeTitle}>{store.name} Deals & Discounts</h1>
               <span className={storeStyles.storeVerifiedBadge}>100% Working</span>
+              <span className={storeStyles.storeOffersBadge}>⚡ {coupons.length} Verified Offers</span>
             </div>
             <p className={storeStyles.storeSubtitle}>
               Save money today at {store.name} with verified discounts, free shipping codes, and promotional deals.
@@ -377,22 +378,6 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           )}
         </div>
 
-        {/* Store Coupon Statistics Grid */}
-        <div className={storeStyles.statsGrid}>
-          <div className={storeStyles.statCard}>
-            <span className={storeStyles.statValue}>{coupons.length}</span>
-            <span className={storeStyles.statLabel}>Available Offers</span>
-          </div>
-          <div className={storeStyles.statCard}>
-            <span className={storeStyles.statValue}>{verifiedCount}</span>
-            <span className={storeStyles.statLabel}>Verified Deals</span>
-          </div>
-          <div className={storeStyles.statCard}>
-            <span className={storeStyles.statValue} style={{ color: "var(--accent-green)" }}>
-              {successRate}%
-            </span>
-            <span className={storeStyles.statLabel}>Success Rate</span>
-          </div>
         </div>
       </section>
 
@@ -521,6 +506,24 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             </div>
           )}
         </section>
+
+        {/* Store Performance & Trust Statistics */}
+        <div className={storeStyles.statsGrid}>
+          <div className={storeStyles.statCard}>
+            <span className={storeStyles.statValue}>{coupons.length}</span>
+            <span className={storeStyles.statLabel}>Available Offers</span>
+          </div>
+          <div className={storeStyles.statCard}>
+            <span className={storeStyles.statValue}>{verifiedCount}</span>
+            <span className={storeStyles.statLabel}>Verified Deals</span>
+          </div>
+          <div className={storeStyles.statCard}>
+            <span className={storeStyles.statValue} style={{ color: "var(--accent-green)" }}>
+              {successRate}%
+            </span>
+            <span className={storeStyles.statLabel}>Success Rate</span>
+          </div>
+        </div>
 
         {/* Email Subscription Box */}
         <section className={storeStyles.newsletterSection}>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import HeaderClient from "./HeaderClient";
@@ -42,7 +42,7 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-292RBXPKZ3";
 
   return (
-    <html lang="en" className={outfit.variable}>
+    <html lang="en" className={`${poppins.variable} ${poppins.className}`}>
       <head>
         <meta name="google-site-verification" content="v4tNxY46v-W3u6LuCye9tAvrFVxeyn_tNNV7R5q24Iw" />
         <meta name="impact-site-verification" value="e8243051-e329-4f57-aedc-5f4539bfc2ac" />
