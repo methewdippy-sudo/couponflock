@@ -378,7 +378,6 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           )}
         </div>
 
-        </div>
       </section>
 
       {/* Featured Products & Clinical Treatments Showcase */}
