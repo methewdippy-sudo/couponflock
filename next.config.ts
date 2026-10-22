@@ -409,6 +409,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/go/candy-in-bulk-us",
+        destination: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        permanent: true,
+      },
+      {
         source: "/go/candy-in-bulk",
         destination: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         permanent: true,

@@ -1585,57 +1585,112 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 625,
     name: "Candy In Bulk",
     slug: "candy-in-bulk",
-    aliases: ["candyinbulk", "swedish-candy", "swedish-candy-land"],
+    aliases: ["candyinbulk", "candy-in-bulk-us", "candyinbulk-us", "candy-in-bulk-deals", "swedish-candy", "swedish-candy-land"],
     logo: "/logos/candy-in-bulk.png",
-    website: "https://candyinbulk.com/?ref=promoregistry",
-    affiliate_url: "https://candyinbulk.com/?ref=promoregistry",
+    website: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+    affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
     country: "US",
     description: "Viral TikTok Swedish candy, authentic Bubs sour foam, sweet licorice, gummy mixes, and wholesale bulk confectionery delivered fresh.",
     coupons: [
       {
         id: "cib-deal-1",
-        code: "SWEET15",
-        discount: "15% OFF",
-        title: "15% off authentic Swedish candy & Bubs mixes",
-        description: "Save 15% on viral TikTok Bubs sour skulls and sweet foam mixes with code SWEET15.",
+        code: "",
+        discount: "20% OFF",
+        title: "20% off coupon code (exclusive verified)",
+        description: "Get your exclusive discounts and coupon codes on bulk Swedish candy and confectionery.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-13"
       },
       {
         id: "cib-deal-2",
-        code: "BULK20",
-        discount: "20% OFF",
-        title: "20% off bulk candy orders over 5 lbs",
-        description: "Enjoy 20% savings on 5 lb wholesale bags and assorted party bundles with code BULK20.",
+        code: "",
+        discount: "FREE GIFT",
+        title: "Limited Time Offer - Free Gift on order $69",
+        description: "Get your exclusive discounts and coupon codes with a free surprise gift on orders over $69.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-15"
       },
       {
         id: "cib-deal-3",
-        code: "SOUR10",
-        discount: "10% OFF",
-        title: "10% off sour foams, fruity dummies & sweet licorice",
-        description: "Get 10% off imported European specialty candies with code SOUR10.",
+        code: "",
+        discount: "40% OFF",
+        title: "40% off on deals",
+        description: "Get your exclusive discounts and coupon codes on select bulk candy deals.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-18"
       },
       {
         id: "cib-deal-4",
-        code: "WELCOME5",
-        discount: "$5 OFF",
-        title: "$5 welcome voucher on your first candy box",
-        description: "Save $5 instantly on any mixed confectionery box with code WELCOME5.",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free shipping over $49",
+        description: "Get your exclusive discounts and coupon codes with 100% free doorstep US shipping.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-15"
       },
       {
         id: "cib-deal-5",
         code: "",
-        discount: "FREE SHIPPING",
-        title: "Free standard delivery on orders over $50",
-        description: "Enjoy 100% free tracked doorstep shipping across the United States on orders $50+.",
+        discount: "35% OFF",
+        title: "35% off on popular candies",
+        description: "Get your exclusive discounts and coupon codes on top-trending viral candies.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
         is_verified: true,
-        expiry_date: "2026-12-31"
+        expiry_date: "2026-11-14"
+      },
+      {
+        id: "cib-deal-6",
+        code: "",
+        discount: "30% OFF",
+        title: "30% off on candy bundles",
+        description: "Get your exclusive discounts and coupon codes on family party packs and bundles.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-11-17"
+      },
+      {
+        id: "cib-deal-7",
+        code: "",
+        discount: "25% OFF",
+        title: "25% off on nuts & snacks",
+        description: "Get your exclusive discounts and coupon codes on roasted nuts and savory snack mixes.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-11-14"
+      },
+      {
+        id: "cib-deal-8",
+        code: "",
+        discount: "20% OFF",
+        title: "20% off on halloween candy collection",
+        description: "Get and exclusive and verified discount code on Halloween bulk treats.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-10-31"
+      },
+      {
+        id: "cib-deal-9",
+        code: "",
+        discount: "5 LB UNDER $20",
+        title: "5 lb deals under $20",
+        description: "Get your exclusive discounts and coupon codes on massive 5 lb confectionery bags.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-11-17"
+      },
+      {
+        id: "cib-deal-10",
+        code: "",
+        discount: "15% OFF",
+        title: "15% off on mix candies",
+        description: "Get your exclusive discounts and coupon codes on personalized custom candy mixes.",
+        affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
+        is_verified: true,
+        expiry_date: "2026-11-15"
       }
     ]
   },
