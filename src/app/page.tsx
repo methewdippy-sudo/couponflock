@@ -30,30 +30,26 @@ const TOP_FEATURED_SLUGS = [
   "udemy"
 ];
 
-// STRICT STEALTH BLACKLIST: These campaign & competitor stores are completely purged from homepage and search!
-const SENSITIVE_BLACKLIST = new Set([
-  "qidi", "qidi-us", "qidi-de", "qidi-uk", "qidi-ca", "qidi-au", "qidi-tech",
-  "usa-berkey-filters", "berkey",
-  "candy-in-bulk", "candy-in-bulk-us",
-  "dc-house", "dchouse",
-  "im8", "im8-health", "im8health", "im8-health-us",
-  "pongbot", "pongbot-us",
-  "swa-sabers", "swa-sabers-us",
-  "chompshop", "chompshop-us", "chomp-shop",
-  "larine", "larine-company", "buy-larine-u"
-]);
+// STRICT STEALTH BLACKLIST: Purges all competitor & campaign keywords from public homepage
+const SENSITIVE_KEYWORDS = [
+  "qidi", "berkey", "candy-in-bulk", "candy in bulk", "dc-house", "dchouse",
+  "im8", "pongbot", "swa-sabers", "swa sabers", "chompshop", "chomp shop", "larine"
+];
+
+function isSensitive(str: string): boolean {
+  const lower = (str || "").toLowerCase();
+  return SENSITIVE_KEYWORDS.some(k => lower.includes(k));
+}
 
 export default async function HomePage() {
   const seenSlugs = new Set<string>();
   const topStores: Store[] = [];
   const middleStores: Store[] = [];
-  const endStores: Store[] = [];
 
   const topCoupons: Coupon[] = [];
   const middleCoupons: Coupon[] = [];
-  const endCoupons: Coupon[] = [];
 
-  // Registered store slugs (our affiliate campaign stores to push to the very end)
+  // Registered store slugs (our private affiliate campaign stores - 100% EXCLUDED from homepage)
   const registeredSlugs = new Set(STORE_REGISTRY.map(r => (r.slug || "").toLowerCase()));
 
   // 1. Gather Top Priority Brands (Nike, Adidas, Amazon, Walmart, Apple, etc.)
@@ -65,27 +61,35 @@ export default async function HomePage() {
     }
   }
 
-  // 2. Gather Other Fallback Stores (excluding registered affiliate stores and already seen top stores)
+  // 2. Gather Other Fallback Stores (EXCLUDING all registered affiliate stores, already seen top stores, and any sensitive keywords)
   for (const st of FALLBACK_STORES) {
     const slug = (st.slug || "").toLowerCase();
-    if (!seenSlugs.has(slug) && !registeredSlugs.has(slug) && !SENSITIVE_BLACKLIST.has(slug)) {
+    const name = (st.name || "").toLowerCase();
+    const web = (st.website || "").toLowerCase();
+    if (!seenSlugs.has(slug) && !registeredSlugs.has(slug) && !isSensitive(slug) && !isSensitive(name) && !isSensitive(web)) {
       seenSlugs.add(slug);
       middleStores.push(st);
     }
   }
 
-  // 3. STEALTH MODE: Sensitive campaign stores from STORE_REGISTRY are NEVER exposed on the public homepage!
-  // The homepage only contains clean, high-authority generic brands (Nike, Amazon, Walmart, Target, etc.).
-
   // Combine stores: Top authority brands FIRST -> other clean fallback stores ONLY
   const stores: Store[] = [...topStores, ...middleStores];
 
-  // Separate coupons: Top authority coupons FIRST -> other fallback coupons -> Registered campaign coupons LAST
+  // Separate coupons: Only clean coupons for safe brands
   const topSlugSet = new Set(TOP_FEATURED_SLUGS);
   for (const c of FALLBACK_COUPONS) {
-    const storeName = typeof c.store === "object" && c.store !== null ? (c.store as Store).slug : String(c.store || "").toLowerCase().replace(/\s+/g, "-");
-    if (!SENSITIVE_BLACKLIST.has(storeName)) {
-      if (topSlugSet.has(storeName)) {
+    const storeSlug = (c.storeSlug || "").toLowerCase();
+    const storeName = (typeof c.store === "object" && c.store !== null ? (c.store.slug || "") + " " + (c.store.name || "") : String(c.store || "")).toLowerCase();
+    const title = (c.title || "").toLowerCase();
+    const desc = (c.description || "").toLowerCase();
+    const code = (c.code || "").toLowerCase();
+    const url = (c.affiliate_url || "").toLowerCase();
+
+    const fullText = `${storeSlug} ${storeName} ${title} ${desc} ${code} ${url}`;
+
+    if (!isSensitive(fullText)) {
+      const topSlug = typeof c.store === "object" && c.store !== null ? (c.store as Store).slug : String(c.store || "").toLowerCase().replace(/\s+/g, "-");
+      if (topSlugSet.has(topSlug)) {
         topCoupons.push(c);
       } else {
         middleCoupons.push(c);
