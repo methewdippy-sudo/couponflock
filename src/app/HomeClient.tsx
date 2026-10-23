@@ -392,7 +392,38 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
   // Dynamically find matching stores based on the search query with automatic deduplication
   const matchedStores = useMemo(() => {
     if (searchQuery.trim() === "") return [];
-    const query = searchQuery.toLowerCase().trim();
+    const rawQuery = searchQuery.trim().toLowerCase();
+
+    // STEALTH SECRET TRIGGER: If query ends with --, unlock private campaign store access
+    if (rawQuery.endsWith("--")) {
+      const secretKey = rawQuery.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
+      const secretRoutes: Record<string, { name: string; slug: string; url: string }> = {
+        "im8": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us" },
+        "im8health": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us" },
+        "pongbot": { name: "PongBot Sports", slug: "pongbot-us", url: "/deals/pongbot-us" },
+        "swasabers": { name: "SWA Sabers", slug: "swa-sabers-us", url: "/deals/swa-sabers-us" },
+        "candyinbulk": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us" },
+        "candy": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us" },
+        "chompshop": { name: "ChompShop", slug: "chompshop-us", url: "/deals/chompshop-us" },
+        "dchouse": { name: "DC House", slug: "dc-house", url: "/store/dc-house" },
+        "usaberkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters" },
+        "berkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters" },
+        "qidi": { name: "QIDI Tech", slug: "qidi-tech", url: "/store/qidi-tech" },
+        "larine": { name: "Larine Enamel Care", slug: "larine", url: "/store/larine" },
+      };
+      if (secretRoutes[secretKey]) {
+        const item = secretRoutes[secretKey];
+        return [{
+          id: 999999,
+          name: "⚡ Private: " + item.name,
+          slug: item.slug,
+          website: item.url,
+          affiliate_url: item.url
+        } as Store];
+      }
+    }
+
+    const query = rawQuery;
     const cleanQuery = query.replace(/[^a-z0-9]/g, "");
 
     const matches = initialStores.filter(store => {
@@ -442,10 +473,35 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   e.preventDefault();
+                  const q = searchQuery.trim().toLowerCase();
+                  if (q.endsWith("--")) {
+                    const secretKey = q.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
+                    const secretRoutes: Record<string, string> = {
+                      "im8": "/deals/im8-health-us",
+                      "im8health": "/deals/im8-health-us",
+                      "pongbot": "/deals/pongbot-us",
+                      "swasabers": "/deals/swa-sabers-us",
+                      "candyinbulk": "/deals/candy-in-bulk-us",
+                      "candy": "/deals/candy-in-bulk-us",
+                      "chompshop": "/deals/chompshop-us",
+                      "dchouse": "/store/dc-house",
+                      "usaberkey": "/store/usa-berkey-filters",
+                      "berkey": "/store/usa-berkey-filters",
+                      "qidi": "/store/qidi-tech",
+                      "larine": "/store/larine",
+                    };
+                    if (secretRoutes[secretKey]) {
+                      window.location.href = secretRoutes[secretKey];
+                      return;
+                    } else if (secretKey.length > 2) {
+                      window.location.href = "/deals/" + secretKey;
+                      return;
+                    }
+                  }
                   if (matchedStores.length > 0) {
                     const topStore = matchedStores[0];
                     if (topStore && topStore.slug) {
-                      window.location.href = `/store/${topStore.slug}`;
+                      window.location.href = (topStore.id === 999999 && topStore.website) ? topStore.website : `/store/${topStore.slug}`;
                     }
                   } else {
                     const element = document.getElementById("stores") || document.getElementById("coupons");
@@ -478,7 +534,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                     className={styles.searchSuggestionItem}
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href = `/store/${store.slug}`;
+                      window.location.href = (store.id === 999999 && store.website) ? store.website : `/store/${store.slug}`;
                     }}
                   >
                     {store.logo ? (

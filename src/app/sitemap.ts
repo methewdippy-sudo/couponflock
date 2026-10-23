@@ -64,10 +64,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Merge registered store slugs and fallback store slugs
-  const registeredSlugs = getAllRegisteredSlugs();
+  // STEALTH SHIELD: Sensitive campaign stores from STORE_REGISTRY are 100% EXCLUDED from sitemap.xml!
+  // Competitors scraping sitemap.xml will only see harmless generic public fallback stores.
   const fallbackSlugs = (FALLBACK_STORES || []).map((s) => s.slug);
-  const combinedSlugs = Array.from(new Set([...registeredSlugs, ...fallbackSlugs]));
+  const combinedSlugs = Array.from(new Set(fallbackSlugs));
 
   // All store pages
   const storePages = combinedSlugs.map((slug) => ({

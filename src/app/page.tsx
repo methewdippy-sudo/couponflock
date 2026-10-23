@@ -61,36 +61,11 @@ export default async function HomePage() {
     }
   }
 
-  // 3. Put Registered Campaign Stores (Scheels, Zendure, Desktronic, AlgoLaser, etc.) at the VERY END
-  for (const reg of STORE_REGISTRY) {
-    const slug = (reg.slug || "").toLowerCase();
-    if (!seenSlugs.has(slug)) {
-      seenSlugs.add(slug);
-      const storeObj: Store = {
-        id: reg.id,
-        name: reg.name,
-        slug: reg.slug,
-        logo: reg.logo,
-        website: reg.website,
-        affiliate_url: reg.affiliate_url,
-        description: reg.description
-      };
-      endStores.push(storeObj);
+  // 3. STEALTH MODE: Sensitive campaign stores from STORE_REGISTRY are NEVER exposed on the public homepage!
+  // The homepage only contains clean, high-authority generic brands (Nike, Amazon, Walmart, Target, etc.).
 
-      if (reg.coupons) {
-        for (const c of reg.coupons) {
-          endCoupons.push({
-            ...c,
-            store: storeObj,
-            storeSlug: reg.slug
-          });
-        }
-      }
-    }
-  }
-
-  // Combine stores: Top authority brands FIRST -> other fallback stores -> Registered campaign stores LAST
-  const stores: Store[] = [...topStores, ...middleStores, ...endStores];
+  // Combine stores: Top authority brands FIRST -> other clean fallback stores ONLY
+  const stores: Store[] = [...topStores, ...middleStores];
 
   // Separate coupons: Top authority coupons FIRST -> other fallback coupons -> Registered campaign coupons LAST
   const topSlugSet = new Set(TOP_FEATURED_SLUGS);
@@ -103,7 +78,7 @@ export default async function HomePage() {
     }
   }
 
-  const coupons: Coupon[] = [...topCoupons, ...middleCoupons, ...endCoupons];
+  const coupons: Coupon[] = [...topCoupons, ...middleCoupons];
 
   return (
     <main>

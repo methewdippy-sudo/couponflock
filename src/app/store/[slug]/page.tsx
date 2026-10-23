@@ -35,6 +35,15 @@ export async function generateMetadata({ params }: StorePageProps): Promise<Meta
     return {
       title: `${store.name} Promo Codes & Verified Discount Codes | CouponFlock`,
       description: `Save money today at ${store.name} with active coupon codes, verified discount offers, and free shipping deals.`,
+      robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
       alternates: {
         canonical: `https://www.couponflock.com/store/${slug}`,
       },
