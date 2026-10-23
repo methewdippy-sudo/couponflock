@@ -30,6 +30,19 @@ const TOP_FEATURED_SLUGS = [
   "udemy"
 ];
 
+// STRICT STEALTH BLACKLIST: These campaign & competitor stores are completely purged from homepage and search!
+const SENSITIVE_BLACKLIST = new Set([
+  "qidi", "qidi-us", "qidi-de", "qidi-uk", "qidi-ca", "qidi-au", "qidi-tech",
+  "usa-berkey-filters", "berkey",
+  "candy-in-bulk", "candy-in-bulk-us",
+  "dc-house", "dchouse",
+  "im8", "im8-health", "im8health", "im8-health-us",
+  "pongbot", "pongbot-us",
+  "swa-sabers", "swa-sabers-us",
+  "chompshop", "chompshop-us", "chomp-shop",
+  "larine", "larine-company", "buy-larine-u"
+]);
+
 export default async function HomePage() {
   const seenSlugs = new Set<string>();
   const topStores: Store[] = [];
@@ -55,7 +68,7 @@ export default async function HomePage() {
   // 2. Gather Other Fallback Stores (excluding registered affiliate stores and already seen top stores)
   for (const st of FALLBACK_STORES) {
     const slug = (st.slug || "").toLowerCase();
-    if (!seenSlugs.has(slug) && !registeredSlugs.has(slug)) {
+    if (!seenSlugs.has(slug) && !registeredSlugs.has(slug) && !SENSITIVE_BLACKLIST.has(slug)) {
       seenSlugs.add(slug);
       middleStores.push(st);
     }
@@ -71,10 +84,12 @@ export default async function HomePage() {
   const topSlugSet = new Set(TOP_FEATURED_SLUGS);
   for (const c of FALLBACK_COUPONS) {
     const storeName = typeof c.store === "object" && c.store !== null ? (c.store as Store).slug : String(c.store || "").toLowerCase().replace(/\s+/g, "-");
-    if (topSlugSet.has(storeName)) {
-      topCoupons.push(c);
-    } else {
-      middleCoupons.push(c);
+    if (!SENSITIVE_BLACKLIST.has(storeName)) {
+      if (topSlugSet.has(storeName)) {
+        topCoupons.push(c);
+      } else {
+        middleCoupons.push(c);
+      }
     }
   }
 
