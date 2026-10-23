@@ -1,17 +1,5 @@
 import { MetadataRoute } from "next";
-import { FALLBACK_STORES, FALLBACK_POSTS } from "../lib/fallbackData";
-
-const SENSITIVE_BLACKLIST = new Set([
-  "qidi", "qidi-us", "qidi-de", "qidi-uk", "qidi-ca", "qidi-au", "qidi-tech",
-  "usa-berkey-filters", "berkey",
-  "candy-in-bulk", "candy-in-bulk-us",
-  "dc-house", "dchouse",
-  "im8", "im8-health", "im8health", "im8-health-us",
-  "pongbot", "pongbot-us",
-  "swa-sabers", "swa-sabers-us",
-  "chompshop", "chompshop-us", "chomp-shop",
-  "larine", "larine-company", "buy-larine-u"
-]);
+import { SAFE_GLOBAL_STORES } from "../lib/safeGlobalStores";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.couponflock.com";
@@ -44,24 +32,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/budget-tracker`,
-      lastModified: staticDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/notion-second-brain`,
-      lastModified: staticDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/giveaway`,
-      lastModified: staticDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/privacy`,
       lastModified: staticDate,
       changeFrequency: "monthly" as const,
@@ -75,29 +45,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // STEALTH SHIELD: Sensitive campaign stores are 100% EXCLUDED from sitemap.xml!
-  const fallbackSlugs = (FALLBACK_STORES || [])
-    .map((s) => s.slug)
-    .filter(slug => !SENSITIVE_BLACKLIST.has((slug || "").toLowerCase()));
-  const combinedSlugs = Array.from(new Set(fallbackSlugs));
-
-  // All store pages
-  const storePages = combinedSlugs.map((slug) => ({
-    url: `${baseUrl}/store/${slug}`,
+  // ONLY safe global retail giants in sitemap.xml
+  const storePages = SAFE_GLOBAL_STORES.map((s) => ({
+    url: `${baseUrl}/store/${s.slug}`,
     lastModified: staticDate,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
 
-  // All blog guide pages (excluding sensitive competitor stores)
-  const blogPages = (FALLBACK_POSTS || [])
-    .filter(p => !Array.from(SENSITIVE_BLACKLIST).some(b => (p.slug || "").toLowerCase().includes(b)))
-    .map((p) => ({
-    url: `${baseUrl}/blog/${p.slug}`,
-    lastModified: staticDate,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
-
-  return [...staticPages, ...storePages, ...blogPages];
+  return [...staticPages, ...storePages];
 }
