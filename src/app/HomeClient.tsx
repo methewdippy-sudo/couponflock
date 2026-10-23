@@ -151,6 +151,13 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
   const filteredStores = useMemo(() => {
     if (searchQuery.trim() === "") return initialStores;
     const query = searchQuery.toLowerCase().trim();
+    const SENSITIVE_KEYWORDS = [
+      "im8", "qidi", "berkey", "pongbot", "candy-in-bulk", "candy in bulk", "candyinbulk",
+      "dc-house", "dchouse", "larine", "swa-sabers", "swasabers", "chompshop"
+    ];
+    if (!query.endsWith("--") && SENSITIVE_KEYWORDS.some(k => query.includes(k))) {
+      return [];
+    }
     const cleanQuery = query.replace(/[^a-z0-9]/g, "");
 
     return initialStores.filter((store) => {
@@ -394,33 +401,43 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     if (searchQuery.trim() === "") return [];
     const rawQuery = searchQuery.trim().toLowerCase();
 
-    // STEALTH SECRET TRIGGER: If query ends with --, unlock private campaign store access
+    // STEALTH SECRET TRIGGER: If query ends with --, unlock the store with clean normal name (NO Private label)
     if (rawQuery.endsWith("--")) {
       const secretKey = rawQuery.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
-      const secretRoutes: Record<string, { name: string; slug: string; url: string }> = {
-        "im8": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us" },
-        "im8health": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us" },
-        "pongbot": { name: "PongBot Sports", slug: "pongbot-us", url: "/deals/pongbot-us" },
-        "swasabers": { name: "SWA Sabers", slug: "swa-sabers-us", url: "/deals/swa-sabers-us" },
-        "candyinbulk": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us" },
-        "candy": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us" },
-        "chompshop": { name: "ChompShop", slug: "chompshop-us", url: "/deals/chompshop-us" },
-        "dchouse": { name: "DC House", slug: "dc-house", url: "/store/dc-house" },
-        "usaberkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters" },
-        "berkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters" },
-        "qidi": { name: "QIDI Tech", slug: "qidi-tech", url: "/store/qidi-tech" },
-        "larine": { name: "Larine Enamel Care", slug: "larine", url: "/store/larine" },
+      const secretRoutes: Record<string, { name: string; slug: string; url: string; logo?: string }> = {
+        "im8": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us", logo: "/logos/im8health.png" },
+        "im8health": { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us", logo: "/logos/im8health.png" },
+        "pongbot": { name: "PongBot Sports", slug: "pongbot-us", url: "/deals/pongbot-us", logo: "/logos/pongbot.png" },
+        "swasabers": { name: "SWA Sabers", slug: "swa-sabers-us", url: "/deals/swa-sabers-us", logo: "/logos/swa-sabers.png" },
+        "candyinbulk": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us", logo: "/logos/candyroo.png" },
+        "candy": { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us", logo: "/logos/candyroo.png" },
+        "chompshop": { name: "ChompShop", slug: "chompshop-us", url: "/deals/chompshop-us", logo: "/logos/chompshop.png" },
+        "dchouse": { name: "DC House", slug: "dc-house", url: "/store/dc-house", logo: "/logos/dc-house.png" },
+        "usaberkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters", logo: "/logos/usa-berkey-filters.png" },
+        "berkey": { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters", logo: "/logos/usa-berkey-filters.png" },
+        "qidi": { name: "QIDI Tech", slug: "qidi-tech", url: "/store/qidi-tech", logo: "/logos/qidi.png" },
+        "larine": { name: "Larine Enamel Care", slug: "larine", url: "/store/larine", logo: "/logos/buy-larine-u.png" },
       };
       if (secretRoutes[secretKey]) {
         const item = secretRoutes[secretKey];
         return [{
           id: 999999,
-          name: "⚡ Private: " + item.name,
+          name: item.name,
           slug: item.slug,
+          logo: item.logo,
           website: item.url,
           affiliate_url: item.url
         } as Store];
       }
+    }
+
+    // CLOAKING: If user did NOT type --, block sensitive campaign stores from appearing in regular search results
+    const SENSITIVE_KEYWORDS = [
+      "im8", "qidi", "berkey", "pongbot", "candy-in-bulk", "candy in bulk", "candyinbulk",
+      "dc-house", "dchouse", "larine", "swa-sabers", "swasabers", "chompshop"
+    ];
+    if (SENSITIVE_KEYWORDS.some(k => rawQuery.includes(k))) {
+      return []; // Return empty results for regular searches of sensitive stores!
     }
 
     const query = rawQuery;
