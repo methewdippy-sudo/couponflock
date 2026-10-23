@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "CouponFlock | 100% Verified Coupon Codes, Promo Deals & Discounts",
-  description: "Where smart shoppers flock for verified coupons, promo codes, and discount savings. Tested daily for Nike, Amazon, Mellow Sleep, Desktronic, Dreame, and 500+ top brands.",
+  description: "Where smart shoppers flock for verified coupons, promo codes, and discount savings. Tested daily for Nike, Amazon, Target, Walmart, Apple, and 500+ top brands.",
   openGraph: {
     title: "CouponFlock | 100% Verified Coupon Codes & Discounts",
     description: "Flock to verified savings. Tested promo codes, deals, and discounts on CouponFlock.com.",
