@@ -2,18 +2,6 @@ import { MetadataRoute } from "next";
 import { FALLBACK_STORES, FALLBACK_POSTS } from "../lib/fallbackData";
 import { getAllRegisteredSlugs } from "../lib/storeRegistry";
 
-const SENSITIVE_BLACKLIST = new Set([
-  "qidi", "qidi-us", "qidi-de", "qidi-uk", "qidi-ca", "qidi-au", "qidi-tech",
-  "usa-berkey-filters", "berkey",
-  "candy-in-bulk", "candy-in-bulk-us",
-  "dc-house", "dchouse",
-  "im8", "im8-health", "im8health", "im8-health-us",
-  "pongbot", "pongbot-us",
-  "swa-sabers", "swa-sabers-us",
-  "chompshop", "chompshop-us", "chomp-shop",
-  "larine", "larine-company", "buy-larine-u"
-]);
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.couponflock.com";
   const staticDate = new Date("2026-08-15T00:00:00Z");
@@ -76,12 +64,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // STEALTH SHIELD: Sensitive campaign stores from STORE_REGISTRY are 100% EXCLUDED from sitemap.xml!
-  // Competitors scraping sitemap.xml will only see harmless generic public fallback stores.
-  const fallbackSlugs = (FALLBACK_STORES || [])
-    .map((s) => s.slug)
-    .filter(slug => !SENSITIVE_BLACKLIST.has((slug || "").toLowerCase()));
-  const combinedSlugs = Array.from(new Set(fallbackSlugs));
+  // Merge registered store slugs and fallback store slugs
+  const registeredSlugs = getAllRegisteredSlugs();
+  const fallbackSlugs = (FALLBACK_STORES || []).map((s) => s.slug);
+  const combinedSlugs = Array.from(new Set([...registeredSlugs, ...fallbackSlugs]));
 
   // All store pages
   const storePages = combinedSlugs.map((slug) => ({
@@ -91,10 +77,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  // All blog guide pages (excluding sensitive competitor stores)
-  const blogPages = (FALLBACK_POSTS || [])
-    .filter(p => !Array.from(SENSITIVE_BLACKLIST).some(b => (p.slug || "").toLowerCase().includes(b)))
-    .map((p) => ({
+  // All 284 blog guide pages
+  const blogPages = (FALLBACK_POSTS || []).map((p) => ({
     url: `${baseUrl}/blog/${p.slug}`,
     lastModified: staticDate,
     changeFrequency: "weekly" as const,
