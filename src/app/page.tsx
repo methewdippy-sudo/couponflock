@@ -2,7 +2,7 @@ import React from "react";
 import HomeClient from "./HomeClient";
 import { SAFE_GLOBAL_STORES, SAFE_GLOBAL_COUPONS } from "../lib/safeGlobalStores";
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const dynamic = "force-static"; // Pure static SSG, 0% Vercel ISR Serverless quota usage
 
 export default async function HomePage() {
   return (

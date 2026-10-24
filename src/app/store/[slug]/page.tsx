@@ -5,7 +5,7 @@ import { Coupon, Store } from "../../../components/CouponCard";
 import { getLogoUrl, FALLBACK_STORES, FALLBACK_COUPONS } from "../../../lib/fallbackData";
 import { getRegisteredStore, getAllRegisteredSlugs } from "../../../lib/storeRegistry";
 
-export const revalidate = 86400; // Edge cached for 24h
+export const dynamic = "force-static"; // Pure static SSG, 0% Vercel ISR quota usage
 
 // Pre-render stores at build time
 export async function generateStaticParams() {
