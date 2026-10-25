@@ -9156,7 +9156,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     id: 811,
     name: "Nuvio Recovery",
     slug: "nuvio-recovery",
-    aliases: ["nuvio", "nuviorecovery", "nuvio-us"],
+    aliases: ["nuvio-recovery-us", "nuvio", "nuviorecovery", "nuvio-us"],
     website: "https://nuviorecovery.com",
     affiliate_url: "https://nuviorecovery.com/collections/all-products?sca_ref=12515963.4GAOkTKNceGUU",
     logo: "/logos/nuvio-recovery.png",
