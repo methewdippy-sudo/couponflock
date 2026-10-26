@@ -36,6 +36,61 @@ export interface RegistryStore {
  * - Guarantees 100% affiliate link propagation across all deal buttons.
  */
 export const STORE_REGISTRY: RegistryStore[] = [
+  // PRO SUPPORT ACCESSORIES (Trading Card Supplies & Top Loaders)
+  {
+    id: 735,
+    name: "Pro Support Accessories",
+    slug: "pro-support-accessories",
+    aliases: ["pro-support-accessories-us", "prosupportaccessories", "pro-support", "prosupport"],
+    website: "https://prosupportaccessories.com?sca_ref=12634999.7LhT9kZrKZ",
+    affiliate_url: "https://prosupportaccessories.com?sca_ref=12634999.7LhT9kZrKZ",
+    logo: "/logos/pro-support-accessories.png",
+    country: "US",
+    description: "Pro Support Accessories manufactures premium standard trading card top loaders, perfect fit inner sleeves, magnetic slabs, and protective storage solutions for TCG and sports card collectors.",
+    coupons: [
+      {
+        id: "prosupport-code-1",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off All Standard Top Loaders & Card Sleeves",
+        description: "Apply official discount code METHEWDIPPY at checkout to save 10% on rigid PVC top loaders and clear sleeves. Verified active today.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "prosupport-code-2",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Magnetic Card Holders & Graded Slab Cases",
+        description: "Save 10% on magnetic one-touch cases and graded card slab protection with verified partner code METHEWDIPPY.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "prosupport-code-3",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Perfect Fit Inner Sleeves & TCG Team Bags",
+        description: "Get 10% instant discount on double-sleeving perfect fit packs and resealable team bags with code METHEWDIPPY.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "prosupport-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free Fast Shipping on Qualifying Wholesale & Bulk Cases",
+        description: "Receive free carbon-neutral shipping on qualifying bulk top loader cases and collector accessory packages.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
   // 1. TRANSPARENT LABS (US Market)
   {
     id: 601,
