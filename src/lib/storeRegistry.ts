@@ -2117,14 +2117,14 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "carpuride",
     aliases: ["carpuride-stereo", "carpuride-us"],
     logo: "/logos/carpuride.svg",
-    website: "https://carpuride.com/?ref=promoregistry",
-    affiliate_url: "https://carpuride.com/?ref=promoregistry",
+    website: "https://carpuride.com/?ref=fikxqabg",
+    affiliate_url: "https://carpuride.com/?ref=fikxqabg",
     country: "US",
     description: "Top-rated portable wireless Apple CarPlay and Android Auto car stereos, dash cams, smart motorcycle displays, and IPS touchscreen receivers.",
     coupons: [
       {
         id: "cpr-deal-1",
-        code: "CARPURIDE50",
+        code: "ENJOY",
         discount: "$50 OFF",
         title: "$50 off portable wireless CarPlay touchscreen stereos",
         description: "Apply verified coupon CARPURIDE50 at checkout for $50 off flagship W103 and W903 displays.",
@@ -2133,7 +2133,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "cpr-deal-2",
-        code: "CAR15",
+        code: "ENJOY",
         discount: "15% OFF",
         title: "15% off sitewide on car & motorcycle smart screens",
         description: "Save 15% on all portable car audio receivers, backup cameras, and motorcycle navigation with code CAR15.",
@@ -2142,7 +2142,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "cpr-deal-3",
-        code: "W103PRO",
+        code: "ENJOY",
         discount: "$30 OFF",
         title: "$30 off W103 Pro 10.3-inch wireless touchscreen",
         description: "Enjoy $30 instant discount on the ultra-wide W103 Pro dual Bluetooth screen with code W103PRO.",
@@ -2151,7 +2151,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "cpr-deal-4",
-        code: "WELCOME20",
+        code: "ENJOY",
         discount: "$20 OFF",
         title: "$20 welcome coupon on your first order",
         description: "Redeem welcome code WELCOME20 for $20 off any portable navigation unit.",
@@ -2160,7 +2160,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "cpr-deal-5",
-        code: "",
+        code: "ENJOY",
         discount: "FREE SHIPPING",
         title: "Free worldwide tracked shipping + 2-year warranty",
         description: "Enjoy 100% free tracked doorstep shipping worldwide plus a 2-year comprehensive warranty.",
