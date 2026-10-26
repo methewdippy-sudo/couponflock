@@ -36,6 +36,61 @@ export interface RegistryStore {
  * - Guarantees 100% affiliate link propagation across all deal buttons.
  */
 export const STORE_REGISTRY: RegistryStore[] = [
+  // DUBBY ENERGY (Clean Gaming & Nootropic Energy Drinks)
+  {
+    id: 740,
+    name: "DUBBY Energy",
+    slug: "dubby",
+    aliases: ["dubby-energy", "dubby-gg", "dubbyenergy", "dubby-us"],
+    website: "https://www.dubby.gg/discount/METHEWDIPPY?ref=izfstirm",
+    affiliate_url: "https://www.dubby.gg/discount/METHEWDIPPY?ref=izfstirm",
+    logo: "/logos/dubby.png",
+    country: "US",
+    description: "DUBBY is a clean energy drink formulated for gamers, students, and athletes. Zero sugar, zero calories, and powered by patented NeuroFactor with zero jitters and zero crash.",
+    coupons: [
+      {
+        id: "dubby-code-1",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off All DUBBY Energy Tubs, Shakers & Starter Packs",
+        description: "Apply verified partner code METHEWDIPPY at checkout to receive 10% instant discount across all DUBBY energy and focus products.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dubby-code-2",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Sugar-Free Nootropic Focus & Energy Drinks",
+        description: "Save 10% on clean energy formula tubs powered by NeuroFactor with coupon code METHEWDIPPY.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dubby-code-3",
+        code: "METHEWDIPPY",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Shaker Cups, Samplers & Merch Bundles",
+        description: "Get 10% instant discount on limited edition shaker bottles, apparel, and variety starter packs with code METHEWDIPPY.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "dubby-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIP",
+        title: "Free US Shipping on Qualifying Domestic Orders Over $50",
+        description: "Enjoy free standard shipping on all qualifying energy powder and shaker tub orders shipped within the US.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
   // PRO SUPPORT ACCESSORIES (Trading Card Supplies & Top Loaders)
   {
     id: 735,
