@@ -1330,15 +1330,15 @@ export const STORE_REGISTRY: RegistryStore[] = [
     ]
   },
 
-  // 19. MAPLE PRIME (US - Luxury Designer Fragrances, Perfumes & Colognes)
+    // 19. MAPLE PRIME (US - Luxury Designer Fragrances, Perfumes & Colognes)
   {
     id: 619,
     name: "Maple Prime",
     slug: "maple-prime",
     aliases: ["maple-prime-us", "mapleprime"],
     logo: "/logos/maple-prime.png",
-    website: "https://mapleprime.com/?ref=promoregistry",
-    affiliate_url: "https://mapleprime.com/?ref=promoregistry",
+    website: "https://mapleprime.com/collections/all?bg_ref=al8eMAdGYf&utm_source=Muhammad%20Haziq%20Ali&utm_medium=affiliate&utm_campaign=Maple%20Prime%20Affiliate%20Program",
+    affiliate_url: "https://mapleprime.com/collections/all?bg_ref=al8eMAdGYf&utm_source=Muhammad%20Haziq%20Ali&utm_medium=affiliate&utm_campaign=Maple%20Prime%20Affiliate%20Program",
     country: "US",
     description: "Premier online luxury fragrance destination offering 100% authentic designer perfumes, colognes, niche scents, and premium beauty collections at discount prices.",
     coupons: [
@@ -1347,42 +1347,33 @@ export const STORE_REGISTRY: RegistryStore[] = [
         code: "Methew",
         discount: "10% OFF",
         title: "10% off sitewide on luxury perfumes & designer colognes",
-        description: "Official Google Ads verified coupon: Enter code Methew at checkout for 10% off authentic luxury scents.",
+        description: "Official partner coupon: Enter code Methew at checkout for 10% off authentic luxury scents.",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "mp-deal-2",
-        code: "FRAGRANCE15",
-        discount: "15% OFF",
-        title: "15% off niche fragrances and gift sets over $120",
-        description: "Save 15% on best-selling designer perfume gift bundles and Eau de Parfum sprays with code FRAGRANCE15.",
+        code: "",
+        discount: "50% OFF",
+        title: "Up to 50% off select designer perfumes & clearance scents",
+        description: "Special seasonal discounts up to 50% off select authentic designer fragrances. Auto-applied at checkout.",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "mp-deal-3",
-        code: "BEAUTY10",
+        code: "Methew",
         discount: "10% OFF",
-        title: "10% off luxury skincare, bath collections & lotions",
-        description: "Enjoy 10% off luxury skincare essentials and scented bath collections with code BEAUTY10.",
+        title: "10% off niche fragrance gift sets & discovery boxes",
+        description: "Save 10% on best-selling luxury perfume gift sets with partner code Methew.",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "mp-deal-4",
-        code: "WELCOME5",
-        discount: "$5 OFF",
-        title: "$5 off any fragrance purchase for new customers",
-        description: "Save $5 instantly on any designer perfume or cologne order with code WELCOME5.",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "mp-deal-5",
         code: "",
         discount: "FREE SHIPPING",
-        title: "Free US tracked shipping on all fragrance orders",
+        title: "Free US tracked shipping on all orders over $49",
         description: "Enjoy 100% free tracked shipping across the United States with guaranteed tamper-proof packaging.",
         is_verified: true,
         expiry_date: "2026-12-31"
