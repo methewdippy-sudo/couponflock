@@ -2162,7 +2162,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "Carpuride",
     slug: "carpuride",
     aliases: ["carpuride-stereo", "carpuride-us"],
-    logo: "/logos/carpuride.svg",
+    logo: "/logos/carpuride.png",
     website: "https://carpuride.com/?ref=fikxqabg",
     affiliate_url: "https://carpuride.com/?ref=fikxqabg",
     country: "US",
@@ -8636,72 +8636,50 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "pongbot-deal-1",
-        code: "SAVE2026",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% off Pace S Pro & smart AI training machines",
-        description: "Take your game to the next level with 15% savings on intelligent ball launchers when you apply verified code SAVE2026 at checkout.",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $900 OFF",
+        title: "Save up to $900 on Aura AI multi-sport training robot",
+        description: "Transform your court practice with pro-level trajectory control and up to $900 in direct package savings on the Aura AI system. No coupon code needed.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-19"
+        expiry_date: "2026-11-28"
       },
       {
         id: "pongbot-deal-2",
-        code: "PRIME26",
-        is_auto_applied: false,
-        discount: "10% OFF",
-        title: "10% off verified discount code sitewide",
-        description: "Save an instant 10% on your entire PongBot equipment order including solo training units and accessories with code PRIME26.",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 55% OFF",
+        title: "Up to 55% off limited-time warehouse & seasonal specials",
+        description: "Limited-time warehouse specials featuring massive markdowns across top-rated tennis ball machines and table tennis robots. Instant discount activated directly.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-21"
+        expiry_date: "2026-11-28"
       },
       {
         id: "pongbot-deal-3",
         code: "",
         is_auto_applied: true,
-        discount: "UP TO 55% OFF",
-        title: "Up to 55% off early Black Friday & seasonal savings",
-        description: "Limited-time warehouse specials featuring massive markdowns across top-rated tennis ball machines and table tennis robots.",
+        discount: "50% OFF",
+        title: "50% off Nova S smart table tennis trainer",
+        description: "Master your spin and footwork drills at half price. Instant 50% discount automatically applied on Nova S training robots.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-20"
+        expiry_date: "2026-11-28"
       },
       {
         id: "pongbot-deal-4",
-        code: "RAMONPADEL",
-        is_auto_applied: false,
+        code: "",
+        is_auto_applied: true,
         discount: "$100 OFF",
-        title: "$100 off premium robot orders over $1,000",
-        description: "Upgrade your solo training setup and slice $100 off flagship robot packages over $1,000 with promo code RAMONPADEL.",
+        title: "$100 direct manufacturer discount on flagship robot systems",
+        description: "Upgrade your solo training setup and get $100 instant direct manufacturer savings on premium robot packages over $1,000.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-23"
+        expiry_date: "2026-11-28"
       },
       {
         id: "pongbot-deal-5",
-        code: "",
-        is_auto_applied: true,
-        discount: "UP TO $900 OFF",
-        title: "Save up to $900 on Aura AI multi-sport training robot",
-        description: "Transform your court practice with pro-level trajectory control and up to $900 in direct package savings on the Aura AI system.",
-        affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
-        is_verified: true,
-        expiry_date: "2026-11-21"
-      },
-      {
-        id: "pongbot-deal-6",
-        code: "",
-        is_auto_applied: true,
-        discount: "50% OFF",
-        title: "50% off Nova S smart table tennis trainer",
-        description: "Master your spin and footwork at half the cost. Instant 50% discount applied automatically on Nova S training robots.",
-        affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
-        is_verified: true,
-        expiry_date: "2026-11-22"
-      },
-      {
-        id: "pongbot-deal-7",
         code: "",
         is_auto_applied: true,
         discount: "FREE SHIPPING",
@@ -8709,32 +8687,32 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Every PongBot sports robot ships 100% free with full tracking and protective packaging right to your doorstep across the US.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-19"
+        expiry_date: "2026-11-28"
       },
       {
-        id: "pongbot-deal-8",
+        id: "pongbot-deal-6",
         code: "",
         is_auto_applied: true,
         discount: "45% OFF",
         title: "45% off Omni S Plus adaptive ball launcher",
-        description: "Get 45% off custom spin drills and programmable shot rhythms on the tournament-grade Omni S Plus.",
+        description: "Get 45% direct factory savings on custom spin drills and programmable shot rhythms on tournament-grade Omni S Plus.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-21"
+        expiry_date: "2026-11-28"
       },
       {
-        id: "pongbot-deal-9",
+        id: "pongbot-deal-7",
         code: "",
         is_auto_applied: true,
         discount: "40% OFF",
         title: "40% off robot starter bundles & catch net kits",
-        description: "Bundle and save 40% on automatic recycling collection nets, multi-ball feeders, and wireless remote accessories.",
+        description: "Bundle and save 40% automatically on automatic recycling collection nets, multi-ball feeders, and wireless remote accessories.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-23"
+        expiry_date: "2026-11-28"
       },
       {
-        id: "pongbot-deal-10",
+        id: "pongbot-deal-8",
         code: "",
         is_auto_applied: true,
         discount: "FREE GIFT",
@@ -8742,10 +8720,10 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Score a complimentary set of high-durability training balls and setup essentials automatically added with select robot models.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-24"
+        expiry_date: "2026-11-28"
       },
       {
-        id: "pongbot-deal-11",
+        id: "pongbot-deal-9",
         code: "",
         is_auto_applied: true,
         discount: "35% OFF",
@@ -8753,18 +8731,18 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Experience realistic match simulation drills and dynamic ball feeds with 35% discount on Halo S Pro units.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-24"
+        expiry_date: "2026-11-28"
       },
       {
-        id: "pongbot-deal-12",
+        id: "pongbot-deal-10",
         code: "",
         is_auto_applied: true,
         discount: "10% OFF",
-        title: "10% off welcome discount for first-time players",
-        description: "New to PongBot? Unlock an easy 10% welcome savings across training equipment on your initial order.",
+        title: "10% direct welcome discount for first-time players",
+        description: "New to PongBot? Unlock an easy 10% direct welcome savings across training equipment on your initial order.",
         affiliate_url: "https://store.pongbotsports.com/?sca_ref=12565715.tCWxyKe3eRDS01",
         is_verified: true,
-        expiry_date: "2026-11-23"
+        expiry_date: "2026-11-28"
       }
     ]
   },
