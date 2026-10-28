@@ -1347,7 +1347,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         code: "Methew",
         discount: "10% OFF",
         title: "10% off sitewide on luxury perfumes & designer colognes",
-        description: "Official partner coupon: Enter code Methew at checkout for 10% off authentic luxury scents.",
+        description: "Official partner coupon: Save an instant 10% on authentic luxury scents, designer perfumes, and colognes.",
         is_verified: true,
         expiry_date: "2026-12-31"
       },

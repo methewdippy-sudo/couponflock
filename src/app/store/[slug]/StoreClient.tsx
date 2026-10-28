@@ -10,6 +10,17 @@ interface StoreClientProps {
   coupons: Coupon[];
 }
 
+function sanitizeCodeText(text: string, code?: string): string {
+  if (!text || !code || code === "DEAL") return text;
+  try {
+    const escaped = code.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\export default function StoreClient({ store, coupons }: StoreClientProps) {");
+    const regex = new RegExp(`\\b${escaped}\\b`, "gi");
+    return text.replace(regex, "••••••••");
+  } catch {
+    return text;
+  }
+}
+
 export default function StoreClient({ store, coupons }: StoreClientProps) {
   const [activeCoupon, setActiveCoupon] = useState<Coupon | null>(null);
   const [copiedId, setCopiedId] = useState<string | number | null>(null);
@@ -166,9 +177,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                 </div>
 
                 <h3 className={storeStyles.ticketTitle}>
-                  {coupon.title || `${coupon.discount} at ${store.name}`}
+                  {sanitizeCodeText(coupon.title || `${coupon.discount} at ${store.name}`, coupon.code)}
                 </h3>
-                <p className={storeStyles.ticketDesc}>{coupon.description}</p>
+                <p className={storeStyles.ticketDesc}>{sanitizeCodeText(coupon.description, coupon.code)}</p>
 
                 <div className={storeStyles.ticketMeta}>
                   <span className={storeStyles.metaItem}>✓ Direct Checkout Guarantee</span>
