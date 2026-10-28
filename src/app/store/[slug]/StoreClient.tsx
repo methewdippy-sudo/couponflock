@@ -33,9 +33,14 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
     e.preventDefault();
     e.stopPropagation();
 
-    const targetUrl = coupon.affiliate_url || (store as any).affiliate_url || (store as any).affiliateLink || store.website || "https://www.google.com";
+    const targetUrl =
+      coupon.affiliate_url ||
+      (store as any).affiliate_url ||
+      (store as any).affiliateLink ||
+      store.website ||
+      "https://www.google.com";
 
-    // 1. Instant Clipboard Copy
+    // 1. Instant Clipboard Copy (for codes)
     if (coupon.code && coupon.code !== "DEAL") {
       if (typeof document !== "undefined") {
         try {
@@ -56,6 +61,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
       setCopiedId(coupon.id);
       setTimeout(() => setCopiedId(null), 4000);
+    } else {
+      setCopiedId(coupon.id);
+      setTimeout(() => setCopiedId(null), 3000);
     }
 
     // 2. Open modal in a NEW TAB (keeps user on our page)
@@ -81,22 +89,23 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       {/* Back to All Stores */}
       <div className={storeStyles.backLinkContainer}>
         <a href="/" className={storeStyles.backLink}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="19" y1="12" x2="5" y2="12" />
             <polyline points="12 19 5 12 12 5" />
           </svg>
-          <span>Back to All Stores</span>
+          <span>All Stores</span>
         </a>
       </div>
 
-      {/* Focused Store Header (Exact PerkVue Standard) */}
+      {/* CouponFlock Verified Store Banner */}
       <section className={storeStyles.storeHeader}>
         <div className={storeStyles.brandInfo}>
           {bannerLogo ? (
             <img
               src={bannerLogo}
               alt={`${store.name} Logo`}
-              width={200} height={96}
+              width={200}
+              height={96}
               className={storeStyles.storeLogo}
               onError={() => setBannerLogoError(true)}
             />
@@ -104,112 +113,118 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             <div className={storeStyles.fallbackLogo}>{store.name.charAt(0).toUpperCase()}</div>
           )}
           <div>
-            <h1 className={storeStyles.storeTitle}>{store.name} Exclusive Offers</h1>
+            <h1 className={storeStyles.storeTitle}>{store.name} Coupons &amp; Verified Promo Codes</h1>
             <p className={storeStyles.storeSubtitle}>
-              Direct verified savings &amp; exclusive partner discounts. Tested active today.
+              Hand-tested and verified savings offers for {store.name}. Guaranteed active today.
             </p>
           </div>
         </div>
 
-        <div className={storeStyles.trustPill}>
-          <span className={storeStyles.pulseDot}></span> Tested Active Today
+        <div className={storeStyles.headerTrustBadge}>
+          <div className={storeStyles.trustPill}>
+            <span className={storeStyles.pulseDot}></span> Verified Active Today
+          </div>
+          <span className={storeStyles.guaranteeText}>CouponFlock Partner</span>
         </div>
       </section>
 
-      {/* 2-Card Focus Grid (Above-the-fold) */}
-      <section className={storeStyles.cardsGrid}>
+      {/* CouponFlock Voucher Tickets Stack */}
+      <section className={storeStyles.cardsList}>
         {coupons.map((coupon, idx) => {
           const isDirectDeal = !coupon.code || coupon.code === "DEAL";
           const discountParts = (coupon.discount || "20% OFF").trim().split(" ");
-          const graphicMain = discountParts[0] || "20%";
-          const graphicSub = discountParts.slice(1).join(" ") || "OFF";
+          const discountVal = discountParts[0] || "20%";
+          const discountSub = discountParts.slice(1).join(" ") || "OFF";
           const isCopied = copiedId === coupon.id;
 
           return (
             <div
               key={coupon.id}
-              className={`${storeStyles.cardContainer} ${idx === 0 ? storeStyles.primaryCard : ""}`}
+              className={`${storeStyles.voucherTicket} ${idx === 0 ? storeStyles.primaryTicket : ""}`}
               onClick={(e) => handleAction(e, coupon)}
             >
-              {/* Header */}
-              <div className={storeStyles.cardHeader}>
-                <span className={storeStyles.verifiedPill}>
-                  <span className={storeStyles.pulsingDot}></span> Verified Active Today
-                </span>
-                <span className={storeStyles.badge3dExtruded}>
-                  {isDirectDeal ? "DIRECT REWARD" : "100% SUCCESS"}
+              {/* ZONE 1: Value Badge */}
+              <div className={storeStyles.valueZone}>
+                <span className={storeStyles.notchTop}></span>
+                <span className={storeStyles.notchBottom}></span>
+                <div>
+                  <div className={storeStyles.discountFigure}>{discountVal}</div>
+                  <div className={storeStyles.discountSub}>{discountSub}</div>
+                </div>
+                <span className={storeStyles.valueTagPill}>
+                  {isDirectDeal ? "Direct Deal" : "Promo Code"}
                 </span>
               </div>
 
-              {/* Main Body with 3D Graphic */}
-              <div className={storeStyles.cardBody}>
-                <div className={storeStyles.offerRow}>
-                  <div className={isDirectDeal ? storeStyles.valueGraphicEmerald : storeStyles.valueGraphicNavy}>
-                    <span className={storeStyles.graphicMain}>{graphicMain}</span>
-                    <span className={storeStyles.graphicSub}>{graphicSub}</span>
-                  </div>
-                  <div className={storeStyles.offerText}>
-                    <h3 className={storeStyles.cardTitle}>{coupon.title || `${coupon.discount} at ${store.name}`}</h3>
-                    <p className={storeStyles.cardDesc}>{coupon.description}</p>
-                  </div>
+              {/* ZONE 2: Content Details */}
+              <div className={storeStyles.contentZone}>
+                <div className={storeStyles.statusRow}>
+                  {idx === 0 && (
+                    <span className={storeStyles.staffPickBadge}>★ Staff Pick</span>
+                  )}
+                  <span className={storeStyles.verifiedBadge}>✓ Tested Active Today</span>
                 </div>
 
-                {/* 3D Code Box */}
-                {!isDirectDeal ? (
-                  <div className={storeStyles.codeBox3d}>
-                    <div className={storeStyles.codeLabelWrapper}>
-                      <span className={storeStyles.codeLabel}>Promo Code:</span>
-                      <span className={storeStyles.codeBadge}>{coupon.code && coupon.code.toLowerCase() === "methew" ? coupon.code : "••••••••"}</span>
-                    </div>
-                    <span className={storeStyles.autoCopiedPill}>
-                      {isCopied ? "Copied! ✓" : (coupon.code && coupon.code.toLowerCase() === "methew" ? "Exclusive Code" : "Click to Reveal")}
-                    </span>
-                  </div>
-                ) : (
-                  <div className={storeStyles.dealFeatureRow}>
-                    <span className={storeStyles.dealFeatureText}>Auto-applied at checkout</span>
-                    <span className={storeStyles.dealFeatureBadge}>No Code Needed ✓</span>
-                  </div>
-                )}
+                <h3 className={storeStyles.ticketTitle}>
+                  {coupon.title || `${coupon.discount} at ${store.name}`}
+                </h3>
+                <p className={storeStyles.ticketDesc}>{coupon.description}</p>
+
+                <div className={storeStyles.ticketMeta}>
+                  <span className={storeStyles.metaItem}>✓ Direct Checkout Guarantee</span>
+                  <span>•</span>
+                  <span className={storeStyles.metaItem}>Official Verified Offer</span>
+                </div>
               </div>
 
-              {/* Push Button */}
-              <div className={storeStyles.cardFooter}>
+              {/* ZONE 3: Action Area — ALL CODES HIDDEN/MASKED */}
+              <div className={storeStyles.actionZone}>
+                {!isDirectDeal ? (
+                  <div className={storeStyles.maskedCodeBox}>
+                    <span className={storeStyles.maskedLock}>🔒 CODE</span>
+                    <span className={storeStyles.maskedDots}>••••••••</span>
+                  </div>
+                ) : (
+                  <div className={storeStyles.directDealBox}>
+                    Direct Store Discount ✓
+                  </div>
+                )}
+
                 <button
                   type="button"
                   onClick={(e) => handleAction(e, coupon)}
-                  className={`${storeStyles.ctaButton} ${isDirectDeal ? storeStyles.btn3dEmerald : storeStyles.btn3dNavy}`}
+                  className={`${storeStyles.ctaButton} ${isDirectDeal ? storeStyles.ctaDealBtn : storeStyles.ctaCodeBtn}`}
                 >
                   {!isDirectDeal ? (
                     <>
                       <span>{isCopied ? "Code Copied! ✓" : "Get Code"}</span>
-                      <span className={storeStyles.arrowIcon}>→</span>
+                      <span className={storeStyles.btnArrow}>→</span>
                     </>
                   ) : (
                     <>
                       <span>{isCopied ? "Opening Offer..." : "Get Deal"}</span>
-                      <span className={storeStyles.arrowIcon}>→</span>
+                      <span className={storeStyles.btnArrow}>→</span>
                     </>
                   )}
                 </button>
 
-                <div className={storeStyles.trustFooter}>
-                  <span>✓ Official Checkout Guarantee</span>
-                  <span>•</span>
-                  <span>Verified Working Today</span>
-                </div>
+                <span className={storeStyles.actionNote}>
+                  {!isDirectDeal ? "Reveals code & opens site" : "Activates deal & opens site"}
+                </span>
               </div>
             </div>
           );
         })}
       </section>
 
-      {/* Clean Trust Strip */}
-      <section className={storeStyles.trustNote}>
-        <div className={storeStyles.trustNoteText}>
-          <strong>PromoRegistry Direct Checkout Standard:</strong> Clicking any offer automatically copies your code and opens the official {store.name} checkout.
+      {/* CouponFlock Authority Trust Banner */}
+      <section className={storeStyles.trustStrip}>
+        <div className={storeStyles.trustText}>
+          <strong>CouponFlock Buyer Guarantee:</strong> All coupon codes and promotional offers are hand-verified daily by our savings specialists. Clicking any deal automatically applies savings and securely redirects you to the official {store.name} checkout.
         </div>
-        <span className={storeStyles.secureBadge}>🔒 Direct Checkout Verified</span>
+        <div className={storeStyles.trustShield}>
+          <span>🛡️ Verified Savings Shield</span>
+        </div>
       </section>
 
       {/* Copy Modal */}
