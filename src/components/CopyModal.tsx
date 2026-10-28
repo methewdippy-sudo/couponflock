@@ -112,112 +112,121 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
     >
       <div className={styles.modal} ref={modalRef} role="dialog" aria-modal="true">
         {/* Top Emerald Header */}
-        <div className={styles.emeraldBanner}>
-          <div className={styles.bannerBadge}>
-            <span className={styles.pulseDot}></span>
-            <span>CouponFlock Verified Guarantee</span>
+        <div className={styles.emeraldHeader}>
+          <div className={styles.headerVaultBadge}>
+            <span className={styles.shieldIcon}>🛡️</span>
+            <div>
+              <span className={styles.vaultTitle}>CouponFlock Verified Vault</span>
+            </div>
           </div>
-          <button
-            type="button"
-            className={styles.closeButton}
-            onClick={onClose}
-            aria-label="Close modal"
-          >
-            ✕
-          </button>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <span className={styles.livePill}>
+              <span className={styles.pulseDot}></span> ACTIVE
+            </span>
+            <button
+              type="button"
+              className={styles.closeButton}
+              onClick={onClose}
+              aria-label="Close modal"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         {/* Modal Body */}
         <div className={styles.modalBody}>
-          {/* Brand Row */}
-          <div className={styles.brandRow}>
+          {/* Store Brand Row */}
+          <div className={styles.storeBrandRow}>
             {storeLogo ? (
-              <div className={styles.storeLogoBox}>
+              <div className={styles.storeLogoWrapper}>
                 <img src={storeLogo} alt={`${storeName} Logo`} className={styles.storeLogoImg} />
               </div>
             ) : (
               <div className={styles.fallbackLogo}>{storeName.charAt(0).toUpperCase()}</div>
             )}
-            <div className={styles.brandDetails}>
-              <div className={styles.storeName}>
+            <div className={styles.brandTextInfo}>
+              <div className={styles.storeHeading}>
                 <span>{storeName}</span>
-                <span className={styles.verifiedCheck}>✓ Verified</span>
+                <span className={styles.verifiedCheckBadge}>✓ Verified Partner</span>
               </div>
-              <span className={styles.discountBadge}>{discount || "Exclusive Offer"}</span>
+              <p style={{ margin: 0, fontSize: "13px", color: "#64748b" }}>
+                Official checkout savings offer
+              </p>
             </div>
           </div>
 
-          {/* Offer Title & Details */}
-          <div>
-            <h3 className={styles.offerTitle}>
-              {title || `${discount || "Exclusive savings"} at ${storeName}`}
-            </h3>
-            {description && <p className={styles.offerDesc}>{description}</p>}
+          {/* Hero Savings Card */}
+          <div className={styles.savingsHeroCard}>
+            <div className={styles.discountBigText}>{discount || "EXCLUSIVE DISCOUNT"}</div>
+            <p className={styles.offerSubtitle}>
+              {title || description || `${discount} instant discount applied for ${storeName}`}
+            </p>
           </div>
 
-          {/* Code Vault / Direct Deal Box */}
+          {/* Unique Coupon Voucher Ticket Box */}
           {!isDirectDeal ? (
-            <div className={styles.codeVaultBox}>
-              <div className={styles.codeVaultLeft}>
-                <span className={styles.codeVaultLabel}>✂️ Promo Code</span>
-                <span className={styles.codeVaultText}>{code}</span>
+            <div className={styles.ticketBox}>
+              <div className={styles.ticketLeft}>
+                <span className={styles.ticketLabel}>✂️ YOUR EXCLUSIVE PROMO CODE:</span>
+                <span className={styles.ticketCodeString}>{code}</span>
               </div>
               <button
                 type="button"
-                className={`${styles.copyPillBtn} ${copied ? styles.copyPillBtnSuccess : ""}`}
+                className={`${styles.copyCodeBtn} ${copied ? styles.copyCodeBtnCopied : ""}`}
                 onClick={handleCopy}
               >
-                {copied ? "COPIED! ✓" : "COPY CODE"}
+                {copied ? "COPIED TO CLIPBOARD! ✓" : "COPY CODE"}
               </button>
             </div>
           ) : (
             <div className={styles.directDealVault}>
-              <div className={styles.directDealIcon}>✓</div>
+              <div className={styles.directDealCheckIcon}>✓</div>
               <div className={styles.directDealInfo}>
-                <span className={styles.directDealHeading}>Direct Store Deal Activated</span>
+                <span className={styles.directDealTitle}>Direct Deal Activated</span>
                 <span className={styles.directDealSubtext}>
-                  No code required. Your verified discount is applied automatically at checkout!
+                  No code needed. Your special discount link has been activated for checkout!
                 </span>
               </div>
             </div>
           )}
 
-          {/* 3-Step Instruction Guide */}
-          <div className={styles.stepsContainer}>
-            <div className={styles.stepItem}>
-              <span className={`${styles.stepNum} ${copied ? styles.stepNumCheck : ""}`}>
+          {/* 3-Step Progress Checklist */}
+          <div className={styles.progressCard}>
+            <div className={styles.progressStep}>
+              <span className={`${styles.stepCircle} ${copied ? styles.stepCircleDone : ""}`}>
                 {copied ? "✓" : "1"}
               </span>
-              <span>{!isDirectDeal ? "Promo code copied to your clipboard" : "Special discount link activated"}</span>
+              <span>
+                {!isDirectDeal ? `Promo code "${code}" copied to clipboard` : "Direct discount link activated"}
+              </span>
             </div>
-            <div className={styles.stepItem}>
-              <span className={styles.stepNum}>2</span>
-              <span>Official {storeName} website opened in your other tab</span>
+            <div className={styles.progressStep}>
+              <span className={styles.stepCircle}>2</span>
+              <span>Official {storeName} checkout tab opened</span>
             </div>
-            <div className={styles.stepItem}>
-              <span className={styles.stepNum}>3</span>
-              <span>{!isDirectDeal ? "Paste code at checkout to claim savings" : "Enjoy instant price reduction at checkout"}</span>
+            <div className={styles.progressStep}>
+              <span className={styles.stepCircle}>3</span>
+              <span>
+                {!isDirectDeal ? "Paste code at checkout to claim your savings" : "Discount will reflect automatically at checkout"}
+              </span>
             </div>
           </div>
 
-          {/* Notice & CTA Button */}
-          <p className={styles.redirectNotice}>
-            We opened the official <strong>{storeName}</strong> checkout in your other tab. If it did not open, click below:
-          </p>
-
+          {/* Bottom Primary Checkout Button */}
           <a
             href={storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.primaryShopBtn}
+            className={styles.primaryCheckoutBtn}
           >
             <span>Continue to {storeName} Checkout</span>
             <span className={styles.btnArrow}>→</span>
           </a>
 
-          {/* Trust Footer */}
-          <div className={styles.trustFooter}>
-            <span>🔒 Safe &amp; Official Direct Merchant Redirect • Free Service</span>
+          {/* Trust Guarantee Note */}
+          <div className={styles.guaranteeNote}>
+            <span>🔒 100% Free Service • Direct Official Merchant Guarantee</span>
           </div>
         </div>
       </div>

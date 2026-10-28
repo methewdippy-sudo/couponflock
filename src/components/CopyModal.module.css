@@ -1,6 +1,6 @@
 /* ============================================================
    COUPONFLOCK POPUP MODAL — Unique Emerald Authority Design
-   100% Distinct from PromoRegistry's Navy Card Modal
+   100% Distinct from PromoRegistry's Centered Navy Card Modal
    ============================================================ */
 
 .overlay {
@@ -9,9 +9,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,15 +32,15 @@
 .modal {
   position: relative;
   background: #ffffff;
-  border-radius: 22px;
+  border-radius: 24px;
   width: 100%;
-  max-width: 500px;
-  max-height: 92vh;
+  max-width: 520px;
+  max-height: 94vh;
   overflow-y: auto;
   box-shadow: 
-    0 20px 40px -10px rgba(15, 23, 42, 0.25),
-    0 1px 3px rgba(15, 23, 42, 0.08);
-  border: 1px solid #e2e8f0;
+    0 25px 50px -12px rgba(15, 23, 42, 0.35),
+    0 4px 12px rgba(16, 185, 129, 0.15);
+  border: 1.5px solid #a7f3d0;
   animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
 
 @keyframes modalScaleUp {
   from {
-    transform: scale(0.94) translateY(10px);
+    transform: scale(0.93) translateY(12px);
     opacity: 0;
   }
   to {
@@ -58,31 +58,54 @@
 }
 
 /* ============================================================
-   EMERALD HEADER BANNER
+   DEEP PINE & EMERALD GRADIENT HEADER
    ============================================================ */
-.emeraldBanner {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  padding: 14px 20px;
+.emeraldHeader {
+  background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+  padding: 16px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.headerVaultBadge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shieldIcon {
+  font-size: 18px;
+}
+
+.vaultTitle {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
-.bannerBadge {
-  display: flex;
+.livePill {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 750;
-  letter-spacing: 0.02em;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ecfdf5;
 }
 
 .pulseDot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #6ee7b7;
   box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.7);
@@ -107,6 +130,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 14px;
 }
 
 .closeButton:hover {
@@ -118,32 +142,33 @@
    MODAL BODY CONTENT
    ============================================================ */
 .modalBody {
-  padding: 24px;
+  padding: 24px 26px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
-/* Brand & Discount Header */
-.brandRow {
+/* Store & Offer Row */
+.storeBrandRow {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding-bottom: 4px;
 }
 
-.storeLogoBox {
+.storeLogoWrapper {
   width: auto;
-  max-width: 140px;
-  height: 60px;
-  min-width: 80px;
-  border-radius: 12px;
+  max-width: 150px;
+  height: 64px;
+  min-width: 90px;
+  border-radius: 14px;
   border: 1px solid #e2e8f0;
   background: #ffffff;
-  padding: 4px 8px;
+  padding: 4px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 .storeLogoImg {
@@ -153,39 +178,39 @@
 }
 
 .fallbackLogo {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
   color: #ffffff;
-  font-weight: 800;
-  font-size: 22px;
+  font-weight: 850;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.brandDetails {
+.brandTextInfo {
   flex: 1;
 }
 
-.storeName {
-  font-size: 17px;
+.storeHeading {
+  font-size: 18px;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 3px 0;
+  margin: 0 0 4px 0;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-.verifiedCheck {
+.verifiedCheckBadge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 750;
   color: #059669;
   background: #ecfdf5;
   padding: 2px 8px;
@@ -193,98 +218,100 @@
   border: 1px solid #a7f3d0;
 }
 
-.discountBadge {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 800;
-  color: #059669;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+/* Hero Savings Box */
+.savingsHeroCard {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border: 1.5px solid #a7f3d0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-align: center;
 }
 
-.offerTitle {
-  font-size: 15px;
-  font-weight: 700;
-  color: #1e293b;
+.discountBigText {
+  font-size: 34px;
+  font-weight: 900;
+  color: #059669;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.offerSubtitle {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #065f46;
   margin: 0;
   line-height: 1.4;
 }
 
-.offerDesc {
-  font-size: 13px;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.5;
-}
-
 /* ============================================================
-   INTERACTIVE CODE VAULT (UNIQUE TICKETING STYLE)
+   COUPON VOUCHER TICKET BOX (COMPLETELY UNIQUE)
    ============================================================ */
-.codeVaultBox {
-  background: #f8fafc;
+.ticketBox {
+  background: #ffffff;
   border: 2px dashed #059669;
   border-radius: 16px;
-  padding: 16px 20px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 16px;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.06);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.08);
 }
 
-.codeVaultLeft {
+.ticketLeft {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-}
-
-.codeVaultLabel {
-  font-size: 11px;
-  font-weight: 700;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
   gap: 4px;
 }
 
-.codeVaultText {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 22px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: 1.5px;
+.ticketLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: #059669;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.copyPillBtn {
+.ticketCodeString {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 24px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: 2px;
+}
+
+.copyCodeBtn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-size: 13px;
+  gap: 7px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 13.5px;
   font-weight: 800;
   cursor: pointer;
   border: none;
-  background: #059669;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   color: #ffffff;
   transition: all 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+  box-shadow: 0 3px 10px rgba(5, 150, 105, 0.3);
+  letter-spacing: 0.02em;
 }
 
-.copyPillBtn:hover {
-  background: #047857;
+.copyCodeBtn:hover {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
   transform: translateY(-1px);
 }
 
-.copyPillBtnSuccess {
+.copyCodeBtnCopied {
   background: #047857 !important;
   color: #ffffff !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.35) !important;
 }
 
 /* Direct Deal Box Variant */
@@ -295,18 +322,20 @@
   padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-.directDealIcon {
-  width: 36px;
-  height: 36px;
+.directDealCheckIcon {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #059669;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
   flex-shrink: 0;
 }
 
@@ -316,41 +345,43 @@
   gap: 2px;
 }
 
-.directDealHeading {
+.directDealTitle {
   font-size: 15px;
   font-weight: 800;
   color: #065f46;
 }
 
 .directDealSubtext {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #047857;
+  line-height: 1.4;
 }
 
 /* ============================================================
-   3-STEP INSTRUCTION PROGRESS STRIP
+   3-STEP PROGRESS VISUAL CHECKLIST
    ============================================================ */
-.stepsContainer {
-  background: #f1f5f9;
+.progressCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-.stepItem {
+.progressStep {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12.5px;
+  font-size: 13px;
+  font-weight: 650;
   color: #334155;
-  font-weight: 600;
 }
 
-.stepNum {
-  width: 20px;
-  height: 20px;
+.stepCircle {
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #059669;
   color: #ffffff;
@@ -362,29 +393,21 @@
   flex-shrink: 0;
 }
 
-.stepNumCheck {
+.stepCircleDone {
   background: #10b981;
 }
 
 /* ============================================================
-   BOTTOM ACTION BUTTON & REDIRECT NOTICE
+   BOTTOM PRIMARY ACTION BUTTON
    ============================================================ */
-.redirectNotice {
-  font-size: 12px;
-  color: #64748b;
-  text-align: center;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.primaryShopBtn {
+.primaryCheckoutBtn {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 20px;
-  border-radius: 12px;
+  padding: 15px 22px;
+  border-radius: 14px;
   font-size: 15px;
   font-weight: 800;
   text-decoration: none;
@@ -394,29 +417,30 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+  letter-spacing: 0.01em;
 }
 
-.primaryShopBtn:hover {
+.primaryCheckoutBtn:hover {
   background: linear-gradient(135deg, #047857 0%, #065f46 100%);
-  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
   transform: translateY(-1px);
 }
 
 .btnArrow {
-  font-size: 16px;
+  font-size: 17px;
   transition: transform 0.2s ease;
 }
 
-.primaryShopBtn:hover .btnArrow {
-  transform: translateX(3px);
+.primaryCheckoutBtn:hover .btnArrow {
+  transform: translateX(4px);
 }
 
-.trustFooter {
+.guaranteeNote {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 11.5px;
   color: #94a3b8;
   font-weight: 600;
 }
@@ -426,21 +450,24 @@
    ============================================================ */
 @media (max-width: 480px) {
   .modal {
-    border-radius: 18px;
+    border-radius: 20px;
   }
   .modalBody {
-    padding: 18px;
-    gap: 14px;
+    padding: 18px 16px;
+    gap: 16px;
   }
-  .codeVaultBox {
+  .ticketBox {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
   }
-  .codeVaultLeft {
+  .ticketLeft {
     align-items: center;
   }
-  .copyPillBtn {
+  .copyCodeBtn {
     justify-content: center;
+  }
+  .discountBigText {
+    font-size: 28px;
   }
 }
