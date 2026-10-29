@@ -115,7 +115,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             <img
               src={bannerLogo}
               alt={`${store.name} Logo`}
-              width={260} height={104}
+              width={360} height={136}
               className={storeStyles.storeLogo}
               onError={() => setBannerLogoError(true)}
             />
