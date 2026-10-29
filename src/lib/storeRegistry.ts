@@ -8341,22 +8341,22 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "berkey-deal-1",
-        code: "USA20",
+        code: "USA30",
         is_auto_applied: true,
-        discount: "20% OFF",
-        title: "20% off exclusive coupon code sitewide",
-        description: "Apply verified promo code USA20 at checkout to save 20% on authentic Berkey water filtration systems and bundles.",
+        discount: "30% OFF",
+        title: "30% off exclusive coupon code sitewide",
+        description: "Apply verified promo code USA30 at checkout to save 30% on authentic Berkey water filtration systems and bundles.",
         affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
       {
         id: "berkey-deal-2",
-        code: "MOM10",
+        code: "MOM25",
         is_auto_applied: true,
-        discount: "15% OFF",
-        title: "15% off discount code on Black Berkey replacement elements",
-        description: "Save 15% on genuine Black Berkey replacement filters and fluoride elements using promo code MOM10.",
+        discount: "25% OFF",
+        title: "25% off discount code on Black Berkey replacement elements",
+        description: "Save 25% on genuine Black Berkey replacement filters and fluoride elements using promo code MOM25.",
         affiliate_url: "https://www.usaberkeyfilters.com/aff/282/",
         is_verified: true,
         expiry_date: "2026-12-31"
