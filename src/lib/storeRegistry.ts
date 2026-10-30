@@ -9300,6 +9300,73 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 146. DEERRUN (Smart Under-Desk Walking Pads & Folding Treadmills - Impact)
+  {
+    id: 812,
+    name: "DeerRun",
+    slug: "deerrun",
+    aliases: ["deerruntreadmill", "deer-run", "deerrun-fitness", "joyfit"],
+    logo: "/logos/deerrun.png",
+    website: "https://deerruntreadmill.com",
+    affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+    country: "US",
+    description: "DeerRun designs innovative, compact smart home fitness equipment: under-desk walking pads, 2-in-1 folding treadmills, and PitPat virtual interactive race treadmills with whisper-quiet motors.",
+    coupons: [
+      {
+        id: "deerrun-deal-1",
+        code: "HELLO10",
+        discount: "10% OFF",
+        title: "10% off DeerRun smart treadmills & walking pads",
+        description: "Save 10% on top-rated under-desk walking pads and portable running machines with code HELLO10.",
+        affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "deerrun-deal-2",
+        code: "ZEE12",
+        discount: "12% OFF",
+        title: "12% off folding compact running treadmills",
+        description: "Apply coupon code ZEE12 at checkout to save 12% on heavy-duty 2-in-1 folding treadmills.",
+        affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "deerrun-deal-3",
+        code: "PLDR20",
+        discount: "$20 OFF",
+        title: "$20 off orders over $299",
+        description: "Get $20 instant checkout discount on eligible premium home fitness purchases with code PLDR20.",
+        affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "deerrun-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $180 OFF",
+        title: "Up to $180 off flash sale treadmill deals",
+        description: "Direct savings up to $180 off select smart connected under-desk treadmills. No code required.",
+        affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "deerrun-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free express US shipping & 1-year warranty",
+        description: "All DeerRun treadmills include fast free tracked doorstep delivery, 30-day money-back guarantee, and 1-year warranty.",
+        affiliate_url: "https://joyfitinc.pxf.io/0GoKdL",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
