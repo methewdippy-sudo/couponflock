@@ -3002,7 +3002,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "CARLUEX",
     slug: "carluex",
     aliases: ["carluex-store", "carluex-carplay", "carluex-us"],
-    logo: "/logos/carluex.svg",
+    logo: "/logos/carluex.png",
     website: "https://www.carluex.store/?ref=abxxbfrf",
     affiliate_url: "https://www.carluex.store/?ref=abxxbfrf",
     country: "US",
