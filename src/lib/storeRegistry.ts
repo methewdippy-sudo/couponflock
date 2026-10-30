@@ -8887,39 +8887,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "rgb-deal-2",
-        code: "Underglow5",
-        is_auto_applied: false,
-        discount: "5% OFF",
-        title: "5% off LED underglow & wheel ring kits",
-        description: "Save 5% on app-controlled exterior underglow lighting and wheel light kits with code Underglow5.",
-        affiliate_url: "https://rgbhalokits.com?sca_ref=12581527.Berepf0CbvflW",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "rgb-deal-3",
-        code: "Grille5",
-        is_auto_applied: false,
-        discount: "5% OFF",
-        title: "5% off custom grille & engine bay LED lighting",
-        description: "Get 5% discount on front grille lighting kits and engine bay illumination strips with code Grille5.",
-        affiliate_url: "https://rgbhalokits.com?sca_ref=12581527.Berepf0CbvflW",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
-        id: "rgb-deal-4",
-        code: "Interior5",
-        is_auto_applied: false,
-        discount: "5% OFF",
-        title: "5% off interior footwell & ambient LED kits",
-        description: "Take 5% off multicolor ambient interior lighting and footwell LED bars with code Interior5.",
-        affiliate_url: "https://rgbhalokits.com?sca_ref=12581527.Berepf0CbvflW",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
         id: "rgb-deal-5",
         code: "",
         is_auto_applied: true,
