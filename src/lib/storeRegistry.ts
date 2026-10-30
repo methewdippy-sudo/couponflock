@@ -9334,6 +9334,52 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 147. GEMINI IVY (Handcrafted Luxury Candles, Soaps & Self-Care - Weekly Friday Payouts)
+  {
+    id: 813,
+    name: "Gemini Ivy",
+    slug: "gemini-ivy",
+    aliases: ["geminiivy", "gemini-ivy-candles", "geminiivy-shop"],
+    logo: "/logos/gemini-ivy.png",
+    website: "https://www.geminiivy.com/?ref=METHEWDIPPY",
+    affiliate_url: "https://www.geminiivy.com/?ref=METHEWDIPPY",
+    country: "US",
+    description: "Gemini Ivy crafts artisanal self-care essentials: clean-burning crackling wood wick candles, natural vegan cold-process soaps, and ultra-hydrating Mango CocoShea whipped body care.",
+    coupons: [
+      {
+        id: "gemini-deal-1",
+        code: "METHEWDIPPY",
+        discount: "20% OFF",
+        title: "20% off verified partner coupon code sitewide",
+        description: "Apply exclusive discount code METHEWDIPPY at checkout for 20% off crackling wood wick candles, vegan soaps, and whipped body butter.",
+        affiliate_url: "https://www.geminiivy.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "gemini-deal-2",
+        code: "METHEWDIPPY",
+        discount: "15% OFF",
+        title: "15% off first handcrafted candle order",
+        description: "Save 15% on artisan luxury scented candles and home fragrance sets using code METHEWDIPPY at checkout.",
+        affiliate_url: "https://www.geminiivy.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "gemini-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free tracked US shipping on qualifying orders",
+        description: "Enjoy zero shipping costs automatically applied at checkout on all eligible domestic orders.",
+        affiliate_url: "https://www.geminiivy.com/?ref=METHEWDIPPY",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
