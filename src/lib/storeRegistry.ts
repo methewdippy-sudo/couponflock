@@ -3003,8 +3003,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
     slug: "carluex",
     aliases: ["carluex-store", "carluex-carplay", "carluex-us"],
     logo: "/logos/carluex.svg",
-    website: "https://www.carluex.store/?ref=promoregistry",
-    affiliate_url: "https://www.carluex.store/?ref=promoregistry",
+    website: "https://www.carluex.store/?ref=abxxbfrf",
+    affiliate_url: "https://www.carluex.store/?ref=abxxbfrf",
     country: "US",
     description: "High-performance multimedia Android AI video boxes and streaming adapters that turn factory wired Apple CarPlay into full wireless Android 13 with Netflix & YouTube.",
     coupons: [
