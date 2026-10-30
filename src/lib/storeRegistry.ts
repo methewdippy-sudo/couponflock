@@ -2102,18 +2102,18 @@ export const STORE_REGISTRY: RegistryStore[] = [
     name: "Carlinkit",
     slug: "carlinkit",
     aliases: ["carlinkitcarplay", "carlinkit-us", "carlinkit-wireless"],
-    logo: "/logos/carlinkit.svg",
-    website: "https://carlinkitcarplay.com/?ref=promoregistry",
-    affiliate_url: "https://carlinkitcarplay.com/?ref=promoregistry",
+    logo: "/logos/carlinkit.png",
+    website: "https://carlinkitcarplay.com/?ref=sbmeibbt",
+    affiliate_url: "https://carlinkitcarplay.com/?ref=sbmeibbt",
     country: "US",
     description: "Pioneering wireless CarPlay and Android Auto adapters, multimedia AI video boxes, and plug-and-play smart automotive electronics for seamless in-car connectivity.",
     coupons: [
       {
         id: "clk-deal-1",
-        code: "CARLINKIT18",
+        code: "METHEWDIPPY",
         discount: "18% OFF",
         title: "18% off sitewide on wireless CarPlay adapters",
-        description: "Apply verified coupon code CARLINKIT18 at checkout to save 18% on Carlinkit 5.0 2air and TBox Plus.",
+        description: "Apply verified exclusive partner promo code METHEWDIPPY at checkout to save 18% on Carlinkit 5.0 2air, TBox Plus, and all adapters.",
         is_verified: true,
         expiry_date: "2026-12-31"
       },
