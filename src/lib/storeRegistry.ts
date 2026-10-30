@@ -3018,15 +3018,6 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       },
       {
-        id: "clx-deal-2",
-        code: "STREAM20",
-        discount: "20% OFF",
-        title: "20% off wireless multimedia streaming adapters",
-        description: "Get 20% discount on plug-and-play in-car video streaming sticks with code STREAM20.",
-        is_verified: true,
-        expiry_date: "2026-12-31"
-      },
-      {
         id: "clx-deal-3",
         code: "CARLUEX15",
         discount: "15% OFF",
