@@ -4,33 +4,32 @@ import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import styles from "./CopyModal.module.css";
 import { Coupon, Store } from "./CouponCard";
+import { trackEvent } from "../lib/telemetry";
 
 interface CopyModalProps {
-  coupon: Coupon;
+  coupon: Coupon | null;
   onClose: () => void;
 }
 
 export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
-  const { store, discount, code, description, title } = coupon;
   const [copied, setCopied] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [sampleCart, setSampleCart] = useState<number>(100);
+  const [voted, setVoted] = useState<"yes" | "no" | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const isDirectDeal =
-    !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
-
-  // SSR mount check for createPortal
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Copied toast timer
   useEffect(() => {
+    if (!coupon) return;
+    setCopied(true);
+    setVoted(null);
     const timer = setTimeout(() => setCopied(false), 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [coupon]);
 
-  // Close on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -39,40 +38,51 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
-  // Extract store info safely
+  if (!mounted || !coupon) return null;
+
+  const { store, discount, code, description, title } = coupon;
+  const isDirectDeal =
+    !code || code === "" || code.trim() === "" || code === "DEAL" || code === "DIRECT";
+
   const isStoreObject = typeof store === "object" && store !== null;
   const storeName = isStoreObject
     ? (store as Store).name
-    : (coupon.storeName || (typeof store === "string" ? store : "Store"));
+    : coupon.storeName || (typeof store === "string" ? store : "Store");
+  const storeSlug = isStoreObject ? (store as Store).slug : "";
   const storeLogo = isStoreObject ? (store as Store).logo : undefined;
 
-  // Build store URL with affiliate query params
   const rawStoreUrl =
     coupon.affiliate_link ||
     coupon.affiliate_url ||
     (isStoreObject && (store as Store).website
       ? (store as Store).website
       : `https://www.google.com/search?q=${encodeURIComponent(storeName + " official website")}`);
-  const [storeUrl, setStoreUrl] = useState<string>(rawStoreUrl);
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && rawStoreUrl) {
-      try {
-        const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
-        const utmTerm = sessionStorage.getItem("utm_term") || "";
-        const gclid = sessionStorage.getItem("gclid") || "";
-        const urlObj = rawStoreUrl.startsWith("http")
-          ? new URL(rawStoreUrl)
-          : new URL(rawStoreUrl, window.location.origin);
-        if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
-        if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
-        if (gclid) urlObj.searchParams.set("subid3", gclid);
-        setStoreUrl(urlObj.toString());
-      } catch {
-        setStoreUrl(rawStoreUrl);
-      }
+  let finalStoreUrl = rawStoreUrl;
+  if (typeof window !== "undefined" && rawStoreUrl) {
+    try {
+      const utmCampaign = sessionStorage.getItem("utm_campaign") || "";
+      const utmTerm = sessionStorage.getItem("utm_term") || "";
+      const gclid = sessionStorage.getItem("gclid") || "";
+      const urlObj = rawStoreUrl.startsWith("http")
+        ? new URL(rawStoreUrl)
+        : new URL(rawStoreUrl, window.location.origin);
+      if (utmCampaign) urlObj.searchParams.set("subid1", utmCampaign);
+      if (utmTerm) urlObj.searchParams.set("subid2", utmTerm);
+      if (gclid) urlObj.searchParams.set("subid3", gclid);
+      finalStoreUrl = urlObj.toString();
+    } catch {
+      finalStoreUrl = rawStoreUrl;
     }
-  }, [rawStoreUrl]);
+  }
+
+  // Estimate savings from discount string
+  const percentMatch = (discount || "").match(/(\d+)\s*%/);
+  const dollarMatch = (discount || "").match(/\$\s*(\d+)/);
+  const pct = percentMatch ? parseInt(percentMatch[1], 10) : 20;
+  const estimatedSavings = dollarMatch
+    ? Math.min(sampleCart * 0.5, parseInt(dollarMatch[1], 10))
+    : Math.round((sampleCart * pct) / 100);
 
   const handleCopy = (e?: React.MouseEvent) => {
     if (e) {
@@ -103,6 +113,18 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
     setTimeout(() => setCopied(false), 2500);
   };
 
+  const handleVote = (choice: "yes" | "no") => {
+    setVoted(choice);
+    trackEvent({
+      site: "CouponFlock",
+      eventType: "feedback_vote",
+      storeSlug,
+      storeName,
+      couponId: String(coupon.id),
+      couponCode: code || "DEAL",
+    });
+  };
+
   const modalContent = (
     <div
       className={styles.overlay}
@@ -110,130 +132,130 @@ export const CopyModal: React.FC<CopyModalProps> = ({ coupon, onClose }) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className={styles.modal} ref={modalRef} role="dialog" aria-modal="true">
-        {/* Top Emerald Header */}
-        <div className={styles.emeraldHeader}>
-          <div className={styles.headerVaultBadge}>
-            <span className={styles.shieldIcon}>🛡️</span>
-            <div>
-              <span className={styles.vaultTitle}>CouponFlock Verified Vault</span>
-            </div>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <span className={styles.livePill}>
-              <span className={styles.pulseDot}></span> ACTIVE
-            </span>
-            <button
-              type="button"
-              className={styles.closeButton}
-              onClick={onClose}
-              aria-label="Close modal"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
+      <div className={styles.ticketModal} ref={modalRef} role="dialog" aria-modal="true">
+        {/* LEFT STUB: Emerald Perforated Ticket Stub + Savings Calculator */}
+        <div className={styles.leftStub}>
+          <span className={styles.notchTop}></span>
+          <span className={styles.notchBottom}></span>
 
-        {/* Modal Body */}
-        <div className={styles.modalBody}>
-          {/* Store Brand Row */}
-          <div className={styles.storeBrandRow}>
+          <div className={styles.stubHeader}>
+            <span className={styles.stubBadge}>
+              <span className={styles.pulseDot}></span> Verified Ticket
+            </span>
+
             {storeLogo ? (
-              <div className={styles.storeLogoWrapper}>
-                <img src={storeLogo} alt={`${storeName} Logo`} className={styles.storeLogoImg} />
+              <div className={styles.logoBox}>
+                <img src={storeLogo} alt={storeName} className={styles.logoImg} />
               </div>
             ) : (
-              <div className={styles.fallbackLogo}>{storeName.charAt(0).toUpperCase()}</div>
+              <div className={styles.logoFallback}>{storeName.charAt(0).toUpperCase()}</div>
             )}
-            <div className={styles.brandTextInfo}>
-              <div className={styles.storeHeading}>
-                <span>{storeName}</span>
-                <span className={styles.verifiedCheckBadge}>✓ Verified Partner</span>
-              </div>
-              <p style={{ margin: 0, fontSize: "13px", color: "#64748b" }}>
-                Official checkout savings offer
-              </p>
+
+            <div className={styles.stubDiscount}>{discount || "20% OFF"}</div>
+            <div className={styles.stubStoreName}>at {storeName}</div>
+          </div>
+
+          {/* Interactive Cart Savings Estimator */}
+          <div className={styles.estimatorBox}>
+            <div className={styles.estimatorTitle}>Quick Savings Estimator</div>
+            <div className={styles.cartPills}>
+              {[50, 100, 250].map((amt) => (
+                <button
+                  key={amt}
+                  type="button"
+                  onClick={() => setSampleCart(amt)}
+                  className={`${styles.cartPill} ${sampleCart === amt ? styles.cartPillActive : ""}`}
+                >
+                  ${amt} Cart
+                </button>
+              ))}
+            </div>
+            <div className={styles.estimatorResult}>
+              <span>Est. Savings:</span>
+              <span className={styles.estimatorSaved}>-${estimatedSavings.toFixed(0)} USD</span>
             </div>
           </div>
 
-          {/* Hero Savings Card */}
-          <div className={styles.savingsHeroCard}>
-            <div className={styles.discountBigText}>{discount || "EXCLUSIVE DISCOUNT"}</div>
-            <p className={styles.offerSubtitle}>
-              {title || description || `${discount} instant discount applied for ${storeName}`}
-            </p>
+          <div className={styles.stubFooter}>✓ Tested Active Today • 100% Free</div>
+        </div>
+
+        {/* RIGHT ZONE: Perforated Code Reveal & Actions */}
+        <div className={styles.rightZone}>
+          <button
+            type="button"
+            className={styles.closeBtn}
+            onClick={onClose}
+            aria-label="Close modal"
+          >
+            ✕
+          </button>
+
+          <div className={styles.offerHeader}>
+            <span className={styles.verifiedTag}>✓ Hand-Tested Checkout Voucher</span>
+            <h2 className={styles.offerTitle}>
+              {title || `${discount} Verified Discount at ${storeName}`}
+            </h2>
+            <p className={styles.offerDesc}>{description}</p>
           </div>
 
-          {/* Unique Coupon Voucher Ticket Box */}
           {!isDirectDeal ? (
-            <div className={styles.ticketBox}>
-              <div className={styles.ticketLeft}>
-                <span className={styles.ticketLabel}>✂️ YOUR EXCLUSIVE PROMO CODE:</span>
-                <span className={styles.ticketCodeString}>{code}</span>
+            <div className={styles.perforatedCodeBox}>
+              <div className={styles.codeMeta}>
+                <span className={styles.scissorLabel}>✂️ Tear-Off Promo Code:</span>
+                <span className={styles.codeValue}>{code}</span>
               </div>
               <button
                 type="button"
-                className={`${styles.copyCodeBtn} ${copied ? styles.copyCodeBtnCopied : ""}`}
                 onClick={handleCopy}
+                className={`${styles.peelCopyBtn} ${copied ? styles.peelCopyBtnCopied : ""}`}
               >
-                {copied ? "COPIED TO CLIPBOARD! ✓" : "COPY CODE"}
+                {copied ? "✓ Code Copied!" : "Copy Code"}
               </button>
             </div>
           ) : (
-            <div className={styles.directDealVault}>
-              <div className={styles.directDealCheckIcon}>✓</div>
-              <div className={styles.directDealInfo}>
-                <span className={styles.directDealTitle}>Direct Deal Activated</span>
-                <span className={styles.directDealSubtext}>
-                  No code needed. Your special discount link has been activated for checkout!
-                </span>
+            <div className={styles.directDealBanner}>
+              <div className={styles.directIcon}>✓</div>
+              <div>
+                <div className={styles.directTextTitle}>Instant Store Discount Activated</div>
+                <div className={styles.directTextSub}>
+                  No promo code needed — your special pricing is unlocked automatically at {storeName}.
+                </div>
               </div>
             </div>
           )}
 
-          {/* 3-Step Progress Checklist */}
-          <div className={styles.progressCard}>
-            <div className={styles.progressStep}>
-              <span className={`${styles.stepCircle} ${copied ? styles.stepCircleDone : ""}`}>
-                {copied ? "✓" : "1"}
-              </span>
-              <span>
-                {!isDirectDeal ? `Promo code "${code}" copied to clipboard` : "Direct discount link activated"}
-              </span>
+          <div className={styles.bottomSection}>
+            <div className={styles.feedbackRow}>
+              <span>Did this {storeName} voucher work for you?</span>
+              {voted ? (
+                <span className={styles.voteThanks}>✓ Thanks for verifying!</span>
+              ) : (
+                <div className={styles.voteBtns}>
+                  <button type="button" onClick={() => handleVote("yes")} className={styles.voteBtn}>
+                    👍 Yes
+                  </button>
+                  <button type="button" onClick={() => handleVote("no")} className={styles.voteBtn}>
+                    👎 No
+                  </button>
+                </div>
+              )}
             </div>
-            <div className={styles.progressStep}>
-              <span className={styles.stepCircle}>2</span>
-              <span>Official {storeName} checkout tab opened</span>
-            </div>
-            <div className={styles.progressStep}>
-              <span className={styles.stepCircle}>3</span>
-              <span>
-                {!isDirectDeal ? "Paste code at checkout to claim your savings" : "Discount will reflect automatically at checkout"}
-              </span>
-            </div>
-          </div>
 
-          {/* Bottom Primary Checkout Button */}
-          <a
-            href={storeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.primaryCheckoutBtn}
-          >
-            <span>Continue to {storeName} Checkout</span>
-            <span className={styles.btnArrow}>→</span>
-          </a>
-
-          {/* Trust Guarantee Note */}
-          <div className={styles.guaranteeNote}>
-            <span>🔒 100% Free Service • Direct Official Merchant Guarantee</span>
+            <a
+              href={finalStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.checkoutCta}
+            >
+              <span>Go to Official {storeName} Store</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
 
-  if (!mounted) return null;
   return createPortal(modalContent, document.body);
 };
 

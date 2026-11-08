@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import storeStyles from "./StoreClient.module.css";
 import CopyModal from "../../../components/CopyModal";
 import { Coupon, Store } from "../../../components/CouponCard";
@@ -28,8 +28,8 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
   const [bannerLogoError, setBannerLogoError] = useState(false);
   const [todayLabel, setTodayLabel] = useState<string>("Today");
   const [votedTickets, setVotedTickets] = useState<Record<string, boolean>>({});
+  const [ticketFilter, setTicketFilter] = useState<"all" | "code" | "deal">("all");
 
-  // Auto-open modal if URL has ?coupon= param (from tabunder flow) & set live date
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
@@ -51,6 +51,14 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       }
     }
   }, [coupons]);
+
+  const filteredCoupons = useMemo(() => {
+    if (ticketFilter === "all") return coupons;
+    return coupons.filter((c) => {
+      const isDirect = !c.code || c.code === "DEAL";
+      return ticketFilter === "code" ? !isDirect : isDirect;
+    });
+  }, [coupons, ticketFilter]);
 
   const handleAction = (e: React.MouseEvent, coupon: Coupon) => {
     e.preventDefault();
@@ -74,7 +82,6 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       targetUrl,
     });
 
-    // 1. Instant Clipboard Copy (for codes)
     if (coupon.code && coupon.code !== "DEAL") {
       if (typeof document !== "undefined") {
         try {
@@ -100,7 +107,6 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       setTimeout(() => setCopiedId(null), 3000);
     }
 
-    // 2. Open modal in a NEW TAB (keeps user on our page)
     try {
       if (typeof window !== "undefined") {
         const ourSiteUrl = `${window.location.origin}${window.location.pathname}?coupon=${coupon.id}&code=${coupon.code || "DEAL"}`;
@@ -110,16 +116,45 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       console.warn("Failed to open popup tab:", err);
     }
 
-    // 3. TABUNDER: Redirect CURRENT tab to official merchant store
     if (typeof window !== "undefined") {
       window.location.href = targetUrl;
     }
   };
 
   const bannerLogo = !bannerLogoError && store.logo ? store.logo : null;
+  const codeCount = coupons.filter((c) => c.code && c.code !== "DEAL").length;
+  const dealCount = coupons.length - codeCount;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Are these ${store.name} coupon codes verified working?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Yes. Every ${store.name} promo code and discount offer on CouponFlock is manually verified by our deal specialists for active checkout redemption.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How do I use a ${store.name} promo code at checkout?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Click "Get Code" on any verified ${store.name} voucher to copy the code automatically, then paste it into the promo code box at the official ${store.name} checkout.`,
+        },
+      },
+    ],
+  };
 
   return (
     <div className={storeStyles.pageContainer}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Back to All Stores */}
       <div className={storeStyles.backLinkContainer}>
         <a href="/" className={storeStyles.backLink}>
@@ -138,7 +173,8 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             <img
               src={bannerLogo}
               alt={`${store.name} Logo`}
-              width={360} height={136}
+              width={360}
+              height={136}
               className={storeStyles.storeLogo}
               onError={() => setBannerLogoError(true)}
             />
@@ -148,7 +184,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           <div>
             <h1 className={storeStyles.storeTitle}>{store.name} Coupons &amp; Verified Promo Codes</h1>
             <p className={storeStyles.storeSubtitle}>
-              Hand-tested and verified savings offers for {store.name}. Guaranteed active today.
+              {coupons.length} hand-tested savings vouchers for {store.name} ({codeCount} Promo Codes &amp; {dealCount} Direct Sales).
             </p>
           </div>
         </div>
@@ -157,13 +193,55 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           <div className={storeStyles.trustPill}>
             <span className={storeStyles.pulseDot}></span> Verified Active • {todayLabel}
           </div>
-          <span className={storeStyles.guaranteeText}>CouponFlock Partner</span>
+          <span className={storeStyles.guaranteeText}>CouponFlock Official Partner</span>
         </div>
       </section>
 
+      {/* Interactive Voucher Filter Bar */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: "10px",
+          marginBottom: "20px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+          {[
+            { key: "all", label: `All Vouchers (${coupons.length})` },
+            { key: "code", label: `Promo Codes (${codeCount})` },
+            { key: "deal", label: `Direct Deals (${dealCount})` },
+          ].map((tab) => (
+            <button
+              key={tab.key}
+              type="button"
+              onClick={() => setTicketFilter(tab.key as any)}
+              style={{
+                padding: "8px 16px",
+                borderRadius: "10px",
+                fontSize: "13px",
+                fontWeight: 700,
+                cursor: "pointer",
+                border: ticketFilter === tab.key ? "1px solid #059669" : "1px solid #e2e8f0",
+                background: ticketFilter === tab.key ? "#059669" : "#ffffff",
+                color: ticketFilter === tab.key ? "#ffffff" : "#334155",
+                transition: "all 0.15s ease",
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <span style={{ fontSize: "12.5px", color: "#64748b", fontWeight: 600 }}>
+          ✓ Click any perforated ticket to copy code &amp; open {store.name}
+        </span>
+      </div>
+
       {/* CouponFlock Voucher Tickets Stack */}
       <section className={storeStyles.cardsList}>
-        {coupons.map((coupon, idx) => {
+        {filteredCoupons.map((coupon, idx) => {
           const isDirectDeal = !coupon.code || coupon.code === "DEAL";
           const discountParts = (coupon.discount || "20% OFF").trim().split(" ");
           const discountVal = discountParts[0] || "20%";
@@ -193,7 +271,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
               <div className={storeStyles.contentZone}>
                 <div className={storeStyles.statusRow}>
                   {idx === 0 && (
-                    <span className={storeStyles.staffPickBadge}>★ Staff Pick</span>
+                    <span className={storeStyles.staffPickBadge}>★ Top Pick</span>
                   )}
                   <span className={storeStyles.verifiedBadge}>✓ Tested Active Today</span>
                 </div>
@@ -231,12 +309,12 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                       border: "1px solid #a7f3d0",
                     }}
                   >
-                    {votedTickets[String(coupon.id)] ? "🦅 +1 Flock Verified!" : "👍 Worked for me"}
+                    {votedTickets[String(coupon.id)] ? "✓ Verified by You!" : "👍 Worked for me"}
                   </span>
                 </div>
               </div>
 
-              {/* ZONE 3: Action Area — ALL CODES HIDDEN/MASKED */}
+              {/* ZONE 3: Action Area */}
               <div className={storeStyles.actionZone}>
                 {!isDirectDeal ? (
                   <div className={storeStyles.maskedCodeBox}>
@@ -286,7 +364,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
         </div>
       </section>
 
-      {/* Below-the-Fold: How to Redeem & Verified Store Guide (Google Ads QS 10/10 & Anti-Ban Compliance) */}
+      {/* Below-the-Fold: How to Redeem & Verified Store Guide */}
       <section className={storeStyles.infoSection}>
         <div className={storeStyles.stepsCard}>
           <h2 className={storeStyles.sectionHeading}>
@@ -353,12 +431,10 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       </section>
 
       {/* Copy Modal */}
-      {activeCoupon && (
-        <CopyModal
-          coupon={activeCoupon}
-          onClose={() => setActiveCoupon(null)}
-        />
-      )}
+      <CopyModal
+        coupon={activeCoupon}
+        onClose={() => setActiveCoupon(null)}
+      />
     </div>
   );
 }

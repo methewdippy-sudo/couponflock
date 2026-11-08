@@ -15,7 +15,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedStoreSlug, setSelectedStoreSlug] = useState<string | null>(null);
   const [activeCoupon, setActiveCoupon] = useState<Coupon | null>(null);
-  const [voucherFilter, setVoucherFilter] = useState<"all" | "code" | "deal">("all");
+  const [voucherFilter, setVoucherFilter] = useState<"all" | "code" | "deal" | "ship">("all");
   const [sortBy, setSortBy] = useState<"popular" | "discount" | "newest">("popular");
 
   const [storePage, setStorePage] = useState(1);
@@ -24,7 +24,43 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
   const STORES_PER_PAGE = 16;
   const COUPONS_PER_PAGE = 12;
 
+  // Secret backdoor operator '--' states (connects to server-side /api/vault-search)
+  const [secretStores, setSecretStores] = useState<Store[]>([]);
+  const [isSecretSearching, setIsSecretSearching] = useState(false);
+  const isSecretMode = searchQuery.trim().endsWith("--") || searchQuery.trim().includes("--");
+
   const isFirstRender = React.useRef(true);
+
+  React.useEffect(() => {
+    const trimmed = searchQuery.trim();
+    if (trimmed.endsWith("--") || trimmed.includes("--")) {
+      const clean = trimmed.replace(/-+$/, "").trim().toLowerCase();
+      if (clean === "telemetry" || clean === "analytics") {
+        window.location.href = "/admin/telemetry";
+        return;
+      }
+      if (clean.length > 0) {
+        setIsSecretSearching(true);
+        fetch(`/api/vault-search?q=${encodeURIComponent(trimmed)}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && Array.isArray(data.results)) {
+              setSecretStores(data.results);
+            } else {
+              setSecretStores([]);
+            }
+          })
+          .catch(() => setSecretStores([]))
+          .finally(() => setIsSecretSearching(false));
+      } else {
+        setSecretStores([]);
+      }
+    } else {
+      if (secretStores.length > 0) {
+        setSecretStores([]);
+      }
+    }
+  }, [searchQuery]);
 
   React.useEffect(() => {
     if (isFirstRender.current) {
@@ -106,8 +142,13 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     </svg>
   );
 
-  // Filter and sort coupons
+  // Filter and sort coupons (strictly from initialCoupons, never exposing secret stores on normal search)
   const filteredCoupons = useMemo(() => {
+    const rawQ = searchQuery.trim().toLowerCase();
+    if (rawQ.endsWith("--") || rawQ.includes("--")) {
+      return [];
+    }
+
     const list = initialCoupons.filter((coupon) => {
       if (!coupon) return false;
       const isStoreObject = typeof coupon.store === "object" && coupon.store !== null;
@@ -120,24 +161,25 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
       if (voucherFilter !== "all") {
         const hasCode = Boolean(coupon.code && coupon.code !== "DEAL" && coupon.code !== "DIRECT");
+        const isShip = (coupon.discount || "").toLowerCase().includes("ship") || (coupon.description || "").toLowerCase().includes("free shipping");
         if (voucherFilter === "code" && !hasCode) return false;
         if (voucherFilter === "deal" && hasCode) return false;
+        if (voucherFilter === "ship" && !isShip) return false;
       }
 
-      if (searchQuery.trim() !== "") {
-        const query = searchQuery.toLowerCase().trim();
-        const cleanQuery = query.replace(/[^a-z0-9]/g, "");
+      if (rawQ !== "") {
+        const cleanQuery = rawQ.replace(/[^a-z0-9]/g, "");
         const cleanStoreName = storeName.toLowerCase().replace(/[^a-z0-9]/g, "");
         const cleanStoreSlug = storeSlug.toLowerCase().replace(/[^a-z0-9]/g, "");
 
         const matchesStore = storeName
-          ? storeName.toLowerCase().includes(query) ||
+          ? storeName.toLowerCase().includes(rawQ) ||
             cleanStoreName.includes(cleanQuery) ||
             cleanStoreSlug.includes(cleanQuery)
           : false;
-        const matchesCode = coupon.code ? coupon.code.toLowerCase().includes(query) : false;
-        const matchesDesc = coupon.description ? coupon.description.toLowerCase().includes(query) : false;
-        const matchesDiscount = coupon.discount ? coupon.discount.toLowerCase().includes(query) : false;
+        const matchesCode = coupon.code ? coupon.code.toLowerCase().includes(rawQ) : false;
+        const matchesDesc = coupon.description ? coupon.description.toLowerCase().includes(rawQ) : false;
+        const matchesDiscount = coupon.discount ? coupon.discount.toLowerCase().includes(rawQ) : false;
 
         return matchesStore || matchesCode || matchesDesc || matchesDiscount;
       }
@@ -159,17 +201,12 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     return sorted;
   }, [initialCoupons, searchQuery, selectedStoreSlug, voucherFilter, sortBy]);
 
-  // Dynamically filter stores by search query
+  // Dynamically filter public safe stores by search query
   const filteredStores = useMemo(() => {
-    if (searchQuery.trim() === "") return initialStores;
     const query = searchQuery.toLowerCase().trim();
-    const SENSITIVE_KEYWORDS = [
-      "im8", "qidi", "berkey", "pongbot", "candy-in-bulk", "candy in bulk", "candyinbulk",
-      "dc-house", "dchouse", "larine", "swa-sabers", "swasabers", "chompshop"
-    ];
-    if (!query.endsWith("--") && SENSITIVE_KEYWORDS.some((k) => query.includes(k))) {
-      return [];
-    }
+    if (query === "") return initialStores;
+    if (query.endsWith("--") || query.includes("--")) return [];
+
     const cleanQuery = query.replace(/[^a-z0-9]/g, "");
 
     return initialStores.filter((store) => {
@@ -377,52 +414,13 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
     window.location.href = storeUrl;
   };
 
-  // Dynamically find matching stores based on the search query with automatic deduplication
+  // Dynamically find matching stores based on the search query
   const matchedStores = useMemo(() => {
     if (searchQuery.trim() === "") return [];
     const rawQuery = searchQuery.trim().toLowerCase();
 
-    if (rawQuery.endsWith("--")) {
-      const secretKey = rawQuery.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
-      if (secretKey === "telemetry" || secretKey === "analytics") {
-        if (typeof window !== "undefined") window.location.href = "/admin/telemetry";
-        return [];
-      }
-      const secretRoutes: Record<string, { name: string; slug: string; url: string; logo?: string }> = {
-        im8: { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us", logo: "/logos/im8health.png" },
-        im8health: { name: "iM8 Health", slug: "im8-health-us", url: "/deals/im8-health-us", logo: "/logos/im8health.png" },
-        pongbot: { name: "PongBot Sports", slug: "pongbot-us", url: "/deals/pongbot-us", logo: "/logos/pongbot.png" },
-        swasabers: { name: "SWA Sabers", slug: "swa-sabers-us", url: "/deals/swa-sabers-us", logo: "/logos/swa-sabers.png" },
-        candyinbulk: { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us", logo: "/logos/candyroo.png" },
-        candy: { name: "Candy In Bulk", slug: "candy-in-bulk-us", url: "/deals/candy-in-bulk-us", logo: "/logos/candyroo.png" },
-        chompshop: { name: "ChompShop", slug: "chompshop-us", url: "/deals/chompshop-us", logo: "/logos/chompshop.png" },
-        dchouse: { name: "DC House", slug: "dc-house", url: "/store/dc-house", logo: "/logos/dc-house.png" },
-        usaberkey: { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters", logo: "/logos/usa-berkey-filters.png" },
-        berkey: { name: "USA Berkey Filters", slug: "usa-berkey-filters", url: "/store/usa-berkey-filters", logo: "/logos/usa-berkey-filters.png" },
-        qidi: { name: "QIDI Tech", slug: "qidi-tech", url: "/store/qidi-tech", logo: "/logos/qidi.png" },
-        larine: { name: "Larine Enamel Care", slug: "larine", url: "/store/larine", logo: "/logos/buy-larine-u.png" },
-      };
-      if (secretRoutes[secretKey]) {
-        const item = secretRoutes[secretKey];
-        return [
-          {
-            id: 999999,
-            name: item.name,
-            slug: item.slug,
-            logo: item.logo,
-            website: item.url,
-            affiliate_url: item.url,
-          } as Store,
-        ];
-      }
-    }
-
-    const SENSITIVE_KEYWORDS = [
-      "im8", "qidi", "berkey", "pongbot", "candy-in-bulk", "candy in bulk", "candyinbulk",
-      "dc-house", "dchouse", "larine", "swa-sabers", "swasabers", "chompshop"
-    ];
-    if (SENSITIVE_KEYWORDS.some((k) => rawQuery.includes(k))) {
-      return [];
+    if (rawQuery.endsWith("--") || rawQuery.includes("--")) {
+      return secretStores;
     }
 
     const query = rawQuery;
@@ -449,10 +447,28 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       seen.add(key);
       return true;
     });
-  }, [initialStores, searchQuery]);
+  }, [initialStores, searchQuery, secretStores]);
+
+  const jsonLdSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "CouponFlock",
+    url: "https://couponflock.com",
+    description: "Verified promo codes, perforated discount vouchers, and instant store deals across 700+ top retail brands.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://couponflock.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
 
   return (
     <div className={styles.mainContainer}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+      />
+
       {/* =========================================================
           COUPONFLOCK HERO SECTION
           ========================================================= */}
@@ -479,7 +495,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   e.preventDefault();
-                  const q = searchQuery.trim().toLowerCase();
+                  const q = searchQuery.trim();
                   if (q) {
                     trackEvent({
                       site: "CouponFlock",
@@ -487,38 +503,44 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                       searchQuery: q.endsWith("--") ? "[secret-operator]" : q,
                     });
                   }
-                  if (q.endsWith("--")) {
-                    const secretKey = q.slice(0, -2).trim().replace(/[^a-z0-9]/g, "");
-                    if (secretKey === "telemetry" || secretKey === "analytics") {
+                  if (q.endsWith("--") || q.includes("--")) {
+                    const clean = q.replace(/-+$/, "").trim().toLowerCase();
+                    if (clean === "telemetry" || clean === "analytics") {
                       window.location.href = "/admin/telemetry";
                       return;
                     }
-                    const secretRoutes: Record<string, string> = {
-                      im8: "/deals/im8-health-us",
-                      im8health: "/deals/im8-health-us",
-                      pongbot: "/deals/pongbot-us",
-                      swasabers: "/deals/swa-sabers-us",
-                      candyinbulk: "/deals/candy-in-bulk-us",
-                      candy: "/deals/candy-in-bulk-us",
-                      chompshop: "/deals/chompshop-us",
-                      dchouse: "/store/dc-house",
-                      usaberkey: "/store/usa-berkey-filters",
-                      berkey: "/store/usa-berkey-filters",
-                      qidi: "/store/qidi-tech",
-                      larine: "/store/larine",
-                    };
-                    if (secretRoutes[secretKey]) {
-                      window.location.href = secretRoutes[secretKey];
+                    if (secretStores.length > 0) {
+                      const target = secretStores[0];
+                      window.location.href =
+                        target.website && target.website.startsWith("/")
+                          ? target.website
+                          : `/store/${target.slug}`;
                       return;
-                    } else if (secretKey.length > 2) {
-                      window.location.href = "/deals/" + secretKey;
+                    }
+                    if (clean) {
+                      fetch(`/api/vault-search?q=${encodeURIComponent(q)}`)
+                        .then((res) => res.json())
+                        .then((data) => {
+                          if (data && data.results && data.results.length > 0) {
+                            const top = data.results[0];
+                            window.location.href =
+                              top.website && top.website.startsWith("/")
+                                ? top.website
+                                : `/store/${top.slug}`;
+                          } else {
+                            window.location.href = `/store/${clean}`;
+                          }
+                        })
+                        .catch(() => {
+                          window.location.href = `/store/${clean}`;
+                        });
                       return;
                     }
                   }
                   if (matchedStores.length > 0) {
                     const topStore = matchedStores[0];
                     if (topStore && topStore.slug) {
-                      window.location.href = topStore.id === 999999 && topStore.website ? topStore.website : `/store/${topStore.slug}`;
+                      window.location.href = `/store/${topStore.slug}`;
                     }
                   } else {
                     const element = document.getElementById("stores") || document.getElementById("coupons");
@@ -542,29 +564,54 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
             )}
 
             {/* Dynamic Autocomplete Suggestion Dropdown */}
-            {searchQuery.trim() !== "" && matchedStores.length > 0 && (
-              <div className={styles.searchSuggestionsDropdown}>
-                {matchedStores.map((store) => (
-                  <a
-                    key={store.id || store.slug}
-                    href={`/store/${store.slug}`}
-                    className={styles.searchSuggestionItem}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = store.id === 999999 && store.website ? store.website : `/store/${store.slug}`;
-                    }}
-                  >
-                    {store.logo ? (
-                      <img src={store.logo} alt={store.name} className={styles.suggestionLogo} />
-                    ) : (
-                      <div className={styles.suggestionFallback}>{store.name.charAt(0).toUpperCase()}</div>
-                    )}
-                    <span className={styles.suggestionName}>{store.name}</span>
-                    <span className={styles.suggestionBadge}>View Deals →</span>
-                  </a>
-                ))}
-              </div>
-            )}
+            {searchQuery.trim() !== "" &&
+              (isSecretMode ? secretStores.length > 0 || isSecretSearching : matchedStores.length > 0) && (
+                <div className={styles.searchSuggestionsDropdown}>
+                  {isSecretMode && (
+                    <div
+                      style={{
+                        padding: "8px 14px",
+                        background: "#ecfdf5",
+                        borderBottom: "1px solid #a7f3d0",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        color: "#047857",
+                      }}
+                    >
+                      <span>🔓 Confidential Vault Search Active</span>
+                      <span>{isSecretSearching ? "Searching..." : `${secretStores.length} Found`}</span>
+                    </div>
+                  )}
+                  {(isSecretMode ? secretStores : matchedStores).map((store) => {
+                    const hrefUrl =
+                      isSecretMode && store.website && store.website.startsWith("/")
+                        ? store.website
+                        : `/store/${store.slug}`;
+                    return (
+                      <a
+                        key={store.id || store.slug}
+                        href={hrefUrl}
+                        className={styles.searchSuggestionItem}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href = hrefUrl;
+                        }}
+                      >
+                        {store.logo ? (
+                          <img src={store.logo} alt={store.name} className={styles.suggestionLogo} />
+                        ) : (
+                          <div className={styles.suggestionFallback}>{store.name.charAt(0).toUpperCase()}</div>
+                        )}
+                        <span className={styles.suggestionName}>{store.name}</span>
+                        <span className={styles.suggestionBadge}>View Vouchers →</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
           </div>
 
           {/* Popular Searches */}
@@ -579,6 +626,38 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                 {tag}
               </button>
             ))}
+          </div>
+
+          {/* 4-Column Emerald Key Metrics Trust Bar */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(175px, 1fr))",
+              gap: "12px",
+              marginTop: "32px",
+              padding: "16px 20px",
+              background: "#ffffff",
+              border: "1px solid #a7f3d0",
+              borderRadius: "16px",
+              boxShadow: "0 4px 14px rgba(5, 150, 105, 0.06)",
+            }}
+          >
+            <div>
+              <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#059669" }}>700+</div>
+              <div style={{ fontSize: "0.8rem", color: "#475569", fontWeight: 600 }}>Partner Brands</div>
+            </div>
+            <div>
+              <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#059669" }}>2,800+</div>
+              <div style={{ fontSize: "0.8rem", color: "#475569", fontWeight: 600 }}>Verified Vouchers</div>
+            </div>
+            <div>
+              <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#047857" }}>Every 4 Hrs</div>
+              <div style={{ fontSize: "0.8rem", color: "#475569", fontWeight: 600 }}>Live Code Testing</div>
+            </div>
+            <div>
+              <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a" }}>100% Free</div>
+              <div style={{ fontSize: "0.8rem", color: "#475569", fontWeight: 600 }}>No Sign-Up Needed</div>
+            </div>
           </div>
         </div>
       </section>
@@ -640,48 +719,138 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
       {/* Main Content Layout */}
       <div className={styles.contentLayout}>
-        {matchedStores.length > 0 && (
-          <section className={styles.filterSection}>
-            <div className={styles.sectionHeader}>
-              <div>
-                <h3 className={styles.sectionTitle}>Matching Stores ({matchedStores.length})</h3>
-              </div>
+        {/* Featured Top Partner Brands (4-Card Executive Row) */}
+        <section style={{ marginBottom: "44px" }}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <h2 className={styles.sectionTitle}>Featured Partner Brands</h2>
+              <p className={styles.sectionSubtitle}>
+                Most redeemed retail partners with verified active promo codes today
+              </p>
             </div>
-            <div className={styles.storesGrid}>
-              {matchedStores.map((store) => (
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "16px",
+            }}
+          >
+            {initialStores.slice(0, 4).map((store, idx) => {
+              const highlights = [
+                "Up to 40% Off + Extra Promo Code",
+                "Verified Sitewide Discount + Free Shipping",
+                "20% Off Member & Seasonal Clearance",
+                "15% Off First Order + Bonus Gift",
+              ];
+              return (
                 <a
-                  key={store.id || store.slug}
+                  key={`feat-${store.slug}`}
                   href={`/store/${store.slug}`}
-                  className={styles.storeCard}
+                  style={{
+                    background: "#ffffff",
+                    border: "1px solid #d1fae5",
+                    borderTop: "4px solid #059669",
+                    borderRadius: "16px",
+                    padding: "20px",
+                    textDecoration: "none",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    gap: "14px",
+                    boxShadow: "0 2px 8px rgba(15, 23, 42, 0.04)",
+                  }}
                 >
-                  {store.logo ? (
-                    <div className={styles.storeCardLogoWrapper}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                    <span
+                      style={{
+                        fontSize: "0.7rem",
+                        fontWeight: 800,
+                        color: "#047857",
+                        background: "#ecfdf5",
+                        border: "1px solid #a7f3d0",
+                        padding: "3px 9px",
+                        borderRadius: "999px",
+                      }}
+                    >
+                      ✓ Verified Today
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "0.7rem",
+                        fontWeight: 800,
+                        color: "#b45309",
+                        background: "#fffbeb",
+                        border: "1px solid #fde68a",
+                        padding: "3px 8px",
+                        borderRadius: "999px",
+                      }}
+                    >
+                      ★ Top Brand
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                    {store.logo ? (
                       <img
                         src={store.logo}
                         alt={store.name}
-                        className={styles.storeCardLogo}
-                        loading="lazy"
-                        decoding="async"
-                        width={48}
-                        height={48}
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          objectFit: "contain",
+                          borderRadius: "10px",
+                          border: "1px solid #f1f5f9",
+                          padding: "4px",
+                        }}
                       />
+                    ) : (
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          borderRadius: "10px",
+                          background: "#ecfdf5",
+                          color: "#059669",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontWeight: 800,
+                        }}
+                      >
+                        {store.name.charAt(0)}
+                      </div>
+                    )}
+                    <div>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#0f172a" }}>{store.name}</div>
+                      <div style={{ fontSize: "0.82rem", color: "#475569", marginTop: "2px" }}>
+                        {highlights[idx % highlights.length]}
+                      </div>
                     </div>
-                  ) : (
-                    <div className={styles.storeCardFallback}>
-                      {store.name.charAt(0).toUpperCase()}
-                    </div>
-                  )}
-                  <span className={styles.storeCardName}>{store.name}</span>
-                  <span className={styles.storeCardLink}>View Coupons →</span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      paddingTop: "10px",
+                      borderTop: "1px solid #f1f5f9",
+                      fontSize: "0.82rem",
+                      fontWeight: 700,
+                      color: "#059669",
+                    }}
+                  >
+                    <span>View Active Vouchers</span>
+                    <span>→</span>
+                  </div>
                 </a>
-              ))}
-            </div>
-          </section>
-        )}
+              );
+            })}
+          </div>
+        </section>
 
-        {/* Featured Brands Grid */}
+        {/* Browse All Stores Grid */}
         <section id="stores" className={styles.filterSection}>
-          <h2 className={styles.sectionTitle}>Browse Popular Stores</h2>
+          <h2 className={styles.sectionTitle}>Browse All Partner Stores</h2>
           <p className={styles.sectionSubtitle}>
             Select any store below to view all active promo codes and verified discounts.
           </p>
@@ -737,6 +906,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                 { key: "all", label: "All Deals" },
                 { key: "code", label: "Promo Codes" },
                 { key: "deal", label: "Store Sales" },
+                { key: "ship", label: "Free Shipping" },
               ].map((tab) => (
                 <button
                   key={tab.key}

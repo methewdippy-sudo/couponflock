@@ -9457,3 +9457,68 @@ export function registerStore(config: RegistryStore): void {
     });
   }
 }
+
+/**
+ * Checks if a normal search query (without --) matches any confidential campaign store
+ * in STORE_REGISTRY so it remains 100% hidden from public search & homepage.
+ */
+export function isSecretRegistryKeyword(rawQuery: string): boolean {
+  const clean = rawQuery.toLowerCase().trim().replace(/[^a-z0-9]/g, "");
+  if (clean.length < 2) return false;
+  return STORE_REGISTRY.some((reg) => {
+    const cleanName = reg.name.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const cleanSlug = reg.slug.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (cleanName.includes(clean) || cleanSlug.includes(clean)) return true;
+    if (reg.aliases) {
+      return reg.aliases.some((a) => a.toLowerCase().replace(/[^a-z0-9]/g, "").includes(clean));
+    }
+    return false;
+  });
+}
+
+/**
+ * Searches all confidential stores in STORE_REGISTRY when the owner uses the `--` operator.
+ * Automatically supports all current and future stores added to STORE_REGISTRY.
+ */
+export function searchSecretRegistryStores(secretKey: string): Store[] {
+  const clean = secretKey.toLowerCase().trim().replace(/[^a-z0-9]/g, "");
+  if (!clean) return [];
+
+  const exactSlugMatch = ALIAS_LOOKUP[secretKey.toLowerCase().trim()];
+  const results: Store[] = [];
+  const seenSlugs = new Set<string>();
+
+  if (exactSlugMatch) {
+    seenSlugs.add(exactSlugMatch.slug);
+    results.push({
+      id: 999999,
+      name: exactSlugMatch.name,
+      slug: exactSlugMatch.slug,
+      logo: exactSlugMatch.logo || getLogoUrl(exactSlugMatch.slug),
+      website: `/store/${exactSlugMatch.slug}`,
+      affiliate_url: `/store/${exactSlugMatch.slug}`,
+    } as Store);
+  }
+
+  STORE_REGISTRY.forEach((reg) => {
+    if (seenSlugs.has(reg.slug)) return;
+    const cleanName = reg.name.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const cleanSlug = reg.slug.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const aliasMatch = reg.aliases?.some((a) =>
+      a.toLowerCase().replace(/[^a-z0-9]/g, "").includes(clean)
+    );
+    if (cleanName.includes(clean) || cleanSlug.includes(clean) || aliasMatch) {
+      seenSlugs.add(reg.slug);
+      results.push({
+        id: 999999,
+        name: reg.name,
+        slug: reg.slug,
+        logo: reg.logo || getLogoUrl(reg.slug),
+        website: `/store/${reg.slug}`,
+        affiliate_url: `/store/${reg.slug}`,
+      } as Store);
+    }
+  });
+
+  return results;
+}
