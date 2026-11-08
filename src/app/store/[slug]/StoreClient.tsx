@@ -302,11 +302,11 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           ))}
         </div>
         <span style={{ fontSize: "12.5px", color: "#64748b", fontWeight: 600 }}>
-          ✓ Click any perforated ticket to copy code &amp; open {store.name}
+          ✓ Verified active discount codes &amp; deals for {store.name}
         </span>
       </div>
 
-      {/* CouponFlock Voucher Tickets Stack */}
+      {/* Clean, Simple & Professional Coupon Cards */}
       <section className={storeStyles.cardsList}>
         {filteredCoupons.map((coupon, idx) => {
           const isDirectDeal = !coupon.code || coupon.code === "DEAL";
@@ -318,103 +318,75 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           return (
             <div
               key={coupon.id}
-              className={`${storeStyles.voucherTicket} ${idx === 0 ? storeStyles.primaryTicket : ""}`}
+              className={`${storeStyles.couponCard} ${idx === 0 ? storeStyles.featuredCouponCard : ""}`}
               onClick={(e) => handleAction(e, coupon)}
             >
-              {/* ZONE 1: Value Badge */}
-              <div className={storeStyles.valueZone}>
-                <span className={storeStyles.notchTop}></span>
-                <span className={storeStyles.notchBottom}></span>
-                <div>
-                  <div className={storeStyles.discountFigure}>{discountVal}</div>
-                  <div className={storeStyles.discountSub}>{discountSub}</div>
+              {/* Left: Punchy Discount Badge */}
+              <div className={storeStyles.cardDiscountCol}>
+                <div className={storeStyles.cardDiscountValue}>
+                  {discountVal} <span className={storeStyles.cardDiscountSub}>{discountSub}</span>
                 </div>
-                <span className={storeStyles.valueTagPill}>
+                <span className={isDirectDeal ? storeStyles.dealPill : storeStyles.codePill}>
                   {isDirectDeal ? "Direct Deal" : "Promo Code"}
                 </span>
               </div>
 
-              {/* ZONE 2: Content Details */}
-              <div className={storeStyles.contentZone}>
-                <div className={storeStyles.statusRow}>
-                  {idx === 0 && (
-                    <span className={storeStyles.staffPickBadge}>★ Top Pick</span>
-                  )}
-                  <span className={storeStyles.verifiedBadge}>✓ Tested Active Today</span>
+              {/* Center: Clean Title & Offer Details */}
+              <div className={storeStyles.cardDetailsCol}>
+                <div className={storeStyles.cardMetaRow}>
+                  {idx === 0 && <span className={storeStyles.topPickTag}>★ Most Popular</span>}
+                  <span className={storeStyles.verifiedActiveTag}>✓ Verified Active</span>
+                  <span className={storeStyles.dotDivider}>•</span>
+                  <span className={storeStyles.usesTag}>{coupon.uses_count ? `${coupon.uses_count.toLocaleString()} uses` : "Tested in cart today"}</span>
                 </div>
 
-                <h3 className={storeStyles.ticketTitle}>
+                <h3 className={storeStyles.cardTitle}>
                   {sanitizeCodeText(coupon.title || `${coupon.discount} at ${store.name}`, coupon.code)}
                 </h3>
-                <p className={storeStyles.ticketDesc}>{sanitizeCodeText(coupon.description, coupon.code)}</p>
-
-                <div className={storeStyles.ticketMeta}>
-                  <span className={storeStyles.metaItem}>✓ Direct Checkout Guarantee</span>
-                  <span>•</span>
-                  <span className={storeStyles.metaItem}>Verified {todayLabel}</span>
-                  <span>•</span>
-                  <span
-                    onClick={(ev) => {
-                      ev.stopPropagation();
-                      setVotedTickets((prev) => ({ ...prev, [String(coupon.id)]: true }));
-                      trackEvent({
-                        site: "CouponFlock",
-                        eventType: "feedback_vote",
-                        storeSlug: store.slug,
-                        storeName: store.name,
-                        couponId: String(coupon.id),
-                        couponCode: coupon.code || "DEAL",
-                      });
-                    }}
-                    style={{
-                      cursor: "pointer",
-                      color: votedTickets[String(coupon.id)] ? "#047857" : "#059669",
-                      fontWeight: 700,
-                      background: "#ecfdf5",
-                      padding: "2px 8px",
-                      borderRadius: "999px",
-                      border: "1px solid #a7f3d0",
-                    }}
-                  >
-                    {votedTickets[String(coupon.id)] ? "✓ Verified by You!" : "👍 Worked for me"}
-                  </span>
-                </div>
+                
+                {coupon.description && (
+                  <p className={storeStyles.cardDesc}>
+                    {sanitizeCodeText(coupon.description, coupon.code)}
+                  </p>
+                )}
               </div>
 
-              {/* ZONE 3: Action Area */}
-              <div className={storeStyles.actionZone}>
-                {!isDirectDeal ? (
-                  <div className={storeStyles.maskedCodeBox}>
-                    <span className={storeStyles.maskedLock}>🔒 CODE</span>
-                    <span className={storeStyles.maskedDots}>••••••••</span>
-                  </div>
-                ) : (
-                  <div className={storeStyles.directDealBox}>
-                    Direct Store Discount ✓
-                  </div>
-                )}
-
+              {/* Right: Modern High-Converting CTA Button */}
+              <div className={storeStyles.cardActionCol}>
                 <button
                   type="button"
                   onClick={(e) => handleAction(e, coupon)}
-                  className={`${storeStyles.ctaButton} ${isDirectDeal ? storeStyles.ctaDealBtn : storeStyles.ctaCodeBtn}`}
+                  className={`${storeStyles.actionButton} ${isDirectDeal ? storeStyles.dealActionButton : storeStyles.codeActionButton} ${isCopied ? storeStyles.copiedButton : ""}`}
                 >
                   {!isDirectDeal ? (
-                    <>
-                      <span>{isCopied ? "Code Copied! ✓" : "Get Code"}</span>
-                      <span className={storeStyles.btnArrow}>→</span>
-                    </>
+                    isCopied ? (
+                      <>
+                        <span className={storeStyles.btnCheck}>✓</span>
+                        <span>Code Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className={storeStyles.btnScissors}>✂</span>
+                        <span className={storeStyles.btnMainLabel}>Get Code</span>
+                        <span className={storeStyles.btnCodePreview}>
+                          {coupon.code ? `${coupon.code.slice(0, 3)}••` : "••••"}
+                        </span>
+                      </>
+                    )
                   ) : (
-                    <>
-                      <span>{isCopied ? "Opening Offer..." : "Get Deal"}</span>
-                      <span className={storeStyles.btnArrow}>→</span>
-                    </>
+                    isCopied ? (
+                      <>
+                        <span className={storeStyles.btnCheck}>✓</span>
+                        <span>Opening Offer...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Get Deal</span>
+                        <span className={storeStyles.btnArrow}>→</span>
+                      </>
+                    )
                   )}
                 </button>
-
-                <span className={storeStyles.actionNote}>
-                  {!isDirectDeal ? "Reveals code & opens site" : "Activates deal & opens site"}
-                </span>
               </div>
             </div>
           );

@@ -61,55 +61,81 @@ export default function FooterClient() {
   return (
     <footer className="mainFooter">
       <div className="footerContainer">
-        <div className="footerMainSection">
-          <a href="/" className="logoContainer" style={{ marginBottom: "12px", display: "inline-flex" }}>
-            <img
-              src="/couponflock-logo.svg"
-              alt="CouponFlock Logo"
-              height="34"
-              style={{ objectFit: "contain", height: "34px" }}
-            />
-          </a>
-          <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.6", maxWidth: "320px" }}>
-            Where smart shoppers flock for 100% hand-tested coupon codes, perforated checkout vouchers, and verified daily brand deals.
+        <div className="footerGrid">
+          {/* Brand Column */}
+          <div>
+            <a href="/" className="logoContainer" style={{ display: "inline-flex", marginBottom: "12px" }}>
+              <img
+                src="/couponflock-logo.svg"
+                alt="CouponFlock Logo"
+                height="34"
+                style={{ objectFit: "contain", height: "34px" }}
+              />
+            </a>
+            <p className="footerBrandDesc">
+              Where smart shoppers flock for 100% hand-tested discount codes, exclusive merchant vouchers, and verified savings with zero ad clutter.
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "14px", fontSize: "0.8rem", color: "#059669", fontWeight: 700 }}>
+              <span>🔒 SSL Secured</span>
+              <span>•</span>
+              <span>✓ Verified Daily</span>
+            </div>
+          </div>
+
+          {/* Column 1: Popular Brands */}
+          <div>
+            <h4 className="footerColumnTitle">Popular Stores</h4>
+            <ul className="footerLinks">
+              <li><a href="/store/im8health" className="footerLinkItem">iM8 Health</a></li>
+              <li><a href="/store/desktronic" className="footerLinkItem">Desktronic</a></li>
+              <li><a href="/store/dreamcloud" className="footerLinkItem">DreamCloud</a></li>
+              <li><a href="/store/bouquets-by-post" className="footerLinkItem">Bouquets By Post</a></li>
+              <li><a href="/store/everblog" className="footerLinkItem">Everblog AI</a></li>
+              <li><a href="/#stores" className="footerLinkItem">Browse All 700+ Stores →</a></li>
+            </ul>
+          </div>
+
+          {/* Column 2: Perks & Tools */}
+          <div>
+            <h4 className="footerColumnTitle">Perks & Tools</h4>
+            <ul className="footerLinks">
+              <li><a href="/#coupons" className="footerLinkItem">Trending Vouchers</a></li>
+              <li><a href="/blog" className="footerLinkItem">Smart Shopping Guides</a></li>
+              <li><a href="/budget-tracker" className="footerLinkItem">Budget Google Sheets</a></li>
+              <li><a href="/notion-second-brain" className="footerLinkItem">Notion Second Brain</a></li>
+              <li><a href="/giveaway" className="footerLinkItem">Member Giveaways</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Trust & Legal */}
+          <div>
+            <h4 className="footerColumnTitle">Trust & Legal</h4>
+            <ul className="footerLinks">
+              <li><a href="/about" className="footerLinkItem">About CouponFlock</a></li>
+              <li><a href="/contact" className="footerLinkItem">Contact Deal Team</a></li>
+              <li><a href="/privacy" className="footerLinkItem">Privacy Policy</a></li>
+              <li><a href="/terms" className="footerLinkItem">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Copyright & Disclaimer */}
+        <div className="footerBottom">
+          <p
+            style={{ fontSize: "0.84rem", color: "var(--text-tertiary)", cursor: "default", userSelect: "none" }}
+            onClick={handleCopyrightClick}
+          >
+            © {new Date().getFullYear()} CouponFlock.com — All Rights Reserved. Direct affiliate checkout partner.
           </p>
-          <p style={{ color: "var(--text-tertiary)", fontSize: "0.75rem", lineHeight: "1.5", maxWidth: "320px", marginTop: "12px" }}>
-            CouponFlock partners directly with leading retail networks to verify promo codes every 4 hours with zero ad clutter.
+
+          <p style={{ fontSize: "0.78rem", color: "var(--text-tertiary)" }}>
+            Discounts hand-verified in shopping carts daily.
           </p>
         </div>
 
-        <div className="footerLinksContainer">
-          <div className="footerColumn">
-            <h4 className="footerColHeader">Flock Radar</h4>
-            <a href="/" className="footerLinkItem">Deal Radar Home</a>
-            <a href="/#stores" className="footerLinkItem">701+ Brand Stores</a>
-            <a href="/blog" className="footerLinkItem">Smart Shopping Guides</a>
-            <a href="/about" className="footerLinkItem">About CouponFlock</a>
-            <a href="/contact" className="footerLinkItem">Contact Us</a>
-          </div>
-          <div className="footerColumn">
-            <h4 className="footerColHeader">Community Perks</h4>
-            <a href="/budget-tracker" className="footerLinkItem">Budget Google Sheets</a>
-            <a href="/notion-second-brain" className="footerLinkItem">Notion Second Brain</a>
-            <a href="/giveaway" className="footerLinkItem">Gift Card Giveaways</a>
-          </div>
-          <div className="footerColumn">
-            <h4 className="footerColHeader">Legal & Trust</h4>
-            <a href="/privacy" className="footerLinkItem">Privacy Policy</a>
-            <a href="/terms" className="footerLinkItem">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-      <div className="footerBottom">
-        <p
-          style={{ fontSize: "0.85rem", color: "var(--text-tertiary)", cursor: "default", userSelect: "none" }}
-          onClick={handleCopyrightClick}
-        >
-          © {new Date().getFullYear()} CouponFlock.com — Where Smart Shoppers Flock for Verified Savings. All Rights Reserved.
-        </p>
-
+        {/* Secret Admin Portals (Toggled on 5 clicks) */}
         {showPortalLink && (
-          <div style={{ display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap", marginTop: "12px" }}>
+          <div style={{ display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap", marginTop: "14px" }}>
             <a
               href="/admin/ai-creator"
               style={{
