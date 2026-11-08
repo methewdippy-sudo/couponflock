@@ -11,36 +11,6 @@ interface HomeClientProps {
   initialStores: Store[];
 }
 
-const BENTO_PICKS = [
-  {
-    badge: "🔥 #1 FLOCK PICK TODAY",
-    brand: "Nike Official",
-    slug: "nike",
-    offer: "Up to 40% Off Member Footwear & Apparel",
-    sub: "Verified 18 mins ago • 1,420 Flock Uses",
-    color: "#065f46",
-    accent: "#34d399",
-  },
-  {
-    badge: "⚡ FLASH VOUCHER DROP",
-    brand: "Apple Store",
-    slug: "apple",
-    offer: "$150 Instant Trade-In & Accessory Credits",
-    sub: "Verified 35 mins ago • 980 Flock Uses",
-    color: "#0f172a",
-    accent: "#fbbf24",
-  },
-  {
-    badge: "🏆 MOST REDEEMED",
-    brand: "Sephora Beauty",
-    slug: "sephora",
-    offer: "20% Off Prestige Skincare & Gift Sets",
-    sub: "Verified 1 hour ago • 1,890 Flock Uses",
-    color: "#064e3b",
-    accent: "#6ee7b7",
-  },
-];
-
 export default function HomeClient({ initialCoupons, initialStores }: HomeClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedStoreSlug, setSelectedStoreSlug] = useState<string | null>(null);
@@ -291,7 +261,7 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
         {pages.map((p, idx) => {
           if (p === "...") {
             return (
-              <span key={`ell-${idx}`} className={styles.paginationEllipsis} style={{ padding: "0 8px", color: "var(--text-tertiary)", fontWeight: "bold" }}>
+              <span key={`ell-${idx}`} style={{ padding: "0 8px", color: "var(--text-tertiary)", fontWeight: "bold" }}>
                 ...
               </span>
             );
@@ -484,33 +454,26 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
   return (
     <div className={styles.mainContainer}>
       {/* =========================================================
-          COUPONFLOCK DEAL RADAR + 3-CARD BENTO HERO
+          COUPONFLOCK HERO SECTION
           ========================================================= */}
-      <section className={styles.heroSection} style={{ paddingBottom: "48px" }}>
-        <div className={styles.heroContent} style={{ maxWidth: "920px" }}>
-          <span
-            className={styles.heroBadge}
-            style={{
-              background: "#ecfdf5",
-              border: "1px solid #6ee7b7",
-              color: "#047857",
-            }}
-          >
-            🦅 Smart Shopper Deal Radar — 701+ Verified Brands &amp; Perforated Vouchers
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <span className={styles.heroBadge}>
+            ✓ 100% Hand-Tested Promo Codes &amp; Verified Store Deals
           </span>
-          <h1 className={styles.heroTitle} style={{ fontSize: "clamp(2.4rem, 4.5vw, 3.8rem)" }}>
-            Flock to Verified Savings. <span className={styles.gradientText}>Peel &amp; Save Instantly.</span>
+          <h1 className={styles.heroTitle}>
+            Smart Savings Made Simple. <span className={styles.gradientText}>Save at 700+ Brands.</span>
           </h1>
-          <p className={styles.heroSubtitle} style={{ marginBottom: "28px" }}>
-            Our community deal radar tests every promo voucher every 4 hours. Click any perforated ticket below to copy your verified code and unlock instant cart discounts.
+          <p className={styles.heroSubtitle}>
+            Browse thousands of verified promo codes and direct store discounts updated daily. Click any coupon to copy the code and save at checkout.
           </p>
 
-          {/* Search Radar Bar */}
-          <div className={styles.searchBarWrapper} style={{ border: "2px solid #a7f3d0", maxWidth: "640px" }}>
+          {/* Search Bar */}
+          <div className={styles.searchBarWrapper}>
             <SearchIcon />
             <input
               type="text"
-              placeholder="Search 701+ brands, perforated vouchers, or items..."
+              placeholder="Search for stores, brands, or promo codes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => {
@@ -597,16 +560,16 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                       <div className={styles.suggestionFallback}>{store.name.charAt(0).toUpperCase()}</div>
                     )}
                     <span className={styles.suggestionName}>{store.name}</span>
-                    <span className={styles.suggestionBadge}>Peel Vouchers</span>
+                    <span className={styles.suggestionBadge}>View Deals →</span>
                   </a>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Trending Flock Tags */}
+          {/* Popular Searches */}
           <div className={styles.popularSearches}>
-            <span className={styles.popularSearchesTitle}>🔥 Flock Radar Picks:</span>
+            <span className={styles.popularSearchesTitle}>Popular Brands:</span>
             {["Nike", "Apple", "Sephora", "Adidas", "Lululemon", "Samsung"].map((tag) => (
               <button
                 key={tag}
@@ -617,68 +580,12 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
               </button>
             ))}
           </div>
-
-          {/* 3-Card Bento Highlight Grid inside Hero (Unique to CouponFlock) */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "16px",
-              width: "100%",
-              marginTop: "34px",
-              textAlign: "left",
-            }}
-          >
-            {BENTO_PICKS.map((pick) => (
-              <a
-                key={pick.slug}
-                href={`/store/${pick.slug}`}
-                style={{
-                  background: pick.color,
-                  color: "#ffffff",
-                  borderRadius: "18px",
-                  padding: "20px",
-                  textDecoration: "none",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  gap: "10px",
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  boxShadow: "0 12px 28px -8px rgba(6, 78, 59, 0.25)",
-                  transition: "transform 0.2s ease",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <span
-                    style={{
-                      fontSize: "0.68rem",
-                      fontWeight: 800,
-                      padding: "3px 9px",
-                      borderRadius: "999px",
-                      background: "rgba(255,255,255,0.12)",
-                      color: pick.accent,
-                    }}
-                  >
-                    {pick.badge}
-                  </span>
-                  <span style={{ fontSize: "0.78rem", color: "#a7f3d0", fontWeight: 700 }}>Peel Ticket →</span>
-                </div>
-                <div>
-                  <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fff" }}>{pick.brand}</div>
-                  <div style={{ fontSize: "0.88rem", color: "#ecfdf5", marginTop: "3px", fontWeight: 500 }}>{pick.offer}</div>
-                </div>
-                <div style={{ fontSize: "0.73rem", color: "#a7f3d0", borderTop: "1px dashed rgba(255,255,255,0.18)", paddingTop: "8px" }}>
-                  ✓ {pick.sub}
-                </div>
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Infinite Auto-Scrolling Trending Brands Carousel */}
       <div className={styles.carouselContainer}>
-        <p className={styles.carouselTitle}>🦅 Live Flock Brand Radar — Click Any Brand to Peel Vouchers</p>
+        <p className={styles.carouselTitle}>Trending Partner Stores — Click Any Store to View Verified Coupons</p>
         <div className={styles.carouselSlider}>
           <div className={styles.carouselTrack}>
             {initialStores.slice(0, 20).map((store) => (
@@ -695,8 +602,8 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                     className={styles.carouselLogo}
                     loading="lazy"
                     decoding="async"
-                    width={36}
-                    height={36}
+                    width={28}
+                    height={28}
                   />
                 ) : (
                   <div className={styles.carouselFallback}>{store.name.charAt(0).toUpperCase()}</div>
@@ -718,8 +625,8 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                     className={styles.carouselLogo}
                     loading="lazy"
                     decoding="async"
-                    width={36}
-                    height={36}
+                    width={28}
+                    height={28}
                   />
                 ) : (
                   <div className={styles.carouselFallback}>{store.name.charAt(0).toUpperCase()}</div>
@@ -735,19 +642,20 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
       <div className={styles.contentLayout}>
         {matchedStores.length > 0 && (
           <section className={styles.filterSection}>
-            <h3 className={styles.sectionTitle} style={{ fontSize: "1.2rem", color: "var(--primary-blue)" }}>
-              Matching Brands ({matchedStores.length})
-            </h3>
-            <div className={styles.storesGrid} style={{ gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))" }}>
+            <div className={styles.sectionHeader}>
+              <div>
+                <h3 className={styles.sectionTitle}>Matching Stores ({matchedStores.length})</h3>
+              </div>
+            </div>
+            <div className={styles.storesGrid}>
               {matchedStores.map((store) => (
                 <a
                   key={store.id || store.slug}
                   href={`/store/${store.slug}`}
                   className={styles.storeCard}
-                  style={{ padding: "16px 12px" }}
                 >
                   {store.logo ? (
-                    <div className={styles.storeCardLogoWrapper} style={{ width: "48px", height: "48px", marginBottom: "8px" }}>
+                    <div className={styles.storeCardLogoWrapper}>
                       <img
                         src={store.logo}
                         alt={store.name}
@@ -759,12 +667,12 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                       />
                     </div>
                   ) : (
-                    <div className={styles.storeCardFallback} style={{ width: "48px", height: "48px", fontSize: "1.2rem", marginBottom: "8px" }}>
+                    <div className={styles.storeCardFallback}>
                       {store.name.charAt(0).toUpperCase()}
                     </div>
                   )}
-                  <span className={styles.storeCardName} style={{ fontSize: "0.95rem" }}>{store.name}</span>
-                  <span className={styles.storeCardLink} style={{ fontSize: "0.78rem" }}>Peel Vouchers →</span>
+                  <span className={styles.storeCardName}>{store.name}</span>
+                  <span className={styles.storeCardLink}>View Coupons →</span>
                 </a>
               ))}
             </div>
@@ -773,9 +681,9 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
         {/* Featured Brands Grid */}
         <section id="stores" className={styles.filterSection}>
-          <h2 className={styles.sectionTitle}>🦅 Browse Vouchers by Brand Radar</h2>
+          <h2 className={styles.sectionTitle}>Browse Popular Stores</h2>
           <p className={styles.sectionSubtitle}>
-            Select any brand below to open its dedicated voucher booth and peel 100% tested promo codes.
+            Select any store below to view all active promo codes and verified discounts.
           </p>
           <div className={styles.storesGrid}>
             {paginatedStores.map((store) => (
@@ -802,43 +710,48 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                   </div>
                 )}
                 <span className={styles.storeCardName}>{store.name}</span>
-                <span className={styles.storeCardLink}>Peel Vouchers →</span>
+                <span className={styles.storeCardLink}>View Coupons →</span>
               </a>
             ))}
           </div>
           {renderPagination(storePage, totalStorePages, setStorePage, "stores")}
         </section>
 
-        {/* Coupons Grid Section with Interactive Voucher Filter & Sort Controls */}
+        {/* Coupons Feed Section */}
         <section id="coupons" className={styles.couponsSection}>
-          <div className={styles.sectionHeader} style={{ flexWrap: "wrap", gap: "14px" }}>
+          <div className={styles.sectionHeader}>
             <div>
               <h2 className={styles.sectionTitle}>
                 {selectedStoreSlug
-                  ? `${initialStores.find((s) => s.slug === selectedStoreSlug)?.name} Perforated Vouchers`
-                  : "✂️ Live Perforated Voucher Feed"}
+                  ? `${initialStores.find((s) => s.slug === selectedStoreSlug)?.name || "Store"} Coupons`
+                  : "Top Verified Promo Codes & Deals"}
               </h2>
+              <p className={styles.sectionSubtitle}>
+                Showing {filteredCoupons.length} active offers tested by our team
+              </p>
             </div>
 
-            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+            {/* Clean Emerald Filter & Sort Bar */}
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
               {[
-                { id: "all", label: "All Vouchers" },
-                { id: "code", label: "✂️ Promo Codes" },
-                { id: "deal", label: "⚡ Auto-Applied Sales" },
+                { key: "all", label: "All Deals" },
+                { key: "code", label: "Promo Codes" },
+                { key: "deal", label: "Store Sales" },
               ].map((tab) => (
                 <button
-                  key={tab.id}
+                  key={tab.key}
                   type="button"
-                  onClick={() => setVoucherFilter(tab.id as "all" | "code" | "deal")}
+                  onClick={() => setVoucherFilter(tab.key as any)}
                   style={{
-                    padding: "7px 14px",
-                    borderRadius: "999px",
-                    fontSize: "0.8rem",
+                    padding: "8px 14px",
+                    borderRadius: "10px",
+                    fontSize: "0.84rem",
                     fontWeight: 700,
                     cursor: "pointer",
-                    border: voucherFilter === tab.id ? "1px solid #059669" : "1px solid #d1fae5",
-                    background: voucherFilter === tab.id ? "#059669" : "#f0fdf4",
-                    color: voucherFilter === tab.id ? "#ffffff" : "#065f46",
+                    border: voucherFilter === tab.key ? "1px solid #059669" : "1px solid #cbd5e1",
+                    background: voucherFilter === tab.key ? "#059669" : "#ffffff",
+                    color: voucherFilter === tab.key ? "#ffffff" : "#334155",
+                    transition: "all 0.15s ease",
                   }}
                 >
                   {tab.label}
@@ -847,26 +760,22 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
 
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as "popular" | "discount" | "newest")}
+                onChange={(e) => setSortBy(e.target.value as any)}
                 style={{
-                  padding: "7px 12px",
-                  borderRadius: "999px",
-                  border: "1px solid #a7f3d0",
-                  background: "#ffffff",
-                  color: "#065f46",
-                  fontSize: "0.8rem",
+                  padding: "8px 12px",
+                  borderRadius: "10px",
+                  fontSize: "0.84rem",
                   fontWeight: 700,
+                  border: "1px solid #cbd5e1",
+                  background: "#ffffff",
+                  color: "#0f172a",
                   cursor: "pointer",
                 }}
               >
-                <option value="popular">Sort: 🔥 Most Popular</option>
-                <option value="discount">Sort: 💎 Highest Savings</option>
-                <option value="newest">Sort: ✨ Newly Verified</option>
+                <option value="popular">Sort: Most Popular</option>
+                <option value="discount">Sort: Highest Discount</option>
+                <option value="newest">Sort: Newest Added</option>
               </select>
-
-              <span className={couponCountStyle}>
-                {filteredCoupons.length} {filteredCoupons.length === 1 ? "Deal" : "Deals"}
-              </span>
             </div>
           </div>
 
@@ -874,22 +783,23 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
             <>
               <div className={styles.couponsGrid}>
                 {paginatedCoupons.map((coupon) => (
-                  <div key={coupon.id} className="animate-slide-up">
-                    <CouponCard coupon={coupon} onGetCode={handleGetCode} />
-                  </div>
+                  <CouponCard
+                    key={coupon.id}
+                    coupon={coupon}
+                    onGetCode={handleGetCode}
+                  />
                 ))}
               </div>
               {renderPagination(couponPage, totalCouponPages, setCouponPage, "coupons")}
             </>
           ) : (
-            <div className={styles.noResults}>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 15h8M9 9h.01M15 9h.01" strokeLinecap="round" />
-              </svg>
-              <h3>No vouchers found</h3>
-              <p>We couldn&apos;t find any discount codes matching &quot;{searchQuery}&quot;. Try searching for something else or reset your filters.</p>
+            <div className={styles.emptyState}>
+              <h3 className={styles.emptyTitle}>No matching coupons found</h3>
+              <p className={styles.emptyDesc}>
+                We couldn&apos;t find any active offers matching &quot;{searchQuery}&quot;.
+              </p>
               <button
+                type="button"
                 onClick={() => {
                   setSearchQuery("");
                   setSelectedStoreSlug(null);
@@ -897,20 +807,18 @@ export default function HomeClient({ initialCoupons, initialStores }: HomeClient
                 }}
                 className={styles.btnResetFilters}
               >
-                View All Vouchers
+                Reset All Filters
               </button>
             </div>
           )}
         </section>
       </div>
 
-      {/* Copy Code Popup Modal */}
-      {activeCoupon && (
-        <CopyModal coupon={activeCoupon} onClose={() => setActiveCoupon(null)} />
-      )}
+      {/* Copy Modal */}
+      <CopyModal
+        coupon={activeCoupon}
+        onClose={() => setActiveCoupon(null)}
+      />
     </div>
   );
 }
-
-const couponCount = "couponCount";
-const couponCountStyle = styles[couponCount] || "";
