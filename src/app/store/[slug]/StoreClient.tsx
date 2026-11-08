@@ -231,8 +231,8 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             <img
               src={bannerLogo}
               alt={`${store.name} Logo`}
-              width={68}
-              height={68}
+              width={64}
+              height={64}
               className={storeStyles.storeLogo}
               onError={() => setBannerLogoError(true)}
             />
@@ -241,26 +241,18 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           )}
           <div>
             <h1 className={storeStyles.storeTitle}>
-              {brandSeo?.h1 || `${store.name} Coupons & Verified Promo Codes`}
+              {store.name} Promo Codes &amp; Deals
             </h1>
             <p className={storeStyles.storeSubtitle}>
-              {coupons.length} hand-tested savings vouchers for {store.name} ({codeCount} Promo Codes &amp; {dealCount} Direct Sales).
+              {coupons.length} verified discounts active today
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "6px", fontSize: "12.5px", color: "#047857", fontWeight: 700 }}>
-              <span>★ {ratingValue} / 5</span>
-              <span>•</span>
-              <span>{reviewCount.toLocaleString()}+ Verified Ratings</span>
-              <span>•</span>
-              <span style={{ color: "#059669" }}>Updated {todayLabel}</span>
-            </div>
           </div>
         </div>
 
         <div className={storeStyles.headerTrustBadge}>
           <div className={storeStyles.trustPill}>
-            <span className={storeStyles.pulseDot}></span> Verified Active • {todayLabel}
+            <span className={storeStyles.pulseDot}></span> Verified {todayLabel}
           </div>
-          <span className={storeStyles.guaranteeText}>CouponFlock Official Partner</span>
         </div>
       </section>
 
@@ -272,28 +264,28 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
           justifyContent: "space-between",
           flexWrap: "wrap",
           gap: "10px",
-          marginBottom: "20px",
+          marginBottom: "16px",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
           {[
-            { key: "all", label: `All Vouchers (${coupons.length})` },
-            { key: "code", label: `Promo Codes (${codeCount})` },
-            { key: "deal", label: `Direct Deals (${dealCount})` },
+            { key: "all", label: `All (${coupons.length})` },
+            { key: "code", label: `Codes (${codeCount})` },
+            { key: "deal", label: `Deals (${dealCount})` },
           ].map((tab) => (
             <button
               key={tab.key}
               type="button"
               onClick={() => setTicketFilter(tab.key as any)}
               style={{
-                padding: "8px 16px",
-                borderRadius: "10px",
-                fontSize: "13px",
+                padding: "6px 14px",
+                borderRadius: "8px",
+                fontSize: "12.5px",
                 fontWeight: 700,
                 cursor: "pointer",
                 border: ticketFilter === tab.key ? "1px solid #059669" : "1px solid #e2e8f0",
                 background: ticketFilter === tab.key ? "#059669" : "#ffffff",
-                color: ticketFilter === tab.key ? "#ffffff" : "#334155",
+                color: ticketFilter === tab.key ? "#ffffff" : "#475569",
                 transition: "all 0.15s ease",
               }}
             >
@@ -301,12 +293,9 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
             </button>
           ))}
         </div>
-        <span style={{ fontSize: "12.5px", color: "#64748b", fontWeight: 600 }}>
-          ✓ Verified active discount codes &amp; deals for {store.name}
-        </span>
       </div>
 
-      {/* Clean, Simple & Professional Coupon Cards */}
+      {/* Ultra-Simple, Clean & High-Converting Coupon Cards */}
       <section className={storeStyles.cardsList}>
         {filteredCoupons.map((coupon, idx) => {
           const isDirectDeal = !coupon.code || coupon.code === "DEAL";
@@ -321,37 +310,25 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
               className={`${storeStyles.couponCard} ${idx === 0 ? storeStyles.featuredCouponCard : ""}`}
               onClick={(e) => handleAction(e, coupon)}
             >
-              {/* Left: Punchy Discount Badge */}
+              {/* Discount Badge */}
               <div className={storeStyles.cardDiscountCol}>
-                <div className={storeStyles.cardDiscountValue}>
-                  {discountVal} <span className={storeStyles.cardDiscountSub}>{discountSub}</span>
-                </div>
-                <span className={isDirectDeal ? storeStyles.dealPill : storeStyles.codePill}>
-                  {isDirectDeal ? "Direct Deal" : "Promo Code"}
-                </span>
+                <div className={storeStyles.cardDiscountValue}>{discountVal}</div>
+                <div className={storeStyles.cardDiscountSub}>{discountSub}</div>
               </div>
 
-              {/* Center: Clean Title & Offer Details */}
+              {/* Title & Status */}
               <div className={storeStyles.cardDetailsCol}>
-                <div className={storeStyles.cardMetaRow}>
-                  {idx === 0 && <span className={storeStyles.topPickTag}>★ Most Popular</span>}
-                  <span className={storeStyles.verifiedActiveTag}>✓ Verified Active</span>
-                  <span className={storeStyles.dotDivider}>•</span>
-                  <span className={storeStyles.usesTag}>{coupon.uses_count ? `${coupon.uses_count.toLocaleString()} uses` : "Tested in cart today"}</span>
-                </div>
-
                 <h3 className={storeStyles.cardTitle}>
                   {sanitizeCodeText(coupon.title || `${coupon.discount} at ${store.name}`, coupon.code)}
                 </h3>
-                
-                {coupon.description && (
-                  <p className={storeStyles.cardDesc}>
-                    {sanitizeCodeText(coupon.description, coupon.code)}
-                  </p>
-                )}
+                <div className={storeStyles.cardMetaRow}>
+                  <span className={storeStyles.verifiedActiveTag}>✓ Verified Active</span>
+                  <span className={storeStyles.dotDivider}>•</span>
+                  <span className={storeStyles.usesTag}>{isDirectDeal ? "Direct Deal" : "Coupon Code"}</span>
+                </div>
               </div>
 
-              {/* Right: Modern High-Converting CTA Button */}
+              {/* Action Button */}
               <div className={storeStyles.cardActionCol}>
                 <button
                   type="button"
@@ -362,22 +339,19 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                     isCopied ? (
                       <>
                         <span className={storeStyles.btnCheck}>✓</span>
-                        <span>Code Copied!</span>
+                        <span>Copied!</span>
                       </>
                     ) : (
                       <>
-                        <span className={storeStyles.btnScissors}>✂</span>
-                        <span className={storeStyles.btnMainLabel}>Get Code</span>
-                        <span className={storeStyles.btnCodePreview}>
-                          {coupon.code ? `${coupon.code.slice(0, 3)}••` : "••••"}
-                        </span>
+                        <span>Get Code</span>
+                        <span className={storeStyles.btnArrow}>→</span>
                       </>
                     )
                   ) : (
                     isCopied ? (
                       <>
                         <span className={storeStyles.btnCheck}>✓</span>
-                        <span>Opening Offer...</span>
+                        <span>Opening...</span>
                       </>
                     ) : (
                       <>
@@ -393,13 +367,10 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
         })}
       </section>
 
-      {/* CouponFlock Authority Trust Banner */}
+      {/* Clean 1-Line Trust Strip */}
       <section className={storeStyles.trustStrip}>
         <div className={storeStyles.trustText}>
-          <strong>CouponFlock Buyer Guarantee:</strong> All coupon codes and promotional offers are hand-verified daily by our savings specialists. Clicking any deal automatically applies savings and securely redirects you to the official {store.name} checkout.
-        </div>
-        <div className={storeStyles.trustShield}>
-          <span>🛡️ Verified Savings Shield</span>
+          🔒 <strong>Verified Checkout Guarantee:</strong> All discount offers are tested in shopping carts today. Clicking any voucher opens official checkout at {store.name}.
         </div>
       </section>
 
