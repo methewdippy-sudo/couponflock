@@ -4,6 +4,7 @@ import StoreClient from "./StoreClient";
 import { Coupon, Store } from "../../../components/CouponCard";
 import { getLogoUrl, FALLBACK_STORES, FALLBACK_COUPONS } from "../../../lib/fallbackData";
 import { getRegisteredStore, getAllRegisteredSlugs } from "../../../lib/storeRegistry";
+import { getBrandSeoData } from "../../../lib/brandSeoData";
 
 export const dynamic = "force-static"; // Pure static SSG, 0% Vercel ISR quota usage
 
@@ -28,24 +29,28 @@ export async function generateMetadata({ params }: StorePageProps): Promise<Meta
   // 1. Check Store Registry first
   const now = new Date();
   const monthYear = now.toLocaleString("en-US", { month: "short", year: "numeric" });
+  const brandSeo = getBrandSeoData(slug);
   const registered = getRegisteredStore(slug);
   if (registered) {
     const { store, coupons } = registered;
     const topDiscount = coupons?.[0]?.discount || "20% Off";
     const logoUrlStr = store.logo || "";
     const absoluteLogoUrl = logoUrlStr.startsWith("http") ? logoUrlStr : `https://www.couponflock.com${logoUrlStr}`;
-    const seoTitle = `${topDiscount} ${store.name} Coupon Codes & Verified Discount Codes (${monthYear}) | CouponFlock`;
-    const seoDesc = `Active ${store.name} discount codes and promo codes verified for ${monthYear}. Claim ${topDiscount} instantly with ${coupons.length} tested ${store.name} coupons & free shipping deals.`;
+    const seoTitle = brandSeo?.metaTitle || `${topDiscount} ${store.name} Coupon Codes & Verified Discount Codes (${monthYear}) | CouponFlock`;
+    const seoDesc = brandSeo?.metaDescription || `Active ${store.name} discount codes and promo codes verified for ${monthYear}. Claim ${topDiscount} instantly with ${coupons.length} tested ${store.name} coupons & free shipping deals.`;
+    const seoKeywords = brandSeo?.keywords && brandSeo.keywords.length > 0
+      ? brandSeo.keywords
+      : [
+          `${store.name.toLowerCase()} discount code`,
+          `${store.name.toLowerCase()} coupon code`,
+          `${store.name.toLowerCase()} promo code`,
+          `${store.name.toLowerCase()} coupons ${now.getFullYear()}`,
+        ];
 
     return {
       title: seoTitle,
       description: seoDesc,
-      keywords: [
-        `${store.name.toLowerCase()} discount code`,
-        `${store.name.toLowerCase()} coupon code`,
-        `${store.name.toLowerCase()} promo code`,
-        `${store.name.toLowerCase()} coupons ${now.getFullYear()}`,
-      ],
+      keywords: seoKeywords,
       robots: {
         index: true,
         follow: true,
