@@ -26,30 +26,42 @@ export async function generateMetadata({ params }: StorePageProps): Promise<Meta
   const { slug } = await params;
   
   // 1. Check Store Registry first
+  const now = new Date();
+  const monthYear = now.toLocaleString("en-US", { month: "short", year: "numeric" });
   const registered = getRegisteredStore(slug);
   if (registered) {
-    const { store } = registered;
+    const { store, coupons } = registered;
+    const topDiscount = coupons?.[0]?.discount || "20% Off";
     const logoUrlStr = store.logo || "";
     const absoluteLogoUrl = logoUrlStr.startsWith("http") ? logoUrlStr : `https://www.couponflock.com${logoUrlStr}`;
+    const seoTitle = `${topDiscount} ${store.name} Coupon Codes & Verified Discount Codes (${monthYear}) | CouponFlock`;
+    const seoDesc = `Active ${store.name} discount codes and promo codes verified for ${monthYear}. Claim ${topDiscount} instantly with ${coupons.length} tested ${store.name} coupons & free shipping deals.`;
 
     return {
-      title: `${store.name} Promo Codes & Verified Discount Codes | CouponFlock`,
-      description: `Save money today at ${store.name} with active coupon codes, verified discount offers, and free shipping deals.`,
+      title: seoTitle,
+      description: seoDesc,
+      keywords: [
+        `${store.name.toLowerCase()} discount code`,
+        `${store.name.toLowerCase()} coupon code`,
+        `${store.name.toLowerCase()} promo code`,
+        `${store.name.toLowerCase()} coupons ${now.getFullYear()}`,
+      ],
       robots: {
-        index: false,
-        follow: false,
-        nocache: true,
+        index: true,
+        follow: true,
         googleBot: {
-          index: false,
-          follow: false,
+          index: true,
+          follow: true,
+          "max-snippet": -1,
+          "max-image-preview": "large",
         },
       },
       alternates: {
         canonical: `https://www.couponflock.com/store/${slug}`,
       },
       openGraph: {
-        title: `${store.name} Promo Codes & Verified Discount Codes | CouponFlock`,
-        description: `Save money today at ${store.name} with active coupon codes, verified discount offers, and free shipping deals.`,
+        title: seoTitle,
+        description: seoDesc,
         url: `https://www.couponflock.com/store/${slug}`,
         siteName: "CouponFlock",
         type: "website",
@@ -65,8 +77,8 @@ export async function generateMetadata({ params }: StorePageProps): Promise<Meta
       },
       twitter: {
         card: "summary_large_image",
-        title: `${store.name} Promo Codes & Verified Discount Codes | CouponFlock`,
-        description: `Save money today at ${store.name} with active coupon codes, verified discount offers, and free shipping deals.`,
+        title: seoTitle,
+        description: seoDesc,
         images: [absoluteLogoUrl],
       }
     };

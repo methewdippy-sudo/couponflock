@@ -9380,6 +9380,222 @@ export const STORE_REGISTRY: RegistryStore[] = [
         expiry_date: "2026-12-31"
       }
     ]
+  },
+
+  // 166. RENUE BY SCIENCE (US - NMN & Cellular Longevity Supplements - Weekly PayPal Payouts)
+  {
+    id: 766,
+    name: "Renue By Science",
+    slug: "renue-by-science",
+    aliases: ["renuebyscience", "renue", "renue-science", "renue-by-science-us"],
+    logo: "https://logo.clearbit.com/renuebyscience.com",
+    website: "https://renuebyscience.com",
+    affiliate_url: "https://renuebyscience.com",
+    country: "US",
+    description: "Research-backed liposomal NMN, NAD+ precursors, resveratrol, and cellular longevity supplements formulated for maximum bioavailability.",
+    coupons: [
+      {
+        id: "rbs-deal-1",
+        code: "RENUE10",
+        discount: "10% OFF",
+        title: "10% off sitewide on Liposomal NMN & NAD+ Longevity Supplements",
+        description: "Apply verified discount code RENUE10 at checkout for 10% off all liposomal capsules, sublingual powders, and NAD+ nasal sprays.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "rbs-deal-2",
+        code: "LONGEVITY15",
+        discount: "15% OFF",
+        title: "15% off Subscribe & Save cellular longevity bundles",
+        description: "Save 15% on recurring liposomal NMN, Spermidine, and Quercetin bundles with verified promo code LONGEVITY15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "rbs-deal-3",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free US tracked shipping on all longevity orders over $50",
+        description: "Enjoy fast, complimentary tracked delivery across the United States on orders of $50 or more.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 167. COMMOMY DECOR (US - 3D Peel & Stick Wall Tiles - Weekly UpPromote Payouts)
+  {
+    id: 767,
+    name: "Commomy Decor",
+    slug: "commomy",
+    aliases: ["commomy-decor", "commomydecor", "commomy-tiles", "commomy-us"],
+    logo: "https://logo.clearbit.com/commomy.com",
+    website: "https://commomy.com",
+    affiliate_url: "https://commomy.com",
+    country: "US",
+    description: "3D peel-and-stick backsplash wall tiles, faux brick panels, stone textures, and DIY kitchen & fireplace makeover tiles.",
+    coupons: [
+      {
+        id: "cmy-deal-1",
+        code: "COMMOMY15",
+        discount: "15% OFF",
+        title: "15% off sitewide on 3D Peel & Stick Wall Tiles",
+        description: "Use verified coupon code COMMOMY15 for 15% instant discount on faux brick, stone, and kitchen backsplash tiles.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cmy-deal-2",
+        code: "DECOR20",
+        discount: "20% OFF",
+        title: "20% off multi-pack room renovation tile bundles",
+        description: "Save 20% when ordering 20+ piece 3D wall tile bulk renovation sets with code DECOR20.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "cmy-deal-3",
+        code: "",
+        discount: "FREE SHIPPING",
+        title: "Free US shipping on qualifying DIY home tile orders",
+        description: "Complimentary doorstep delivery on all qualifying peel-and-stick wall tile packages.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 168. PETALS AND TAILS (US - CBD Pet Wellness & Oils - Paid Every Friday)
+  {
+    id: 768,
+    name: "Petals and Tails",
+    slug: "petals-and-tails",
+    aliases: ["petalsandtails", "petals-tails", "petals-and-tails-us"],
+    logo: "https://logo.clearbit.com/petalsandtails.com",
+    website: "https://petalsandtails.com",
+    affiliate_url: "https://petalsandtails.com",
+    country: "US",
+    description: "Organic hemp oil tinctures, calming chews, salmon oil supplements, and natural paw care formulated for dogs and cats.",
+    coupons: [
+      {
+        id: "pat-deal-1",
+        code: "PETALS15",
+        discount: "15% OFF",
+        title: "15% off sitewide on Calming Pet Hemp Oils & Chews",
+        description: "Redeem verified code PETALS15 at checkout for 15% off all organic pet tinctures, treats, and grooming balms.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "pat-deal-2",
+        code: "PAWS20",
+        discount: "20% OFF",
+        title: "20% off first auto-ship pet wellness bundle",
+        description: "Get 20% off your initial pet wellness bundle order with coupon code PAWS20.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 169. ENIGWATCH (US - Luxury Watch Winders & Biometric Safes - Weekly Payouts)
+  {
+    id: 769,
+    name: "Enigwatch",
+    slug: "enigwatch",
+    aliases: ["enigwatch-us", "enig-watch"],
+    logo: "https://logo.clearbit.com/enigwatch.com",
+    website: "https://enigwatch.com",
+    affiliate_url: "https://enigwatch.com",
+    country: "US",
+    description: "Handcrafted luxury automatic watch winders, biometric fingerprint watch safes, and multi-rotor collector cabinets.",
+    coupons: [
+      {
+        id: "eng-deal-1",
+        code: "ENIG10",
+        discount: "10% OFF",
+        title: "10% off Luxury Automatic Watch Winders & Collector Safes",
+        description: "Save 10% on silent Japanese Mabuchi motor watch winders and biometric safes with code ENIG10.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "eng-deal-2",
+        code: "",
+        discount: "$75 OFF",
+        title: "Up to $75 off Multi-Watch Cabinet Winders + Free Insured Shipping",
+        description: "Instant savings on 6-watch and 12-watch luxury cabinets with free insured global delivery.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 170. UPERFECT (US / Global - 4K Portable Gaming & OLED Monitors)
+  {
+    id: 770,
+    name: "UPERFECT",
+    slug: "uperfect",
+    aliases: ["uperfect-monitor", "uperfectmonitor", "uperfect-us"],
+    logo: "https://logo.clearbit.com/uperfect.com",
+    website: "https://www.uperfect.com",
+    affiliate_url: "https://www.uperfect.com",
+    country: "US",
+    description: "4K OLED portable monitors, 144Hz gaming displays, dual-screen laptop extenders, and touchscreen workstation monitors.",
+    coupons: [
+      {
+        id: "upf-deal-1",
+        code: "UPERFECT30",
+        discount: "$30 OFF",
+        title: "$30 off 4K OLED & 144Hz Portable Gaming Monitors",
+        description: "Apply verified code UPERFECT30 at checkout to save $30 on portable monitors and dual-screen extenders.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "upf-deal-2",
+        code: "UPERFECT15",
+        discount: "15% OFF",
+        title: "15% off Dual-Screen Folding Laptop Workstation Monitors",
+        description: "Get 15% instant discount on UStation dual-screen portable displays with code UPERFECT15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+
+  // 171. FOSI AUDIO (US / Global - Hi-Fi Home Audio Amplifiers & DACs)
+  {
+    id: 771,
+    name: "Fosi Audio",
+    slug: "fosi-audio",
+    aliases: ["fosiaudio", "fosi", "fosi-audio-us"],
+    logo: "https://logo.clearbit.com/fosiaudio.com",
+    website: "https://fosiaudio.com",
+    affiliate_url: "https://fosiaudio.com",
+    country: "US",
+    description: "Compact audiophile Class D power amplifiers, tube preamplifiers, headphone DACs, and desktop hi-fi stereo receivers.",
+    coupons: [
+      {
+        id: "fsi-deal-1",
+        code: "FOSI15",
+        discount: "15% OFF",
+        title: "15% off V3 Mono, ZA3 & BT20A Pro Hi-Fi Power Amplifiers",
+        description: "Save 15% sitewide on Fosi Audio Class D amplifiers, tube preamps, and DACs with verified code FOSI15.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "fsi-deal-2",
+        code: "AUDIO10",
+        discount: "10% OFF",
+        title: "10% off Audiophile Desktop DAC & Tube Preamp Bundles",
+        description: "Redeem code AUDIO10 at checkout for 10% off complete desktop stereo bundles plus free tracked shipping.",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
   }
 ];
 
