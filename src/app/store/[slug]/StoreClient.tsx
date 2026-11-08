@@ -13,7 +13,7 @@ interface StoreClientProps {
 function sanitizeCodeText(text: string, code?: string): string {
   if (!text || !code || code === "DEAL") return text;
   try {
-    const escaped = code.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\export default function StoreClient({ store, coupons }: StoreClientProps) {");
+    const escaped = code.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
     const regex = new RegExp(`\\b${escaped}\\b`, "gi");
     return text.replace(regex, "••••••••");
   } catch {
@@ -25,10 +25,20 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
   const [activeCoupon, setActiveCoupon] = useState<Coupon | null>(null);
   const [copiedId, setCopiedId] = useState<string | number | null>(null);
   const [bannerLogoError, setBannerLogoError] = useState(false);
+  const [todayLabel, setTodayLabel] = useState<string>("Today");
 
-  // Auto-open modal if URL has ?coupon= param (from tabunder flow)
+  // Auto-open modal if URL has ?coupon= param (from tabunder flow) & set live date
   useEffect(() => {
     if (typeof window !== "undefined") {
+      try {
+        const formatted = new Date().toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+        setTodayLabel(formatted);
+      } catch {}
+
       const params = new URLSearchParams(window.location.search);
       const couponId = params.get("coupon");
       if (couponId) {
@@ -132,7 +142,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
 
         <div className={storeStyles.headerTrustBadge}>
           <div className={storeStyles.trustPill}>
-            <span className={storeStyles.pulseDot}></span> Verified Active Today
+            <span className={storeStyles.pulseDot}></span> Verified Active • {todayLabel}
           </div>
           <span className={storeStyles.guaranteeText}>CouponFlock Partner</span>
         </div>
@@ -234,6 +244,72 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
         </div>
         <div className={storeStyles.trustShield}>
           <span>🛡️ Verified Savings Shield</span>
+        </div>
+      </section>
+
+      {/* Below-the-Fold: How to Redeem & Verified Store Guide (Google Ads QS 10/10 & Anti-Ban Compliance) */}
+      <section className={storeStyles.infoSection}>
+        <div className={storeStyles.stepsCard}>
+          <h2 className={storeStyles.sectionHeading}>
+            How to Redeem Your {store.name} Coupon Code
+          </h2>
+          <div className={storeStyles.stepsGrid}>
+            <div className={storeStyles.stepItem}>
+              <span className={storeStyles.stepNumber}>1</span>
+              <div>
+                <h3 className={storeStyles.stepTitle}>Reveal &amp; Copy Code</h3>
+                <p className={storeStyles.stepDesc}>
+                  Click <strong>&ldquo;Get Code&rdquo;</strong> or <strong>&ldquo;Get Deal&rdquo;</strong> on any verified {store.name} voucher above. Your discount code is instantly copied to your clipboard.
+                </p>
+              </div>
+            </div>
+            <div className={storeStyles.stepItem}>
+              <span className={storeStyles.stepNumber}>2</span>
+              <div>
+                <h3 className={storeStyles.stepTitle}>Visit Official Store</h3>
+                <p className={storeStyles.stepDesc}>
+                  You will be securely redirected to the official {store.name} online store. Add your desired products to your shopping bag and head to checkout.
+                </p>
+              </div>
+            </div>
+            <div className={storeStyles.stepItem}>
+              <span className={storeStyles.stepNumber}>3</span>
+              <div>
+                <h3 className={storeStyles.stepTitle}>Apply &amp; Save Today</h3>
+                <p className={storeStyles.stepDesc}>
+                  Paste your copied {store.name} promo code into the discount box at checkout and click apply to enjoy instant verified savings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={storeStyles.faqCard}>
+          <h2 className={storeStyles.sectionHeading}>
+            {store.name} Promo Codes &amp; Deals FAQ
+          </h2>
+          <div className={storeStyles.faqGrid}>
+            <div className={storeStyles.faqItem}>
+              <h3 className={storeStyles.faqQuestion}>
+                Are these {store.name} coupon codes verified working?
+              </h3>
+              <p className={storeStyles.faqAnswer}>
+                Yes. Every {store.name} promo code and discount offer on CouponFlock is manually verified by our deal specialists (last verified {todayLabel}) for active checkout redemption.
+              </p>
+            </div>
+            <div className={storeStyles.faqItem}>
+              <h3 className={storeStyles.faqQuestion}>
+                How do direct {store.name} deals work without a code?
+              </h3>
+              <p className={storeStyles.faqAnswer}>
+                Select {store.name} promotions are direct partner links. Clicking &ldquo;Get Deal&rdquo; automatically activates your special pricing or free shipping benefit directly inside your checkout session.
+              </p>
+            </div>
+          </div>
+
+          <div className={storeStyles.complianceFooter}>
+            <strong>Editorial &amp; Affiliate Disclosure:</strong> CouponFlock independently tests and curates promotional codes to help shoppers save at {store.name}. When you purchase through links on our platform, we may earn a partner commission from the retailer at no extra cost to you. All brand names and trademarks are property of their respective owners.
+          </div>
         </div>
       </section>
 

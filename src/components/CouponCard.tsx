@@ -34,9 +34,9 @@ export interface Coupon {
   discount: string;
   title?: string;
   description: string;
-  is_verified: boolean;
-  expiry_date: string;
-  store: string | Store;
+  is_verified?: boolean;
+  expiry_date?: string;
+  store?: string | Store;
   storeSlug?: string;
   affiliate_url?: string;
   affiliate_link?: string;
