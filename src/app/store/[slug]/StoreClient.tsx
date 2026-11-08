@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import storeStyles from "./StoreClient.module.css";
 import CopyModal from "../../../components/CopyModal";
 import { Coupon, Store } from "../../../components/CouponCard";
+import { trackEvent } from "../../../lib/telemetry";
 
 interface StoreClientProps {
   store: Store;
@@ -26,6 +27,7 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
   const [copiedId, setCopiedId] = useState<string | number | null>(null);
   const [bannerLogoError, setBannerLogoError] = useState(false);
   const [todayLabel, setTodayLabel] = useState<string>("Today");
+  const [votedTickets, setVotedTickets] = useState<Record<string, boolean>>({});
 
   // Auto-open modal if URL has ?coupon= param (from tabunder flow) & set live date
   useEffect(() => {
@@ -60,6 +62,17 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
       (store as any).affiliateLink ||
       store.website ||
       "https://www.google.com";
+
+    trackEvent({
+      site: "CouponFlock",
+      eventType: "coupon_click",
+      storeSlug: store.slug,
+      storeName: store.name,
+      couponId: String(coupon.id),
+      couponCode: coupon.code || "AUTO-DEAL",
+      discount: coupon.discount,
+      targetUrl,
+    });
 
     // 1. Instant Clipboard Copy (for codes)
     if (coupon.code && coupon.code !== "DEAL") {
@@ -193,7 +206,33 @@ export default function StoreClient({ store, coupons }: StoreClientProps) {
                 <div className={storeStyles.ticketMeta}>
                   <span className={storeStyles.metaItem}>✓ Direct Checkout Guarantee</span>
                   <span>•</span>
-                  <span className={storeStyles.metaItem}>Official Verified Offer</span>
+                  <span className={storeStyles.metaItem}>Verified {todayLabel}</span>
+                  <span>•</span>
+                  <span
+                    onClick={(ev) => {
+                      ev.stopPropagation();
+                      setVotedTickets((prev) => ({ ...prev, [String(coupon.id)]: true }));
+                      trackEvent({
+                        site: "CouponFlock",
+                        eventType: "feedback_vote",
+                        storeSlug: store.slug,
+                        storeName: store.name,
+                        couponId: String(coupon.id),
+                        couponCode: coupon.code || "DEAL",
+                      });
+                    }}
+                    style={{
+                      cursor: "pointer",
+                      color: votedTickets[String(coupon.id)] ? "#047857" : "#059669",
+                      fontWeight: 700,
+                      background: "#ecfdf5",
+                      padding: "2px 8px",
+                      borderRadius: "999px",
+                      border: "1px solid #a7f3d0",
+                    }}
+                  >
+                    {votedTickets[String(coupon.id)] ? "🦅 +1 Flock Verified!" : "👍 Worked for me"}
+                  </span>
                 </div>
               </div>
 

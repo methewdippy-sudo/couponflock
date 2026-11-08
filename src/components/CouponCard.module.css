@@ -2,24 +2,24 @@
    COUPON CARD — Professional Clean Design
    ============================================================ */
 
-/* Card Container */
+/* Card Container — Perforated Emerald Voucher Stub Style */
 .card {
   position: relative;
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
+  border: 1.5px dashed #6ee7b7;
+  border-left: 6px solid #059669;
+  border-radius: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px 18px;
-  gap: 16px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 18px 20px;
+  gap: 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
-  /* Reset button element default styles */
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -27,6 +27,7 @@
   -webkit-appearance: none;
   appearance: none;
   -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.05);
 }
 
 .card:visited,
@@ -36,21 +37,22 @@
 }
 
 .card:hover {
-  border-color: #c7d2fe;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+  border-color: #10b981;
+  box-shadow: 0 10px 26px rgba(5, 150, 105, 0.12);
   text-decoration: none;
   color: inherit;
 }
 
 .card:focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid #059669;
   outline-offset: 2px;
 }
 
 /* Best Deal Highlight */
 .bestDealCard {
-  border-color: #c7d2fe;
-  background: linear-gradient(to right, #faf5ff, #ffffff);
+  border-color: #34d399;
+  background: linear-gradient(to right, #ecfdf5, #ffffff);
 }
 
 /* ---- LEFT: Logo ---- */
