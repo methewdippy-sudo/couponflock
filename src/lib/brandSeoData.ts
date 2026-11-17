@@ -16,6 +16,69 @@ export interface BrandSeoEntry {
 }
 
 export const CAMPAIGN_BRAND_SEO_DATA: Record<string, BrandSeoEntry> = {
+  "king-of-christmas": {
+    slug: "king-of-christmas",
+    aliases: ["kingofchristmas", "king-of-christmas-us", "kingofchristmas-us", "king-christmas", "kingofchristmas-com", "king-of-christmas-trees"],
+    brandName: "King of Christmas",
+    category: "Holiday Decor & Artificial Christmas Trees",
+    h1: "King of Christmas Discount Codes, Verified Promo Codes & Holiday Deals",
+    metaTitle: "50% Off King of Christmas Promo Codes & Coupons (Nov 2026)",
+    metaDescription: "Save up to 50% on realistic artificial Christmas trees, flocked pre-lit trees, and holiday accessories. Verified King of Christmas discount codes & free shipping tested today.",
+    keywords: [
+      "king of christmas discount code",
+      "king of christmas promo code",
+      "king of christmas coupon code",
+      "king of christmas coupon",
+      "king of christmas coupons",
+      "king of christmas code",
+      "king of christmas promo",
+      "kingofchristmas"
+    ],
+    ratingValue: 4.93,
+    reviewCount: 4210,
+    overview: [
+      "King of Christmas is renowned for designing the most realistic, lush, and durable artificial Christmas trees in the industry. From full-profile noble firs to heavily flocked snowy spruces and pre-lit warm micro-LED trees, each tree is crafted with ultra-realistic PE/PVC branch tips to bring holiday magic to any home.",
+      "Every King of Christmas tree is built to last for seasons to come and includes a sturdy steel tree stand, a durable storage bag, and shaping gloves. Our team tests King of Christmas discount codes and promotional vouchers daily to guarantee instant, verified savings on your holiday centerpiece."
+    ],
+    savingsTips: [
+      "Sign Up for Newsletter Savings: New subscribers frequently receive a 10% instant promo code on their first full-priced tree purchase.",
+      "Shop Early Season Sales: Early holiday sales and seasonal promotions feature discounts of up to 50% off select best-selling pre-lit artificial trees.",
+      "Complimentary Accessories Included: Every tree purchase includes a free premium storage bag and heavy-duty folding metal stand, saving $60+ compared to buying separately.",
+      "Free Contiguous US Shipping: All standard ground delivery orders ship 100% free with no minimum spend required across the 48 continental states."
+    ],
+    howToApply: [
+      {
+        step: 1,
+        title: "Select Verified King of Christmas Code",
+        description: "Choose the top King of Christmas coupon or promo code from our verified list above and click 'Get Code' to copy it."
+      },
+      {
+        step: 2,
+        title: "Shop King of Christmas Trees",
+        description: "Browse realistic artificial trees, flocked trees, garlands, and ornaments, adding your desired holiday decor to your cart."
+      },
+      {
+        step: 3,
+        title: "Paste Coupon Code at Checkout",
+        description: "Locate the 'Gift card or discount code' box in checkout, paste your coupon, and click 'Apply' to see your instant holiday discount applied."
+      }
+    ],
+    faqs: [
+      {
+        question: "Does King of Christmas offer promo codes?",
+        answer: "Yes, King of Christmas regularly offers promotional codes ranging from 10% off sitewide to seasonal discounts up to $75 off on select tree heights and collections."
+      },
+      {
+        question: "Does King of Christmas provide free shipping?",
+        answer: "Yes! King of Christmas offers free standard ground shipping on all orders shipped to addresses within the 48 contiguous United States."
+      },
+      {
+        question: "What comes included with a King of Christmas tree?",
+        answer: "Every artificial tree includes a heavy-duty folding steel tree stand, a durable zippered storage bag, and shaping gloves to fluff branches safely."
+      }
+    ]
+  },
+
   // 1. iM8 HEALTH (Cellular Longevity & Nutrition) - Top Spend PKR 163,000+
   "im8health": {
     slug: "im8health",

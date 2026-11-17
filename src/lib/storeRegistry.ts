@@ -36,6 +36,83 @@ export interface RegistryStore {
  * - Guarantees 100% affiliate link propagation across all deal buttons.
  */
 export const STORE_REGISTRY: RegistryStore[] = [
+  // KING OF CHRISTMAS (Artificial Christmas Trees, Flocked Trees & Holiday Decor)
+  {
+    id: 88991,
+    name: "King of Christmas",
+    slug: "king-of-christmas",
+    aliases: [
+      "kingofchristmas",
+      "king-of-christmas-us",
+      "kingofchristmas-us",
+      "king-christmas",
+      "kingofchristmas-com",
+      "king-of-christmas-trees"
+    ],
+    website: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987",
+    affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987",
+    logo: "/logos/king-of-christmas.png",
+    country: "US",
+    description: "King of Christmas is the premier destination for realistic artificial Christmas trees, flocked trees, pre-lit Christmas trees, holiday wreaths, garlands, and Christmas accessories.",
+    coupons: [
+      {
+        id: "koc-code-1",
+        code: "WELCOME10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% Off Sitewide with King of Christmas Promo Code",
+        description: "Save 10% on your entire order of realistic artificial Christmas trees, pre-lit flocked trees, and holiday accessories with promo code WELCOME10.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-deal-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 50% OFF",
+        title: "Up to 50% Off Early Holiday Christmas Tree Sale",
+        description: "Get massive early season discounts of up to 50% off select best-selling pre-lit and unlit artificial Christmas trees. No code needed.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-3",
+        code: "HOLIDAY75",
+        is_auto_applied: false,
+        discount: "UP TO $75 OFF",
+        title: "Up to $75 Off Tiered Holiday Discount on Select Trees",
+        description: "Take up to $75 off premium flocked and pre-lit trees during seasonal promotion with coupon code HOLIDAY75 at King of Christmas.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free Standard Ground Shipping on All Contiguous US Orders",
+        description: "Enjoy 100% free standard ground shipping across the contiguous United States on all artificial trees, garlands, and ornaments.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-deal-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE ACCESSORIES",
+        title: "Free Storage Bag, Tree Stand & Protective Gloves Included",
+        description: "Every King of Christmas tree comes bundled with a heavy-duty steel tree stand, storage bag, and shaping gloves at no extra charge.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      }
+    ]
+  },
+
   // DUBBY ENERGY (Clean Gaming & Nootropic Energy Drinks)
   {
     id: 740,
