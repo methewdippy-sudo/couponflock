@@ -56,7 +56,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
     description: "King of Christmas is the premier destination for realistic artificial Christmas trees, flocked trees, pre-lit Christmas trees, holiday wreaths, garlands, and Christmas accessories.",
     coupons: [
       {
-        id: "koc-code-1",
+        id: "koc-code-welcome",
         code: "WELCOME10",
         is_auto_applied: false,
         discount: "10% OFF",
@@ -67,7 +67,73 @@ export const STORE_REGISTRY: RegistryStore[] = [
         affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
       },
       {
-        id: "koc-deal-2",
+        id: "koc-code-king100",
+        code: "KING100",
+        is_auto_applied: false,
+        discount: "$100 OFF",
+        title: "$100 Off Orders Over $2,199 at Checkout",
+        description: "Apply coupon code KING100 at checkout to instantly save $100 on qualifying King of Christmas orders over $2,199.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-king75",
+        code: "KING75",
+        is_auto_applied: false,
+        discount: "$75 OFF",
+        title: "$75 Off Orders Over $1,699 with Promo Code",
+        description: "Take $75 off high-end flocked, pre-lit fir, and Noble Christmas tree orders totaling $1,699 or more using code KING75.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-king50",
+        code: "KING50",
+        is_auto_applied: false,
+        discount: "$50 OFF",
+        title: "$50 Off Orders Over $1,149 Discount Code",
+        description: "Redeem verified discount code KING50 at checkout to deduct $50 on King of Christmas purchases of $1,149 or more.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-king35",
+        code: "KING35",
+        is_auto_applied: false,
+        discount: "$35 OFF",
+        title: "$35 Off Orders Over $799 Promo Code",
+        description: "Use official promo code KING35 during checkout to receive $35 off your total tree and decor order over $799.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-king25",
+        code: "KING25",
+        is_auto_applied: false,
+        discount: "$25 OFF",
+        title: "$25 Off Orders Over $549 Discount Code",
+        description: "Enjoy $25 off bestselling 6ft to 8ft artificial Christmas trees and pre-lit greenery over $549 with code KING25.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-code-king15",
+        code: "KING15",
+        is_auto_applied: false,
+        discount: "$15 OFF",
+        title: "$15 Off Orders Over $349 at King of Christmas",
+        description: "Enter promo code KING15 at checkout to get $15 off your tree or holiday decor purchase of $349 or more.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
+      },
+      {
+        id: "koc-deal-sale50",
         code: "",
         is_auto_applied: true,
         discount: "UP TO 50% OFF",
@@ -78,18 +144,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
       },
       {
-        id: "koc-code-3",
-        code: "HOLIDAY75",
-        is_auto_applied: false,
-        discount: "UP TO $75 OFF",
-        title: "Up to $75 Off Tiered Holiday Discount on Select Trees",
-        description: "Take up to $75 off premium flocked and pre-lit trees during seasonal promotion with coupon code HOLIDAY75 at King of Christmas.",
-        is_verified: true,
-        expiry_date: "2026-12-31",
-        affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
-      },
-      {
-        id: "koc-deal-4",
+        id: "koc-deal-freeship",
         code: "",
         is_auto_applied: true,
         discount: "FREE SHIPPING",
@@ -100,7 +155,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         affiliate_url: "https://redirect.partner.fatcoupon.com/go?cid=575&pid=579&url=https%3A%2F%2Fkingofchristmas.com&mid=20987"
       },
       {
-        id: "koc-deal-5",
+        id: "koc-deal-bundle",
         code: "",
         is_auto_applied: true,
         discount: "FREE ACCESSORIES",
