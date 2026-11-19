@@ -56,11 +56,11 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "sc-pr-1",
-        code: "WELCOME15",
-        is_auto_applied: false,
-        discount: "15% OFF",
-        title: "15% Off Your First Order with Silver Cross Promo Code",
-        description: "Save 15% on your first order of luxury strollers, Wave 3 prams, and nursery essentials with promo code WELCOME15.",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
+        title: "Black Friday Sale: Save Up to $125 on Luxury Strollers & Cribs",
+        description: "Activate instant Black Friday savings of up to $125 on Wave 3 prams, Reef 2 strollers, and travel cribs. No promo code needed.",
         is_verified: true,
         expiry_date: "2026-12-31",
         affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
@@ -134,7 +134,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king100",
         code: "KING100",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$100 OFF",
         title: "$100 Off Orders Over $2,199 at Checkout",
         description: "Apply official coupon code KING100 at checkout to instantly deduct $100 on qualifying King of Christmas orders over $2,199.",
@@ -145,7 +145,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king75",
         code: "KING75",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$75 OFF",
         title: "$75 Off Orders Over $1,699 with Promo Code",
         description: "Take $75 off high-end flocked, pre-lit fir, and Noble Christmas tree orders totaling $1,699 or more using verified code KING75.",
@@ -156,7 +156,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king50",
         code: "KING50",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$50 OFF",
         title: "$50 Off Orders Over $1,149 Discount Code",
         description: "Redeem verified discount code KING50 at checkout to deduct $50 on King of Christmas purchases of $1,149 or more.",
@@ -167,7 +167,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king35",
         code: "KING35",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$35 OFF",
         title: "$35 Off Orders Over $799 Promo Code",
         description: "Use official promo code KING35 during checkout to receive $35 off your total tree and holiday decor order over $799.",
@@ -178,7 +178,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king25",
         code: "KING25",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$25 OFF",
         title: "$25 Off Orders Over $549 Discount Code",
         description: "Enjoy $25 off bestselling 6ft to 8ft artificial Christmas trees and pre-lit greenery over $549 with code KING25.",
@@ -189,7 +189,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "koc-code-king15",
         code: "KING15",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$15 OFF",
         title: "$15 Off Orders Over $349 at King of Christmas",
         description: "Enter promo code KING15 at checkout to get $15 off your tree or holiday decor purchase of $349 or more.",
@@ -248,7 +248,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dubby-code-1",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off All DUBBY Energy Tubs, Shakers & Starter Packs",
         description: "Apply verified partner code METHEWDIPPY at checkout to receive 10% instant discount across all DUBBY energy and focus products.",
@@ -258,7 +258,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dubby-code-2",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off Sugar-Free Nootropic Focus & Energy Drinks",
         description: "Save 10% on clean energy formula tubs powered by NeuroFactor with coupon code METHEWDIPPY.",
@@ -268,7 +268,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dubby-code-3",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off Shaker Cups, Samplers & Merch Bundles",
         description: "Get 10% instant discount on limited edition shaker bottles, apparel, and variety starter packs with code METHEWDIPPY.",
@@ -303,7 +303,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "prosupport-code-1",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off All Standard Top Loaders & Card Sleeves",
         description: "Apply official discount code METHEWDIPPY at checkout to save 10% on rigid PVC top loaders and clear sleeves. Verified active today.",
@@ -313,7 +313,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "prosupport-code-2",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off Magnetic Card Holders & Graded Slab Cases",
         description: "Save 10% on magnetic one-touch cases and graded card slab protection with verified partner code METHEWDIPPY.",
@@ -323,7 +323,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "prosupport-code-3",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% Off Perfect Fit Inner Sleeves & TCG Team Bags",
         description: "Get 10% instant discount on double-sleeving perfect fit packs and resealable team bags with code METHEWDIPPY.",
@@ -376,7 +376,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "tl-deal-3",
         code: "SUBSCRIBE15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off subscription orders + free gifts",
         description: "Get 15% recurring savings on all supplement subscriptions with code SUBSCRIBE15.",
         is_verified: true,
@@ -487,7 +487,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dc-deal-1",
         code: "VIPONLY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off luxury hybrid mattress coupon code",
         description: "Save an extra 15% on DreamCloud Luxury Hybrid mattresses with verified code VIPONLY.",
         is_verified: true,
@@ -871,7 +871,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "mellow-deal-1",
         code: "",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off discount sitewide (auto-applied at checkout)",
         description: "Click to activate 15% instant discount on mattresses, toppers, and bed frames automatically at checkout.",
         is_verified: true,
@@ -880,7 +880,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "mellow-deal-2",
         code: "",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off memory foam mattresses & cooling toppers",
         description: "Enjoy 15% off premium cooling memory foam mattresses. Discount applied automatically via link.",
         is_verified: true,
@@ -930,8 +930,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "comfrt-deal-1",
-        code: "WELCOME15",
-        discount: "15% OFF",
+        code: "",
+        discount: "UP TO $125 OFF",
         title: "15% off weighted hoodies coupon code",
         description: "Save 15% on original anxiety relief weighted hoodies and sweatpants with code WELCOME15.",
         is_verified: true,
@@ -1087,7 +1087,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "im8-deal-3",
         code: "METHEW29111",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off first order discount code on all longevity powders",
         description: "Apply 15% instant discount across all single and multi-pack nutrition orders with code METHEW29111.",
         is_verified: true,
@@ -1161,7 +1161,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "fb-deal-1",
         code: "FILTER15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all faucet filters & refills",
         description: "Save 15% on the genuine Filterbaby 2.0 skincare water filter and replacements with code FILTER15.",
         is_verified: true,
@@ -1375,7 +1375,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "bbp-deal-4",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off letterbox flowers & luxury floral gifts (auto-applied)",
         description: "Get 15% off letterbox flowers carefully packed in protective boxes that slip easily through standard UK letterboxes.",
         affiliate_url: "https://bouquetsbypost.com/muhammadhaziqueali",
@@ -1500,7 +1500,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "yeb-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off bike racks, waterproof panniers & headlights",
         description: "Save 15% on essential riding accessories, helmets, bike covers, and cargo racks with code ACCESSORY15.",
         is_verified: true,
@@ -1593,7 +1593,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "eb-deal-1",
         code: "EVERBLOG15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Everblog AI monthly & annual subscriptions",
         description: "Apply verified code EVERBLOG15 at checkout to save 15% on any AI blogging plan.",
         is_verified: true,
@@ -1679,7 +1679,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "evo-deal-4",
-        code: "WELCOME15",
+        code: "",
         discount: "$15 OFF",
         title: "$15 welcome voucher on your first tool order over $150",
         description: "Save $15 on your first Evolution Power Tools order with code WELCOME15.",
@@ -1713,7 +1713,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "doe-deal-1",
         code: "OAK15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on minimalist wallets & EDC accessories",
         description: "Official verified code: Enter code OAK15 at checkout to save 15% on all wallets and cardholders.",
         is_verified: true,
@@ -1773,7 +1773,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "oh-deal-1",
         code: "OHORA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off semi-cured gel nail strips sitewide",
         description: "Save 15% on best-selling gel manicures and pedicures with code OHORA15.",
         is_verified: true,
@@ -1983,7 +1983,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "cib-deal-10",
         code: "",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off on mix candies",
         description: "Get your exclusive discounts and coupon codes on personalized custom candy mixes.",
         affiliate_url: "https://www.candyinbulk.com?sca_ref=12482409.Dtw0PMQuP08o&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate",
@@ -2035,7 +2035,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "hex-deal-4",
         code: "WOK15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off hybrid woks, roasting pans & Dutch ovens",
         description: "Get 15% discount on specialty woks, griddles, and deep roasting pans with code WOK15.",
         is_verified: true,
@@ -2146,7 +2146,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "liv-deal-3",
         code: "ENERGY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Energy Multiplier & Sleep Multiplier mixes",
         description: "Get 15% discount on matcha energy blends and melatonin sleep aid packets with code ENERGY15.",
         is_verified: true,
@@ -2206,7 +2206,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "cw-deal-3",
         code: "BAKE15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off non-toxic ceramic bakeware & sheet pans",
         description: "Enjoy 15% discount on muffin tins, baking sheets, and ceramic loaf pans with code BAKE15.",
         is_verified: true,
@@ -2334,7 +2334,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "clk-deal-4",
-        code: "WELCOME15",
+        code: "",
         discount: "$15 OFF",
         title: "$15 welcome voucher for new customers",
         description: "Enjoy $15 instant savings on any car tech order over $70 with code WELCOME15.",
@@ -2377,7 +2377,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "cpr-deal-2",
         code: "ENJOY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on car & motorcycle smart screens",
         description: "Save 15% on all portable car audio receivers, backup cameras, and motorcycle navigation with code CAR15.",
         is_verified: true,
@@ -2428,7 +2428,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "arz-deal-1",
         code: "ARZOPA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on ultra-slim portable monitors",
         description: "Apply code ARZOPA15 at checkout to save 15% on A1 Gamut, S1 Table, and Z1FC portable monitors.",
         is_verified: true,
@@ -2557,7 +2557,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "sr-deal-2",
         code: "TRIPOD15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off heavy-duty carbon fiber tripods & fluid heads",
         description: "Save 15% on professional video tripods, monopod kits, and ball heads with code TRIPOD15.",
         is_verified: true,
@@ -2617,7 +2617,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "jf-deal-2",
         code: "MOLK15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off MÖLK protein tubs & protein shake cases",
         description: "Get 15% off best-selling chocolate, vanilla, and peanut butter MÖLK protein with code MOLK15.",
         is_verified: true,
@@ -2788,7 +2788,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "inc-deal-1",
         code: "INCREDI15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on knee sleeves & recovery braces",
         description: "Save 15% on patented circulation-boosting knee sleeves and back braces with code INCREDI15.",
         is_verified: true,
@@ -2866,7 +2866,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "ori-deal-3",
         code: "JEANS15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Factory American durable denim & delta flex pants",
         description: "Enjoy 15% discount on ultra-durable American denim and delta flex pants with code JEANS15.",
         is_verified: true,
@@ -2917,7 +2917,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "lng-deal-2",
         code: "PRINT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Orange resin 3D printers and UV curers",
         description: "Enjoy 15% discount on high-resolution LCD resin printers with code PRINT15.",
         is_verified: true,
@@ -3037,7 +3037,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "sih-deal-2",
         code: "CHAIR15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on breathable mesh ergonomic chairs",
         description: "Enjoy 15% discount across all ergonomic home and office desk chairs with code CHAIR15.",
         is_verified: true,
@@ -3054,7 +3054,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "sih-deal-4",
-        code: "WELCOME15",
+        code: "",
         discount: "$15 OFF",
         title: "$15 welcome coupon for first-time buyers",
         description: "Claim $15 off your first ergonomic workspace purchase with code WELCOME15.",
@@ -3088,7 +3088,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "syn-deal-1",
         code: "SYNTECH15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on Meta Quest 3 head straps & docks",
         description: "Save 15% on Quest 3 comfort head straps with battery and charging docks with code SYNTECH15.",
         is_verified: true,
@@ -3166,7 +3166,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "tel-deal-3",
         code: "MOUNT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off magnetic neck mounts, tripods & suction cups",
         description: "Save 15% on quick-release POV magnetic neck mounts with code MOUNT15.",
         is_verified: true,
@@ -3217,7 +3217,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "clx-deal-3",
         code: "CARLUEX15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on smart car adapters",
         description: "Enjoy 15% savings across all wireless CarPlay dongles with code CARLUEX15.",
         is_verified: true,
@@ -3268,7 +3268,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "and-deal-2",
         code: "SEAT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all esports chairs & desk mats",
         description: "Enjoy 15% discount across all professional gaming seats with code SEAT15.",
         is_verified: true,
@@ -3345,7 +3345,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       },
       {
         id: "rng-deal-4",
-        code: "WELCOME15",
+        code: "",
         discount: "$15 OFF",
         title: "$15 welcome coupon on your first order",
         description: "Claim $15 off your initial smart ring purchase with code WELCOME15.",
@@ -3379,7 +3379,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dh-deal-1",
         code: "MAST15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Mast rotary tattoo pens & wireless machines",
         description: "Save 15% on Mast Tour, Mast Flip, and Fold Pro wireless battery pens with code MAST15.",
         is_verified: true,
@@ -3449,7 +3449,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "godbricks-deal-2",
         code: "AFOL15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off modular kits on orders over $79",
         description: "Save 15% on large architectural brick sets and modular collector kits with coupon code AFOL15.",
         is_verified: true,
@@ -3499,7 +3499,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "flirtwithsb-deal-1",
         code: "SB15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off women boutique dresses & outfits",
         description: "Redeem verified coupon code SB15 to enjoy 15% off trending seasonal dresses, matching sets, and tops.",
         is_verified: true,
@@ -3558,7 +3558,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "voxapod-deal-1",
         code: "VOXAPOD15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off menstrual cup & disc starter kits",
         description: "Apply promo code VOXAPOD15 at checkout to save 15% on medical-grade silicone period cups and discs.",
         is_verified: true,
@@ -3617,7 +3617,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "total-man-shop-deal-1",
         code: "TOTAL15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off men wellness & recovery devices",
         description: "Save 15% on male health optimization gear and therapeutic devices with coupon code TOTAL15.",
         is_verified: true,
@@ -3676,7 +3676,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "ecoerfashion-deal-1",
         code: "ECO15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off organic cotton basics & apparel",
         description: "Enter promo code ECO15 to save 15% on sustainable tees, loungewear, and minimalist organic clothing.",
         is_verified: true,
@@ -3735,7 +3735,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nothosaur-deal-1",
         code: "DINO15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off prehistoric fossil replicas & dino models",
         description: "Redeem verified coupon code DINO15 to save 15% on museum-grade dinosaur figures and fossil casts.",
         is_verified: true,
@@ -3794,7 +3794,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "flawless-diamond-deal-1",
         code: "FLAWLESS15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off lab-grown diamond engagement rings",
         description: "Apply promo code FLAWLESS15 at checkout to receive 15% off handcrafted lab diamond solitaires and halos.",
         is_verified: true,
@@ -3871,7 +3871,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "blackview-deal-3",
         code: "BLACKVIEW15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off outdoor smartwatches & wireless earbuds",
         description: "Take 15% off rugged smart wearables and shock-resistant audio gear with code BLACKVIEW15.",
         is_verified: true,
@@ -3921,7 +3921,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "foot-locker-deal-2",
         code: "LKS15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off select Nike, Jordan & Adidas footwear",
         description: "Save 15% on premier basketball sneakers and streetwear trainers with coupon code LKS15.",
         is_verified: true,
@@ -4030,7 +4030,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "itarti-deal-1",
         code: "ITARTI15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all IT Arti premium tech & accessories",
         description: "Enter verified coupon code ITARTI15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -4089,7 +4089,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "cult-kits-deal-1",
         code: "CULTKIT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Cult Kits favorites",
         description: "Apply verified code CULTKIT15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4148,7 +4148,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "maryann-organics-deal-1",
         code: "MARYANN15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all MaryAnn Organics favorites",
         description: "Apply verified code MARYANN15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4207,7 +4207,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "lesmart-deal-1",
         code: "LESMART15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Lesmart Golf favorites",
         description: "Apply verified code LESMART15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4266,7 +4266,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nfstrike-deal-1",
         code: "NFSTRIK15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Nfstrike favorites",
         description: "Apply verified code NFSTRIK15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4325,7 +4325,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "ape-born-deal-1",
         code: "APEBORN15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all APE BORN favorites",
         description: "Apply verified code APEBORN15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4384,7 +4384,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "carerspk-deal-1",
         code: "CARERSP15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Carerspk favorites",
         description: "Apply verified code CARERSP15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4443,7 +4443,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "tribute-gallery-deal-1",
         code: "TRIBUTE15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Tribute Music Gallery favorites",
         description: "Apply verified code TRIBUTE15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4502,7 +4502,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "feierfitness-deal-1",
         code: "FEIERFI15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all feierfitness favorites",
         description: "Apply verified code FEIERFI15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4561,7 +4561,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "farmhaven-deal-1",
         code: "FARMHAV15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all FarmHaven favorites",
         description: "Apply verified code FARMHAV15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4620,7 +4620,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "incerun-deal-1",
         code: "INCERUN15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all INCERUN Men favorites",
         description: "Apply verified code INCERUN15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4679,7 +4679,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "plant-based-candles-deal-1",
         code: "PLANTBA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Plant Based Candles favorites",
         description: "Apply verified code PLANTBA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4738,7 +4738,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "pseyeche-deal-1",
         code: "PSEYECH15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all PsEYEche favorites",
         description: "Apply verified code PSEYECH15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4797,7 +4797,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "xpand-laces-deal-1",
         code: "XPANDLA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all XPAND Laces favorites",
         description: "Apply verified code XPANDLA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4856,7 +4856,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "jnl-naturals-deal-1",
         code: "JNLNATU15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all J&L Naturals favorites",
         description: "Apply verified code JNLNATU15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4915,7 +4915,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "savanagarden-deal-1",
         code: "SAVANAG15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all savanagarden favorites",
         description: "Apply verified code SAVANAG15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -4974,7 +4974,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "beautology-lab-deal-1",
         code: "BEAUTOL15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all BEAUTOLOGY LAB favorites",
         description: "Apply verified code BEAUTOL15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5033,7 +5033,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "psync-labs-deal-1",
         code: "PSYNCLA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Psync Labs favorites",
         description: "Apply verified code PSYNCLA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5092,7 +5092,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "geetahair-deal-1",
         code: "GEETAHA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all GeetaHair favorites",
         description: "Apply verified code GEETAHA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5151,7 +5151,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "kaygo-safety-deal-1",
         code: "KAYGOSA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all KAYGO Safety favorites",
         description: "Apply verified code KAYGOSA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5210,7 +5210,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "chessbazaar-deal-1",
         code: "CHESSBA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all chessbazaar favorites",
         description: "Apply verified code CHESSBA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5269,7 +5269,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "double-stitch-deal-1",
         code: "DOUBLES15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Double Stitch favorites",
         description: "Apply verified code DOUBLES15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5328,7 +5328,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "arylic-deal-1",
         code: "ARYLIC15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all Arylic premium tech & accessories",
         description: "Enter verified coupon code ARYLIC15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -5387,7 +5387,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "gamakay-deal-1",
         code: "GAMAKAY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all GamaKay premium tech & accessories",
         description: "Enter verified coupon code GAMAKAY15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -5464,7 +5464,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "met-riders-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -5523,7 +5523,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "eskute-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -5564,7 +5564,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "flair-espresso-deal-1",
         code: "FLAIRES15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Flair Espresso favorites",
         description: "Apply verified code FLAIRES15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -5741,7 +5741,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "etoe-deal-1",
         code: "ETOE15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all ETOE premium tech & accessories",
         description: "Enter verified coupon code ETOE15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -5818,7 +5818,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "magicycle-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -5877,7 +5877,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "heybike-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -5936,7 +5936,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "wallke-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -5995,7 +5995,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "inokim-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -6054,7 +6054,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "kugoo-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -6113,7 +6113,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nanrobot-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -6154,7 +6154,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "wolfbox-deal-1",
         code: "WOLFBOX15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all WOLFBOX premium tech & accessories",
         description: "Enter verified coupon code WOLFBOX15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -6272,7 +6272,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "proscenic-deal-1",
         code: "PROSCEN15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Proscenic favorites",
         description: "Apply verified code PROSCEN15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6331,7 +6331,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "circular-deal-1",
         code: "CIRCULA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Circular favorites",
         description: "Apply verified code CIRCULA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6390,7 +6390,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "healing-sauna-deal-1",
         code: "HEALING15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Healing Sauna favorites",
         description: "Apply verified code HEALING15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6508,7 +6508,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "splay-shoes-deal-1",
         code: "SPLAYSH15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Splay Shoes favorites",
         description: "Apply verified code SPLAYSH15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6567,7 +6567,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nomatic-deal-1",
         code: "NOMATIC15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Nomatic favorites",
         description: "Apply verified code NOMATIC15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6626,7 +6626,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "wandrd-deal-1",
         code: "WANDRD15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Wandrd favorites",
         description: "Apply verified code WANDRD15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6685,7 +6685,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "petkit-deal-1",
         code: "PETKIT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all Petkit premium tech & accessories",
         description: "Enter verified coupon code PETKIT15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -6744,7 +6744,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "akko-deal-1",
         code: "AKKO15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all AKKO Gear premium tech & accessories",
         description: "Enter verified coupon code AKKO15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -6803,7 +6803,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "iqunix-deal-1",
         code: "IQUNIX15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off all IQUNIX premium tech & accessories",
         description: "Enter verified coupon code IQUNIX15 to take 15% off high-performance hardware and audio devices.",
         is_verified: true,
@@ -6862,7 +6862,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "solstice-watersports-deal-1",
         code: "SOLSTIC15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Solstice Watersports favorites",
         description: "Apply verified code SOLSTIC15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -6939,7 +6939,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "aipas-deal-3",
         code: "ACCESSORY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off spare batteries, chargers & racks",
         description: "Save 15% on original factory accessories, pannier bags, and replacement parts with code ACCESSORY15.",
         is_verified: true,
@@ -6980,7 +6980,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "joytutus-deal-1",
         code: "METHEWDIPPY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on Joytutus car accessories & appliances",
         description: "Apply verified exclusive partner promo code METHEWDIPPY at checkout to save on all Joytutus car refrigerators, organizers, and accessories.",
         is_verified: true,
@@ -7039,7 +7039,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "bodegacooler-deal-1",
         code: "METHEWDIPPY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all bodegacooler favorites",
         description: "Apply verified exclusive partner promo code METHEWDIPPY at checkout to save on all BODEGAcooler dual-zone car refrigerators and portable freezers.",
         is_verified: true,
@@ -7157,7 +7157,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "hooga-deal-1",
         code: "HOOGA15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Hooga Health favorites",
         description: "Apply verified code HOOGA15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7393,7 +7393,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "rockbros-deal-1",
         code: "ROCKBRO15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all ROCKBROS favorites",
         description: "Apply verified code ROCKBRO15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7452,7 +7452,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "lumibricks-deal-1",
         code: "LUMIBRI15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Lumibricks favorites",
         description: "Apply verified code LUMIBRI15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7511,7 +7511,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "neosabers-deal-1",
         code: "METHEWDIPPY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Neosabers favorites",
         description: "Apply verified code NEOSABE15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7570,7 +7570,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "korean-skincare-deal-1",
         code: "KOREANS15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Korean Skincare favorites",
         description: "Apply verified code KOREANS15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7629,7 +7629,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "bull-boost-performance-deal-1",
         code: "BULLBOO15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Bull Boost Performance favorites",
         description: "Apply verified code BULLBOO15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7688,7 +7688,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "fitueyes-deal-1",
         code: "FITUEYE15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Fitueyes favorites",
         description: "Apply verified code FITUEYE15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7747,7 +7747,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "helvetus-deal-1",
         code: "HELVETU15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Helvetus favorites",
         description: "Apply verified code HELVETU15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7806,7 +7806,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "reconstitution-solution-deal-1",
         code: "RECONST15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Reconstitution Solution favorites",
         description: "Apply verified code RECONST15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7865,7 +7865,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "xsteel-targets-deal-1",
         code: "XSTEELT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on all Xsteel Targets favorites",
         description: "Apply verified code XSTEELT15 at checkout to enjoy 15% off bestselling products and new arrivals.",
         is_verified: true,
@@ -7926,7 +7926,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "redu-deal-1",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off coupon code (automatically applied at checkout)",
         description: "Get 15% discount on Redu Sculpt body sculpting massager and firming gels. No code entry needed, discount activates automatically.",
         is_verified: true,
@@ -7976,7 +7976,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "redu-deal-6",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off first order discount for new customers",
         description: "Claim 15% off your first Redu Sculpt order with automatic partner discount activated in cart.",
         is_verified: true,
@@ -8078,7 +8078,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "nushape-7",
         code: "METHEW88461",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off practitioner, studio & multi-unit clinic orders",
         description: "Save 15% on multi-unit professional clinic and wellness studio packages with code METHEW88461.",
         is_verified: true,
@@ -8133,7 +8133,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "seeq-3",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off multi-tub clear whey bundles & variety packs",
         description: "Stack savings on 2-tub and 3-tub clear whey isolate variety packs with automatic bundle discount.",
         is_verified: true,
@@ -8208,7 +8208,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "skinny-1",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide discount (automatically applied in cart)",
         description: "Save 15% on Super Youth multi-collagen and beauty nutrition. Discount activates automatically at checkout.",
         is_verified: true,
@@ -8302,7 +8302,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "chomp-code-1",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "45% OFF",
         title: "Up to 45% off ChompSaw maker kits & bundle sets",
         description: "Apply exclusive coupon code METHEWDIPPY at checkout to unlock up to 45% discount on ChompSaw tool sets and cardboard craft supplies.",
@@ -8313,7 +8313,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "chomp-code-2",
         code: "METHEWDIPPY",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "40% OFF",
         title: "40% off sitewide discount code",
         description: "Use verified partner code METHEWDIPPY at checkout for 40% savings on all ChompShop maker tools, attachments, and craft packs.",
@@ -8325,7 +8325,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "chomp-deal-3",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off on bundles",
         description: "Save 15% automatically on ChompSaw tool and materials bundles. No coupon code required.",
         affiliate_url: "https://chompshop.com?sca_ref=12513706.FPVyii8Sr4k&utm_source=chompsquad&utm_medium=referral&utm_campaign=methew-dippy",
@@ -8428,7 +8428,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "rone-deal-3",
         code: "METHEW",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% Off Sitewide Promo Code (Verified Working)",
         description: "Apply active promo code METHEW at checkout to receive an instant 15% discount across all energy honey pouches.",
         affiliate_url: "https://www.ronenutrition.com/Methew",
@@ -8472,7 +8472,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "rone-deal-7",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "Stock & Save: 15% Off 4+ Pouch Volume Pack",
         description: "Order in volume to maximize endurance savings — get an automatic 15% reduction when purchasing 4 bags or more.",
         affiliate_url: "https://www.ronenutrition.com/Methew",
@@ -8589,7 +8589,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dak-deal-1",
         code: "MARKTPLAATS",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "5% KORTING",
         title: "5% kortingscode op gehele bestelling bij Dakvoordeelshop",
         description: "Gebruik actiecode MARKTPLAATS in het winkelmandje voor 5% directe korting op EPDM dakbedekking en accessoires.",
@@ -8600,7 +8600,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dak-deal-2",
         code: "WEEKENDVOORDEEL5",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "5% KORTING",
         title: "5% weekend actiecode op dakisolatie en EPDM folie",
         description: "Ontvang 5% extra voordeel op hoogwaardige PIR isolatieplaten en daktrimmen met actiecode WEEKENDVOORDEEL5.",
@@ -8611,7 +8611,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "dak-deal-3",
         code: "WELKOM5",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "5% WELKOMSTKORTING",
         title: "5% welkomstkorting voor nieuwe klanten bij Dakvoordeelshop",
         description: "Direct 5% korting op je eerste bestelling EPDM pakketten en PIR dakisolatie met actiecode WELKOM5.",
@@ -8707,8 +8707,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "magicshine-deal-1",
         code: "MTBVIP",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off MTB trail lights and bike headlights with coupon code",
         description: "Apply verified promo code MTBVIP at checkout to receive 15% off on Monteer, Allty, and Seemee series.",
         affiliate_url: "https://magicshine.com",
@@ -8718,8 +8718,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "magicshine-deal-2",
         code: "WELCOM15",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off first order with email newsletter registration",
         description: "Save 15% on high-lumen bicycle headlights and cycling safety gear using discount code WELCOM15.",
         affiliate_url: "https://magicshine.com",
@@ -8729,8 +8729,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "magicshine-deal-3",
         code: "MSFANS",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off official fan community promo code sitewide",
         description: "Enter coupon code MSFANS for 15% off bike lights and rechargeable cycling safety bundles.",
         affiliate_url: "https://magicshine.com",
@@ -8766,7 +8766,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "renpho-deal-1",
         code: "WBROOKS8",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% off verified partner discount code sitewide",
         description: "Apply working coupon code WBROOKS8 in your cart for 10% off smart body composition scales and massagers.",
@@ -8777,8 +8777,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "renpho-deal-2",
         code: "WRRENPHO15L",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off promo code on smart scales & eye massagers",
         description: "Save 15% on bestselling Eyeris eye massagers and Elis smart scales with verified code WRRENPHO15L.",
         affiliate_url: "https://renpho.com",
@@ -8788,8 +8788,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "renpho-deal-3",
         code: "KICK15",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off seasonal wellness promo code",
         description: "Use active discount code KICK15 for 15% off percussion massage guns, air purifiers, and AI smart bikes.",
         affiliate_url: "https://renpho.com",
@@ -9075,8 +9075,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "rgb-deal-1",
         code: "RGBMETHEW",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off verified exclusive partner discount code sitewide",
         description: "Apply working coupon code RGBMETHEW at checkout to unlock 15% off halo kits, DRL boards, underglow, and LED emblems.",
         affiliate_url: "https://rgbhalokits.com?sca_ref=12581527.Berepf0CbvflW",
@@ -9201,7 +9201,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         id: "swa-deal-9",
         code: "",
         is_auto_applied: true,
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off convention & cosplay ready replicas",
         description: "Save 15% on screen-accurate hilts and cosplay accessories with quick-draw belt clips and display stands.",
         affiliate_url: "https://swasabers.com?sca_ref=12581612.1kP736bJt9AA",
@@ -9238,8 +9238,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "larine-deal-1",
         code: "METHEW23131",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off verified exclusive discount code sitewide",
         description: "Apply working coupon code METHEW23131 at checkout to save 15% on remineralizing gum, mints, and oral health bundles.",
         affiliate_url: "https://www.buylarine.com/METHEW23131",
@@ -9249,7 +9249,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "larine-deal-2",
         code: "METHEW23131",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "10% OFF",
         title: "10% off verified promo code on all enamel care kits",
         description: "Use active discount code METHEW23131 to unlock savings on Enamel Starter Kits and variety packs.",
@@ -9318,9 +9318,9 @@ export const STORE_REGISTRY: RegistryStore[] = [
     coupons: [
       {
         id: "plated-deal-1",
-        code: "WELCOME15",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off verified exclusive coupon code sitewide",
         description: "Apply promo code WELCOME15 at checkout to receive 15% off your order of clinically proven exosome serums.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
@@ -9330,7 +9330,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "plated-deal-2",
         code: "INTENSE20",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "20% OFF",
         title: "20% off INTENSE Serum for rapid collagen & wrinkle renewal",
         description: "Get 20% off highest-concentration exosome INTENSE Serum with working discount code INTENSE20.",
@@ -9341,8 +9341,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "plated-deal-3",
         code: "DAILY15",
-        is_auto_applied: false,
-        discount: "15% OFF",
+        is_auto_applied: true,
+        discount: "UP TO $125 OFF",
         title: "15% off DAILY Serum for radiant skin barrier repair",
         description: "Save 15% on DAILY exosome serum designed to defend against environmental aging with code DAILY15.",
         affiliate_url: "https://connectadtrack.com/?s=cpa&u=ceisna8bjodc5606cmdomnp2q8bf1f346w9t9racuvlvn48j4jw&url=https%3A%2F%2Fplatedskinscience.com%2F",
@@ -9352,7 +9352,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "plated-deal-4",
         code: "HAIR20",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "20% OFF",
         title: "20% off CALM Serum and Hair Density Recovery Serum",
         description: "Use active voucher code HAIR20 to save 20% on scalp revitalization and post-procedure calm serums.",
@@ -9400,7 +9400,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nuvio-deal-1",
         code: "METHEW50",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$50 OFF",
         title: "$50 off verified discount code sitewide",
         description: "Save an instant $50 on any red light therapy panel, infrared sauna, or cold plunge tub with code METHEW50.",
@@ -9411,7 +9411,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nuvio-deal-2",
         code: "METHEW50",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$50 OFF",
         title: "$50 off clinical red light therapy panels",
         description: "Apply promo code METHEW50 to receive $50 off targeted and full-body medical-grade red light panels.",
@@ -9422,7 +9422,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nuvio-deal-3",
         code: "METHEW50",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$50 OFF",
         title: "$50 off portable infrared home saunas & domes",
         description: "Get $50 off premium low-EMF infrared saunas and sauna blankets with working voucher code METHEW50.",
@@ -9433,7 +9433,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "nuvio-deal-4",
         code: "METHEW50",
-        is_auto_applied: false,
+        is_auto_applied: true,
         discount: "$50 OFF",
         title: "$50 off portable ice baths & cold plunge tubs",
         description: "Take $50 off insulated ice bath recovery tubs and cold water plunge systems using code METHEW50.",
@@ -9558,7 +9558,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "gemini-deal-2",
         code: "METHEWDIPPY",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off first handcrafted candle order",
         description: "Save 15% on artisan luxury scented candles and home fragrance sets using code METHEWDIPPY at checkout.",
         affiliate_url: "https://www.geminiivy.com/?ref=METHEWDIPPY",
@@ -9603,7 +9603,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "rbs-deal-2",
         code: "LONGEVITY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Subscribe & Save cellular longevity bundles",
         description: "Save 15% on recurring liposomal NMN, Spermidine, and Quercetin bundles with verified promo code LONGEVITY15.",
         is_verified: true,
@@ -9636,7 +9636,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "cmy-deal-1",
         code: "COMMOMY15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on 3D Peel & Stick Wall Tiles",
         description: "Use verified coupon code COMMOMY15 for 15% instant discount on faux brick, stone, and kitchen backsplash tiles.",
         is_verified: true,
@@ -9678,7 +9678,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "pat-deal-1",
         code: "PETALS15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off sitewide on Calming Pet Hemp Oils & Chews",
         description: "Redeem verified code PETALS15 at checkout for 15% off all organic pet tinctures, treats, and grooming balms.",
         is_verified: true,
@@ -9753,7 +9753,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "upf-deal-2",
         code: "UPERFECT15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off Dual-Screen Folding Laptop Workstation Monitors",
         description: "Get 15% instant discount on UStation dual-screen portable displays with code UPERFECT15.",
         is_verified: true,
@@ -9777,7 +9777,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
       {
         id: "fsi-deal-1",
         code: "FOSI15",
-        discount: "15% OFF",
+        discount: "UP TO $125 OFF",
         title: "15% off V3 Mono, ZA3 & BT20A Pro Hi-Fi Power Amplifiers",
         description: "Save 15% sitewide on Fosi Audio Class D amplifiers, tube preamps, and DACs with verified code FOSI15.",
         is_verified: true,
