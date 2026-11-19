@@ -36,6 +36,82 @@ export interface RegistryStore {
  * - Guarantees 100% affiliate link propagation across all deal buttons.
  */
 export const STORE_REGISTRY: RegistryStore[] = [
+  // SILVER CROSS (British Luxury Strollers & Nursery Gear)
+  {
+    id: 91515237,
+    name: "Silver Cross",
+    slug: "silvercross",
+    aliases: [
+      "silver-cross",
+      "silvercrossus",
+      "silver-cross-us",
+      "silvercross-us",
+      "silvercross-baby"
+    ],
+    website: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15",
+    affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15",
+    logo: "/logos/silvercross.png",
+    country: "US",
+    description: "Silver Cross is the iconic British luxury nursery brand producing award-winning strollers, prams, car seats, and baby gear since 1877.",
+    coupons: [
+      {
+        id: "sc-pr-1",
+        code: "WELCOME15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% Off Your First Order with Silver Cross Promo Code",
+        description: "Save 15% on your first order of luxury strollers, Wave 3 prams, and nursery essentials with promo code WELCOME15.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+      },
+      {
+        id: "sc-pr-2",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO $150 OFF",
+        title: "Save Up to $150 on Stroller & Bassinet Bundles",
+        description: "Get instant price drops on Wave 3, Reef 2, and Dune convertible luxury stroller bundles. No promo code required.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+      },
+      {
+        id: "sc-pr-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free US Tracked Ground Shipping on Orders $100+",
+        description: "Enjoy 100% free standard ground shipping across the contiguous United States on all strollers, car seats, and accessories.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+      },
+      {
+        id: "sc-pr-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE ACCESSORY",
+        title: "Complimentary Rain Covers & Cup Holders Included",
+        description: "Select Silver Cross premium stroller packages come bundled with complimentary tailored rain covers and cup holder accessories.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+      },
+      {
+        id: "sc-pr-5",
+        code: "",
+        is_auto_applied: true,
+        discount: "UP TO 40% OFF",
+        title: "Up to 40% Off Seasonal Clearance & Accessories",
+        description: "Save up to 40% on select changing bags, footmuffs, car seat adapters, and travel stroller accessories.",
+        is_verified: true,
+        expiry_date: "2026-12-31",
+        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+      }
+    ]
+  },
+
   // KING OF CHRISTMAS (Artificial Christmas Trees, Flocked Trees & Holiday Decor)
   {
     id: 88991,
