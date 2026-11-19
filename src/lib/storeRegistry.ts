@@ -48,8 +48,8 @@ export const STORE_REGISTRY: RegistryStore[] = [
       "silvercross-us",
       "silvercross-baby"
     ],
-    website: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15",
-    affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15",
+    website: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225",
+    affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225",
     logo: "/logos/silvercross.png",
     country: "US",
     description: "Silver Cross is the iconic British luxury nursery brand producing award-winning strollers, prams, car seats, and baby gear since 1877.",
@@ -63,7 +63,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Save 15% on your first order of luxury strollers, Wave 3 prams, and nursery essentials with promo code WELCOME15.",
         is_verified: true,
         expiry_date: "2026-12-31",
-        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+        affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
       },
       {
         id: "sc-pr-2",
@@ -74,7 +74,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Get instant price drops on Wave 3, Reef 2, and Dune convertible luxury stroller bundles. No promo code required.",
         is_verified: true,
         expiry_date: "2026-12-31",
-        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+        affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
       },
       {
         id: "sc-pr-3",
@@ -85,7 +85,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Enjoy 100% free standard ground shipping across the contiguous United States on all strollers, car seats, and accessories.",
         is_verified: true,
         expiry_date: "2026-12-31",
-        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+        affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
       },
       {
         id: "sc-pr-4",
@@ -96,7 +96,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Select Silver Cross premium stroller packages come bundled with complimentary tailored rain covers and cup holder accessories.",
         is_verified: true,
         expiry_date: "2026-12-31",
-        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+        affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
       },
       {
         id: "sc-pr-5",
@@ -107,7 +107,7 @@ export const STORE_REGISTRY: RegistryStore[] = [
         description: "Save up to 40% on select changing bags, footmuffs, car seat adapters, and travel stroller accessories.",
         is_verified: true,
         expiry_date: "2026-12-31",
-        affiliate_url: "https://app.linkscircle.com/track/ccb74544-9966-4398-a84a-57fea5381a1e/4dcc2529-30cf-4f04-b0a6-bc6819ed1d15"
+        affiliate_url: "https://app.linkscircle.com/track?linkmid=91515237&linkaffid=96610225"
       }
     ]
   },
