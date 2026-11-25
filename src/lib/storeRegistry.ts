@@ -36,6 +36,74 @@ export interface RegistryStore {
  * - Guarantees 100% affiliate link propagation across all deal buttons.
  */
 export const STORE_REGISTRY: RegistryStore[] = [
+  {
+    id: 99450,
+    name: "Waterdrop",
+    slug: "waterdrop",
+    aliases: ["waterdropfilter", "waterdrop-filter", "waterdrop-filters", "waterdropfilters", "waterdrop-ro", "waterdrop-us"],
+    website: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+    affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+    logo: "/logos/waterdrop.png",
+    country: "US",
+    description: "Official Waterdrop verified coupon & discount portal. Shop NSF-certified tankless reverse osmosis systems (G3P800, G2, X12), countertop dispensers, and genuine replacement water filters with exclusive savings.",
+    coupons: [
+      {
+        id: "waterdrop-deal-1",
+        code: "WD10",
+        is_auto_applied: false,
+        discount: "10% OFF",
+        title: "10% off verified promo code sitewide",
+        description: "Apply verified promo code WD10 at checkout to save 10% on all Waterdrop reverse osmosis water filter systems and replacements.",
+        affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "waterdrop-deal-2",
+        code: "WD15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off discount code on eligible RO filtration systems",
+        description: "Use coupon code WD15 for an exclusive 15% discount on select under-sink filtration systems and filter bundles.",
+        affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "waterdrop-deal-3",
+        code: "SAVE70",
+        is_auto_applied: false,
+        discount: "$70 OFF",
+        title: "$70 off flagship reverse osmosis systems (G3P800, X12)",
+        description: "Save $70 on premium tankless reverse osmosis water purifiers using verified coupon code SAVE70.",
+        affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "waterdrop-deal-4",
+        code: "FREESHIP",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free tracked US shipping on all orders",
+        description: "Free standard ground delivery across the United States. Automatically applied at checkout.",
+        affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "waterdrop-deal-5",
+        code: "HERO15",
+        is_auto_applied: false,
+        discount: "15% OFF",
+        title: "15% off community hero discount (Military, Healthcare & Students)",
+        description: "Special 15% discount verified via VerifyPass for active military, medical professionals, first responders, and students.",
+        affiliate_url: "https://www.waterdropfilter.com/?ref=aynlalsd&utm_medium=affiliate&utm_source=goaffpro",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
   // SILVER CROSS (British Luxury Strollers & Nursery Gear)
   {
     id: 91515237,
