@@ -418,7 +418,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/go/usa-berkey-filters",
-        destination: "https://www.usaberkeyfilters.com/aff/282/",
+        destination: "https://www.usaberkeyfilters.com/aff/271/",
         permanent: true,
       },
       {
