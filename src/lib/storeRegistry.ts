@@ -8516,7 +8516,64 @@ export const STORE_REGISTRY: RegistryStore[] = [
   },
 
   // 20. USA BERKEY FILTERS (Gravity-Fed Water Purification Systems & Replacement Elements)
-  {
+    {
+    id: 734,
+    name: "The Berkey",
+    slug: "the-berkey",
+    aliases: ["theberkey", "the-berkey-filters", "theberkeyfilters", "the-berkey-water-filters"],
+    website: "https://theberkey.com/?rfsn=9428965.01bcd90",
+    affiliate_url: "https://theberkey.com/?rfsn=9428965.01bcd90",
+    logo: "/logos/the-berkey.png",
+    country: "US",
+    description: "Official authorized dealer of genuine Berkey water filtration systems since 2016. Shop authentic Big, Travel, Royal systems, Black Berkey replacement filters, and accessories.",
+    coupons: [
+      {
+        id: "the-berkey-deal-1",
+        code: "10OFFBERKEY",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off verified promo code sitewide",
+        description: "Apply verified promo code 10OFFBERKEY at checkout to save 10% on authentic Berkey water filtration systems and bundles.",
+        affiliate_url: "https://theberkey.com/?rfsn=9428965.01bcd90",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "the-berkey-deal-2",
+        code: "10OFFBERKEY",
+        is_auto_applied: true,
+        discount: "10% OFF",
+        title: "10% off discount code on Black Berkey replacement elements",
+        description: "Save 10% on genuine Black Berkey replacement filters and fluoride elements using promo code 10OFFBERKEY.",
+        affiliate_url: "https://theberkey.com/?rfsn=9428965.01bcd90",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "the-berkey-deal-3",
+        code: "",
+        is_auto_applied: true,
+        discount: "BUNDLE SALE",
+        title: "Big Berkey and Royal Berkey stainless steel bundle deals",
+        description: "Save on complete stainless steel gravity water filter systems. Applied automatically at checkout.",
+        affiliate_url: "https://theberkey.com/?rfsn=9428965.01bcd90",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      },
+      {
+        id: "the-berkey-deal-4",
+        code: "",
+        is_auto_applied: true,
+        discount: "FREE SHIPPING",
+        title: "Free tracked US shipping on qualifying system orders",
+        description: "Enjoy zero shipping costs automatically calculated on eligible Berkey water purification system orders.",
+        affiliate_url: "https://theberkey.com/?rfsn=9428965.01bcd90",
+        is_verified: true,
+        expiry_date: "2026-12-31"
+      }
+    ]
+  },
+{
     id: 732,
     name: "USA Berkey Filters",
     slug: "usa-berkey-filters",
